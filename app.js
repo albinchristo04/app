@@ -38,19 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- PLAYER & ADS LOGIC ---
     const player = videojs('player');
 
-    // Intercept HLS segments to proxy them
-    videojs.Hls.xhr.beforeRequest = function (options) {
-      // Only proxy if the URI is from 46.149.191.217
-      if (options.uri.startsWith('http://46.149.191.217')) {
-        // Required to prevent circular requests
-        if (options.uri.includes('/api/proxy')) {
-          return options;
-        }
-        options.uri = `/api/proxy?url=${encodeURIComponent(options.uri)}`;
-      }
-      return options;
-    };
-
     // Personnalisation du message d'erreur
     player.on('error', function() {
         const errorDisplay = player.getChild('errorDisplay');
@@ -79,12 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const playChannel = (url) => {
-        let finalUrl = url;
-        // Check if the URL needs to be proxied (i.e., if it's from 46.149.191.217)
-        if (url.startsWith('http://46.149.191.217')) {
-            finalUrl = `/api/proxy?url=${encodeURIComponent(url)}`;
-        }
-        player.src({ src: finalUrl, type: 'application/x-mpegURL' });
+        player.src({ src: url, type: 'application/x-mpegURL' });
         player.play();
     };
 
@@ -111,15 +93,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- INITIALIZATION ---
     const init = async () => {
         try {
-            // Fetch chaine4.m3u8 (Sport) using the proxy
-            const proxyUrl4 = `/api/proxy?url=${encodeURIComponent('chaine4.m3u8')}`;
-            const response4 = await fetch(proxyUrl4);
-            if (!response4.ok) {
-                throw new Error(`HTTP error! status: ${response4.status} for chaine4.m3u8`);
+            // Fetch ara.m3u directly
+            const response = await fetch('ara.m3u');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status} for ara.m3u`);
             }
-            const m3uData4 = await response4.text();
-            allChannels = parseM3U(m3uData4); // No category needed if only one list
-            displayChannels(allChannels); // Display all initially
+            const m3uData = await response.text();
+            allChannels = parseM3U(m3uData);
+            displayChannels(allChannels);
 
             // Les publicités sont initialisées ici, APRES que les chaînes soient affichées
             initAds();
