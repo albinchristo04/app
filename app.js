@@ -150,4 +150,3 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     init();
-});
