@@ -38,6 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- PLAYER & ADS LOGIC ---
     const player = videojs('player');
 
+    // Intercept HLS segments to proxy them
+    videojs.Hls.xhr.beforeRequest = function (options) {
+      // Only proxy if the URI is from 46.149.191.217
+      if (options.uri.startsWith('http://46.149.191.217')) {
+        // Required to prevent circular requests
+        if (options.uri.includes('/api/proxy')) {
+          return options;
+        }
+        options.uri = `/api/proxy?url=${encodeURIComponent(options.uri)}`;
+      }
+      return options;
+    };
+
     // Personnalisation du message d'erreur
     player.on('error', function() {
         const errorDisplay = player.getChild('errorDisplay');
@@ -66,7 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const playChannel = (url) => {
-        player.src({ src: url, type: 'application/x-mpegURL' });
+        let finalUrl = url;
+        // Check if the URL needs to be proxied (i.e., if it's from 46.149.191.217)
+        if (url.startsWith('http://46.149.191.217')) {
+            finalUrl = `/api/proxy?url=${encodeURIComponent(url)}`;
+        }
+        player.src({ src: finalUrl, type: 'application/x-mpegURL' });
         player.play();
     };
 
@@ -93,13 +111,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- INITIALIZATION ---
     const init = async () => {
         try {
-            const response = await fetch('chaine.m3u8');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+            // Fetch chaine.m3u8 (Variété)
+            const response1 = await fetch('chaine.m3u8');
+            if (!response1.ok) {
+                throw new Error(`HTTP error! status: ${response1.status} for chaine.m3u8`);
             }
-            const m3uData = await response.text();
-            allChannels = parseM3U(m3uData);
-            displayChannels(allChannels);
+            const m3uData1 = await response1.text();
+            const channels1 = parseM3U(m3uData1).map(c => ({ ...c, category: 'Variété' }));
+
+            // Fetch chaine4.m3u8 (Sport) using the proxy
+            const proxyUrl4 = `/api/proxy?url=${encodeURIComponent('chaine4.m3u8')}`;
+            const response4 = await fetch(proxyUrl4);
+            if (!response4.ok) {
+                throw new Error(`HTTP error! status: ${response4.status} for chaine4.m3u8`);
+            }
+            const m3uData4 = await response4.text();
+            const channels4 = parseM3U(m3uData4).map(c => ({ ...c, category: 'Sport' }));
+
+            allChannels = [...channels1, ...channels4]; // Combine all channels
+            filterAndDisplayChannels('all'); // Display all initially
 
             // Les publicités sont initialisées ici, APRES que les chaînes soient affichées
             initAds();
