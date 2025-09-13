@@ -111,14 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- INITIALIZATION ---
     const init = async () => {
         try {
-            // Fetch chaine.m3u8 (Variété)
-            const response1 = await fetch('chaine.m3u8');
-            if (!response1.ok) {
-                throw new Error(`HTTP error! status: ${response1.status} for chaine.m3u8`);
-            }
-            const m3uData1 = await response1.text();
-            const channels1 = parseM3U(m3uData1).map(c => ({ ...c, category: 'Variété' }));
-
             // Fetch chaine4.m3u8 (Sport) using the proxy
             const proxyUrl4 = `/api/proxy?url=${encodeURIComponent('chaine4.m3u8')}`;
             const response4 = await fetch(proxyUrl4);
@@ -126,10 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(`HTTP error! status: ${response4.status} for chaine4.m3u8`);
             }
             const m3uData4 = await response4.text();
-            const channels4 = parseM3U(m3uData4).map(c => ({ ...c, category: 'Sport' }));
-
-            allChannels = [...channels1, ...channels4]; // Combine all channels
-            filterAndDisplayChannels('all'); // Display all initially
+            allChannels = parseM3U(m3uData4); // No category needed if only one list
+            displayChannels(allChannels); // Display all initially
 
             // Les publicités sont initialisées ici, APRES que les chaînes soient affichées
             initAds();
