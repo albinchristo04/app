@@ -93,10 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- INITIALIZATION ---
     const init = async () => {
         try {
-            // Fetch ara.m3u directly
-            const response = await fetch('ara.m3u');
+            const response = await fetch('chaine.m3u8');
             if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status} for ara.m3u`);
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
             const m3uData = await response.text();
             allChannels = parseM3U(m3uData);
@@ -131,3 +130,4 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     init();
+});
