@@ -1,6 +1,5 @@
-
 const http = require('http');
-const https = require('https'); // Import https module
+const https = require('https');
 const fs = require('fs');
 const path = require('path');
 const { URL } = require('url');
@@ -11,14 +10,13 @@ const MIME_TYPES = {
     '.html': 'text/html',
     '.css': 'text/css',
     '.js': 'application/javascript',
-    '.m3u8': 'application/x-mpegURL',
+    '.m3u8': 'application/vnd.apple.mpegurl',
     '.json': 'application/json',
     '.jpg': 'image/jpeg',
     '.png': 'image/png',
 };
 
 const server = http.createServer((req, res) => {
-    // Set CORS headers
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Request-Method', '*');
     res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
@@ -32,7 +30,6 @@ const server = http.createServer((req, res) => {
     const parsedUrl = new URL(req.url, `http://${req.headers.host}`);
     let pathname = parsedUrl.pathname;
 
-    // Proxy logic
     if (pathname === '/proxy') {
         const targetUrlString = parsedUrl.searchParams.get('url');
         if (!targetUrlString) {
@@ -44,8 +41,37 @@ const server = http.createServer((req, res) => {
         const protocol = targetUrlString.startsWith('https') ? https : http;
 
         const proxyRequest = protocol.get(targetUrlString, (proxyRes) => {
-            res.writeHead(proxyRes.statusCode, proxyRes.headers);
-            proxyRes.pipe(res, { end: true });
+            if (proxyRes.statusCode !== 200) {
+                res.writeHead(proxyRes.statusCode, proxyRes.headers);
+                proxyRes.pipe(res, { end: true });
+                return;
+            }
+            
+            const contentType = proxyRes.headers['content-type'] || '';
+            if (contentType.includes('application/vnd.apple.mpegurl') || contentType.includes('application/x-mpegurl')) {
+                let body = '';
+                proxyRes.on('data', chunk => body += chunk);
+                proxyRes.on('end', () => {
+                    const base_url = new URL(targetUrlString);
+                    const rewrittenPlaylist = body.split('\n').map(line => {
+                        line = line.trim();
+                        if (line && !line.startsWith('#')) {
+                            const absoluteUrl = new URL(line, base_url).href;
+                            return `/proxy?url=${encodeURIComponent(absoluteUrl)}`;
+                        }
+                        return line;
+                    }).join('\n');
+
+                    res.writeHead(200, {
+                        'Content-Type': 'application/vnd.apple.mpegurl',
+                        'Access-Control-Allow-Origin': '*'
+                    });
+                    res.end(rewrittenPlaylist);
+                });
+            } else {
+                res.writeHead(proxyRes.statusCode, proxyRes.headers);
+                proxyRes.pipe(res, { end: true });
+            }
         });
 
         proxyRequest.on('error', (err) => {
@@ -58,12 +84,12 @@ const server = http.createServer((req, res) => {
             proxyRequest.destroy();
         });
         
-        return; // Stop further execution for proxy requests
+        return;
     }
 
     // Static file serving logic
     if (pathname === '/') {
-        pathname = '/player.html'; // Default to player page
+        pathname = '/player.html';
     }
 
     let filePath = path.join(__dirname, pathname);
