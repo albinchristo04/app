@@ -1,10 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- DOM ELEMENTS ---
     const channelList = document.getElementById('channel-list');
+    const sportChannelList = document.getElementById('sport-channel-list');
     const searchInput = document.getElementById('search-input');
+    const btnGeneral = document.getElementById('btn-general');
+    const btnSport = document.getElementById('btn-sport');
 
     // --- STATE ---
     let allChannels = [];
+    let sportChannels = [];
+    let activeList = 'general';
 
     // --- PARSING LOGIC ---
     const parseM3U = (data) => {
@@ -28,9 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // --- DISPLAY LOGIC ---
-    const displayChannels = (channels) => {
-        if (!channelList) return;
-        channelList.innerHTML = channels.map(channel =>
+    const displayChannels = (channels, listElement) => {
+        if (!listElement) return;
+        listElement.innerHTML = channels.map(channel =>
             `<li data-url="${channel.url}">${channel.name}</li>`
         ).join('');
     };
@@ -48,16 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const initAds = () => {
         try {
-            // IMPORTANT: Remplacez cette URL de test par votre propre URL de publicité VAST.
-            // Obtenez-la auprès de votre réseau publicitaire (Google Ad Manager, etc.)
-            const myVastAdTagUrl = ""; // <-- COLLEZ VOTRE URL DE PUBLICITÉ VAST ICI
-
+            const myVastAdTagUrl = "YOUR_VAST_AD_TAG_URL_HERE";
             const adTagUrl = myVastAdTagUrl || 'https://pubads.g.doubleclick.net/gampad/ads?' + 
                 'iu=/21775744923/external/vmap_ad_samples&sz=640x480&' +
                 'cust_params=sample_ar%3Dpremidpostpod&ciu_szs=300x250&' +
                 'gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&' +
                 'correlator=';
-
             const imaOptions = { adTagUrl: adTagUrl };
             player.ima(imaOptions);
         } catch (e) {
@@ -70,38 +71,77 @@ document.addEventListener('DOMContentLoaded', () => {
         player.play();
     };
 
-    channelList.addEventListener('click', (e) => {
+    const handleChannelClick = (e) => {
         if (e.target && e.target.tagName === 'LI') {
             const url = e.target.dataset.url;
             playChannel(url);
 
-            const currentActive = channelList.querySelector('.active');
-            if (currentActive) currentActive.classList.remove('active');
+            // Deselect from all lists
+            document.querySelectorAll('#channel-list li, #sport-channel-list li').forEach(li => li.classList.remove('active'));
+            
+            // Select in current list
             e.target.classList.add('active');
         }
+    };
+
+    channelList.addEventListener('click', handleChannelClick);
+    sportChannelList.addEventListener('click', handleChannelClick);
+
+
+    // --- CATEGORY SWITCH LOGIC ---
+    btnGeneral.addEventListener('click', () => {
+        activeList = 'general';
+        channelList.style.display = 'block';
+        sportChannelList.style.display = 'none';
+        btnGeneral.classList.add('active');
+        btnSport.classList.remove('active');
+        displayChannels(allChannels, channelList); // Refresh search
+    });
+
+    btnSport.addEventListener('click', () => {
+        activeList = 'sport';
+        channelList.style.display = 'none';
+        sportChannelList.style.display = 'block';
+        btnSport.classList.add('active');
+        btnGeneral.classList.remove('active');
+        displayChannels(sportChannels, sportChannelList); // Refresh search
     });
 
     // --- SEARCH LOGIC ---
     searchInput.addEventListener('input', (e) => {
         const searchTerm = e.target.value.toLowerCase();
-        const filteredChannels = allChannels.filter(channel =>
-            channel.name.toLowerCase().includes(searchTerm)
-        );
-        displayChannels(filteredChannels);
+        if (activeList === 'general') {
+            const filteredChannels = allChannels.filter(channel =>
+                channel.name.toLowerCase().includes(searchTerm)
+            );
+            displayChannels(filteredChannels, channelList);
+        } else {
+            const filteredChannels = sportChannels.filter(channel =>
+                channel.name.toLowerCase().includes(searchTerm)
+            );
+            displayChannels(filteredChannels, sportChannelList);
+        }
     });
 
     // --- INITIALIZATION ---
     const init = async () => {
         try {
-            const response = await fetch('chaine.m3u8');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const m3uData = await response.text();
-            allChannels = parseM3U(m3uData);
-            displayChannels(allChannels);
+            // Fetch general channels
+            const generalResponse = await fetch('chaine.m3u8');
+            if (!generalResponse.ok) throw new Error(`HTTP error! status: ${generalResponse.status}`);
+            const generalM3uData = await generalResponse.text();
+            allChannels = parseM3U(generalM3uData);
+            displayChannels(allChannels, channelList);
 
-            // Les publicités sont initialisées ici, APRES que les chaînes soient affichées
+            // Fetch sport channels
+            const sportResponse = await fetch('chaine3.m3u');
+            if (!sportResponse.ok) throw new Error(`HTTP error! status: ${sportResponse.status}`);
+            const sportM3uData = await sportResponse.text();
+            sportChannels = parseM3U(sportM3uData);
+            displayChannels(sportChannels, sportChannelList);
+
+
+            // Ads are initialized after channels are displayed
             initAds();
 
             // Check for channel in URL or play default
@@ -117,9 +157,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (channelUrl) {
                 playChannel(channelUrl);
-                const channelItem = channelList.querySelector(`li[data-url="${channelUrl}"]`);
+                // Find active channel in the correct list
+                let channelItem = channelList.querySelector(`li[data-url="${channelUrl}"]`);
                 if (channelItem) {
                     channelItem.classList.add('active');
+                } else {
+                    channelItem = sportChannelList.querySelector(`li[data-url="${channelUrl}"]`);
+                    if (channelItem) {
+                        // Switch to sport tab if deep-linked channel is a sport channel
+                        btnSport.click();
+                        channelItem.classList.add('active');
+                    }
                 }
             }
 
