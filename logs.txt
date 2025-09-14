@@ -1,0 +1,16 @@
+IDEOJS: WARN: Problem encountered with playlist 0-https://chaine-en-live.vercel.app/proxy?url=https%3A%2F%2Fde.online24.pm%2Fplay%2F1101%2FBC28182177585B5%2Fvideo.m3u8. Trying again since it is the only playlist. video.js:210:47
+Échec du chargement pour l’élément <script> dont la source est « https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/7.2.1/videojs.ads.min.js ». player.html:115:103
+Avertissements de cookies 3
+Un accès partitionné à un cookie ou au stockage a été fourni à « https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=D31E5VJC77UFMVKBN7LG&lib=ttq » car il est chargé dans le contexte tiers et le partitionnement d’état dynamique est activé.
+
+Cette page est en mode de compatibilité (quirks). La mise en page peut en être affectée. Pour le mode standard, utilisez « <!DOCTYPE html> ».
+ads
+MouseEvent.mozPressure est obsolète. Veuillez utiliser plutôt PointerEvent.pressure. video.js:2054:13
+MouseEvent.mozInputSource est obsolète. Veuillez utiliser plutôt PointerEvent.pointerType. video.js:2054:13
+A resource is blocked by OpaqueResponseBlocking, please check browser console for details. sodar
+VIDEOJS: WARN: Problem encountered with playlist 0-https://chaine-en-live.vercel.app/proxy?url=https%3A%2F%2Fde.online24.pm%2Fplay%2F1101%2FBC28182177585B5%2Fvideo.m3u8. Trying again since it is the only playlist. video.js:210:47
+VIDEOJS: WARN: Problem encountered with playlist 0-https://chaine-en-live.vercel.app/proxy?url=https%3A%2F%2Fde.online24.pm%2Fplay%2F5112%2FBC28182177585B5%2Fvideo.m3u8. Trying again since it is the only playlist. video.js:210:47
+VIDEOJS: WARN: Problem encountered with playlist 0-https://chaine-en-live.vercel.app/proxy?url=https%3A%2F%2Fde.online24.pm%2Fplay%2F5112%2FBC28182177585B5%2Fvideo.m3u8. Trying again since it is the only playlist. video.js:210:47
+VIDEOJS: WARN: Problem encountered with playlist 0-https://chaine-en-live.vercel.app/proxy?url=https%3A%2F%2Fde.online24.pm%2Fplay%2F5112%2FBC28182177585B5%2Fvideo.m3u8. Trying again since it is the only playlist. video.js:210:47
+
+?
