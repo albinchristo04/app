@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const playChannel = (url) => {
-        player.src({ src: url, type: 'application/x-mpegURL' });
+        player.src({ src: `/proxy?url=${encodeURIComponent(url)}`, type: 'application/x-mpegURL' });
         player.play();
     };
 
