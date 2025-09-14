@@ -67,7 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const playChannel = (url) => {
-        player.src({ src: `/proxy?url=${encodeURIComponent(url)}`, type: 'application/x-mpegURL' });
+        let sourceUrl = url;
+        // Only use proxy for absolute URLs (external links)
+        if (url.startsWith('http://') || url.startsWith('https://')) {
+            sourceUrl = `/proxy?url=${encodeURIComponent(url)}`;
+        }
+        player.src({ src: sourceUrl, type: 'application/x-mpegURL' });
         player.play();
     };
 
