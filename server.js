@@ -1,4 +1,6 @@
+
 const http = require('http');
+const https = require('https'); // Import https module
 const fs = require('fs');
 const path = require('path');
 const { URL } = require('url');
@@ -32,14 +34,16 @@ const server = http.createServer((req, res) => {
 
     // Proxy logic
     if (pathname === '/proxy') {
-        const targetUrl = parsedUrl.searchParams.get('url');
-        if (!targetUrl) {
+        const targetUrlString = parsedUrl.searchParams.get('url');
+        if (!targetUrlString) {
             res.writeHead(400, { 'Content-Type': 'text/plain' });
             res.end('Proxy error: URL parameter is missing.');
             return;
         }
 
-        const proxyRequest = http.get(targetUrl, (proxyRes) => {
+        const protocol = targetUrlString.startsWith('https') ? https : http;
+
+        const proxyRequest = protocol.get(targetUrlString, (proxyRes) => {
             res.writeHead(proxyRes.statusCode, proxyRes.headers);
             proxyRes.pipe(res, { end: true });
         });
