@@ -114,40 +114,52 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
     <script>
     // --- LOGIQUE DE PARTAGE SOCIAL ---
-    document.addEventListener('DOMContentLoaded', () => {
+    function updateShareLinks(channelUrl, channelName) {
         const twitterBtn = document.getElementById('share-twitter');
         const facebookBtn = document.getElementById('share-facebook');
         const whatsappBtn = document.getElementById('share-whatsapp');
 
-        function updateShareLinks(channelUrl, channelName) {
-            const text = `Regardez ${channelName} en direct !`;
-            const pageUrl = `https://amouradore.github.io/chaine-en-live/player.html?channel=${encodeURIComponent(channelUrl)}`;
+        const text = `Regardez ${channelName} en direct !`;
+        const pageUrl = `https://amouradore.github.io/chaine-en-live/player.html?channel=${encodeURIComponent(channelUrl)}`;
 
-            twitterBtn.href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(text)}`;
-            facebookBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
-            whatsappBtn.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(text + ' ' + pageUrl)}`;
-        }
+        if (twitterBtn) twitterBtn.href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(text)}`;
+        if (facebookBtn) facebookBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+        if (whatsappBtn) whatsappBtn.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(text + ' ' + pageUrl)}`;
+    }
 
-        // Met à jour les liens quand une chaîne est cliquée
-        const channelList = document.getElementById('channel-list');
-        channelList.addEventListener('click', (e) => {
-            if (e.target && e.target.tagName === 'LI') {
-                const url = e.target.dataset.url;
-                const name = e.target.textContent;
-                updateShareLinks(url, name);
-            }
-        });
+    document.addEventListener('DOMContentLoaded', async () => {
+        // Load and display channels
+        const channels = await window.fetchAndParseM3U8('chaine.m3u8');
+        window.displayChannels(channels);
 
-        // Met à jour au chargement si une chaîne est dans l'URL
+        // Handle initial channel playback
         const urlParams = new URLSearchParams(window.location.search);
         const initialChannelUrl = urlParams.get('channel');
+        let channelToPlay = null;
+
         if (initialChannelUrl) {
-            // On attend que la liste des chaînes soit chargée pour trouver le nom
-            setTimeout(() => {
-                const channelItem = channelList.querySelector(`li[data-url="${initialChannelUrl}"]`);
-                const initialChannelName = channelItem ? channelItem.textContent : 'cette chaîne';
-                updateShareLinks(initialChannelUrl, initialChannelName);
-            }, 1500); // Petit délai pour laisser le temps à app.js de charger les chaînes
+            channelToPlay = channels.find(c => c.url === initialChannelUrl);
+        }
+
+        if (channelToPlay) {
+            window.playChannel(channelToPlay.url);
+            updateShareLinks(channelToPlay.url, channelToPlay.name);
+        } else if (channels.length > 0) {
+            // Play the first channel by default if no specific channel is requested
+            window.playChannel(channels[0].url);
+            updateShareLinks(channels[0].url, channels[0].name);
+        }
+
+        // Update share links when a channel is clicked
+        const channelList = document.getElementById('channel-list');
+        if (channelList) {
+            channelList.addEventListener('click', (e) => {
+                if (e.target && e.target.tagName === 'LI') {
+                    const url = e.target.dataset.url;
+                    const name = e.target.textContent;
+                    updateShareLinks(url, name);
+                }
+            });
         }
     });
     </script>

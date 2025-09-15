@@ -1,180 +1,117 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // --- DOM ELEMENTS ---
-    const channelList = document.getElementById('channel-list');
-    const sportChannelList = document.getElementById('sport-channel-list');
-    const searchInput = document.getElementById('search-input');
-    const btnGeneral = document.getElementById('btn-general');
-    const btnSport = document.getElementById('btn-sport');
+// app.js
 
-    // --- STATE ---
-    let allChannels = [];
-    let sportChannels = [];
-    let activeList = 'general';
+let hlsInstance; // Global Hls instance
 
-    // --- PARSING LOGIC ---
-    const parseM3U = (data) => {
-        const lines = data.trim().split('\n');
-        const channels = [];
-        let currentChannel = {};
-        lines.forEach(line => {
-            line = line.trim();
-            if (line.startsWith('#EXTINF:')) {
-                const name = line.split(',').pop();
-                if (name) currentChannel.name = name;
-            } else if (line.length > 0 && !line.startsWith('#')) {
-                if (currentChannel.name) {
-                    currentChannel.url = line;
-                    channels.push(currentChannel);
-                    currentChannel = {};
+// Function to fetch and parse the M3U8 playlist
+async function fetchAndParseM3U8(m3u8Url) {
+    try {
+        const response = await fetch(`/api/proxy?url=${encodeURIComponent(m3u8Url)}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const m3u8Content = await response.text();
+        return parseM3U8(m3u8Content);
+    } catch (error) {
+        console.error('Error fetching or parsing M3U8:', error);
+        const channelListElement = document.getElementById('channel-list');
+        if (channelListElement) {
+            channelListElement.innerHTML = '<p>Error loading channels. Please try again later.</p>';
+        }
+        return [];
+    }
+}
+
+// Function to parse M3U8 content
+function parseM3U8(content) {
+    const lines = content.split('\n');
+    const channels = [];
+    let currentChannel = {};
+
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+
+        if (line.startsWith('#EXTINF')) {
+            const nameMatch = line.match(/,(.*)$/);
+            currentChannel.name = nameMatch ? nameMatch[1].trim() : 'Unknown Channel';
+        } else if (line && !line.startsWith('#')) {
+            currentChannel.url = line;
+            channels.push(currentChannel);
+            currentChannel = {}; // Reset for the next channel
+        }
+    }
+    return channels;
+}
+
+// Function to display channels
+function displayChannels(channels) {
+    const channelListElement = document.getElementById('channel-list');
+    if (!channelListElement) return;
+
+    channelListElement.innerHTML = ''; // Clear previous list
+    if (channels.length === 0) {
+        channelListElement.innerHTML = '<p>No channels found.</p>';
+        return;
+    }
+
+    const ul = document.createElement('ul');
+    channels.forEach(channel => {
+        const li = document.createElement('li');
+        li.textContent = channel.name;
+        li.dataset.url = channel.url;
+        li.addEventListener('click', () => playChannel(channel.url));
+        ul.appendChild(li);
+    });
+    channelListElement.appendChild(ul);
+}
+
+// Function to play a channel
+function playChannel(url) {
+    const videoElement = document.getElementById('player'); // Changed from videoPlayer to player
+    if (!videoElement) {
+        console.error('Video element with ID "player" not found.');
+        return;
+    }
+
+    if (Hls.isSupported()) {
+        if (hlsInstance) {
+            hlsInstance.destroy(); // Destroy previous Hls instance if exists
+        }
+        hlsInstance = new Hls();
+        hlsInstance.loadSource(url);
+        hlsInstance.attachMedia(videoElement);
+        hlsInstance.on(Hls.Events.MANIFEST_PARSED, function() {
+            videoElement.play();
+        });
+        hlsInstance.on(Hls.Events.ERROR, function (event, data) {
+            if (data.fatal) {
+                switch (data.type) {
+                    case Hls.ErrorTypes.NETWORK_ERROR:
+                        console.error('Fatal network error, trying to reload stream.');
+                        hlsInstance.startLoad();
+                        break;
+                    case Hls.ErrorTypes.MEDIA_ERROR:
+                        console.error('Fatal media error, trying to recover.');
+                        hlsInstance.recoverMediaError();
+                        break;
+                    default:
+                        console.error('Fatal unhandled error, destroying Hls.js.');
+                        hlsInstance.destroy();
+                        break;
                 }
             }
         });
-        return channels;
-    };
+    } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+        // Native HLS support for Safari
+        videoElement.src = url;
+        videoElement.addEventListener('loadedmetadata', function() {
+            videoElement.play();
+        });
+    } else {
+        console.error('Your browser does not support HLS playback.');
+    }
+}
 
-    // --- DISPLAY LOGIC ---
-    const displayChannels = (channels, listElement) => {
-        if (!listElement) return;
-        listElement.innerHTML = channels.map(channel =>
-            `<li data-url="${channel.url}">${channel.name}</li>`
-        ).join('');
-    };
-
-    // --- PLAYER & ADS LOGIC ---
-    const player = videojs('player');
-
-    
-
-    
-
-    const playChannel = (url) => {
-        let sourceUrl = url;
-        // Only use proxy for absolute URLs (external links)
-        if (url.startsWith('http://') || url.startsWith('https://')) {
-            // Removed corsproxy.io for hls.js integration
-            // sourceUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
-        }
-
-        if (Hls.isSupported()) {
-            const video = document.getElementById('player');
-            const hls = new Hls();
-            hls.loadSource(sourceUrl);
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                player.play();
-            });
-        } else if (player.canPlayType('application/vnd.apple.mpegurl')) {
-            player.src({ src: sourceUrl, type: 'application/x-mpegURL' });
-            player.play();
-        } else {
-            console.error('HLS is not supported in this browser.');
-        }
-    };
-
-    const handleChannelClick = (e) => {
-        if (e.target && e.target.tagName === 'LI') {
-            const url = e.target.dataset.url;
-            playChannel(url);
-
-            // Deselect from all lists
-            document.querySelectorAll('#channel-list li, #sport-channel-list li').forEach(li => li.classList.remove('active'));
-            
-            // Select in current list
-            e.target.classList.add('active');
-        }
-    };
-
-    channelList.addEventListener('click', handleChannelClick);
-    sportChannelList.addEventListener('click', handleChannelClick);
-
-
-    // --- CATEGORY SWITCH LOGIC ---
-    btnGeneral.addEventListener('click', () => {
-        activeList = 'general';
-        channelList.style.display = 'block';
-        sportChannelList.style.display = 'none';
-        btnGeneral.classList.add('active');
-        btnSport.classList.remove('active');
-        displayChannels(allChannels, channelList); // Refresh search
-    });
-
-    btnSport.addEventListener('click', () => {
-        activeList = 'sport';
-        channelList.style.display = 'none';
-        sportChannelList.style.display = 'block';
-        btnSport.classList.add('active');
-        btnGeneral.classList.remove('active');
-        displayChannels(sportChannels, sportChannelList); // Refresh search
-    });
-
-    // --- SEARCH LOGIC ---
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        if (activeList === 'general') {
-            const filteredChannels = allChannels.filter(channel =>
-                channel.name.toLowerCase().includes(searchTerm)
-            );
-            displayChannels(filteredChannels, channelList);
-        } else {
-            const filteredChannels = sportChannels.filter(channel =>
-                channel.name.toLowerCase().includes(searchTerm)
-            );
-            displayChannels(filteredChannels, sportChannelList);
-        }
-    });
-
-    // --- INITIALIZATION ---
-    const init = async () => {
-        try {
-            // Fetch general channels
-            const generalResponse = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('chaine.m3u8')}`);
-            if (!generalResponse.ok) throw new Error(`HTTP error! status: ${generalResponse.status}`);
-            const generalM3uData = await generalResponse.text();
-            allChannels = parseM3U(generalM3uData);
-            displayChannels(allChannels, channelList);
-
-            // Fetch sport channels from All_Sports.m3u
-            const sportResponse = await fetch('ALL_Sports.m3u');
-            if (!sportResponse.ok) throw new Error(`HTTP error! status: ${sportResponse.status}`);
-            const sportM3uData = await sportResponse.text();
-            sportChannels = parseM3U(sportM3uData);
-            displayChannels(sportChannels, sportChannelList);
-
-
-            
-
-            // Check for channel in URL or play default
-            const urlParams = new URLSearchParams(window.location.search);
-            let channelUrl = urlParams.get('channel');
-
-            if (!channelUrl) {
-                const defaultChannel = allChannels.find(c => c.name.trim() === 'BeIN Sport 1 HD');
-                if (defaultChannel) {
-                    channelUrl = defaultChannel.url;
-                }
-            }
-
-            if (channelUrl) {
-                playChannel(channelUrl);
-                // Find active channel in the correct list
-                let channelItem = channelList.querySelector(`li[data-url="${channelUrl}"]`);
-                if (channelItem) {
-                    channelItem.classList.add('active');
-                } else {
-                    channelItem = sportChannelList.querySelector(`li[data-url="${channelUrl}"]`);
-                    if (channelItem) {
-                        // Switch to sport tab if deep-linked channel is a sport channel
-                        btnSport.click();
-                        channelItem.classList.add('active');
-                    }
-                }
-            }
-
-        } catch (error) {
-            console.error('Error loading or parsing M3U data:', error);
-            if(channelList) channelList.innerHTML = '<li>Erreur de chargement des chaînes.</li>';
-        }
-    };
-
-    init();
-});
+// Make functions globally accessible for player.html
+window.fetchAndParseM3U8 = fetchAndParseM3U8;
+window.displayChannels = displayChannels;
+window.playChannel = playChannel;
