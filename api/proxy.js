@@ -1,29 +1,16 @@
 const https = require('https');
 const { URL } = require('url');
 
-export default function handler(req, res) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Request-Method', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
-    res.setHeader('Access-Control-Allow-Headers', '*');
-    if (req.method === 'OPTIONS') {
-        res.writeHead(204);
-        res.end();
-        return;
-    }
-
-    const parsedUrl = new URL(req.url, `http://${req.headers.host}`);
-    const targetUrlString = parsedUrl.searchParams.get('url');
-
-    if (!targetUrlString) {
-        res.writeHead(400, { 'Content-Type': 'text/plain' });
-        res.end('Proxy error: URL parameter is missing.');
-        return;
-    }
-
+function doProxy(req, res, targetUrlString) {
     const protocol = targetUrlString.startsWith('https') ? https : require('http');
 
     const proxyRequest = protocol.get(targetUrlString, (proxyRes) => {
+        if (proxyRes.statusCode >= 300 && proxyRes.statusCode < 400 && proxyRes.headers.location) {
+            const redirectUrl = new URL(proxyRes.headers.location, targetUrlString).href;
+            doProxy(req, res, redirectUrl);
+            return;
+        }
+
         if (proxyRes.statusCode !== 200) {
             res.writeHead(proxyRes.statusCode, proxyRes.headers);
             proxyRes.pipe(res, { end: true });
@@ -66,4 +53,27 @@ export default function handler(req, res) {
     req.on('close', () => {
         proxyRequest.destroy();
     });
+}
+
+export default function handler(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Request-Method', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
+    res.setHeader('Access-Control-Allow-Headers', '*');
+    if (req.method === 'OPTIONS') {
+        res.writeHead(204);
+        res.end();
+        return;
+    }
+
+    const parsedUrl = new URL(req.url, `http://${req.headers.host}`);
+    const targetUrlString = parsedUrl.searchParams.get('url');
+
+    if (!targetUrlString) {
+        res.writeHead(400, { 'Content-Type': 'text/plain' });
+        res.end('Proxy error: URL parameter is missing.');
+        return;
+    }
+
+    doProxy(req, res, targetUrlString);
 }
