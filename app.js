@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const playChannel = async (url) => {
         try {
             // Use CORS proxy to fetch the master playlist
-            const masterPlaylistUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
+            const masterPlaylistUrl = `https://cors.x2u.in/${encodeURIComponent(url)}`;
             const response = await fetch(masterPlaylistUrl);
             const masterPlaylistContent = await response.text();
 
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const streamUrlAbsolute = baseUrl + streamUrlRelative;
 
             // Use CORS proxy for the final stream URL
-            const sourceUrl = `https://corsproxy.io/?${encodeURIComponent(streamUrlAbsolute)}`;
+            const sourceUrl = `https://cors.x2u.in/${encodeURIComponent(streamUrlAbsolute)}`;
             
             player.src({ src: sourceUrl, type: 'application/x-mpegURL' });
             player.play();
