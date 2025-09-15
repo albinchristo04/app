@@ -111,8 +111,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- INITIALIZATION ---
     const init = async () => {
-        const rai1Url = 'http://kavamz.xyz/live/Sorellagiovanni/bwkMzU31/dda83e75-3b38-4cf5-a9c0-6c5423d667a2.m3u';
-        playChannel(rai1Url);
+        try {
+            // Fetch general channels
+            const generalResponse = await fetch('chaine.m3u8');
+            if (!generalResponse.ok) throw new Error(`HTTP error! status: ${generalResponse.status}`);
+            const generalM3uData = await generalResponse.text();
+            allChannels = parseM3U(generalM3uData);
+            displayChannels(allChannels, channelList);
+
+            // Fetch sport channels
+            const sportResponse = await fetch('chaine3.m3u');
+            if (!sportResponse.ok) throw new Error(`HTTP error! status: ${sportResponse.status}`);
+            const sportM3uData = await sportResponse.text();
+            sportChannels = parseM3U(sportM3uData);
+            displayChannels(sportChannels, sportChannelList);
+
+
+            
+
+            // Check for channel in URL or play default
+            const urlParams = new URLSearchParams(window.location.search);
+            let channelUrl = urlParams.get('channel');
+
+            if (!channelUrl) {
+                const defaultChannel = allChannels.find(c => c.name.trim() === 'BeIN Sport 1 HD');
+                if (defaultChannel) {
+                    channelUrl = defaultChannel.url;
+                }
+            }
+
+            if (channelUrl) {
+                playChannel(channelUrl);
+                // Find active channel in the correct list
+                let channelItem = channelList.querySelector(`li[data-url="${channelUrl}"]`);
+                if (channelItem) {
+                    channelItem.classList.add('active');
+                } else {
+                    channelItem = sportChannelList.querySelector(`li[data-url="${channelUrl}"]`);
+                    if (channelItem) {
+                        // Switch to sport tab if deep-linked channel is a sport channel
+                        btnSport.click();
+                        channelItem.classList.add('active');
+                    }
+                }
+            }
+
+        } catch (error) {
+            console.error('Error loading or parsing M3U data:', error);
+            if(channelList) channelList.innerHTML = '<li>Erreur de chargement des chaînes.</li>';
+        }
     };
 
     init();

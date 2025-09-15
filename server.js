@@ -56,8 +56,7 @@ const server = http.createServer((req, res) => {
                     const rewrittenPlaylist = body.split('\n').map(line => {
                         line = line.trim();
                         if (line && !line.startsWith('#')) {
-                            const absoluteUrl = new URL(line, base_url).href;
-                            return `/proxy?url=${encodeURIComponent(absoluteUrl)}`;
+                            return new URL(line, base_url).href;
                         }
                         return line;
                     }).join('\n');
