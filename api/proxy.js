@@ -2,6 +2,14 @@ const https = require('https');
 const { URL } = require('url');
 
 function doProxy(req, res, targetUrlString) {
+    // Store the original targetUrlString for resolving relative paths later
+    const originalTargetUrlString = targetUrlString;
+
+    // Force targetUrlString to HTTPS for the proxy's internal request
+    if (targetUrlString.startsWith('http://')) {
+        targetUrlString = targetUrlString.replace('http://', 'https://');
+    }
+
     const protocol = targetUrlString.startsWith('https') ? https : require('http');
 
     const proxyRequest = protocol.get(targetUrlString, (proxyRes) => {
@@ -22,11 +30,11 @@ function doProxy(req, res, targetUrlString) {
             let body = '';
             proxyRes.on('data', chunk => body += chunk);
             proxyRes.on('end', () => {
-                const base_url = new URL(targetUrlString);
+                const base_url_for_resolving = new URL(originalTargetUrlString); // Use the original URL for resolving relative paths
                 const rewrittenPlaylist = body.split('\n').map(line => {
                     line = line.trim();
                     if (line && !line.startsWith('#')) {
-                        let absoluteUrl = new URL(line, base_url).href;
+                        let absoluteUrl = new URL(line, base_url_for_resolving).href;
                         // Force absoluteUrl to HTTPS if it's HTTP
                         if (absoluteUrl.startsWith('http://')) {
                             absoluteUrl = absoluteUrl.replace('http://', 'https://');
