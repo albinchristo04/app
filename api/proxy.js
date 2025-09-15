@@ -2,7 +2,7 @@ const https = require('https');
 const { URL } = require('url');
 
 function doProxy(req, res, targetUrlString) {
-    const protocol = https; // Always use HTTPS for outgoing requests
+    const protocol = targetUrlString.startsWith('https') ? https : require('http');
 
     const proxyRequest = protocol.get(targetUrlString, (proxyRes) => {
         if (proxyRes.statusCode >= 300 && proxyRes.statusCode < 400 && proxyRes.headers.location) {
@@ -26,7 +26,11 @@ function doProxy(req, res, targetUrlString) {
                 const rewrittenPlaylist = body.split('\n').map(line => {
                     line = line.trim();
                     if (line && !line.startsWith('#')) {
-                        const absoluteUrl = new URL(line, base_url).href;
+                        let absoluteUrl = new URL(line, base_url).href;
+                        // Force absoluteUrl to HTTPS if it's HTTP
+                        if (absoluteUrl.startsWith('http://')) {
+                            absoluteUrl = absoluteUrl.replace('http://', 'https://');
+                        }
                         return `/api/proxy?url=${encodeURIComponent(absoluteUrl)}`;
                     }
                     return line;
@@ -34,12 +38,20 @@ function doProxy(req, res, targetUrlString) {
 
                 res.writeHead(200, {
                     'Content-Type': 'application/vnd.apple.mpegurl',
-                    'Access-Control-Allow-Origin': '*'
+                    'Access-Control-Allow-Origin': '*',
+                    'Cache-Control': 'no-cache, no-store, must-revalidate', // Add cache control
+                    'Pragma': 'no-cache',
+                    'Expires': '0'
                 });
                 res.end(rewrittenPlaylist);
             });
         } else {
-            res.writeHead(proxyRes.statusCode, proxyRes.headers);
+            res.writeHead(proxyRes.statusCode, {
+                ...proxyRes.headers,
+                'Cache-Control': 'no-cache, no-store, must-revalidate', // Add cache control
+                'Pragma': 'no-cache',
+                'Expires': '0'
+            });
             proxyRes.pipe(res, { end: true });
         }
     });
