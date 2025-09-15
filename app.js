@@ -1,10 +1,14 @@
 // app.js
 
 let hlsInstance; // Global Hls instance
+let generalChannels = [];
+let sportChannels = [];
+let currentPlayingChannel = null; // To keep track of the currently playing channel
 
 // Function to fetch and parse the M3U8 playlist
 async function fetchAndParseM3U8(m3u8Url) {
     try {
+        // Fetch the M3U8 file directly (assuming it's a local file)
         const response = await fetch(m3u8Url);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -13,10 +17,7 @@ async function fetchAndParseM3U8(m3u8Url) {
         return parseM3U8(m3u8Content);
     } catch (error) {
         console.error('Error fetching or parsing M3U8:', error);
-        const channelListElement = document.getElementById('channel-list');
-        if (channelListElement) {
-            channelListElement.innerHTML = '<p>Error loading channels. Please try again later.</p>';
-        }
+        // No need to update channelListElement here, as displayChannels will handle it
         return [];
     }
 }
@@ -42,9 +43,9 @@ function parseM3U8(content) {
     return channels;
 }
 
-// Function to display channels
-function displayChannels(channels) {
-    const channelListElement = document.getElementById('channel-list');
+// Function to display channels for a given category
+function displayChannels(channels, targetElementId) {
+    const channelListElement = document.getElementById(targetElementId);
     if (!channelListElement) return;
 
     channelListElement.innerHTML = ''; // Clear previous list
@@ -58,7 +59,11 @@ function displayChannels(channels) {
         const li = document.createElement('li');
         li.textContent = channel.name;
         li.dataset.url = channel.url;
-        li.addEventListener('click', () => playChannel(channel.url));
+        li.addEventListener('click', () => {
+            playChannel(channel.url);
+            currentPlayingChannel = channel; // Update currently playing channel
+            updateShareLinks(channel.url, channel.name); // Update share links
+        });
         ul.appendChild(li);
     });
     channelListElement.appendChild(ul);
@@ -66,7 +71,7 @@ function displayChannels(channels) {
 
 // Function to play a channel
 function playChannel(url) {
-    const videoElement = document.getElementById('player'); // Changed from videoPlayer to player
+    const videoElement = document.getElementById('player');
     if (!videoElement) {
         console.error('Video element with ID "player" not found.');
         return;
@@ -74,7 +79,7 @@ function playChannel(url) {
 
     if (Hls.isSupported()) {
         if (hlsInstance) {
-            hlsInstance.destroy(); // Destroy previous Hls instance if exists
+            hlsInstance.destroy();
         }
         hlsInstance = new Hls();
         hlsInstance.loadSource(url);
@@ -101,7 +106,6 @@ function playChannel(url) {
             }
         });
     } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-        // Native HLS support for Safari
         videoElement.src = url;
         videoElement.addEventListener('loadedmetadata', function() {
             videoElement.play();
@@ -111,7 +115,42 @@ function playChannel(url) {
     }
 }
 
+// Function to switch between categories
+function switchCategory(category) {
+    const generalList = document.getElementById('channel-list');
+    const sportList = document.getElementById('sport-channel-list');
+    const btnGeneral = document.getElementById('btn-general');
+    const btnSport = document.getElementById('btn-sport');
+
+    if (category === 'general') {
+        generalList.style.display = 'block';
+        sportList.style.display = 'none';
+        btnGeneral.classList.add('active');
+        btnSport.classList.remove('active');
+        if (generalChannels.length > 0 && (!currentPlayingChannel || !generalChannels.some(c => c.url === currentPlayingChannel.url))) {
+            playChannel(generalChannels[0].url);
+            currentPlayingChannel = generalChannels[0];
+            updateShareLinks(generalChannels[0].url, generalChannels[0].name);
+        }
+    } else if (category === 'sport') {
+        generalList.style.display = 'none';
+        sportList.style.display = 'block';
+        btnGeneral.classList.remove('active');
+        btnSport.classList.add('active');
+        if (sportChannels.length > 0 && (!currentPlayingChannel || !sportChannels.some(c => c.url === currentPlayingChannel.url))) {
+            playChannel(sportChannels[0].url);
+            currentPlayingChannel = sportChannels[0];
+            updateShareLinks(sportChannels[0].url, sportChannels[0].name);
+        }
+    }
+}
+
 // Make functions globally accessible for player.html
 window.fetchAndParseM3U8 = fetchAndParseM3U8;
 window.displayChannels = displayChannels;
 window.playChannel = playChannel;
+window.generalChannels = generalChannels; // Expose for initial load in player.html
+window.sportChannels = sportChannels;     // Expose for initial load in player.html
+window.switchCategory = switchCategory;   // Expose for category buttons
+window.currentPlayingChannel = currentPlayingChannel; // Expose for initial load in player.html
+window.updateShareLinks = updateShareLinks; // Expose updateShareLinks for player.html

@@ -114,52 +114,55 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
     <script>
     // --- LOGIQUE DE PARTAGE SOCIAL ---
-    function updateShareLinks(channelUrl, channelName) {
-        const twitterBtn = document.getElementById('share-twitter');
-        const facebookBtn = document.getElementById('share-facebook');
-        const whatsappBtn = document.getElementById('share-whatsapp');
-
-        const text = `Regardez ${channelName} en direct !`;
-        const pageUrl = `https://amouradore.github.io/chaine-en-live/player.html?channel=${encodeURIComponent(channelUrl)}`;
-
-        if (twitterBtn) twitterBtn.href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(text)}`;
-        if (facebookBtn) facebookBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
-        if (whatsappBtn) whatsappBtn.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(text + ' ' + pageUrl)}`;
-    }
+    // This function is now exposed globally from app.js, so we don't need to redefine it here.
+    // function updateShareLinks(channelUrl, channelName) { ... }
 
     document.addEventListener('DOMContentLoaded', async () => {
-        // Load and display channels
-        const channels = await window.fetchAndParseM3U8('chaine.m3u8');
-        window.displayChannels(channels);
+        // Load both general and sport channels
+        window.generalChannels = await window.fetchAndParseM3U8('chaine.m3u8');
+        window.sportChannels = await window.fetchAndParseM3U8('All_Sports.m3u');
 
-        // Handle initial channel playback
+        // Display general channels by default
+        window.displayChannels(window.generalChannels, 'channel-list');
+        window.displayChannels(window.sportChannels, 'sport-channel-list'); // Populate sport list but keep it hidden
+
+        // Add event listeners for category buttons
+        const btnGeneral = document.getElementById('btn-general');
+        const btnSport = document.getElementById('btn-sport');
+
+        if (btnGeneral) {
+            btnGeneral.addEventListener('click', () => window.switchCategory('general'));
+        }
+        if (btnSport) {
+            btnSport.addEventListener('click', () => window.switchCategory('sport'));
+        }
+
+        // Handle initial channel playback (from URL parameter or first general channel)
         const urlParams = new URLSearchParams(window.location.search);
         const initialChannelUrl = urlParams.get('channel');
         let channelToPlay = null;
+        let initialCategory = 'general'; // Default category
 
         if (initialChannelUrl) {
-            channelToPlay = channels.find(c => c.url === initialChannelUrl);
+            channelToPlay = window.generalChannels.find(c => c.url === initialChannelUrl);
+            if (!channelToPlay) {
+                channelToPlay = window.sportChannels.find(c => c.url === initialChannelUrl);
+                if (channelToPlay) {
+                    initialCategory = 'sport'; // If initial channel is sport, switch category
+                }
+            }
         }
+
+        // Switch to the correct category first
+        window.switchCategory(initialCategory);
 
         if (channelToPlay) {
             window.playChannel(channelToPlay.url);
-            updateShareLinks(channelToPlay.url, channelToPlay.name);
-        } else if (channels.length > 0) {
-            // Play the first channel by default if no specific channel is requested
-            window.playChannel(channels[0].url);
-            updateShareLinks(channels[0].url, channels[0].name);
-        }
-
-        // Update share links when a channel is clicked
-        const channelList = document.getElementById('channel-list');
-        if (channelList) {
-            channelList.addEventListener('click', (e) => {
-                if (e.target && e.target.tagName === 'LI') {
-                    const url = e.target.dataset.url;
-                    const name = e.target.textContent;
-                    updateShareLinks(url, name);
-                }
-            });
+            window.updateShareLinks(channelToPlay.url, channelToPlay.name);
+        } else if (window.generalChannels.length > 0) {
+            // Play the first general channel by default if no specific channel is requested
+            window.playChannel(window.generalChannels[0].url);
+            window.updateShareLinks(window.generalChannels[0].url, window.generalChannels[0].name);
         }
     });
     </script>
