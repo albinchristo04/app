@@ -47,14 +47,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
 
-    const playChannel = (url) => {
-        let sourceUrl = url;
-        // Only use proxy for absolute URLs (external links)
-        if (url.startsWith('http://') || url.startsWith('https://')) {
-            sourceUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
+    const playChannel = async (url) => {
+        try {
+            // Use CORS proxy to fetch the master playlist
+            const masterPlaylistUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
+            const response = await fetch(masterPlaylistUrl);
+            const masterPlaylistContent = await response.text();
+
+            // Parse the master playlist to find the stream URL (assuming it's the last line)
+            const lines = masterPlaylistContent.trim().split('\n');
+            const streamUrlRelative = lines[lines.length - 1];
+
+            // Construct the absolute URL for the stream
+            const baseUrl = url.substring(0, url.lastIndexOf('/') + 1);
+            const streamUrlAbsolute = baseUrl + streamUrlRelative;
+
+            // Use CORS proxy for the final stream URL
+            const sourceUrl = `https://corsproxy.io/?${encodeURIComponent(streamUrlAbsolute)}`;
+            
+            player.src({ src: sourceUrl, type: 'application/x-mpegURL' });
+            player.play();
+        } catch (error) {
+            console.error('Error playing channel:', error);
+            const errorDisplay = player.getChild('errorDisplay');
+            if (errorDisplay) {
+                errorDisplay.getChild('content').el().innerHTML = 'Error loading channel. Please try again later.';
+            }
         }
-        player.src({ src: sourceUrl, type: 'application/x-mpegURL' });
-        player.play();
     };
 
     const handleChannelClick = (e) => {
