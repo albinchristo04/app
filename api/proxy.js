@@ -2,7 +2,7 @@ const https = require('https');
 const { URL } = require('url');
 
 function doProxy(req, res, targetUrlString) {
-    const protocol = targetUrlString.startsWith('https') ? https : require('http');
+    const protocol = https; // Always use HTTPS for outgoing requests
 
     const proxyRequest = protocol.get(targetUrlString, (proxyRes) => {
         if (proxyRes.statusCode >= 300 && proxyRes.statusCode < 400 && proxyRes.headers.location) {
