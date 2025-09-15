@@ -1,0 +1,69 @@
+const https = require('https');
+const { URL } = require('url');
+
+export default function handler(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Request-Method', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
+    res.setHeader('Access-Control-Allow-Headers', '*');
+    if (req.method === 'OPTIONS') {
+        res.writeHead(204);
+        res.end();
+        return;
+    }
+
+    const parsedUrl = new URL(req.url, `http://${req.headers.host}`);
+    const targetUrlString = parsedUrl.searchParams.get('url');
+
+    if (!targetUrlString) {
+        res.writeHead(400, { 'Content-Type': 'text/plain' });
+        res.end('Proxy error: URL parameter is missing.');
+        return;
+    }
+
+    const protocol = targetUrlString.startsWith('https') ? https : require('http');
+
+    const proxyRequest = protocol.get(targetUrlString, (proxyRes) => {
+        if (proxyRes.statusCode !== 200) {
+            res.writeHead(proxyRes.statusCode, proxyRes.headers);
+            proxyRes.pipe(res, { end: true });
+            return;
+        }
+
+        const contentType = proxyRes.headers['content-type'] || '';
+        if (contentType.includes('application/vnd.apple.mpegurl') || contentType.includes('application/x-mpegurl')) {
+            let body = '';
+            proxyRes.on('data', chunk => body += chunk);
+            proxyRes.on('end', () => {
+                const base_url = new URL(targetUrlString);
+                const rewrittenPlaylist = body.split('\n').map(line => {
+                    line = line.trim();
+                    if (line && !line.startsWith('#')) {
+                        const absoluteUrl = new URL(line, base_url).href;
+                        return `/api/proxy?url=${encodeURIComponent(absoluteUrl)}`;
+                    }
+                    return line;
+                }).join('\n');
+
+                res.writeHead(200, {
+                    'Content-Type': 'application/vnd.apple.mpegurl',
+                    'Access-Control-Allow-Origin': '*'
+                });
+                res.end(rewrittenPlaylist);
+            });
+        } else {
+            res.writeHead(proxyRes.statusCode, proxyRes.headers);
+            proxyRes.pipe(res, { end: true });
+        }
+    });
+
+    proxyRequest.on('error', (err) => {
+        console.error('Proxy request error:', err);
+        res.writeHead(500, { 'Content-Type': 'text/plain' });
+        res.end(`Proxy error: ${err.message}`);
+    });
+
+    req.on('close', () => {
+        proxyRequest.destroy();
+    });
+}

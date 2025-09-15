@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let sourceUrl = url;
         // Only use proxy for absolute URLs (external links)
         if (url.startsWith('http://') || url.startsWith('https://')) {
-            sourceUrl = `/proxy?url=${encodeURIComponent(url)}`;
+            sourceUrl = `/api/proxy?url=${encodeURIComponent(url)}`;
         }
         player.src({ src: sourceUrl, type: 'application/x-mpegURL' });
         player.play();
