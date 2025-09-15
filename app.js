@@ -5,7 +5,7 @@ let hlsInstance; // Global Hls instance
 // Function to fetch and parse the M3U8 playlist
 async function fetchAndParseM3U8(m3u8Url) {
     try {
-        const response = await fetch(`/api/proxy?url=${encodeURIComponent(m3u8Url)}`);
+        const response = await fetch(m3u8Url);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
