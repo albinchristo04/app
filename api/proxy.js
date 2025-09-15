@@ -33,6 +33,7 @@ function doProxy(req, res, targetUrlString) {
                 const base_url_for_resolving = new URL(originalTargetUrlString); // Use the original URL for resolving relative paths
                 const rewrittenPlaylist = body.split('\n').map(line => {
                     line = line.trim();
+                    // Rewrite stream URLs (lines that are not comments)
                     if (line && !line.startsWith('#')) {
                         let absoluteUrl = new URL(line, base_url_for_resolving).href;
                         // Force absoluteUrl to HTTPS if it's HTTP
@@ -40,6 +41,16 @@ function doProxy(req, res, targetUrlString) {
                             absoluteUrl = absoluteUrl.replace('http://', 'https://');
                         }
                         return `/api/proxy?url=${encodeURIComponent(absoluteUrl)}`;
+                    }
+                    // Rewrite URI attributes in #EXT-X-STREAM-INF lines
+                    if (line.startsWith('#EXT-X-STREAM-INF') && line.includes('URI="')) {
+                        return line.replace(/URI="(http:\/\/[^\"]+)"/, (match, p1) => {
+                            let uri = p1;
+                            if (uri.startsWith('http://')) {
+                                uri = uri.replace('http://', 'https://');
+                            }
+                            return `URI=\"/api/proxy?url=${encodeURIComponent(uri)}\"`;
+                        });
                     }
                     return line;
                 }).join('\n');
