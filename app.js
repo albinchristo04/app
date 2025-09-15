@@ -119,8 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
             allChannels = parseM3U(generalM3uData);
             displayChannels(allChannels, channelList);
 
-            // Fetch sport channels
-            const sportResponse = await fetch('chaine3.m3u');
+            // Fetch sport channels from All_Sports.m3u
+            const sportResponse = await fetch('All_Sports.m3u');
             if (!sportResponse.ok) throw new Error(`HTTP error! status: ${sportResponse.status}`);
             const sportM3uData = await sportResponse.text();
             sportChannels = parseM3U(sportM3uData);
