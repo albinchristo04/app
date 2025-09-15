@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let channelUrl = urlParams.get('channel');
 
             if (!channelUrl) {
-                const defaultChannel = allChannels.find(c => c.name.trim() === 'BeIN Sport 1 HD');
+                const defaultChannel = { url: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8' };
                 if (defaultChannel) {
                     channelUrl = defaultChannel.url;
                 }
