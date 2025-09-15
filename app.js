@@ -43,28 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- PLAYER & ADS LOGIC ---
     const player = videojs('player');
 
-    // Personnalisation du message d'erreur
-    player.on('error', function() {
-        const errorDisplay = player.getChild('errorDisplay');
-        if (errorDisplay) {
-            errorDisplay.getChild('content').el().innerHTML = 'Refresh the page';
-        }
-    });
+    
 
-    const initAds = () => {
-        try {
-            const myVastAdTagUrl = "YOUR_VAST_AD_TAG_URL_HERE";
-            const adTagUrl = myVastAdTagUrl || 'https://pubads.g.doubleclick.net/gampad/ads?' + 
-                'iu=/21775744923/external/vmap_ad_samples&sz=640x480&' +
-                'cust_params=sample_ar%3Dpremidpostpod&ciu_szs=300x250&' +
-                'gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&' +
-                'correlator=';
-            const imaOptions = { adTagUrl: adTagUrl };
-            player.ima(imaOptions);
-        } catch (e) {
-            console.error("Erreur lors de l'initialisation des publicités:", e);
-        }
-    };
+    
 
     const playChannel = (url) => {
         let sourceUrl = url;
@@ -146,8 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             displayChannels(sportChannels, sportChannelList);
 
 
-            // Ads are initialized after channels are displayed
-            initAds();
+            
 
             // Check for channel in URL or play default
             const urlParams = new URLSearchParams(window.location.search);
