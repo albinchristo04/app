@@ -113,14 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const init = async () => {
         try {
             // Fetch general channels
-            const generalResponse = await fetch('chaine.m3u8');
+            const generalResponse = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('chaine.m3u8')}`);
             if (!generalResponse.ok) throw new Error(`HTTP error! status: ${generalResponse.status}`);
             const generalM3uData = await generalResponse.text();
             allChannels = parseM3U(generalM3uData);
             displayChannels(allChannels, channelList);
 
             // Fetch sport channels from All_Sports.m3u
-            const sportResponse = await fetch('All_Sports.m3u');
+            const sportResponse = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('All_Sports.m3u')}`);
             if (!sportResponse.ok) throw new Error(`HTTP error! status: ${sportResponse.status}`);
             const sportM3uData = await sportResponse.text();
             sportChannels = parseM3U(sportM3uData);
