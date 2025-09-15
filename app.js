@@ -51,10 +51,24 @@ document.addEventListener('DOMContentLoaded', () => {
         let sourceUrl = url;
         // Only use proxy for absolute URLs (external links)
         if (url.startsWith('http://') || url.startsWith('https://')) {
-            sourceUrl = `/api/proxy?url=${encodeURIComponent(url)}`;
+            // Removed corsproxy.io for hls.js integration
+            // sourceUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
         }
-        player.src({ src: sourceUrl, type: 'application/x-mpegURL' });
-        player.play();
+
+        if (Hls.isSupported()) {
+            const video = document.getElementById('player');
+            const hls = new Hls();
+            hls.loadSource(sourceUrl);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                player.play();
+            });
+        } else if (player.canPlayType('application/vnd.apple.mpegurl')) {
+            player.src({ src: sourceUrl, type: 'application/x-mpegURL' });
+            player.play();
+        } else {
+            console.error('HLS is not supported in this browser.');
+        }
     };
 
     const handleChannelClick = (e) => {
@@ -120,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             displayChannels(allChannels, channelList);
 
             // Fetch sport channels from All_Sports.m3u
-            const sportResponse = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('All_Sports.m3u')}`);
+            const sportResponse = await fetch('ALL_Sports.m3u');
             if (!sportResponse.ok) throw new Error(`HTTP error! status: ${sportResponse.status}`);
             const sportM3uData = await sportResponse.text();
             sportChannels = parseM3U(sportM3uData);
