@@ -114,8 +114,18 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
     <script>
     // --- LOGIQUE DE PARTAGE SOCIAL ---
-    // This function is now exposed globally from app.js, so we don't need to redefine it here.
-    // function updateShareLinks(channelUrl, channelName) { ... }
+    function updateShareLinks(channelUrl, channelName) {
+        const twitterBtn = document.getElementById('share-twitter');
+        const facebookBtn = document.getElementById('share-facebook');
+        const whatsappBtn = document.getElementById('share-whatsapp');
+
+        const text = `Regardez ${channelName} en direct !`;
+        const pageUrl = `https://amouradore.github.io/chaine-en-live/player.html?channel=${encodeURIComponent(channelUrl)}`;
+
+        if (twitterBtn) twitterBtn.href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(text)}`;
+        if (facebookBtn) facebookBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+        if (whatsappBtn) whatsappBtn.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(text + ' ' + pageUrl)}`;
+    }
 
     document.addEventListener('DOMContentLoaded', async () => {
         // Load both general and sport channels
@@ -158,11 +168,11 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
         if (channelToPlay) {
             window.playChannel(channelToPlay.url);
-            window.updateShareLinks(channelToPlay.url, channelToPlay.name);
+            updateShareLinks(channelToPlay.url, channelToPlay.name); // Call local updateShareLinks
         } else if (window.generalChannels.length > 0) {
             // Play the first general channel by default if no specific channel is requested
             window.playChannel(window.generalChannels[0].url);
-            window.updateShareLinks(window.generalChannels[0].url, window.generalChannels[0].name);
+            updateShareLinks(window.generalChannels[0].url, window.generalChannels[0].name); // Call local updateShareLinks
         }
     });
     </script>

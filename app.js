@@ -153,4 +153,4 @@ window.generalChannels = generalChannels; // Expose for initial load in player.h
 window.sportChannels = sportChannels;     // Expose for initial load in player.html
 window.switchCategory = switchCategory;   // Expose for category buttons
 window.currentPlayingChannel = currentPlayingChannel; // Expose for initial load in player.html
-window.updateShareLinks = updateShareLinks; // Expose updateShareLinks for player.html
+
