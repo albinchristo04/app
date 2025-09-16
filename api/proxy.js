@@ -5,10 +5,7 @@ function doProxy(req, res, targetUrlString) {
     // Store the original targetUrlString for resolving relative paths later
     const originalTargetUrlString = targetUrlString;
 
-    // Force targetUrlString to HTTPS for the proxy's internal request
-    if (targetUrlString.startsWith('http://')) {
-        targetUrlString = targetUrlString.replace('http://', 'https://');
-    }
+    // The targetUrlString is used as is
 
     const protocol = targetUrlString.startsWith('https') ? https : require('http');
 
@@ -36,19 +33,14 @@ function doProxy(req, res, targetUrlString) {
                     // Rewrite stream URLs (lines that are not comments)
                     if (line && !line.startsWith('#')) {
                         let absoluteUrl = new URL(line, base_url_for_resolving).href;
-                        // Force absoluteUrl to HTTPS if it's HTTP
-                        if (absoluteUrl.startsWith('http://')) {
-                            absoluteUrl = absoluteUrl.replace('http://', 'https://');
-                        }
+                        // The absoluteUrl is used as is
                         return `/api/proxy?url=${encodeURIComponent(absoluteUrl)}`;
                     }
                     // Rewrite URI attributes in #EXT-X-STREAM-INF lines
                     if (line.startsWith('#EXT-X-STREAM-INF') && line.includes('URI="')) {
                         return line.replace(/URI="(http:\/\/[^\"]+)"/, (match, p1) => {
                             let uri = p1;
-                            if (uri.startsWith('http://')) {
-                                uri = uri.replace('http://', 'https://');
-                            }
+                            // The uri is used as is
                             return `URI=\"/api/proxy?url=${encodeURIComponent(uri)}\"`;
                         });
                     }

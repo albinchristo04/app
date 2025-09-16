@@ -77,12 +77,17 @@ function playChannel(url) {
         return;
     }
 
+    let streamUrl = url;
+    if (streamUrl.startsWith('http://')) {
+        streamUrl = `/api/proxy?url=${encodeURIComponent(streamUrl)}`;
+    }
+
     if (Hls.isSupported()) {
         if (hlsInstance) {
             hlsInstance.destroy();
         }
         hlsInstance = new Hls();
-        hlsInstance.loadSource(url);
+        hlsInstance.loadSource(streamUrl);
         hlsInstance.attachMedia(videoElement);
         hlsInstance.on(Hls.Events.MANIFEST_PARSED, function() {
             videoElement.play();
@@ -106,7 +111,7 @@ function playChannel(url) {
             }
         });
     } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-        videoElement.src = url;
+        videoElement.src = streamUrl;
         videoElement.addEventListener('loadedmetadata', function() {
             videoElement.play();
         });
