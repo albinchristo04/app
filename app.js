@@ -14,7 +14,7 @@ async function fetchAndParseM3U8(m3u8Url) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const m3u8Content = await response.text();
-        return parseM3U8(m3u8Content);
+        return parseM3U8(m3u8Content, m3u8Url);
     } catch (error) {
         console.error('Error fetching or parsing M3U8:', error);
         // No need to update channelListElement here, as displayChannels will handle it
@@ -23,7 +23,7 @@ async function fetchAndParseM3U8(m3u8Url) {
 }
 
 // Function to parse M3U8 content
-function parseM3U8(content) {
+function parseM3U8(content, m3u8Url) {
     const lines = content.split('\n');
     const channels = [];
     let currentChannel = {};
@@ -40,6 +40,11 @@ function parseM3U8(content) {
             currentChannel = {}; // Reset for the next channel
         }
     }
+
+    if (m3u8Url === 'All_Sports.m3u') {
+        channels.unshift({ name: 'Test Channel (Public)', url: 'https://ireplay.tv/test/blender.m3u8' });
+    }
+
     return channels;
 }
 
