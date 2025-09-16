@@ -9,7 +9,14 @@ function doProxy(req, res, targetUrlString) {
 
     const protocol = targetUrlString.startsWith('https') ? https : require('http');
 
-    const proxyRequest = protocol.get(targetUrlString, (proxyRes) => {
+    const options = {
+        headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+            'Referer': 'https://chaine-en-live.vercel.app/'
+        }
+    };
+
+    const proxyRequest = protocol.get(targetUrlString, options, (proxyRes) => {
         if (proxyRes.statusCode >= 300 && proxyRes.statusCode < 400 && proxyRes.headers.location) {
             const redirectUrl = new URL(proxyRes.headers.location, targetUrlString).href;
             doProxy(req, res, redirectUrl);
