@@ -1,0 +1,8 @@
+{
+  "appId": "com.chaineenlive.app",
+  "appName": "Chaine en Live",
+  "webDir": "www",
+  "cordova": {
+    "includePlugins": true
+  }
+}
