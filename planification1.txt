@@ -1,0 +1,82 @@
+1. Ce que tu dois avoir dans le code de l’app (Unity/Android)
+
+S-6 à S-4 — fondations
+
+    Consentement & vie privée (GDPR/CCPA)
+        Écran CMP maison (ON/OFF pub personnalisées), lien Politique de confidentialité.
+        Passer le consentement au SDK Unity Ads (MetaData), déclarer AD_ID (Android 13+).
+        Mode mineurs off (si public mineur → pas de pubs personnalisées).
+    Analytics & logs
+        Événements: app_open, session_start, start_stream, ad_load/{placement}, ad_impression/{placement}, ad_error/{code}, share_click, referral_claim, notification_open, rebuffer_ratio, session_end.
+        Crashlytics + journalisation des ad_errors/no-fill.
+    Remote Config léger (JSON hébergé)
+        Paramètres modifiables sans mise à jour: intervalle mid‑roll, caps par session/jour, formats actifs (bannière/interstitiel/rewarded), valeur rewarded (ex: 30 min HD), segments (nouveau vs récurrent), timing des notifications.
+    Mécanisme d’update hors store
+        Check version au démarrage (JSON), bouton “Mettre à jour”.
+        Signature APK + affichage du hash SHA‑256 pour rassurer.
+
+S-4 à S-3 — monétisation propre (Unity Ads)
+
+    Placements distincts
+        inter_preroll (après clic “Lire”, jamais à l’ouverture de l’app)
+        inter_midroll (pendant le live/VOD)
+        inter_nav (quand on quitte le player/retour accueil)
+        rewarded_hd (30 min HD)
+        rewarded_skip (sauter le prochain mid‑roll)
+        banner_home (uniquement sur l’accueil/guide)
+    Logique d’ad‑load (départ)
+        Pré‑roll: 1 interstitiel après clic “Lire”.
+        Mid‑roll: 1 toutes 12 min (testera 10/12/15 plus tard).
+        Inter_nav: max 1 toutes 10 min, cap 2/session.
+        Rewarded: bouton visible “Activer HD 30 min” et “Sauter prochaine pub”; cap 4–6/jour.
+        Bannières: home/guide seulement.
+    Caching & fallback
+        Préchargement dès l’accueil; si pas prêt/no‑fill → ne pas bloquer la vidéo.
+        Timeout de chargement court (2–3 s), reprise du flux immédiate après échec.
+    Caps & pacing côté app
+        Interstitiels ≤2/session et ≤5/jour; cooldown 10 min.
+        Mid‑roll: cooldown 10–15 min (piloté par Remote Config).
+        Sauvegarde des compteurs (PlayerPrefs) + reset quotidien.
+
+S-3 — player & qualité (rétention)
+
+    Lecture HLS/DASH (ExoPlayer via Unity/Android), ABR, faible rebuffer.
+    Détection moment critique/réseau faible → décaler la pub.
+    Reprise frame‑accurate après pub, pas d’overlap audio, pas de pub masquant des contrôles.
+
+S-2 — viralité et attribution sans store
+
+    ID utilisateur aléatoire (uid) généré au 1er lancement.
+    Deep links & partage
+        Schéma: https://tondomaine.app/e/{eventId}?ref={uid}
+        Intent filter Android App Links pour ouvrir l’app depuis lien/QR.
+    Parrainage simple (sans Play Referrer)
+        Dans l’app: “Partager l’événement” envoie le lien ref.
+        Dans l’app du filleul: bouton “Valider le lien de mon ami” (ouvre le deep link → serveur crédite parrain + filleul).
+        Anti‑abus: 1 récompense par nouveau uid + même appareil bloqué, délai 24 h.
+    Récompenses in‑app = utilitaires (pas paywall)
+        HD temporaire, skip mid‑roll, pas de blocage du contenu de base.
+
+S-1 — notifications & contenus live
+
+    Intégration FCM (Firebase Cloud Messaging).
+    Canaux: “Événements en direct”, opt‑in clair, 1–2/j max.
+    In‑app inbox simple (bandeau événement en cours).
+
+Lancement → S+4 — optimisation
+
+    Segmentation automatique
+        Nouveaux (<3 jours): pression pub plus légère, rewarded mis en avant.
+        Récurrents: mid‑roll normal + rewarded; inter_nav limités.
+        Pays/horaires avec no‑fill élevé: bannière off, privilégier rewarded.
+    A/B (une variable à la fois via Remote Config)
+        10 vs 12 vs 15 min mid‑roll; 1 vs 2 interstitiels/session; rewarded 20 vs 30 vs 45 min.
+    KPIs in‑app à viser
+        D1 > 30%, D7 > 10–12%, rebuffer < 3%, impressions/DAU 3–5.
+        Taux d’erreur pub < 5%, no‑fill surveillé par pays/heure.
+
+Rappels conformité
+
+    Jamais de pub au lancement de l’app; bouton “fermer” visible.
+    Pas d’interstitiels posés par‑dessus le player pendant une interaction.
+    Droits de diffusion: sécurisés avant mise en prod.

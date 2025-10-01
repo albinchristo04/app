@@ -1,0 +1,10 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/tnt.png", TNT 1
+https://d11.epicquesthero.com:1686/hls/bbtsp1.m3u8?md5=pHdXcheqQPVkjbFwrnBdEw&expires=1759074797
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/tnt.png", TNT 2
+https://d13.epicquesthero.com:1686/hls/bbtsp2.m3u8?md5=qlduFDZB-hEIdYiQBoVmyA&expires=1759074797
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/tnt.png", TNT 3
+https://d13.epicquesthero.com:1686/hls/bbtsp3.m3u8?md5=ohDuqm5FnDd6Aie5gxyAAg&expires=1759074798
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/tnt.png", TNT 4
+https://d14.epicquesthero.com:1686/hls/bbtespn.m3u8?md5=StEg2nzxSkbvkOR86P3_xA&expires=1759074798
+

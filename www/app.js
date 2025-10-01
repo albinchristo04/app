@@ -36,9 +36,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             const channelItem = document.createElement('a');
 
             let streamUrl = channel.url;
-            if (playlistFile === 'france-sport.m3u') {
-                streamUrl = 'https://chaine-en-live.vercel.app/api/proxy?url=' + encodeURIComponent(channel.url);
-            }
             const destinationUrl = `player.html?stream=${encodeURIComponent(streamUrl)}&playlist=${encodeURIComponent(playlistFile)}`;
             
             channelItem.href = destinationUrl;
@@ -91,16 +88,50 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    function displayMatches(matchesData) {
+        channelListContainer.innerHTML = ''; // Clear existing content
+        channelListContainer.className = 'matches-grid'; // Add a class for styling
+        
+        if (matchesData && matchesData.matches && matchesData.matches.length > 0) {
+            matchesData.matches.forEach(match => {
+                const matchCard = document.createElement('div');
+                matchCard.className = 'match-card';
+
+                matchCard.innerHTML = `
+                    <img src="${match.home_logo}" alt="${match.home} logo" onerror="this.onerror=null;this.src='https://via.placeholder.com/50';">
+                    <div class="match-info">
+                        <h3><span class="team-name">${match.home}</span> vs <span class="team-name">${match.away}</span></h3>
+                        <p>Heure : ${match.time_baghdad} (Baghdad)</p>
+                        <p>Statut : ${match.status_text} (<span class="result">${match.result_text}</span>)</p>
+                        <p>Compétition : ${match.competition}</p>
+                        <p class="channel">Chaîne : ${match.channel || 'Non spécifiée'}</p>
+                    </div>
+                    <img src="${match.away_logo}" alt="${match.away} logo" onerror="this.onerror=null;this.src='https://via.placeholder.com/50';">
+                `;
+                channelListContainer.appendChild(matchCard);
+            });
+        } else {
+            channelListContainer.innerHTML = '<p class="error-message">Aucun match trouvé pour aujourd\'hui.</p>';
+        }
+    }
+
     async function loadPlaylist(playlistFile) {
         try {
-            const response = await fetch(playlistFile);
-            if (!response.ok) throw new Error(`Erreur réseau`);
-            const m3uContent = await response.text();
-            const channels = parseM3U(m3uContent);
-            displayChannels(channels, playlistFile);
+            if (playlistFile === 'matches_today.json') {
+                const response = await fetch('matches/today.json');
+                if (!response.ok) throw new Error(`Erreur réseau: Impossible de charger les matchs du jour. Statut: ${response.status}`);
+                const matchesData = await response.json();
+                displayMatches(matchesData);
+            } else {
+                const response = await fetch(playlistFile);
+                if (!response.ok) throw new Error(`Erreur réseau: Impossible de charger la playlist. Statut: ${response.status}`);
+                const m3uContent = await response.text();
+                const channels = parseM3U(m3uContent);
+                displayChannels(channels, playlistFile);
+            }
         } catch (error) {
-            console.error('Erreur chargement playlist', error);
-            channelListContainer.innerHTML = `<p class="error-message">Impossible de charger la playlist.</p>`;
+            console.error('Erreur chargement playlist ou matchs', error);
+            channelListContainer.innerHTML = `<p class="error-message">Impossible de charger les données.</p>`;
         }
     }
 

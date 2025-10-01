@@ -1,0 +1,10 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/tnt.png", TNT 1
+https://d1.merichunidya.com:1686/hls/bbtsp1.m3u8?md5=aS146nS0Ls2YRrPa03iHbw&expires=1759161276
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/tnt.png", TNT 2
+https://d7.merichunidya.com:1686/hls/bbtsp2.m3u8?md5=yE7LwzOXabQTuTaninFDEA&expires=1759161276
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/tnt.png", TNT 3
+https://d6.merichunidya.com:1686/hls/bbtsp3.m3u8?md5=l2lwc527WaErjNP7Wne_mA&expires=1759161276
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/tnt.png", TNT 4
+https://d8.merichunidya.com:1686/hls/bbtespn.m3u8?md5=91T57T6IPy3y7zr8gjfpEA&expires=1759161277
+

@@ -1,0 +1,6 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/16-by-xfireflix.png", Star Sports 1
+https://d5.merichunidya.com:1686/hls/star1in.m3u8?md5=9OUwNQWVoUeBPQmAr2tbfg&expires=1759161275
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/1-by-xfireflix.png", Star Sports 1 Hindi
+https://d2.merichunidya.com:1686/hls/starhindi.m3u8?md5=7XQf42SSxLuoXPcM8kZBlA&expires=1759161275
+

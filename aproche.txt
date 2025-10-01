@@ -1,0 +1,103 @@
+ Solutions possibles
+?? Option A : Utiliser VLC / LibVLC Android plugin
+
+    Ce qu’on a fait côté Android natif reste ton meilleur choix.
+    Tu peux intégrer cordova-plugin-vlc (fonctionne aussi avec Capacitor).
+    ?? cordova-plugin-vlc
+    Ce plugin appelle LibVLC nativement dans ton APK ? donc ton app se comportera comme VLC et pourra lire tes flux IPTV .ts.
+
+Exemple d’appel dans JS :
+
+JavaScript
+
+VLCPlayer.play([
+  {
+    url: "https://cf.hi-max.me/live/xxxx.ts",
+    title: "Canal+"
+  }
+]);
+
+?? Option B : Utiliser hls.js (si tes flux existent en .m3u8)
+
+Si ton serveur IPTV fournit une playlist HLS (.m3u8) alors tu peux les lire avec le player HTML5 + hls.js.
+
+Dans ton app Capacitor :
+
+HTML
+
+<video id="video" controls autoplay width="100%" height="200"></video>
+
+Puis dans JS :
+
+JavaScript
+
+import Hls from 'hls.js';
+
+function playHLS(url) {
+  const video = document.getElementById('video');
+  if (Hls.isSupported()) {
+    const hls = new Hls();
+    hls.loadSource(url);
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+      video.play();
+    });
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = url; // pour Safari
+  }
+}
+
+// Exemple
+playHLS("https://server/playlist.m3u8");
+
+?? Par contre : si ton fournisseur n’a que des .ts bruts, hls.js ne suffit pas.
+?? Option C : Passer par ExoPlayer (plugin natif Capacitor/Cordova)
+
+Il existe un plugin cordova-plugin-exoplayer qui permet de lire des flux TS/HLS/MPEG-Dash de façon native (comme un vrai lecteur Android).
+?? cordova-plugin-exoplayer
+
+Exemple :
+
+JavaScript
+
+ExoPlayer.show({
+  url: "https://cf.hi-max.me/live/.../106909.ts",
+  title: "Canal+"
+});
+
+?? Recommandation pour toi
+
+Puisque tu veux un lecteur puissant comme VLC et que tes flux .ts sont déjà validés ?
+?? La meilleure solution est d’intégrer LibVLC (via cordova-plugin-vlc) à ton app Capacitor.
+
+En résumé :
+
+    Ajoute le plugin VLC :
+
+Bash
+
+    npm install cordova-plugin-vlc
+    npx cap sync
+
+    Dans ton JS, appelle VLCPlayer.play({url}) à la place de PlayerPlugin.playVideo.
+
+??? Adaptation de ton code
+
+Dans ton channelItem.addEventListener('click') :
+
+JavaScript
+
+channelItem.addEventListener('click', async (event) => {
+    event.preventDefault();
+    try {
+        await AdMob.showInterstitial();
+        VLCPlayer.play([{ url: channel.url, title: channel.name }]);
+    } catch (err) {
+        console.error("Erreur pub ou lecteur", err);
+        VLCPlayer.play([{ url: channel.url, title: channel.name }]);
+    } finally {
+        prepareInterstitialAd();
+    }
+});
+
+? Avec ça, tu auras un lecteur fiable comme VLC, capable de lire tes flux IPTV .ts à l’intérieur de ton APK.

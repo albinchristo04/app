@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مباريات اليوم</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 16px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #333;
+        }
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .back-button {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 12px;
+            background-color: #333;
+            border-radius: 8px;
+        }
+        .competition-group {
+            margin-top: 24px;
+        }
+        .competition-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #4a90e2;
+        }
+        .match-card {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .match-teams {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+        }
+        .team img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 8px;
+        }
+        .team-name {
+            font-size: 14px;
+            text-align: center;
+        }
+        .match-center {
+            text-align: center;
+        }
+        .match-time, .match-result {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .match-status {
+            font-size: 12px;
+            color: #aaa;
+            background-color: #333;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .match-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: #bbb;
+            border-top: 1px solid #333;
+            padding-top: 12px;
+            margin-top: 12px;
+        }
+        .match-channel {
+            margin: 0 10px;
+        }
+        .loading, .error {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>مباريات اليوم</h1>
+        <a href="index.html" class="back-button">العودة للقنوات</a>
+    </header>
+
+    <main id="matches-container">
+        <div class="loading">جاري تحميل المباريات...</div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('matches-container');
+
+            fetch('matches/today.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    container.innerHTML = ''; // Clear loading message
+
+                    if (!data.matches || data.matches.length === 0) {
+                        container.innerHTML = '<div class="error">لا توجد مباريات اليوم.</div>';
+                        return;
+                    }
+
+                    // Group matches by competition
+                    const competitions = data.matches.reduce((acc, match) => {
+                        const comp = match.competition || 'مسابقات أخرى';
+                        if (!acc[comp]) {
+                            acc[comp] = [];
+                        }
+                        acc[comp].push(match);
+                        return acc;
+                    }, {});
+
+                    // Render matches for each competition
+                    for (const competitionName in competitions) {
+                        const competitionGroup = document.createElement('div');
+                        competitionGroup.className = 'competition-group';
+
+                        const competitionTitle = document.createElement('div');
+                        competitionTitle.className = 'competition-title';
+                        competitionTitle.textContent = competitionName;
+                        competitionGroup.appendChild(competitionTitle);
+
+                        competitions[competitionName].forEach(match => {
+                            const card = document.createElement('div');
+                            card.className = 'match-card';
+
+                            let statusText = match.status_text;
+                            let resultOrTime;
+
+                            if (match.status !== 'NS') { // Not Started
+                                resultOrTime = `<div class="match-result">${match.result_text}</div>`;
+                            } else {
+                                // Timezone conversion logic
+                                const matchDate = data.date; // e.g., "2025-10-01"
+                                const baghdadTime = match.time_baghdad; // e.g., "15:00"
+                                
+                                if (matchDate && baghdadTime) {
+                                    // Create an ISO string assuming Baghdad is UTC+3
+                                    const isoString = `${matchDate}T${baghdadTime}:00+03:00`;
+                                    const dateObj = new Date(isoString);
+
+                                    // Check if the date is valid
+                                    if (!isNaN(dateObj)) {
+                                        // Format to user's local time
+                                        const localTime = dateObj.toLocaleTimeString(navigator.language || 'fr-FR', { hour: '2-digit', minute: '2-digit' });
+                                        resultOrTime = `<div class="match-time">${localTime}</div>`;
+                                    } else {
+                                        // Fallback to original time if conversion fails
+                                        resultOrTime = `<div class="match-time">${match.time_baghdad}</div>`;
+                                    }
+                                } else {
+                                    resultOrTime = `<div class="match-time">${match.time_baghdad}</div>`;
+                                }
+                            }
+
+                            card.innerHTML = `
+                                <div class="match-teams">
+                                    <div class="team">
+                                        <img src="${match.home_logo}" alt="${match.home}">
+                                        <div class="team-name">${match.home}</div>
+                                    </div>
+                                    <div class="match-center">
+                                        ${resultOrTime}
+                                        <div class="match-status">${statusText}</div>
+                                    </div>
+                                    <div class="team">
+                                        <img src="${match.away_logo}" alt="${match.away}">
+                                        <div class="team-name">${match.away}</div>
+                                    </div>
+                                </div>
+                                <div class="match-details">
+                                    <span class="match-channel">📺 ${match.channel}</span>
+                                </div>
+                            `;
+                            competitionGroup.appendChild(card);
+                        });
+                        container.appendChild(competitionGroup);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching or parsing matches:', error);
+                    container.innerHTML = '<div class="error">حدث خطأ أثناء تحميل المباريات.</div>';
+                });
+        });
+    </script>
+
+</body>
+</html>

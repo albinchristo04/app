@@ -34,8 +34,23 @@ public class MainActivity extends BridgeActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Initialisation de Unity Ads directement ici
+        // Autoriser le contenu mixte (HTTP/HTTPS) et les cookies tiers pour corriger les problèmes de lecture de flux vidéo.
+        android.webkit.WebView webView = getBridge().getWebView();
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            android.webkit.CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true);
+            webView.getSettings().setMixedContentMode(android.webkit.WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+        }
+        // Ajout de règles supplémentaires pour être moins strict sur les origines des flux
+        webView.getSettings().setAllowUniversalAccessFromFileURLs(true);
+        webView.getSettings().setAllowFileAccessFromFileURLs(true);
+
+
+        initializeUnityAds();
+    }
+
+    private void initializeUnityAds() {
         Log.d(TAG, "Initializing Unity Ads from MainActivity...");
+
         UnityAds.initialize(getApplicationContext(), UNITY_GAME_ID, TEST_MODE, new IUnityAdsInitializationListener() {
             @Override
             public void onInitializationComplete() {
@@ -67,6 +82,7 @@ public class MainActivity extends BridgeActivity {
             @Override
             public void onBannerLoaded(BannerView bn) {
                 Log.d(TAG, "Banner loaded successfully.");
+                adjustWebViewMarginForBanner();
             }
 
             @Override
@@ -102,6 +118,21 @@ public class MainActivity extends BridgeActivity {
         } else {
             Log.e(TAG, "Root view not found, can't add banner.");
         }
+    }
+
+    private void adjustWebViewMarginForBanner() {
+        runOnUiThread(() -> {
+            android.view.View webView = getBridge().getWebView();
+            if (webView != null) {
+                ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) webView.getLayoutParams();
+                // Convert 50dp to pixels for the margin
+                int bannerHeight = (int) (50 * getResources().getDisplayMetrics().density);
+                if (params.bottomMargin != bannerHeight) {
+                    params.bottomMargin = bannerHeight;
+                    webView.setLayoutParams(params);
+                }
+            }
+        });
     }
 
     private void startInterstitialTimer() {
@@ -141,6 +172,12 @@ public class MainActivity extends BridgeActivity {
                         @Override
                         public void onUnityAdsShowComplete(String pId, UnityAds.UnityAdsShowCompletionState state) {
                             Log.d(TAG, "Interstitial Ad finished: " + pId);
+                            // Ad is closed, now tell the WebView to resume.
+                            runOnUiThread(() -> {
+                                if (bridge != null && bridge.getWebView() != null) {
+                                    bridge.getWebView().evaluateJavascript("if (typeof resumePlayback === 'function') { resumePlayback(); }", null);
+                                }
+                            });
                         }
                     });
                 }

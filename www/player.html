@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecteur de Chaîne</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        body { margin: 0; padding: 0; background-color: #000; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial, sans-serif; color: white; }
+        #player-container { width: 100%; max-width: 800px; text-align: center; }
+        #video-player { width: 100%; max-height: 70vh; background-color: #000; }
+        #back-button { margin-top: 10px; padding: 10px 20px; background-color: #333; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        #loading { color: white; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <div id="player-container">
+        <div id="loading">Chargement de la diffusion en cours...</div>
+        <video id="video-player" controls></video>
+        <button id="back-button">Retour à la liste</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const streamUrl = urlParams.get('stream');
+            
+            const videoPlayer = document.getElementById('video-player');
+            const loadingElement = document.getElementById('loading');
+            const backButton = document.getElementById('back-button');
+
+            let hls = null;
+            let hlsUsed = false;
+
+            function playWithHls(url) {
+                if (Hls.isSupported()) {
+                    console.log("Fallback to HLS.js player.");
+                    hlsUsed = true;
+                    if (hls) {
+                        hls.destroy();
+                    }
+                    hls = new Hls();
+                    hls.loadSource(url);
+                    hls.attachMedia(videoPlayer);
+                    hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                        videoPlayer.play().catch(e => console.error("HLS.js autoplay was prevented.", e));
+                    });
+                    hls.on(Hls.Events.ERROR, function(event, data) {
+                        if (data.fatal) {
+                            console.error('Fatal HLS.js error:', data);
+                            loadingElement.style.display = 'block';
+                            loadingElement.textContent = 'Erreur: Impossible de charger ce flux vidéo.';
+                        }
+                    });
+                } else {
+                    loadingElement.textContent = 'Votre navigateur ne supporte pas la lecture de ce type de flux.';
+                }
+            }
+
+            if (streamUrl) {
+                const decodedStreamUrl = decodeURIComponent(streamUrl);
+                
+                videoPlayer.style.display = 'block';
+                loadingElement.style.display = 'none';
+
+                videoPlayer.addEventListener('error', function(e) {
+                    if (!hlsUsed) {
+                        console.error("Native player failed. Trying HLS.js fallback. Error:", e);
+                        playWithHls(decodedStreamUrl);
+                    }
+                });
+
+                console.log("Trying native player first...");
+                videoPlayer.src = decodedStreamUrl;
+                videoPlayer.play().catch(error => {
+                    console.error('Native autoplay was prevented:', error);
+                });
+
+            } else {
+                loadingElement.textContent = 'Aucune URL de diffusion spécifiée.';
+            }
+            
+            backButton.addEventListener('click', () => {
+                if (hls) {
+                    hls.destroy();
+                }
+                
+                const playlistParam = urlParams.get('playlist');
+                if (playlistParam) {
+                    localStorage.setItem('lastPlaylist', playlistParam);
+                    window.location.href = 'index.html';
+                } else {
+                    const lastPlaylist = localStorage.getItem('lastPlaylist');
+                    if (lastPlaylist) {
+                        window.location.href = 'index.html';
+                    } else {
+                        window.history.back();
+                    }
+                }
+            });
+
+            window.resumePlayback = function() {
+                const video = document.getElementById('video-player');
+                if (video && video.paused) {
+                    video.play().catch(e => console.error("Error trying to resume playback:", e));
+                }
+            };
+        });
+    </script>
+</body>
+</html>
