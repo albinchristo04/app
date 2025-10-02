@@ -1,6 +1,4 @@
-# scripts/scrape_yallashoot_to_json.py
 import os
-import json
 import datetime as dt
 from pathlib import Path
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
@@ -9,25 +7,19 @@ import time
 # --- Configuration ---
 BASE_URL = "https://int.soccerway.com/matches/"
 REPO_ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = REPO_ROOT / "matches"
-OUT_DIR.mkdir(parents=True, exist_ok=True)
-OUT_PATH = OUT_DIR / "today.json"
 
 def get_soccerway_url_for_today():
-    """Constructs the URL for today's matches on Soccerway."""
     today = dt.date.today()
     return f"{BASE_URL}{today.year}/{today.month:02d}/{today.day:02d}/"
 
-def scrape_soccerway():
+def capture_page_state():
     """
-    Scrapes match data from Soccerway.com.
-    This version is more robust, handles cookie banners, and waits for dynamic content.
+    This is a DEBUGGING script.
+    It navigates to the page, handles cookies, waits for content,
+    and then saves a screenshot and the rendered HTML for analysis.
     """
     url = get_soccerway_url_for_today()
-    today_iso = dt.date.today().isoformat()
-    all_matches = []
-
-    print(f"[Soccerway] Launching browser...")
+    print(f"[Soccerway-Debug] Launching browser...")
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         ctx = browser.new_context(
@@ -37,117 +29,49 @@ def scrape_soccerway():
         page = ctx.new_page()
         page.set_default_timeout(90000)
 
-        print(f"[Soccerway] Navigating to {url}")
+        print(f"[Soccerway-Debug] Navigating to {url}")
         try:
             page.goto(url, wait_until="domcontentloaded")
         except PWTimeout:
-            print("[Soccerway] Page navigation timed out. Aborting.")
+            print("[Soccerway-Debug] Page navigation timed out.")
             browser.close()
-            return []
+            return
 
-        # --- Step 1: Handle Cookie Consent ---
-        print("[Soccerway] Looking for cookie consent button...")
+        print("[Soccerway-Debug] Looking for cookie consent button...")
         try:
             cookie_button = page.locator('#onetrust-accept-btn-handler, button:has-text("AGREE"), button:has-text("ACCEPT")').first
             cookie_button.wait_for(timeout=15000)
             if cookie_button.is_visible():
-                print("[Soccerway] Cookie consent button found. Clicking it.")
+                print("[Soccerway-Debug] Cookie consent button found. Clicking it.")
                 cookie_button.click()
                 time.sleep(3)
-            else:
-                print("[Soccerway] Cookie button not visible, assuming no banner.")
-        except PWTimeout:
-            print("[Soccerway] Timed out waiting for cookie button. It might not exist, continuing.")
-        except Exception as e:
-            print(f"[Soccerway] Error clicking cookie button: {e}")
+        except Exception:
+            print("[Soccerway-Debug] Could not find or click cookie button, continuing.")
 
-        # --- Step 2: Wait for Match Content ---
-        print("[Soccerway] Waiting for match tables to be rendered dynamically...")
+        print("[Soccerway-Debug] Waiting for match tables to appear...")
         try:
             page.wait_for_selector("table.matches tbody tr", state='attached', timeout=45000)
-            print("[Soccerway] At least one match table seems to be rendered.")
+            print("[Soccerway-Debug] Wait successful. Content should be present.")
         except PWTimeout:
-            print("[Soccerway] Timed out waiting for match content to render. Aborting.")
-            page.screenshot(path=REPO_ROOT / "debug_screenshot.png")
-            browser.close()
-            return []
+            print("[Soccerway-Debug] Timed out waiting for content. Will capture state anyway.")
 
-        # --- Step 3: Scrape the Data ---
-        print("[Soccerway] Starting data extraction...")
-        competition_tables = page.locator('table.matches').all()
-        print(f"[Soccerway] Found {len(competition_tables)} competition tables.")
+        # --- Capture State ---
+        print("[Soccerway-Debug] Capturing page state for analysis...")
+        screenshot_path = REPO_ROOT / "debug_screenshot.png"
+        html_path = REPO_ROOT / "rendered_page.html"
 
-        for table in competition_tables:
-            try:
-                competition_name = table.locator('thead th a').inner_text().strip()
-            except Exception:
-                competition_name = "Unknown Competition"
-
-            match_rows = table.locator('tbody tr').all()
-
-            for row in match_rows:
-                try:
-                    score_time_element = row.locator('td.score-time a')
-                    if score_time_element.count() == 0:
-                        continue
-
-                    home_team = row.locator('td.team-a a').get_attribute('title').strip()
-                    away_team = row.locator('td.team-b a').get_attribute('title').strip()
-                    score_or_time = score_time_element.inner_text().strip()
-
-                    status, result_text, time_utc, status_text = "NS", "", "", "Not Started"
-
-                    if ':' in score_or_time:
-                        time_utc = score_or_time
-                    elif '-' in score_or_time:
-                        status = "FT"
-                        result_text = score_or_time
-                        status_text = "Full-Time"
-                    else:
-                        status = "PST"
-                        status_text = score_or_time
-
-                    all_matches.append({
-                        "id": f"{home_team[:12]}-{away_team[:12]}-{today_iso}".replace(" ", ""),
-                        "home": home_team,
-                        "away": away_team,
-                        "home_logo": "https://via.placeholder.com/50?text=L",
-                        "away_logo": "https://via.placeholder.com/50?text=L",
-                        "time_baghdad": time_utc,
-                        "status": status,
-                        "status_text": status_text,
-                        "result_text": result_text,
-                        "channel": None,
-                        "commentator": None,
-                        "competition": competition_name,
-                        "_source": "soccerway"
-                    })
-                except Exception as e:
-                    continue
+        try:
+            page.screenshot(path=screenshot_path, full_page=True)
+            print(f"[Soccerway-Debug] Screenshot saved to {screenshot_path}")
+            
+            html_content = page.content()
+            with open(html_path, "w", encoding="utf-8") as f:
+                f.write(html_content)
+            print(f"[Soccerway-Debug] Rendered HTML saved to {html_path}")
+        except Exception as e:
+            print(f"[Soccerway-Debug] Failed to capture page state: {e}")
 
         browser.close()
-        print(f"[Soccerway] Successfully extracted {len(all_matches)} matches.")
-        return all_matches
-
-def main():
-    """Main function to run the scraper and write the JSON file."""
-    matches = scrape_soccerway()
-
-    if not matches:
-        print("No matches were scraped. The output file will not be updated, writing empty list.")
-        output_data = {"date": dt.date.today().isoformat(), "source_url": get_soccerway_url_for_today(), "matches": []}
-    else:
-        print(f"[write] Scraped {len(matches)} matches in total.")
-        output_data = {
-            "date": dt.date.today().isoformat(),
-            "source_url": get_soccerway_url_for_today(),
-            "matches": matches
-        }
-
-    with OUT_PATH.open("w", encoding="utf-8") as f:
-        json.dump(output_data, f, ensure_ascii=False, indent=2)
-
-    print(f"[write] Wrote {len(output_data['matches'])} matches to {OUT_PATH}.")
 
 if __name__ == "__main__":
-    main()
+    capture_page_state()
