@@ -28,6 +28,7 @@ def scrape_soccerway():
         ctx = browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127 Safari/537.36",
             locale="en-US",
+            extra_http_headers={"Accept-Language": "en-US,en;q=0.9"}
         )
         page = ctx.new_page()
         page.set_default_timeout(90000)
