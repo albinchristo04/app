@@ -25,14 +25,17 @@ def scrape_thesportsdb():
     api_url = f"{BASE_API_URL}?d={today_date_str}"
     all_matches = []
 
-    print(f"[TheSportsDB] Fetching data from: {api_url}")
+    print(f"[TheSportsDB-Debug] API URL: {api_url}") # DEBUG PRINT
     try:
         response = requests.get(api_url, timeout=30) # 30 second timeout
         response.raise_for_status() # Raise an exception for HTTP errors (4xx or 5xx)
+        raw_data = response.text # Get raw text for debugging
+        print(f"[TheSportsDB-Debug] Raw API Response: {raw_data}") # DEBUG PRINT
+
         data = response.json()
 
         if data and data.get("events"): # The API returns a dict with a key 'events'
-            print(f"[TheSportsDB] Found {len(data["events"])} events.")
+            print(f"[TheSportsDB-Debug] Found {len(data["events"])} events.")
             for event in data["events"]:
                 # Map API fields to our desired JSON structure
                 home_team = event.get("strHomeTeam", "Unknown Home")
@@ -79,12 +82,12 @@ def scrape_thesportsdb():
                     "_source": "thesportsdb"
                 })
         else:
-            print("[TheSportsDB] No events found for today or API response was empty/malformed.")
+            print("[TheSportsDB-Debug] No events found for today or API response was empty/malformed.")
 
     except requests.exceptions.RequestException as e:
-        print(f"[TheSportsDB] Error fetching data from API: {e}")
+        print(f"[TheSportsDB-Debug] Error fetching data from API: {e}")
     except json.JSONDecodeError:
-        print("[TheSportsDB] Error decoding JSON response from API.")
+        print("[TheSportsDB-Debug] Error decoding JSON response from API.")
 
     return all_matches
 
