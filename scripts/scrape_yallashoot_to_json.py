@@ -7,7 +7,6 @@ from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 import time
 
 # --- Configuration ---
-# The new source for match data
 BASE_URL = "https://int.soccerway.com/matches/"
 REPO_ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = REPO_ROOT / "matches"
@@ -17,19 +16,18 @@ OUT_PATH = OUT_DIR / "today.json"
 def get_soccerway_url_for_today():
     """Constructs the URL for today's matches on Soccerway."""
     today = dt.date.today()
-    # Format month and day with leading zeros
     return f"{BASE_URL}{today.year}/{today.month:02d}/{today.day:02d}/"
 
 def scrape_soccerway():
     """
     Scrapes match data from Soccerway.com.
-    NOTE: This script is based on common HTML patterns for this site, as direct
-    inspection was not possible. Selectors may need adjustment.
+    This version is more robust, handles cookie banners, and waits for dynamic content.
     """
     url = get_soccerway_url_for_today()
     today_iso = dt.date.today().isoformat()
     all_matches = []
 
+    print(f"[Soccerway] Launching browser...")
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         ctx = browser.new_context(
@@ -37,82 +35,87 @@ def scrape_soccerway():
             locale="en-US",
         )
         page = ctx.new_page()
-        page.set_default_timeout(90000)  # Increased timeout for this potentially heavier site
+        page.set_default_timeout(90000)
 
         print(f"[Soccerway] Navigating to {url}")
-        page.goto(url, wait_until="domcontentloaded")
         try:
-            # Wait for the main match table container to be visible
-            # Soccerway uses tables with a class `matches`
-            page.wait_for_selector('table.matches', state='visible', timeout=30000)
-            print("[Soccerway] Match tables found.")
+            page.goto(url, wait_until="domcontentloaded")
         except PWTimeout:
-            print("[Soccerway] Timed out waiting for match tables. The page structure might have changed.")
-            # Let's try to accept a cookie banner if it's in the way
-            try:
-                cookie_button = page.query_selector('button:has-text("ACCEPT")') or page.query_selector('button:has-text("AGREE")')
-                if cookie_button:
-                    cookie_button.click()
-                    print("[Soccerway] Clicked cookie consent button. Retrying wait.")
-                    page.wait_for_selector('table.matches', state='visible', timeout=30000)
-                else:
-                    browser.close()
-                    return []
-            except Exception as e:
-                print(f"[Soccerway] Could not click cookie button or find matches after: {e}")
-                browser.close()
-                return []
+            print("[Soccerway] Page navigation timed out. Aborting.")
+            browser.close()
+            return []
 
-        competition_tables = page.query_selector_all('table.matches')
+        # --- Step 1: Handle Cookie Consent ---
+        print("[Soccerway] Looking for cookie consent button...")
+        try:
+            # OneTrust banners often use these IDs or text
+            cookie_button = page.locator('#onetrust-accept-btn-handler, button:has-text("AGREE"), button:has-text("ACCEPT")').first
+            cookie_button.wait_for(timeout=15000) # Wait for the button to be available
+            if cookie_button.is_visible():
+                print("[Soccerway] Cookie consent button found. Clicking it.")
+                cookie_button.click()
+                time.sleep(3) # Wait for the banner to disappear
+            else:
+                print("[Soccerway] Cookie button not visible, assuming no banner.")
+        except PWTimeout:
+            print("[Soccerway] Timed out waiting for cookie button. It might not exist, continuing.")
+        except Exception as e:
+            print(f"[Soccerway] Error clicking cookie button: {e}")
+
+        # --- Step 2: Wait for Match Content ---
+        print("[Soccerway] Waiting for matches to be rendered dynamically...")
+        try:
+            # This is a better selector. We wait for a row that has a team name in it.
+            # This is more specific than just waiting for any table.
+            page.wait_for_selector("tr.match td.team-a a", state='visible', timeout=45000)
+            print("[Soccerway] Match content appears to be rendered.")
+        except PWTimeout:
+            print("[Soccerway] Timed out waiting for match content to render. The page might be empty or the structure has changed. Aborting.")
+            page.screenshot(path=REPO_ROOT / "debug_screenshot.png") # Take a screenshot for debugging
+            browser.close()
+            return []
+
+        # --- Step 3: Scrape the Data ---
+        print("[Soccerway] Starting data extraction...")
+        # A competition is a table with class 'matches'
+        competition_tables = page.locator('table.matches').all()
+
         print(f"[Soccerway] Found {len(competition_tables)} competition tables.")
 
         for table in competition_tables:
             try:
-                # The competition name is usually in the thead of the table
-                competition_name_element = table.query_selector('thead th a')
-                competition_name = competition_name_element.inner_text().strip() if competition_name_element else "Unknown Competition"
-            except AttributeError:
+                competition_name = table.locator('thead th a').inner_text().strip()
+            except Exception:
                 competition_name = "Unknown Competition"
 
-            match_rows = table.query_selector_all('tbody tr:not(.group-head)') # Exclude group headers within a competition
+            # Get all match rows, excluding header/group rows
+            match_rows = table.locator('tbody tr:not(.group-head):not(.empty)').all()
 
             for row in match_rows:
                 try:
-                    home_team_element = row.query_selector('td.team-a a')
-                    away_team_element = row.query_selector('td.team-b a')
-                    score_time_element = row.query_selector('td.score-time a')
+                    home_team = row.locator('td.team-a a').get_attribute('title').strip()
+                    away_team = row.locator('td.team-b a').get_attribute('title').strip()
+                    score_or_time = row.locator('td.score-time a').inner_text().strip()
 
-                    # Skip if essential elements are missing
-                    if not all([home_team_element, away_team_element, score_time_element]):
-                        continue
-
-                    home_team = home_team_element.get_attribute('title').strip()
-                    away_team = away_team_element.get_attribute('title').strip()
-                    score_or_time = score_time_element.inner_text().strip()
-
-                    status = "NS"  # Not Started
-                    result_text = ""
-                    time_utc = ""
-                    status_text = "Not Started"
+                    status, result_text, time_utc, status_text = "NS", "", "", "Not Started"
 
                     if ':' in score_or_time:
                         time_utc = score_or_time
-                    elif '-' in score_or_time: # It's a score like "2 - 1"
+                    elif '-' in score_or_time:
                         status = "FT"  # Assume Full-Time
                         result_text = score_or_time
                         status_text = "Full-Time"
-                    else: # Could be postponed (PST), cancelled (CAN), etc.
-                        status = "PST"
+                    else:
+                        status = "PST" # Postponed or other status
                         status_text = score_or_time
 
-
-                    match_data = {
+                    all_matches.append({
                         "id": f"{home_team[:12]}-{away_team[:12]}-{today_iso}".replace(" ", ""),
                         "home": home_team,
                         "away": away_team,
-                        "home_logo": "https://via.placeholder.com/50?text=L",  # Placeholder logo
-                        "away_logo": "https://via.placeholder.com/50?text=L",  # Placeholder logo
-                        "time_baghdad": time_utc, # Keep key for app compatibility, but value is UTC
+                        "home_logo": "https://via.placeholder.com/50?text=L",
+                        "away_logo": "https://via.placeholder.com/50?text=L",
+                        "time_baghdad": time_utc, # Garder la clé pour la compatibilité avec l'application, mais la valeur est UTC
                         "status": status,
                         "status_text": status_text,
                         "result_text": result_text,
@@ -120,16 +123,14 @@ def scrape_soccerway():
                         "commentator": None,
                         "competition": competition_name,
                         "_source": "soccerway"
-                    }
-                    all_matches.append(match_data)
-
+                    })
                 except Exception as e:
                     print(f"[Soccerway] Error parsing a match row: {e}")
                     continue
 
         browser.close()
+        print(f"[Soccerway] Successfully extracted {len(all_matches)} matches.")
         return all_matches
-
 
 def main():
     """Main function to run the scraper and write the JSON file."""
