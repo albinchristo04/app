@@ -117,16 +117,16 @@
     </main>
 
     <script>
-        // Function to transliterate Arabic/French names to correct English equivalents
+        // Function to transliterate/translate Arabic/French names to English equivalents
         function transliterateToEnglish(text) {
-            // Mapping for specific Arabic team names to their correct English equivalents
+            // Mapping for common Arabic team names and competition names to their correct English equivalents
             const nameMapping = {
-                // Common Arabic team names with their English equivalents
-                "الجيش الرواندي": "Army Rwanda",
+                // Arabic team names with their English equivalents
+                "الجيش الرواندي": "Rwanda Army",
                 "بيراميدز": "Pyramids",
                 "أولمبيك آسفي": "Olympic Safi",
                 "حسنية أكادير": "Hassania Agadir",
-                "كربغ Ağdam": "Qarabag Agdam",  // This is closer to the actual spelling
+                "كربغ Ağdam": "Qarabag Agdam",
                 "كوبنهاجن": "Copenhagen",
                 "يونيون سانت جيلواز": "Union Saint-Gilloise",
                 "نيوكاسل يونايتد": "Newcastle United",
@@ -140,8 +140,8 @@
                 "باريس سان جيرمان": "Paris Saint-Germain",
                 "نابولي": "Napoli",
                 "سبورتنج لشبونة": "Sporting Lisbon",
-                "نهضة بركان": "NA Hussein Dey", // This might be NA Hussein Dey, but if it refers to Raja Beni Mellal, it might be Raja Casablanca
-                "اتحاد يعقوب المنصور": "Union Yaakoub El Mansour",
+                "نهضة بركان": "NA Hussein Dey", 
+                "اتحاد يعقوب المنصور": "Union Yaacoub El Mansour",
                 "باير ليفركوزن": "Bayer Leverkusen",
                 "آيندهوفن": "PSV Eindhoven",
                 "موناكو": "Monaco",
@@ -159,24 +159,100 @@
                 "انتر ميامي": "Inter Miami",
                 "شيكاغو فاير": "Chicago Fire",
                 
-                // Specific teams with proper English names
+                // More Arabic team names
                 "ريال بيتيس": "Real Betis",
-                "دياومو كييف": "Dynamo Kiev",
+                "دياومو كييف": "Dynamo Kyiv",
                 "كريستال بالاس": "Crystal Palace",
-                "Fcnrbخشة": "Fenerbahce", // Fenerbahce in Arabic script
+                "Fcnrbخشة": "Fenerbahce",
                 "رينجرز": "Rangers",
                 "أولمبيك ليون": "Olympique Lyon",
                 "شتوتجارت": "Stuttgart",
+                "لودوجوريتس": "Ludogorets",
+                "ديانجور": "Dinamo Zagreb",
+                "اولمبيك مارسي": "Olympique Marseille",
+                "كاستيلليون": "Castellón",
+                "ايندستريال": "Industrial",
+                "الاتحاد الاسباني": "Spanish Union",
+                "اول اكتوبر": "October First",
+                "اولمبيك خريبكة": "Olympic Khouribga",
+                "اولمبيك طنجة": "Olympic Tangier",
+                "الرجاء الرياضي": "Raja Casablanca",
+                "الوداد البيضاوي": "Wydad Casablanca",
+                "النصر السعودي": "Al Nassr",
+                "الهلال السعودي": "Al Hilal",
+                "الاهلي المصري": "Al Ahly",
+                "الزمالك": "Zamalek",
+                "الهلال السوداني": "Al Hilal Sudan",
+                "المريخ السوداني": "Al Merrikh",
+                "الاهلي الليبي": "Al Ahly Libya",
+                "الاتحاد الليبي": "Al Ittihad Libya",
+                "الترجي التونسي": "Espérance Tunis",
+                "الإفريقي التونسي": "Club Africain",
+                "النجم الساحلي": "Etoile du Sahel",
+                "سيدي بوزيد": "Sidi Bouzid",
+                "اولمبيك الدنف": "Olympic Dainf",
+                "الارزي": "Al-Arzi",
+                "الاندلس": "Al-Andalus",
+                "الشعلة": "Al-Shabab",
+                "التعاون": "Al-Taawoun",
+                "الفتح": "Al-Fateh",
+                "الباطن": "Al-Batin",
+                "القادسية": "Al-Qadisiyah",
+                "الفيصلي": "Al-Faisaly",
+                "الرستميون": "Al-Rastamiyoun",
+                "اولمبيك خمارات": "Olympic Khemarat",
+                "النادي الاهلي": "Al Ahly Club",
+                "اولمبيك اسفي": "Olympic Safi",
                 
-                // Arabic competition names
+                // Arabic competition names with English equivalents
                 "أفريقيا, دوري أبطال أفريقيا - تصفيات": "Africa, CAF Champions League - Qualifiers",
-                "المغرب, الدوري المغربي": "Morocco, Moroccan League",
+                "المغرب, الدوري المغربي": "Morocco, Botola Pro",
                 "أوروبا, دوري أبطال اوروبا": "Europe, UEFA Champions League",
-                "دولي, كأس العالم تحت 20 - المجموعات": "International, World Cup U20 - Groups",
+                "دولي, كأس العالم تحت 20 - المجموعات": "International, FIFA World Cup U20 - Groups",
+                "أوروبا, الدوري الأوروبي": "Europe, UEFA Europa League",
+                "أوروبا, دوري المؤتمر الأوروبي": "Europe, UEFA Europa Conference League",
+                "إنجلترا, الدوري الإنجليزي الممتاز": "England, Premier League",
+                "إسبانيا, الدوري الإسباني": "Spain, La Liga",
+                "إيطاليا, الدوري الإيطالي": "Italy, Serie A",
+                "ألمانيا, الدوري الألماني": "Germany, Bundesliga",
+                "فرنسا, الدوري الفرنسي": "France, Ligue 1",
+                "البرتغال, الدوري البرتغالي": "Portugal, Primeira Liga",
+                "هولندا, الدوري الهولندي": "Netherlands, Eredivisie",
+                "روسيا, الدوري الروسي": "Russia, Russian Premier League",
+                "تركيا, الدوري التركي": "Turkey, Süper Lig",
+                "اليونان, الدوري اليوناني": "Greece, Super League Greece",
+                "النمسا, الدوري النمساوي": "Austria, Austrian Bundesliga",
+                "بلجيكا, الدوري البلجيكي": "Belgium, Belgian Pro League",
+                "إفريقيا, كأس الكونفدرالية": "Africa, CAF Confederation Cup",
+                "إفريقيا, كأس الأمم الإفريقية": "Africa, Africa Cup of Nations",
+                "أوروبا, كأس أوروبا": "Europe, UEFA Euro Cup",
+                "دولي, كأس العالم": "International, FIFA World Cup",
+                "دولي, كأس القارات": "International, FIFA Confederations Cup",
+                "إفريقيا, كأس الأمم الإفريقية تحت 23": "Africa, Africa Cup of Nations U23",
                 
-                // Arabic status text
+                // Arabic status text with English equivalents
                 "لم تبدأ بعد": "Not started yet",
                 "انتهت": "Finished",
+                "غير معروف": "Unknown",
+                "النتيجة النهائية": "Final score",
+                "الوقت الإضافي": "Extra time",
+                "ركلات الترجيح": "Penalty shootout",
+                "انسحب": "Withdrew",
+                "الشوط الأول": "First half",
+                "الشوط الثاني": "Second half",
+                "اوقفت": "Postponed",
+                "الوقت الأصلي": "Regular time",
+                
+                // Arabic channel names with English equivalents
+                "beIN SPORTS HD 4": "beIN SPORTS HD 4",
+                "beIN Sports 3 HD": "beIN Sports 3 HD",
+                "beIN SPORTS HD 1": "beIN SPORTS HD 1",
+                "beIN Sports 6 HD": "beIN Sports 6 HD",
+                "beIN SPORTS HD 9": "beIN SPORTS HD 9",
+                "beIN Sports 5 HD": "beIN Sports 5 HD",
+                "Bein Sports HD2": "Bein Sports HD2",
+                "الرياضية المغربية 3": "Moroccan Sports 3",
+                "أون سبورت 1": "On Sport 1",
                 "غير معروف": "Unknown",
                 
                 // Add more mappings as needed
@@ -187,26 +263,27 @@
                 return nameMapping[text];
             }
             
-            // Some names might be partially in Arabic and need special handling
-            // Check if it contains Arabic script but isn't in our mapping
+            // If text contains Arabic characters but not in our mapping, try to handle common patterns
             if (/[\u0600-\u06FF]/.test(text)) {
-                // For names that are transliterated Arabic, we'll keep the existing name as is
-                // But first try to find if the Arabic text is similar to any known names
-                // by checking for common Arabic-to-English equivalents
-                let processedText = text;
-                
-                // Common Arabic words in team names
-                processedText = processedText
-                    .replace(/ال(.+?)\s+/g, '$1 ') // Remove "ال" prefix
-                    .replace(/\s+ال(.+?)$/g, ' $1') // Remove "ال" prefix in final position
-                    .replace(/(.+?)\s+ال(.+?)$/g, '$1 $2'); // Remove "ال" from middle of name
-                
-                // Return the original text if no mapping is found, to be translated by a service
-                return text;
+                // For team names starting with "ال" (al-), remove prefix and try to find match
+                if (text.startsWith("ال")) {
+                    // Try to match without the "ال" prefix
+                    const withoutPrefix = text.substring(2); // Remove first two characters (ال)
+                    if (nameMapping[withoutPrefix]) {
+                        return nameMapping[withoutPrefix];
+                    }
+                    
+                    // Try to find a match with partial matching
+                    for (const [arabic, english] of Object.entries(nameMapping)) {
+                        if (arabic.includes(withoutPrefix) || withoutPrefix.includes(arabic)) {
+                            return english;
+                        }
+                    }
+                }
             }
             
             // For names that are already in Latin script, return them as is
-            if (/^[A-Za-z\s\-\'\.\&\d]+$/.test(text)) {
+            if (/^[A-Za-z\s\-\'\.\&\d\/]+$/.test(text)) {
                 return text;
             }
             
