@@ -27,7 +27,8 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests # Only requests is needed now
+          pip install requests beautifulsoup4 playwright # Re-add beautifulsoup4 if it was removed, ensure playwright is there
+          playwright install chromium
 
       - name: Run scraper
         run: python scripts/scrape_yallashoot_to_json.py

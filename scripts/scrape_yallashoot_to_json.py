@@ -1,8 +1,8 @@
 import os, json, datetime as dt, time
 from pathlib import Path
 from zoneinfo import ZoneInfo
+
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
-from googletrans import Translator # New import
 
 BAGHDAD_TZ = ZoneInfo("Asia/Baghdad")
 DEFAULT_URL = "https://www.yalla-shoot.info/matches-today/"
@@ -12,7 +12,6 @@ OUT_DIR = REPO_ROOT / "matches"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 OUT_PATH = OUT_DIR / "today.json"
 
-translator = Translator() # Initialize translator
 
 def gradual_scroll(page, step=900, pause=0.25):
     last_h = 0
@@ -25,6 +24,7 @@ def gradual_scroll(page, step=900, pause=0.25):
             time.sleep(pause)
         last_h = h
 
+
 def scrape():
     url = os.environ.get("FORCE_URL") or DEFAULT_URL
     today = dt.datetime.now(BAGHDAD_TZ).date().isoformat()
@@ -35,6 +35,7 @@ def scrape():
             viewport={"width": 1366, "height": 864},
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127 Safari/537.36",
             locale="ar",
+            # 👇 أهم سطر: خلي المتصفح على توقيت بغداد حتى الموقع يطلع الأوقات صح
             timezone_id="Asia/Baghdad",
         )
         page = ctx.new_page()
@@ -115,28 +116,21 @@ def scrape():
     }
 
     for c in cards:
-        # Translate fields from Arabic to English
-        translated_home = translator.translate(c["home"], src='ar', dest='en').text
-        translated_away = translator.translate(c["away"], src='ar', dest='en').text
-        translated_competition = translator.translate(c["competition"], src='ar', dest='en').text
-        translated_status_text = translator.translate(c["status_text"], src='ar', dest='en').text
-        translated_result_text = translator.translate(c["result_text"], src='ar', dest='en').text # Translate result text too
-
-        mid = f"{translated_home[:12]}-{translated_away[:12]}-{today}".replace(" ", "")
+        mid = f"{c['home'][:12]}-{c['away'][:12]}-{today}".replace(" ", "")
         out["matches"].append({
             "id": mid,
-            "home": translated_home,
-            "away": translated_away,
+            "home": c["home"],
+            "away": c["away"],
             "home_logo": c["home_logo"],
             "away_logo": c["away_logo"],
             "time_baghdad": c["time_local"],
-            "status": normalize_status(c["status_text"]), # Keep original status for normalization
-            "status_text": translated_status_text,
-            "result_text": translated_result_text,
+            "status": normalize_status(c["status_text"]),
+            "status_text": c["status_text"],
+            "result_text": c["result_text"],
             "channel": c["channel"] or None,
             "commentator": c["commentator"] or None,
-            "competition": translated_competition,
-            "_source": "yalla1shoot_translated" # Indicate translated source
+            "competition": c["competition"] or None,
+            "_source": "yalla1shoot" # Indicate translated source
         })
 
     with OUT_PATH.open("w", encoding="utf-8") as f:
