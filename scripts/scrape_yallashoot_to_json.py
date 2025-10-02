@@ -13,8 +13,9 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 OUT_PATH = OUT_DIR / "today.json"
 
 def get_soccerway_url_for_today():
+    """Constructs the URL for today's matches on Soccerway."""
     today = dt.date.today()
-    return f"{BASE_URL}{today.year}/{today.month:02d}/{today.day:02d}/"
+    return f"{BASE_URL}{today.year}/{today.month:02d}/{today.day:02d}/?force=1"
 
 def scrape_soccerway():
     url = get_soccerway_url_for_today()
