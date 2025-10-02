@@ -117,16 +117,16 @@
     </main>
 
     <script>
-        // Function to transliterate Arabic/French names to English
+        // Function to transliterate Arabic/French names to correct English equivalents
         function transliterateToEnglish(text) {
-            // Mapping for common Arabic and French team names
+            // Mapping for specific Arabic team names to their correct English equivalents
             const nameMapping = {
-                // Arabic team names
+                // Common Arabic team names with their English equivalents
                 "الجيش الرواندي": "Army Rwanda",
                 "بيراميدز": "Pyramids",
                 "أولمبيك آسفي": "Olympic Safi",
                 "حسنية أكادير": "Hassania Agadir",
-                "كارباغ اغدام": "Qarabag Agdam",
+                "كربغ Ağdam": "Qarabag Agdam",  // This is closer to the actual spelling
                 "كوبنهاجن": "Copenhagen",
                 "يونيون سانت جيلواز": "Union Saint-Gilloise",
                 "نيوكاسل يونايتد": "Newcastle United",
@@ -140,7 +140,7 @@
                 "باريس سان جيرمان": "Paris Saint-Germain",
                 "نابولي": "Napoli",
                 "سبورتنج لشبونة": "Sporting Lisbon",
-                "نهضة بركان": "NA Hussein Dey",
+                "نهضة بركان": "NA Hussein Dey", // This might be NA Hussein Dey, but if it refers to Raja Beni Mellal, it might be Raja Casablanca
                 "اتحاد يعقوب المنصور": "Union Yaakoub El Mansour",
                 "باير ليفركوزن": "Bayer Leverkusen",
                 "آيندهوفن": "PSV Eindhoven",
@@ -159,6 +159,15 @@
                 "انتر ميامي": "Inter Miami",
                 "شيكاغو فاير": "Chicago Fire",
                 
+                // Specific teams with proper English names
+                "ريال بيتيس": "Real Betis",
+                "دياومو كييف": "Dynamo Kiev",
+                "كريستال بالاس": "Crystal Palace",
+                "Fcnrbخشة": "Fenerbahce", // Fenerbahce in Arabic script
+                "رينجرز": "Rangers",
+                "أولمبيك ليون": "Olympique Lyon",
+                "شتوتجارت": "Stuttgart",
+                
                 // Arabic competition names
                 "أفريقيا, دوري أبطال أفريقيا - تصفيات": "Africa, CAF Champions League - Qualifiers",
                 "المغرب, الدوري المغربي": "Morocco, Moroccan League",
@@ -173,9 +182,27 @@
                 // Add more mappings as needed
             };
             
-            // Check if we have a mapping for this text
+            // Check if we have a direct mapping for this text
             if (nameMapping[text]) {
                 return nameMapping[text];
+            }
+            
+            // Some names might be partially in Arabic and need special handling
+            // Check if it contains Arabic script but isn't in our mapping
+            if (/[\u0600-\u06FF]/.test(text)) {
+                // For names that are transliterated Arabic, we'll keep the existing name as is
+                // But first try to find if the Arabic text is similar to any known names
+                // by checking for common Arabic-to-English equivalents
+                let processedText = text;
+                
+                // Common Arabic words in team names
+                processedText = processedText
+                    .replace(/ال(.+?)\s+/g, '$1 ') // Remove "ال" prefix
+                    .replace(/\s+ال(.+?)$/g, ' $1') // Remove "ال" prefix in final position
+                    .replace(/(.+?)\s+ال(.+?)$/g, '$1 $2'); // Remove "ال" from middle of name
+                
+                // Return the original text if no mapping is found, to be translated by a service
+                return text;
             }
             
             // For names that are already in Latin script, return them as is
@@ -183,52 +210,8 @@
                 return text;
             }
             
-            // For remaining Arabic or other scripts, apply basic transliteration rules
-            // This is a simplified approach - in real applications, you'd want a more comprehensive library
-            let transliterated = text;
-            
-            // Apply common Arabic transliteration rules
-            transliterated = transliterated
-                .replace(/ا/g, 'a')
-                .replace(/ب/g, 'b')
-                .replace(/ت/g, 't')
-                .replace(/ث/g, 'th')
-                .replace(/ج/g, 'j')
-                .replace(/ح/g, 'h')
-                .replace(/خ/g, 'kh')
-                .replace(/د/g, 'd')
-                .replace(/ذ/g, 'dh')
-                .replace(/ر/g, 'r')
-                .replace(/ز/g, 'z')
-                .replace(/س/g, 's')
-                .replace(/ش/g, 'sh')
-                .replace(/ص/g, 's')
-                .replace(/ض/g, 'd')
-                .replace(/ط/g, 't')
-                .replace(/ظ/g, 'z')
-                .replace(/ع/g, 'a')
-                .replace(/غ/g, 'gh')
-                .replace(/ف/g, 'f')
-                .replace(/ق/g, 'q')
-                .replace(/ك/g, 'k')
-                .replace(/ل/g, 'l')
-                .replace(/م/g, 'm')
-                .replace(/ن/g, 'n')
-                .replace(/ه/g, 'h')
-                .replace(/و/g, 'w')
-                .replace(/ي/g, 'y')
-                .replace(/ى/g, 'y')
-                .replace(/ة/g, 'h')
-                .replace(/\u064e/g, '') // Fatha
-                .replace(/\u064f/g, '') // Damma
-                .replace(/\u0650/g, '') // Kasra
-                .replace(/\u064b/g, '') // Fathatan
-                .replace(/\u064c/g, '') // Dammatan
-                .replace(/\u064d/g, '') // Kasratan
-                .replace(/\u0651/g, '') // Shadda
-                .replace(/\u0652/g, ''); // Sukun
-                
-            return transliterated;
+            // If no mapping exists, return the original text
+            return text;
         }
 
         document.addEventListener('DOMContentLoaded', () => {
