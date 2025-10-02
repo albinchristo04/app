@@ -712,12 +712,32 @@
                     for (let i = 0; i < lines.length; i++) {
                         const line = lines[i].trim();
                         if (line.startsWith('#EXTINF:')) {
-                            // Check if the channel name matches
-                            if (line.toLowerCase().includes(channelName.toLowerCase()) ||
-                                line.toLowerCase().includes(homeTeam.toLowerCase()) ||
-                                line.toLowerCase().includes(awayTeam.toLowerCase()) ||
-                                line.toLowerCase().includes(competition.toLowerCase())) {
-                                
+                            // Extract just the channel name from the EXTINF line for more accurate matching
+                            let channelNameFromLine = line;
+                            
+                            // Extract the channel name part after the comma
+                            const lastCommaIndex = line.lastIndexOf(',');
+                            if (lastCommaIndex !== -1) {
+                                channelNameFromLine = line.substring(lastCommaIndex + 1).trim();
+                            }
+                            
+                            // Check if the channel name matches with various search strategies
+                            const matchesChannel = 
+                                // Direct match
+                                channelNameFromLine.toLowerCase().includes(channelName.toLowerCase()) ||
+                                // Match with common abbreviations
+                                channelNameFromLine.toLowerCase().replace(/\s+/g, '').includes(channelName.toLowerCase().replace(/\s+/g, '')) ||
+                                // Check if beIN is in the name (for cases like bein sport 3 hd vs beIN Sports 3 HD)
+                                (channelName.toLowerCase().includes('bein') && channelNameFromLine.toLowerCase().includes('bein')) ||
+                                // Check for numeric matches like "bein sport 3" vs "bein sports hd 3"
+                                (/\d/.test(channelName) && /\d/.test(channelNameFromLine) && 
+                                 channelName.replace(/\D/g, '') === channelNameFromLine.replace(/\D/g, '')) ||
+                                // Match if home/away team names are in the channel name
+                                channelNameFromLine.toLowerCase().includes(homeTeam.toLowerCase()) ||
+                                channelNameFromLine.toLowerCase().includes(awayTeam.toLowerCase()) ||
+                                channelNameFromLine.toLowerCase().includes(competition.toLowerCase());
+                            
+                            if (matchesChannel) {
                                 // Get the next line which should be the URL
                                 if (i + 1 < lines.length) {
                                     const nextLine = lines[i + 1].trim();
