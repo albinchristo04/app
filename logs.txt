@@ -1,8 +1,0 @@
-
-Artifacts
-Produced during runtime
-Name 	Size 	Digest 	
-github-pages
-	366 Bytes 	
-sha256:c88a21b64b0b26e26902f00148dab733f3a4624b62956df4809e3a12a94b0812
-

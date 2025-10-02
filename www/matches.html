@@ -119,7 +119,12 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('matches-container');
-
+            
+            // Get today's date in YYYY-MM-DD format
+            const today = new Date();
+            const todayString = today.toISOString().split('T')[0];
+            
+            // First, try to fetch matches from the GitHub source
             fetch('https://amouradore.github.io/chaine-en-live/today.json')
                 .then(response => {
                     if (!response.ok) {
@@ -127,94 +132,290 @@
                     }
                     return response.json();
                 })
-                .then(data => {
+                .then(githubData => {
                     container.innerHTML = ''; // Clear loading message
 
-                    if (!data.matches || data.matches.length === 0) {
-                        container.innerHTML = '<div class="error">No matches today.</div>';
-                        return;
-                    }
+                    // Check if GitHub source has matches for today
+                    const githubMatches = githubData.matches;
 
-                    // Group matches by competition
-                    const competitions = data.matches.reduce((acc, match) => {
-                        const comp = match.competition || 'Other Competitions';
-                        if (!acc[comp]) {
-                            acc[comp] = [];
-                        }
-                        acc[comp].push(match);
-                        return acc;
-                    }, {});
+                    if (githubMatches && githubMatches.length > 0) {
+                        // Group matches by competition
+                        const competitions = githubMatches.reduce((acc, match) => {
+                            const comp = match.competition || 'Other Competitions';
+                            if (!acc[comp]) {
+                                acc[comp] = [];
+                            }
+                            acc[comp].push(match);
+                            return acc;
+                        }, {});
 
-                    // Render matches for each competition
-                    for (const competitionName in competitions) {
-                        const competitionGroup = document.createElement('div');
-                        competitionGroup.className = 'competition-group';
+                        // Render matches for each competition
+                        for (const competitionName in competitions) {
+                            const competitionGroup = document.createElement('div');
+                            competitionGroup.className = 'competition-group';
 
-                        const competitionTitle = document.createElement('div');
-                        competitionTitle.className = 'competition-title';
-                        competitionTitle.textContent = competitionName;
-                        competitionGroup.appendChild(competitionTitle);
+                            const competitionTitle = document.createElement('div');
+                            competitionTitle.className = 'competition-title';
+                            competitionTitle.textContent = competitionName;
+                            competitionGroup.appendChild(competitionTitle);
 
-                        competitions[competitionName].forEach(match => {
-                            const card = document.createElement('div');
-                            card.className = 'match-card';
+                            competitions[competitionName].forEach(match => {
+                                const card = document.createElement('div');
+                                card.className = 'match-card';
 
-                            let statusText = match.status_text;
-                            let resultOrTime;
+                                let statusText = match.status_text;
+                                let resultOrTime;
 
-                            if (match.status !== 'NS') { // Not Started
-                                resultOrTime = `<div class="match-result">${match.result_text}</div>`;
-                            } else {
-                                // Timezone conversion logic
-                                const matchDate = data.date; // e.g., "2025-10-01"
-                                const baghdadTime = match.time_baghdad; // e.g., "15:00"
-                                
-                                if (matchDate && baghdadTime) {
-                                    // Create an ISO string assuming Baghdad is UTC+3
-                                    const isoString = `${matchDate}T${baghdadTime}:00+03:00`;
-                                    const dateObj = new Date(isoString);
+                                if (match.status !== 'NS') { // Not Started
+                                    resultOrTime = `<div class="match-result">${match.result_text}</div>`;
+                                } else {
+                                    // Timezone conversion logic
+                                    const matchDate = githubData.date; // e.g., "2025-10-02"
+                                    const baghdadTime = match.time_baghdad; // e.g., "15:00"
+                                    
+                                    if (matchDate && baghdadTime) {
+                                        // Create an ISO string assuming Baghdad is UTC+3
+                                        const isoString = `${matchDate}T${baghdadTime}:00+03:00`;
+                                        const dateObj = new Date(isoString);
 
-                                    // Check if the date is valid
-                                    if (!isNaN(dateObj)) {
-                                        // Format to user's local time
-                                        const localTime = dateObj.toLocaleTimeString(navigator.language || 'en-US', { hour: '2-digit', minute: '2-digit' });
-                                        resultOrTime = `<div class="match-time">${localTime}</div>`;
+                                        // Check if the date is valid
+                                        if (!isNaN(dateObj)) {
+                                            // Format to user's local time
+                                            const localTime = dateObj.toLocaleTimeString(navigator.language || 'en-US', { hour: '2-digit', minute: '2-digit' });
+                                            resultOrTime = `<div class="match-time">${localTime}</div>`;
+                                        } else {
+                                            // Fallback to original time if conversion fails
+                                            resultOrTime = `<div class="match-time">${match.time_baghdad}</div>`;
+                                        }
                                     } else {
-                                        // Fallback to original time if conversion fails
                                         resultOrTime = `<div class="match-time">${match.time_baghdad}</div>`;
                                     }
-                                } else {
-                                    resultOrTime = `<div class="match-time">${match.time_baghdad}</div>`;
                                 }
-                            }
 
-                            card.innerHTML = `
-                                <div class="match-teams">
-                                    <div class="team">
-                                        <img src="${match.home_logo}" alt="${match.home}">
-                                        <div class="team-name">${match.home}</div>
+                                card.innerHTML = `
+                                    <div class="match-teams">
+                                        <div class="team">
+                                            <img src="${match.home_logo}" alt="${match.home}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
+                                            <div class="team-name">${match.home}</div>
+                                        </div>
+                                        <div class="match-center">
+                                            ${resultOrTime}
+                                            <div class="match-status">${statusText}</div>
+                                        </div>
+                                        <div class="team">
+                                            <img src="${match.away_logo}" alt="${match.away}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
+                                            <div class="team-name">${match.away}</div>
+                                        </div>
                                     </div>
-                                    <div class="match-center">
-                                        ${resultOrTime}
-                                        <div class="match-status">${statusText}</div>
+                                    <div class="match-details">
+                                        <span class="match-channel">📺 ${match.channel}</span>
                                     </div>
-                                    <div class="team">
-                                        <img src="${match.away_logo}" alt="${match.away}">
-                                        <div class="team-name">${match.away}</div>
-                                    </div>
-                                </div>
-                                <div class="match-details">
-                                    <span class="match-channel">📺 ${match.channel}</span>
-                                </div>
-                            `;
-                            competitionGroup.appendChild(card);
-                        });
-                        container.appendChild(competitionGroup);
+                                `;
+                                competitionGroup.appendChild(card);
+                            });
+                            container.appendChild(competitionGroup);
+                        }
+                    } else {
+                        // If no matches from GitHub, try the local file as fallback
+                        return fetch('matches/today.json')
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error(`HTTP error! status: ${response.status}`);
+                                }
+                                return response.json();
+                            })
+                            .then(localData => {
+                                const localMatches = localData.matches;
+
+                                if (!localMatches || localMatches.length === 0) {
+                                    container.innerHTML = '<div class="error">No matches today.</div>';
+                                    return;
+                                }
+
+                                // Group local matches by competition
+                                const localCompetitions = localMatches.reduce((acc, match) => {
+                                    const comp = match.competition || 'Other Competitions';
+                                    if (!acc[comp]) {
+                                        acc[comp] = [];
+                                    }
+                                    acc[comp].push(match);
+                                    return acc;
+                                }, {});
+
+                                // Render local matches for each competition
+                                for (const competitionName in localCompetitions) {
+                                    const competitionGroup = document.createElement('div');
+                                    competitionGroup.className = 'competition-group';
+
+                                    const competitionTitle = document.createElement('div');
+                                    competitionTitle.className = 'competition-title';
+                                    competitionTitle.textContent = competitionName;
+                                    competitionGroup.appendChild(competitionTitle);
+
+                                    localCompetitions[competitionName].forEach(match => {
+                                        const card = document.createElement('div');
+                                        card.className = 'match-card';
+
+                                        let statusText = match.status_text;
+                                        let resultOrTime;
+
+                                        if (match.status !== 'NS') { // Not Started
+                                            resultOrTime = `<div class="match-result">${match.result_text}</div>`;
+                                        } else {
+                                            // Timezone conversion logic using today's date
+                                            const matchDate = todayString; // Use today's date
+                                            const baghdadTime = match.time_baghdad; // e.g., "15:00"
+                                            
+                                            if (matchDate && baghdadTime) {
+                                                // Create an ISO string assuming Baghdad is UTC+3
+                                                const isoString = `${matchDate}T${baghdadTime}:00+03:00`;
+                                                const dateObj = new Date(isoString);
+
+                                                // Check if the date is valid
+                                                if (!isNaN(dateObj)) {
+                                                    // Format to user's local time
+                                                    const localTime = dateObj.toLocaleTimeString(navigator.language || 'en-US', { hour: '2-digit', minute: '2-digit' });
+                                                    resultOrTime = `<div class="match-time">${localTime}</div>`;
+                                                } else {
+                                                    // Fallback to original time if conversion fails
+                                                    resultOrTime = `<div class="match-time">${match.time_baghdad}</div>`;
+                                                }
+                                            } else {
+                                                resultOrTime = `<div class="match-time">${match.time_baghdad}</div>`;
+                                            }
+                                        }
+
+                                        card.innerHTML = `
+                                            <div class="match-teams">
+                                                <div class="team">
+                                                    <img src="${match.home_logo}" alt="${match.home}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
+                                                    <div class="team-name">${match.home}</div>
+                                                </div>
+                                                <div class="match-center">
+                                                    ${resultOrTime}
+                                                    <div class="match-status">${statusText}</div>
+                                                </div>
+                                                <div class="team">
+                                                    <img src="${match.away_logo}" alt="${match.away}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
+                                                    <div class="team-name">${match.away}</div>
+                                                </div>
+                                            </div>
+                                            <div class="match-details">
+                                                <span class="match-channel">📺 ${match.channel}</span>
+                                            </div>
+                                        `;
+                                        competitionGroup.appendChild(card);
+                                    });
+                                    container.appendChild(competitionGroup);
+                                }
+                            })
+                            .catch(localError => {
+                                console.error('Error fetching local matches:', localError);
+                                container.innerHTML = '<div class="error">No matches today from both sources.</div>';
+                            });
                     }
                 })
-                .catch(error => {
-                    console.error('Error fetching or parsing matches:', error);
-                    container.innerHTML = '<div class="error">An error occurred while loading matches.</div>';
+                .catch(githubError => {
+                    console.error('Error fetching GitHub matches:', githubError);
+                    // If GitHub source fails, try the local file as fallback
+                    fetch('matches/today.json')
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(`HTTP error! status: ${response.status}`);
+                            }
+                            return response.json();
+                        })
+                        .then(localData => {
+                            container.innerHTML = ''; // Clear error message
+
+                            const localMatches = localData.matches;
+
+                            if (!localMatches || localMatches.length === 0) {
+                                container.innerHTML = '<div class="error">No matches today.</div>';
+                                return;
+                            }
+
+                            // Group local matches by competition
+                            const localCompetitions = localMatches.reduce((acc, match) => {
+                                const comp = match.competition || 'Other Competitions';
+                                if (!acc[comp]) {
+                                    acc[comp] = [];
+                                }
+                                acc[comp].push(match);
+                                return acc;
+                            }, {});
+
+                            // Render local matches for each competition
+                            for (const competitionName in localCompetitions) {
+                                const competitionGroup = document.createElement('div');
+                                competitionGroup.className = 'competition-group';
+
+                                const competitionTitle = document.createElement('div');
+                                competitionTitle.className = 'competition-title';
+                                competitionTitle.textContent = competitionName;
+                                competitionGroup.appendChild(competitionTitle);
+
+                                localCompetitions[competitionName].forEach(match => {
+                                    const card = document.createElement('div');
+                                    card.className = 'match-card';
+
+                                    let statusText = match.status_text;
+                                    let resultOrTime;
+
+                                    if (match.status !== 'NS') { // Not Started
+                                        resultOrTime = `<div class="match-result">${match.result_text}</div>`;
+                                    } else {
+                                        // Timezone conversion logic using today's date
+                                        const matchDate = todayString; // Use today's date
+                                        const baghdadTime = match.time_baghdad; // e.g., "15:00"
+                                        
+                                        if (matchDate && baghdadTime) {
+                                            // Create an ISO string assuming Baghdad is UTC+3
+                                            const isoString = `${matchDate}T${baghdadTime}:00+03:00`;
+                                            const dateObj = new Date(isoString);
+
+                                            // Check if the date is valid
+                                            if (!isNaN(dateObj)) {
+                                                // Format to user's local time
+                                                const localTime = dateObj.toLocaleTimeString(navigator.language || 'en-US', { hour: '2-digit', minute: '2-digit' });
+                                                resultOrTime = `<div class="match-time">${localTime}</div>`;
+                                            } else {
+                                                // Fallback to original time if conversion fails
+                                                resultOrTime = `<div class="match-time">${match.time_baghdad}</div>`;
+                                            }
+                                        } else {
+                                            resultOrTime = `<div class="match-time">${match.time_baghdad}</div>`;
+                                        }
+                                    }
+
+                                    card.innerHTML = `
+                                        <div class="match-teams">
+                                            <div class="team">
+                                                <img src="${match.home_logo}" alt="${match.home}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
+                                                <div class="team-name">${match.home}</div>
+                                            </div>
+                                            <div class="match-center">
+                                                ${resultOrTime}
+                                                <div class="match-status">${statusText}</div>
+                                            </div>
+                                            <div class="team">
+                                                <img src="${match.away_logo}" alt="${match.away}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
+                                                <div class="team-name">${match.away}</div>
+                                            </div>
+                                        </div>
+                                        <div class="match-details">
+                                            <span class="match-channel">📺 ${match.channel}</span>
+                                        </div>
+                                    `;
+                                    competitionGroup.appendChild(card);
+                                });
+                                container.appendChild(competitionGroup);
+                            }
+                        })
+                        .catch(localError => {
+                            console.error('Error fetching local matches:', localError);
+                            container.innerHTML = '<div class="error">An error occurred while loading matches from both sources.</div>';
+                        });
                 });
         });
     </script>
