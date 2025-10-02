@@ -444,6 +444,7 @@
                                 card.addEventListener('click', () => {
                                     findAndPlayChannel(channelName, match.competition, homeTeam, awayTeam);
                                 });
+                                card.style.cursor = 'pointer'; // Indicate that the card is clickable
                                 competitionGroup.appendChild(card);
                             });
                             container.appendChild(competitionGroup);
@@ -665,8 +666,29 @@
                         });
                 });
                 
+        // M3U parsing function (same as in app.js)
+        function parseM3U(m3uContent) {
+            const channels = [];
+            const lines = m3uContent.split(/\r?\n/);
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (line.startsWith('#EXTINF:')) {
+                    const nextLine = lines[i + 1] ? lines[i + 1].trim() : '';
+                    if (!nextLine || nextLine.startsWith('#')) continue;
+                    const commaIndex = line.lastIndexOf(',');
+                    if (commaIndex === -1) continue;
+                    const name = line.substring(commaIndex + 1).trim();
+                    let logo = 'https://via.placeholder.com/60?text=N/A';
+                    const logoMatch = line.match(/tvg-logo="([^"]*)"/);
+                    if (logoMatch && logoMatch[1]) logo = logoMatch[1];
+                    if (name) channels.push({ name, logo, url: nextLine });
+                }
+            }
+            return channels;
+        }
+        
         // Function to find and play the channel that broadcasts the match
-        function findAndPlayChannel(channelName, competition, homeTeam, awayTeam) {
+        async function findAndPlayChannel(channelName, competition, homeTeam, awayTeam) {
             // List of playlist files to search through
             const playlists = [
                 'bein.m3u',
@@ -684,46 +706,12 @@
             ];
             
             // Try to find the channel in each playlist
-            let channelFound = false;
-            
-            // M3U parsing function (same as in app.js)
-            function parseM3U(m3uContent) {
-                const channels = [];
-                const lines = m3uContent.split(/\r?\n/);
-                for (let i = 0; i < lines.length; i++) {
-                    const line = lines[i].trim();
-                    if (line.startsWith('#EXTINF:')) {
-                        const nextLine = lines[i + 1] ? lines[i + 1].trim() : '';
-                        if (!nextLine || nextLine.startsWith('#')) continue;
-                        const commaIndex = line.lastIndexOf(',');
-                        if (commaIndex === -1) continue;
-                        const name = line.substring(commaIndex + 1).trim();
-                        let logo = 'https://via.placeholder.com/60?text=N/A';
-                        const logoMatch = line.match(/tvg-logo="([^"]*)"/);
-                        if (logoMatch && logoMatch[1]) logo = logoMatch[1];
-                        if (name) channels.push({ name, logo, url: nextLine });
-                    }
-                }
-                return channels;
-            }
-            
-            // Function to search in a specific playlist
-            async function searchInPlaylist(playlist, index) {
-                if (index >= playlists.length) {
-                    // If no channel found in any playlist
-                    if (!channelFound) {
-                        alert(`Channel "${channelName}" not found in any playlist. Competing teams: ${homeTeam} vs ${awayTeam}`);
-                    }
-                    return;
-                }
-                
+            for (const playlist of playlists) {
                 try {
                     const response = await fetch(playlist);
                     if (!response.ok) {
                         console.error(`Failed to fetch ${playlist}:`, response.status);
-                        // Try next playlist
-                        await searchInPlaylist(playlists, index + 1);
-                        return;
+                        continue; // Try next playlist
                     }
                     
                     const m3uContent = await response.text();
@@ -731,49 +719,75 @@
                     
                     // Look for the channel in the parsed channels
                     for (const channel of channels) {
-                        // Normalize names for comparison
-                        function normalizeName(name) {
-                            return name
-                                .toLowerCase()
-                                .replace(/\s+/g, '') // Remove all spaces
-                                .replace(/[^a-z0-9]/g, ''); // Keep only letters and numbers
-                        }
-                        
-                        // Check if the channel name matches with various search strategies
-                        const matchesChannel = 
-                            // Direct match (case insensitive)
-                            channel.name.toLowerCase().includes(channelName.toLowerCase()) ||
-                            // Normalized comparison (remove spaces and special chars)
-                            normalizeName(channel.name).includes(normalizeName(channelName)) ||
-                            // Partial matches - check if main keywords match
-                            (channelName.toLowerCase().includes('bein') && channel.name.toLowerCase().includes('bein') &&
-                             channelName.replace(/\D/g, '').includes(channel.name.replace(/\D/g, ''))) ||
-                            // Check if the channel name contains the number from the requested channel
-                            (/\d/.test(channelName) && channel.name.replace(/\D/g, '').includes(channelName.replace(/\D/g, ''))) ||
-                            // Match if home/away team names are in the channel name
-                            channel.name.toLowerCase().includes(homeTeam.toLowerCase()) ||
-                            channel.name.toLowerCase().includes(awayTeam.toLowerCase()) ||
-                            channel.name.toLowerCase().includes(competition.toLowerCase());
-                        
-                        if (matchesChannel) {
+                        // Enhanced matching algorithm
+                        if (matchChannelNames(channel.name, channelName, homeTeam, awayTeam)) {
                             // Channel found, redirect to player with the stream URL
                             window.location.href = `player.html?stream=${encodeURIComponent(channel.url)}&playlist=${encodeURIComponent(playlist)}&match=${encodeURIComponent(homeTeam + ' vs ' + awayTeam)}&channel=${encodeURIComponent(channelName)}`;
-                            channelFound = true;
-                            return; // Stop searching
+                            return; // Exit function after redirect
                         }
                     }
-                    
-                    // Continue searching in the next playlist
-                    await searchInPlaylist(playlists, index + 1);
                 } catch (error) {
                     console.error(`Error searching in playlist ${playlist}:`, error);
                     // Continue to next playlist
-                    await searchInPlaylist(playlists, index + 1);
                 }
             }
             
-            // Start searching from the first playlist
-            searchInPlaylist(playlists, 0);
+            // If no channel found in any playlist
+            alert(`Channel "${channelName}" not found in any playlist. Competing teams: ${homeTeam} vs ${awayTeam}`);
+        }
+        
+        // Function to match channel names with various strategies
+        function matchChannelNames(channelNameFromList, requestedChannelName, homeTeam, awayTeam) {
+            // Convert both names to lowercase for case-insensitive comparison
+            const listNameLower = channelNameFromList.toLowerCase();
+            const requestedNameLower = requestedChannelName.toLowerCase();
+            
+            // Strategy 1: Direct inclusion match
+            if (listNameLower.includes(requestedNameLower)) {
+                return true;
+            }
+            
+            // Strategy 2: Check for common variations - remove common suffixes/prefixes
+            const cleanListName = listNameLower
+                .replace(/\bhd\b/g, '')      // Remove "HD"
+                .replace(/\bsports?\b/g, '') // Remove "Sport" or "Sports"
+                .replace(/\bchannel?\b/g, '')// Remove "Channel"
+                .replace(/\bpremium?\b/g, '')// Remove "Premium"
+                .replace(/\s+/g, '');        // Remove all spaces
+            
+            const cleanRequestedName = requestedNameLower
+                .replace(/\bhd\b/g, '')
+                .replace(/\bsports?\b/g, '')
+                .replace(/\bchannel?\b/g, '')
+                .replace(/\bpremium?\b/g, '')
+                .replace(/\s+/g, '');
+            
+            if (cleanListName.includes(cleanRequestedName) || cleanRequestedName.includes(cleanListName)) {
+                return true;
+            }
+            
+            // Strategy 3: Numeric match - if both names contain numbers, check if they match
+            const listNumbers = channelNameFromList.replace(/\D/g, '');
+            const requestedNumbers = requestedChannelName.replace(/\D/g, '');
+            
+            if (listNumbers && requestedNumbers && listNumbers.includes(requestedNumbers)) {
+                // Additional check: make sure the alphabetic parts also match somewhat
+                const listLetters = channelNameFromList.replace(/[^a-zA-Z]/g, '').toLowerCase();
+                const requestedLetters = requestedChannelName.replace(/[^a-zA-Z]/g, '').toLowerCase();
+                
+                if (listLetters.includes('bein') && requestedLetters.includes('bein')) return true;
+                if (listLetters.includes('dazn') && requestedLetters.includes('dazn')) return true;
+                if (listLetters.includes('ssc') && requestedLetters.includes('ssc')) return true;
+                if (listLetters.includes('sky') && requestedLetters.includes('sky')) return true;
+                if (listLetters.includes('tnt') && requestedLetters.includes('tnt')) return true;
+            }
+            
+            // Strategy 4: Team name match - if team names appear in the channel name
+            if (listNameLower.includes(homeTeam.toLowerCase()) || listNameLower.includes(awayTeam.toLowerCase())) {
+                return true;
+            }
+            
+            return false;
         }
     });
     </script>
