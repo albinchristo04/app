@@ -2,127 +2,100 @@ import os
 import json
 import datetime as dt
 from pathlib import Path
-from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
-import time
+import requests # New import
 
 # --- Configuration ---
-BASE_URL = "https://int.soccerway.com/matches/"
+API_KEY = "1" # Free API key for v1, will try this first
+BASE_API_URL = f"https://www.thesportsdb.com/api/v1/json/{API_KEY}/eventsday.php" # Common v1 endpoint for events by day
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = REPO_ROOT / "matches"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 OUT_PATH = OUT_DIR / "today.json"
 
-def get_soccerway_url_for_today():
-    """Constructs the URL for today's matches on Soccerway."""
-    today = dt.date.today()
-    return f"{BASE_URL}{today.year}/{today.month:02d}/{today.day:02d}/?force=1"
+def get_today_date_str():
+    """Returns today's date in YYYY-MM-DD format."""
+    return dt.date.today().strftime("%Y-%m-%d")
 
-def scrape_soccerway():
-    url = get_soccerway_url_for_today()
-    today_iso = dt.date.today().isoformat()
+def scrape_thesportsdb():
+    """
+    Fetches match data from TheSportsDB.com API.
+    """
+    today_date_str = get_today_date_str()
+    api_url = f"{BASE_API_URL}?d={today_date_str}"
     all_matches = []
 
-    print(f"[Soccerway] Launching browser...")
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        ctx = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127 Safari/537.36",
-            locale="en-US",
-            extra_http_headers={"Accept-Language": "en-US,en;q=0.9"}
-        )
-        page = ctx.new_page()
-        page.set_default_timeout(90000)
+    print(f"[TheSportsDB] Fetching data from: {api_url}")
+    try:
+        response = requests.get(api_url, timeout=30) # 30 second timeout
+        response.raise_for_status() # Raise an exception for HTTP errors (4xx or 5xx)
+        data = response.json()
 
-        print(f"[Soccerway] Navigating to {url}")
-        try:
-            page.goto(url, wait_until="domcontentloaded")
-        except PWTimeout:
-            print("[Soccerway] Page navigation timed out. Aborting.")
-            browser.close()
-            return []
+        if data and data.get("events"): # The API returns a dict with a key 'events'
+            print(f"[TheSportsDB] Found {len(data["events"])} events.")
+            for event in data["events"]:
+                # Map API fields to our desired JSON structure
+                home_team = event.get("strHomeTeam", "Unknown Home")
+                away_team = event.get("strAwayTeam", "Unknown Away")
+                competition = event.get("strLeague", "Unknown League")
+                event_time = event.get("strTime", "") # Format: HH:MM:SS
+                event_date = event.get("dateEvent", today_date_str) # Format: YYYY-MM-DD
+                event_status = event.get("strStatus", "NS") # e.g., "FT", "NS", "HT"
+                final_score = event.get("strResult", "") # e.g., "1-0"
 
-        print("[Soccerway] Looking for cookie consent button...")
-        try:
-            cookie_button = page.locator('#onetrust-accept-btn-handler').first
-            cookie_button.wait_for(timeout=15000)
-            if cookie_button.is_visible():
-                print("[Soccerway] Cookie consent button found. Clicking it.")
-                cookie_button.click()
-                time.sleep(3)
-        except Exception:
-            print("[Soccerway] Could not find or click cookie button, continuing.")
+                # Construct a unique ID
+                match_id = f"{home_team[:12]}-{away_team[:12]}-{event_date}".replace(" ", "")
 
-        print("[Soccerway] Waiting for match content to render...")
-        try:
-            page.wait_for_selector("div.table-container table.matches", state='visible', timeout=45000)
-            print("[Soccerway] Match content appears to be rendered.")
-        except PWTimeout:
-            print("[Soccerway] Timed out waiting for match content to render. Aborting.")
-            browser.close()
-            return []
+                # TheSportsDB doesn't always provide logos directly in this endpoint, use placeholders
+                home_logo = event.get("strHomeTeamBadge", "https://via.placeholder.com/50?text=H")
+                away_logo = event.get("strAwayTeamBadge", "https://via.placeholder.com/50?text=A")
 
-        competition_divs = page.locator('div.table-container').all()
-        print(f"[Soccerway] Found {len(competition_divs)} competition containers.")
+                # Status mapping
+                status_code = "NS"
+                status_text = "Not Started"
+                if event_status == "FT":
+                    status_code = "FT"
+                    status_text = "Full-Time"
+                elif event_status == "HT":
+                    status_code = "HT"
+                    status_text = "Half-Time"
+                elif event_status and event_status != "NS": # Other statuses like "Postponed"
+                    status_code = "PST"
+                    status_text = event_status
 
-        for container in competition_divs:
-            try:
-                competition_name = container.locator('h2.block_header a').inner_text().strip()
-            except Exception:
-                competition_name = "Unknown Competition"
+                all_matches.append({
+                    "id": match_id,
+                    "home": home_team,
+                    "away": away_team,
+                    "home_logo": home_logo,
+                    "away_logo": away_logo,
+                    "time_baghdad": event_time, # Keeping the key name for app compatibility
+                    "status": status_code,
+                    "status_text": status_text,
+                    "result_text": final_score,
+                    "channel": event.get("strTVStation", None), # API might provide this
+                    "commentator": None, # API unlikely to provide this
+                    "competition": competition,
+                    "_source": "thesportsdb"
+                })
+        else:
+            print("[TheSportsDB] No events found for today or API response was empty/malformed.")
 
-            match_rows = container.locator('table.matches tbody tr').all()
-            for row in match_rows:
-                try:
-                    score_time_element = row.locator('td.score-time a')
-                    if score_time_element.count() == 0:
-                        continue
+    except requests.exceptions.RequestException as e:
+        print(f"[TheSportsDB] Error fetching data from API: {e}")
+    except json.JSONDecodeError:
+        print("[TheSportsDB] Error decoding JSON response from API.")
 
-                    home_team = row.locator('td.team-a a').get_attribute('title').strip()
-                    away_team = row.locator('td.team-b a').get_attribute('title').strip()
-                    score_or_time = score_time_element.inner_text().strip()
-
-                    status, result_text, time_utc, status_text = "NS", "", "", "Not Started"
-
-                    if ':' in score_or_time:
-                        time_utc = score_or_time
-                    elif '-' in score_or_time.strip():
-                        status = "FT"
-                        result_text = score_or_time.strip()
-                        status_text = "Full-Time"
-                    else:
-                        status = "PST"
-                        status_text = score_or_time.strip()
-
-                    all_matches.append({
-                        "id": f"{home_team[:12]}-{away_team[:12]}-{today_iso}".replace(" ", ""),
-                        "home": home_team,
-                        "away": away_team,
-                        "home_logo": "https://via.placeholder.com/50?text=L",
-                        "away_logo": "https://via.placeholder.com/50?text=L",
-                        "time_baghdad": time_utc,
-                        "status": status,
-                        "status_text": status_text,
-                        "result_text": result_text,
-                        "channel": None,
-                        "commentator": None,
-                        "competition": competition_name,
-                        "_source": "soccerway"
-                    })
-                except Exception:
-                    continue
-
-        browser.close()
-        print(f"[Soccerway] Successfully extracted {len(all_matches)} matches.")
-        return all_matches
+    return all_matches
 
 def main():
-    matches = scrape_soccerway()
+    matches = scrape_thesportsdb()
     if not matches:
         print("No matches were scraped. Writing empty list to JSON.")
-        output_data = {"date": dt.date.today().isoformat(), "source_url": get_soccerway_url_for_today(), "matches": []}
+        output_data = {"date": get_today_date_str(), "source_url": f"{BASE_API_URL}?d={get_today_date_str()}", "matches": []}
     else:
         print(f"[write] Scraped {len(matches)} matches in total.")
-        output_data = {"date": dt.date.today().isoformat(), "source_url": get_soccerway_url_for_today(), "matches": matches}
+        output_data = {"date": get_today_date_str(), "source_url": f"{BASE_API_URL}?d={get_today_date_str()}", "matches": matches}
     with OUT_PATH.open("w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
     print(f"[write] Wrote {len(output_data['matches'])} matches to {OUT_PATH}.")
