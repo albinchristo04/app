@@ -117,6 +117,120 @@
     </main>
 
     <script>
+        // Function to transliterate Arabic/French names to English
+        function transliterateToEnglish(text) {
+            // Mapping for common Arabic and French team names
+            const nameMapping = {
+                // Arabic team names
+                "الجيش الرواندي": "Army Rwanda",
+                "بيراميدز": "Pyramids",
+                "أولمبيك آسفي": "Olympic Safi",
+                "حسنية أكادير": "Hassania Agadir",
+                "كارباغ اغدام": "Qarabag Agdam",
+                "كوبنهاجن": "Copenhagen",
+                "يونيون سانت جيلواز": "Union Saint-Gilloise",
+                "نيوكاسل يونايتد": "Newcastle United",
+                "الجيش الملكي": "Royal Army",
+                "اتحاد طنجة": "Tangier Union",
+                "بوروسيا دورتموند": "Borussia Dortmund",
+                "أتلتيك بلباو": "Athletic Bilbao",
+                "فياريال": "Villarreal",
+                "يوفنتوس": "Juventus",
+                "برشلونة": "Barcelona",
+                "باريس سان جيرمان": "Paris Saint-Germain",
+                "نابولي": "Napoli",
+                "سبورتنج لشبونة": "Sporting Lisbon",
+                "نهضة بركان": "NA Hussein Dey",
+                "اتحاد يعقوب المنصور": "Union Yaakoub El Mansour",
+                "باير ليفركوزن": "Bayer Leverkusen",
+                "آيندهوفن": "PSV Eindhoven",
+                "موناكو": "Monaco",
+                "مانشستر سيتي": "Manchester City",
+                "أرسنال": "Arsenal",
+                "أولمبياكوس": "Olympiacos",
+                "إسبانيا تحت 20": "Spain U20",
+                "المكسيك تحت 20": "Mexico U20",
+                "إيطاليا تحت 20": "Italy U20",
+                "كوبا تحت 20": "Cuba U20",
+                "تشيلي تحت 20": "Chile U20",
+                "اليابان تحت 20": "Japan U20",
+                "كوريا الجنوبية تحت 20": "South Korea U20",
+                "باراغواي تحت 20": "Paraguay U20",
+                "انتر ميامي": "Inter Miami",
+                "شيكاغو فاير": "Chicago Fire",
+                
+                // Arabic competition names
+                "أفريقيا, دوري أبطال أفريقيا - تصفيات": "Africa, CAF Champions League - Qualifiers",
+                "المغرب, الدوري المغربي": "Morocco, Moroccan League",
+                "أوروبا, دوري أبطال اوروبا": "Europe, UEFA Champions League",
+                "دولي, كأس العالم تحت 20 - المجموعات": "International, World Cup U20 - Groups",
+                
+                // Arabic status text
+                "لم تبدأ بعد": "Not started yet",
+                "انتهت": "Finished",
+                "غير معروف": "Unknown",
+                
+                // Add more mappings as needed
+            };
+            
+            // Check if we have a mapping for this text
+            if (nameMapping[text]) {
+                return nameMapping[text];
+            }
+            
+            // For names that are already in Latin script, return them as is
+            if (/^[A-Za-z\s\-\'\.\&\d]+$/.test(text)) {
+                return text;
+            }
+            
+            // For remaining Arabic or other scripts, apply basic transliteration rules
+            // This is a simplified approach - in real applications, you'd want a more comprehensive library
+            let transliterated = text;
+            
+            // Apply common Arabic transliteration rules
+            transliterated = transliterated
+                .replace(/ا/g, 'a')
+                .replace(/ب/g, 'b')
+                .replace(/ت/g, 't')
+                .replace(/ث/g, 'th')
+                .replace(/ج/g, 'j')
+                .replace(/ح/g, 'h')
+                .replace(/خ/g, 'kh')
+                .replace(/د/g, 'd')
+                .replace(/ذ/g, 'dh')
+                .replace(/ر/g, 'r')
+                .replace(/ز/g, 'z')
+                .replace(/س/g, 's')
+                .replace(/ش/g, 'sh')
+                .replace(/ص/g, 's')
+                .replace(/ض/g, 'd')
+                .replace(/ط/g, 't')
+                .replace(/ظ/g, 'z')
+                .replace(/ع/g, 'a')
+                .replace(/غ/g, 'gh')
+                .replace(/ف/g, 'f')
+                .replace(/ق/g, 'q')
+                .replace(/ك/g, 'k')
+                .replace(/ل/g, 'l')
+                .replace(/م/g, 'm')
+                .replace(/ن/g, 'n')
+                .replace(/ه/g, 'h')
+                .replace(/و/g, 'w')
+                .replace(/ي/g, 'y')
+                .replace(/ى/g, 'y')
+                .replace(/ة/g, 'h')
+                .replace(/\u064e/g, '') // Fatha
+                .replace(/\u064f/g, '') // Damma
+                .replace(/\u0650/g, '') // Kasra
+                .replace(/\u064b/g, '') // Fathatan
+                .replace(/\u064c/g, '') // Dammatan
+                .replace(/\u064d/g, '') // Kasratan
+                .replace(/\u0651/g, '') // Shadda
+                .replace(/\u0652/g, ''); // Sukun
+                
+            return transliterated;
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('matches-container');
             
@@ -141,7 +255,8 @@
                     if (githubMatches && githubMatches.length > 0) {
                         // Group matches by competition
                         const competitions = githubMatches.reduce((acc, match) => {
-                            const comp = match.competition || 'Other Competitions';
+                            // Transliterate the competition name
+                            const comp = transliterateToEnglish(match.competition) || 'Other Competitions';
                             if (!acc[comp]) {
                                 acc[comp] = [];
                             }
@@ -163,7 +278,8 @@
                                 const card = document.createElement('div');
                                 card.className = 'match-card';
 
-                                let statusText = match.status_text;
+                                // Transliterate status text
+                                let statusText = transliterateToEnglish(match.status_text);
                                 let resultOrTime;
 
                                 if (match.status !== 'NS') { // Not Started
@@ -192,23 +308,28 @@
                                     }
                                 }
 
+                                // Transliterate team names and channel
+                                const homeTeam = transliterateToEnglish(match.home);
+                                const awayTeam = transliterateToEnglish(match.away);
+                                const channelName = transliterateToEnglish(match.channel);
+
                                 card.innerHTML = `
                                     <div class="match-teams">
                                         <div class="team">
-                                            <img src="${match.home_logo}" alt="${match.home}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
-                                            <div class="team-name">${match.home}</div>
+                                            <img src="${match.home_logo}" alt="${homeTeam}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
+                                            <div class="team-name">${homeTeam}</div>
                                         </div>
                                         <div class="match-center">
                                             ${resultOrTime}
                                             <div class="match-status">${statusText}</div>
                                         </div>
                                         <div class="team">
-                                            <img src="${match.away_logo}" alt="${match.away}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
-                                            <div class="team-name">${match.away}</div>
+                                            <img src="${match.away_logo}" alt="${awayTeam}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
+                                            <div class="team-name">${awayTeam}</div>
                                         </div>
                                     </div>
                                     <div class="match-details">
-                                        <span class="match-channel">📺 ${match.channel}</span>
+                                        <span class="match-channel">📺 ${channelName}</span>
                                     </div>
                                 `;
                                 competitionGroup.appendChild(card);
@@ -234,7 +355,8 @@
 
                                 // Group local matches by competition
                                 const localCompetitions = localMatches.reduce((acc, match) => {
-                                    const comp = match.competition || 'Other Competitions';
+                                    // Transliterate the competition name
+                                    const comp = transliterateToEnglish(match.competition) || 'Other Competitions';
                                     if (!acc[comp]) {
                                         acc[comp] = [];
                                     }
@@ -256,7 +378,8 @@
                                         const card = document.createElement('div');
                                         card.className = 'match-card';
 
-                                        let statusText = match.status_text;
+                                        // Transliterate status text
+                                        let statusText = transliterateToEnglish(match.status_text);
                                         let resultOrTime;
 
                                         if (match.status !== 'NS') { // Not Started
@@ -285,23 +408,28 @@
                                             }
                                         }
 
+                                        // Transliterate team names and channel
+                                        const homeTeam = transliterateToEnglish(match.home);
+                                        const awayTeam = transliterateToEnglish(match.away);
+                                        const channelName = transliterateToEnglish(match.channel);
+
                                         card.innerHTML = `
                                             <div class="match-teams">
                                                 <div class="team">
-                                                    <img src="${match.home_logo}" alt="${match.home}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
-                                                    <div class="team-name">${match.home}</div>
+                                                    <img src="${match.home_logo}" alt="${homeTeam}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
+                                                    <div class="team-name">${homeTeam}</div>
                                                 </div>
                                                 <div class="match-center">
                                                     ${resultOrTime}
                                                     <div class="match-status">${statusText}</div>
                                                 </div>
                                                 <div class="team">
-                                                    <img src="${match.away_logo}" alt="${match.away}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
-                                                    <div class="team-name">${match.away}</div>
+                                                    <img src="${match.away_logo}" alt="${awayTeam}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
+                                                    <div class="team-name">${awayTeam}</div>
                                                 </div>
                                             </div>
                                             <div class="match-details">
-                                                <span class="match-channel">📺 ${match.channel}</span>
+                                                <span class="match-channel">📺 ${channelName}</span>
                                             </div>
                                         `;
                                         competitionGroup.appendChild(card);
@@ -337,7 +465,8 @@
 
                             // Group local matches by competition
                             const localCompetitions = localMatches.reduce((acc, match) => {
-                                const comp = match.competition || 'Other Competitions';
+                                // Transliterate the competition name
+                                const comp = transliterateToEnglish(match.competition) || 'Other Competitions';
                                 if (!acc[comp]) {
                                     acc[comp] = [];
                                 }
@@ -359,7 +488,8 @@
                                     const card = document.createElement('div');
                                     card.className = 'match-card';
 
-                                    let statusText = match.status_text;
+                                    // Transliterate status text
+                                    let statusText = transliterateToEnglish(match.status_text);
                                     let resultOrTime;
 
                                     if (match.status !== 'NS') { // Not Started
@@ -388,23 +518,28 @@
                                         }
                                     }
 
+                                    // Transliterate team names and channel
+                                    const homeTeam = transliterateToEnglish(match.home);
+                                    const awayTeam = transliterateToEnglish(match.away);
+                                    const channelName = transliterateToEnglish(match.channel);
+
                                     card.innerHTML = `
                                         <div class="match-teams">
                                             <div class="team">
-                                                <img src="${match.home_logo}" alt="${match.home}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
-                                                <div class="team-name">${match.home}</div>
+                                                <img src="${match.home_logo}" alt="${homeTeam}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
+                                                <div class="team-name">${homeTeam}</div>
                                             </div>
                                             <div class="match-center">
                                                 ${resultOrTime}
                                                 <div class="match-status">${statusText}</div>
                                             </div>
                                             <div class="team">
-                                                <img src="${match.away_logo}" alt="${match.away}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
-                                                <div class="team-name">${match.away}</div>
+                                                <img src="${match.away_logo}" alt="${awayTeam}" onerror="this.src='https://via.placeholder.com/60?text=N/A';">
+                                                <div class="team-name">${awayTeam}</div>
                                             </div>
                                         </div>
                                         <div class="match-details">
-                                            <span class="match-channel">📺 ${match.channel}</span>
+                                            <span class="match-channel">📺 ${channelName}</span>
                                         </div>
                                     `;
                                     competitionGroup.appendChild(card);
