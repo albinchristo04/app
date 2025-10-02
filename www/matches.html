@@ -263,27 +263,75 @@
                 return nameMapping[text];
             }
             
-            // If text contains Arabic characters but not in our mapping, try to handle common patterns
+            // If text contains Arabic characters but not in our mapping, apply transliteration rules
             if (/[\u0600-\u06FF]/.test(text)) {
-                // For team names starting with "ال" (al-), remove prefix and try to find match
-                if (text.startsWith("ال")) {
-                    // Try to match without the "ال" prefix
+                // For team names starting with "ال" (al-), handle the prefix appropriately
+                if (text.startsWith("ال") && text.length > 2) {
+                    // Remove the prefix and try to match the rest
                     const withoutPrefix = text.substring(2); // Remove first two characters (ال)
                     if (nameMapping[withoutPrefix]) {
                         return nameMapping[withoutPrefix];
                     }
-                    
-                    // Try to find a match with partial matching
-                    for (const [arabic, english] of Object.entries(nameMapping)) {
-                        if (arabic.includes(withoutPrefix) || withoutPrefix.includes(arabic)) {
-                            return english;
-                        }
-                    }
                 }
+                
+                // Apply transliteration rules for Arabic to English
+                let transliterated = text
+                    .replace(/ا/g, 'a')
+                    .replace(/أ/g, 'a')
+                    .replace(/إ/g, 'i')
+                    .replace(/آ/g, 'a')
+                    .replace(/ب/g, 'b')
+                    .replace(/ت/g, 't')
+                    .replace(/ث/g, 'th')
+                    .replace(/ج/g, 'j')
+                    .replace(/ح/g, 'h')
+                    .replace(/خ/g, 'kh')
+                    .replace(/د/g, 'd')
+                    .replace(/ذ/g, 'dh')
+                    .replace(/ر/g, 'r')
+                    .replace(/ز/g, 'z')
+                    .replace(/س/g, 's')
+                    .replace(/ش/g, 'sh')
+                    .replace(/ص/g, 's')
+                    .replace(/ض/g, 'd')
+                    .replace(/ط/g, 't')
+                    .replace(/ظ/g, 'z')
+                    .replace(/ع/g, 'a') // This is actually 'ayn, but for team names we often simplify
+                    .replace(/غ/g, 'gh')
+                    .replace(/ف/g, 'f')
+                    .replace(/ق/g, 'q')
+                    .replace(/ك/g, 'k')
+                    .replace(/ل/g, 'l')
+                    .replace(/م/g, 'm')
+                    .replace(/ن/g, 'n')
+                    .replace(/ه/g, 'h')
+                    .replace(/و/g, 'w')
+                    .replace(/ي/g, 'y')
+                    .replace(/ى/g, 'y')
+                    .replace(/ة/g, 'h') // ta' marbuta
+                    .replace(/ؤ/g, 'u')
+                    .replace(/ئ/g, 'i')
+                    .replace(/لا/g, 'la')
+                    .replace(/ﻷ/g, 'laa')
+                    .replace(/ﻹ/g, 'lai')
+                    .replace(/ﻵ/g, 'laa');
+                
+                // Remove Arabic diacritics if any
+                transliterated = transliterated
+                    .replace(/\u064B/g, '') // Fathatan
+                    .replace(/\u064C/g, '') // Dammatan
+                    .replace(/\u064D/g, '') // Kasratan
+                    .replace(/\u064E/g, '') // Fatha
+                    .replace(/\u064F/g, '') // Damma
+                    .replace(/\u0650/g, '') // Kasra
+                    .replace(/\u0651/g, '') // Shadda
+                    .replace(/\u0652/g, ''); // Sukun
+                
+                return transliterated;
             }
             
             // For names that are already in Latin script, return them as is
-            if (/^[A-Za-z\s\-\'\.\&\d\/]+$/.test(text)) {
+            if (/^[A-Za-z\s\-\'\.\&\d\/\(\)]+$/.test(text)) {
                 return text;
             }
             
