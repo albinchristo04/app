@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaînes en Direct</title>
+    <title>Live Channels</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Chaînes en Direct</h1>
+        <h1>Live Channels</h1>
         <div class="file-selector">
-            <label for="playlist-select">Choisir une playlist :</label>
+            <label for="playlist-select">Choose a playlist:</label>
             <select id="playlist-select">
                 <option value="sport-espn.m3u">ESPN</option>
                 <option value="dazn.m3u">DAZN</option>
@@ -24,12 +24,12 @@
                 <option value="willow.m3u">Willow</option>
             </select>
         </div>
-        <a href="matches.html" id="matches-button">Matche d'aujourd'hui</a>
+        <a href="matches.html" id="matches-button">Today's Matches</a>
     </header>
     <div id="banner-ad"></div>
     <main>
         <div id="channel-list">
-            <!-- Les chaînes seront injectées ici par JavaScript -->
+            <!-- Channels will be injected here by JavaScript -->
         </div>
     </main>
     <script src="app.js"></script>

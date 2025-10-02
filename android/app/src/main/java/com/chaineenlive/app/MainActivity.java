@@ -25,7 +25,7 @@ public class MainActivity extends BridgeActivity {
     private static final String BANNER_AD_UNIT_ID = "banner";
     private static final String INTERSTITIAL_AD_UNIT_ID = "interstitial-android";
     private static final boolean TEST_MODE = false; // Mettre  false en production
-    private static final long INTERSTITIAL_INTERVAL = 5 * 60 * 1000; // 5 minutes
+    private static final long INTERSTITIAL_INTERVAL = 15 * 60 * 1000; // 15 minutes
 
     private BannerView bannerView;
     private Timer interstitialTimer;

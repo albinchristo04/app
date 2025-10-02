@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Chaine en Live</string>
-    <string name="title_activity_main">Chaine en Live</string>
+    <string name="app_name">Live Channels</string>
+    <string name="title_activity_main">Live Channels</string>
     <string name="package_name">com.chaineenlive.app</string>
     <string name="custom_url_scheme">com.chaineenlive.app</string>
 </resources>

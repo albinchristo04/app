@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مباريات اليوم</title>
+    <title>Today's Matches</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -109,19 +108,19 @@
 <body>
 
     <header>
-        <h1>مباريات اليوم</h1>
-        <a href="index.html" class="back-button">العودة للقنوات</a>
+        <h1>Today's Matches</h1>
+        <a href="index.html" class="back-button">Back to Channels</a>
     </header>
 
     <main id="matches-container">
-        <div class="loading">جاري تحميل المباريات...</div>
+        <div class="loading">Loading matches...</div>
     </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('matches-container');
 
-            fetch('matches/today.json')
+            fetch('https://amouradore.github.io/chaine-en-live/today.json')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
@@ -132,13 +131,13 @@
                     container.innerHTML = ''; // Clear loading message
 
                     if (!data.matches || data.matches.length === 0) {
-                        container.innerHTML = '<div class="error">لا توجد مباريات اليوم.</div>';
+                        container.innerHTML = '<div class="error">No matches today.</div>';
                         return;
                     }
 
                     // Group matches by competition
                     const competitions = data.matches.reduce((acc, match) => {
-                        const comp = match.competition || 'مسابقات أخرى';
+                        const comp = match.competition || 'Other Competitions';
                         if (!acc[comp]) {
                             acc[comp] = [];
                         }
@@ -178,7 +177,7 @@
                                     // Check if the date is valid
                                     if (!isNaN(dateObj)) {
                                         // Format to user's local time
-                                        const localTime = dateObj.toLocaleTimeString(navigator.language || 'fr-FR', { hour: '2-digit', minute: '2-digit' });
+                                        const localTime = dateObj.toLocaleTimeString(navigator.language || 'en-US', { hour: '2-digit', minute: '2-digit' });
                                         resultOrTime = `<div class="match-time">${localTime}</div>`;
                                     } else {
                                         // Fallback to original time if conversion fails
@@ -215,7 +214,7 @@
                 })
                 .catch(error => {
                     console.error('Error fetching or parsing matches:', error);
-                    container.innerHTML = '<div class="error">حدث خطأ أثناء تحميل المباريات.</div>';
+                    container.innerHTML = '<div class="error">An error occurred while loading matches.</div>';
                 });
         });
     </script>

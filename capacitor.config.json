@@ -1,6 +1,6 @@
 {
   "appId": "com.chaineenlive.app",
-  "appName": "Chaine en Live",
+  "appName": "Live Channels",
   "webDir": "www",
   "cordova": {
     "includePlugins": true
