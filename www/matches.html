@@ -731,17 +731,25 @@
                     
                     // Look for the channel in the parsed channels
                     for (const channel of channels) {
+                        // Normalize names for comparison
+                        function normalizeName(name) {
+                            return name
+                                .toLowerCase()
+                                .replace(/\s+/g, '') // Remove all spaces
+                                .replace(/[^a-z0-9]/g, ''); // Keep only letters and numbers
+                        }
+                        
                         // Check if the channel name matches with various search strategies
                         const matchesChannel = 
-                            // Direct match
+                            // Direct match (case insensitive)
                             channel.name.toLowerCase().includes(channelName.toLowerCase()) ||
-                            // Match with common abbreviations
-                            channel.name.toLowerCase().replace(/\s+/g, '').includes(channelName.toLowerCase().replace(/\s+/g, '')) ||
-                            // Check if beIN is in the name (for cases like bein sport 3 hd vs beIN Sports 3 HD)
-                            (channelName.toLowerCase().includes('bein') && channel.name.toLowerCase().includes('bein')) ||
-                            // Check for numeric matches like "bein sport 3" vs "bein sports hd 3"
-                            (/\d/.test(channelName) && /\d/.test(channel.name) && 
-                             channelName.replace(/\D/g, '') === channel.name.replace(/\D/g, '')) ||
+                            // Normalized comparison (remove spaces and special chars)
+                            normalizeName(channel.name).includes(normalizeName(channelName)) ||
+                            // Partial matches - check if main keywords match
+                            (channelName.toLowerCase().includes('bein') && channel.name.toLowerCase().includes('bein') &&
+                             channelName.replace(/\D/g, '').includes(channel.name.replace(/\D/g, ''))) ||
+                            // Check if the channel name contains the number from the requested channel
+                            (/\d/.test(channelName) && channel.name.replace(/\D/g, '').includes(channelName.replace(/\D/g, ''))) ||
                             // Match if home/away team names are in the channel name
                             channel.name.toLowerCase().includes(homeTeam.toLowerCase()) ||
                             channel.name.toLowerCase().includes(awayTeam.toLowerCase()) ||
