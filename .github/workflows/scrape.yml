@@ -31,7 +31,16 @@ jobs:
           playwright install chromium
 
       - name: Run scraper
+        id: scraper
         run: python scripts/scrape_yallashoot_to_json.py
+
+      - name: Upload Debug Screenshot
+        uses: actions/upload-artifact@v4
+        if: always() # Toujours exécuter cette étape
+        with:
+          name: debug-screenshot
+          path: debug_screenshot.png
+          if-no-files-found: ignore # Ne pas échouer si la capture d'écran n'existe pas
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
