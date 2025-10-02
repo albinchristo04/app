@@ -6,10 +6,9 @@ on:
     - cron: '0 1 * * *'
 
 permissions:
-  contents: write # Required to commit changes back to the repo if needed
+  contents: read
   pages: write
   id-token: write
-  actions: write # Required to upload artifacts
 
 jobs:
   scrape-and-deploy:
@@ -31,25 +30,13 @@ jobs:
           pip install playwright
           playwright install chromium
 
-      - name: Run DEBUG scraper to capture page state
+      - name: Run scraper
         run: python scripts/scrape_yallashoot_to_json.py
 
-      - name: Upload Debug Artifacts
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: debug-artifacts
-          path: |
-            debug_screenshot.png
-            rendered_page.html
-          if-no-files-found: ignore
-          retention-days: 1 # Keep artifacts for 1 day
-
-      # The following steps will likely fail or do nothing, which is OK for this debug run
       - name: Setup Pages
         uses: actions/configure-pages@v5
       
-      - name: Upload artifact for deployment
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './matches'
