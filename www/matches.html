@@ -440,6 +440,10 @@
                                         <span class="match-channel">📺 ${channelName}</span>
                                     </div>
                                 `;
+                                // Add click event to the card to find and play the channel
+                                card.addEventListener('click', () => {
+                                    findAndPlayChannel(channelName, match.competition, homeTeam, awayTeam);
+                                });
                                 competitionGroup.appendChild(card);
                             });
                             container.appendChild(competitionGroup);
@@ -660,7 +664,87 @@
                             container.innerHTML = '<div class="error">An error occurred while loading matches from both sources.</div>';
                         });
                 });
-        });
+                
+        // Function to find and play the channel that broadcasts the match
+        function findAndPlayChannel(channelName, competition, homeTeam, awayTeam) {
+            // List of playlist files to search through
+            const playlists = [
+                'bein.m3u',
+                'dazn.m3u', 
+                'SSC.m3u',
+                'sky_sports.m3u',
+                'tnt_sports.m3u',
+                'willow.m3u',
+                'ptv_sports.m3u',
+                'star_sports.m3u',
+                'sport-espn.m3u',
+                'mbc.m3u',
+                'france-sport.m3u',
+                'chaine-us.m3u'
+            ];
+            
+            // Try to find the channel in each playlist
+            let channelFound = false;
+            
+            // Function to search in a specific playlist
+            async function searchInPlaylist(playlist, index) {
+                if (index >= playlists.length) {
+                    // If no channel found in any playlist
+                    if (!channelFound) {
+                        alert(`Channel "${channelName}" not found in any playlist. Competing teams: ${homeTeam} vs ${awayTeam}`);
+                    }
+                    return;
+                }
+                
+                try {
+                    const response = await fetch(playlist);
+                    if (!response.ok) {
+                        console.error(`Failed to fetch ${playlist}:`, response.status);
+                        // Try next playlist
+                        await searchInPlaylist(playlists, index + 1);
+                        return;
+                    }
+                    
+                    const m3uContent = await response.text();
+                    const lines = m3uContent.split(/\r?\n/);
+                    
+                    // Look for the channel in the playlist
+                    for (let i = 0; i < lines.length; i++) {
+                        const line = lines[i].trim();
+                        if (line.startsWith('#EXTINF:')) {
+                            // Check if the channel name matches
+                            if (line.toLowerCase().includes(channelName.toLowerCase()) ||
+                                line.toLowerCase().includes(homeTeam.toLowerCase()) ||
+                                line.toLowerCase().includes(awayTeam.toLowerCase()) ||
+                                line.toLowerCase().includes(competition.toLowerCase())) {
+                                
+                                // Get the next line which should be the URL
+                                if (i + 1 < lines.length) {
+                                    const nextLine = lines[i + 1].trim();
+                                    if (nextLine && !nextLine.startsWith('#')) {
+                                        // Channel found, redirect to player with the stream URL
+                                        window.location.href = `player.html?stream=${encodeURIComponent(nextLine)}&playlist=${encodeURIComponent(playlist)}&match=${encodeURIComponent(homeTeam + ' vs ' + awayTeam)}&channel=${encodeURIComponent(channelName)}`;
+                                        channelFound = true;
+                                        return; // Stop searching
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    // Continue searching in the next playlist
+                    await searchInPlaylist(playlists, index + 1);
+                } catch (error) {
+                    console.error(`Error searching in playlist ${playlist}:`, error);
+                    // Continue to next playlist
+                    await searchInPlaylist(playlists, index + 1);
+                }
+            }
+            
+            // Start searching from the first playlist
+            searchInPlaylist(playlists, 0);
+        }
+    });
     </script>
 
 </body>
