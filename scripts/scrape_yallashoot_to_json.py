@@ -1,131 +1,149 @@
-import os
-import json
-import datetime as dt
+import os, json, datetime as dt, time
 from pathlib import Path
-import requests
+from zoneinfo import ZoneInfo
+from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
+from googletrans import Translator # New import
 
-# --- Configuration ---
-API_KEY = "123"
-BASE_API_URL = f"https://www.thesportsdb.com/api/v1/json/{API_KEY}/"
+BAGHDAD_TZ = ZoneInfo("Asia/Baghdad")
+DEFAULT_URL = "https://www.yalla-shoot.info/matches-today/"
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = REPO_ROOT / "matches"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 OUT_PATH = OUT_DIR / "today.json"
 
-POPULAR_SOCCER_LEAGUE_IDS = ["4328"] # English Premier League
+translator = Translator() # Initialize translator
 
-def get_today_date_str():
-    return dt.date.today().strftime("%Y-%m-%d")
+def gradual_scroll(page, step=900, pause=0.25):
+    last_h = 0
+    while True:
+        h = page.evaluate("() => document.body.scrollHeight")
+        if h <= last_h:
+            break
+        for y in range(0, h, step):
+            page.evaluate(f"window.scrollTo(0, {y});")
+            time.sleep(pause)
+        last_h = h
 
-def scrape_thesportsdb():
-    today_date_str = get_today_date_str()
-    all_matches = []
-    
-    for league_id in POPULAR_SOCCER_LEAGUE_IDS:
-        # --- Fetch Next Events ---
-        next_events_url = f"{BASE_API_URL}eventsnextleague.php?id={league_id}"
-        print(f"[TheSportsDB-Debug] Fetching next events from: {next_events_url}")
+def scrape():
+    url = os.environ.get("FORCE_URL") or DEFAULT_URL
+    today = dt.datetime.now(BAGHDAD_TZ).date().isoformat()
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        ctx = browser.new_context(
+            viewport={"width": 1366, "height": 864},
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127 Safari/537.36",
+            locale="ar",
+            timezone_id="Asia/Baghdad",
+        )
+        page = ctx.new_page()
+        page.set_default_timeout(60000)
+
+        print("[open]", url)
+        page.goto(url, wait_until="domcontentloaded", timeout=60000)
         try:
-            response = requests.get(next_events_url, timeout=30)
-            response.raise_for_status()
-            data = response.json()
-            print(f"[TheSportsDB-Debug] Raw API Response (Next Events): {response.text}") # DEBUG PRINT
+            page.wait_for_load_state("networkidle", timeout=20000)
+        except PWTimeout:
+            pass
 
-            if data and data.get("events"): # The API returns a dict with a key 'events'
-                print(f"[TheSportsDB-Debug] Found {len(data["events"])} next events for League ID {league_id}.")
-                for event in data["events"]:
-                    # Filter for today's events
-                    if event.get("dateEvent") == today_date_str:
-                        all_matches.append(event)
-            else:
-                print(f"[TheSportsDB-Debug] No next events found for League ID {league_id} or API response was empty/malformed.")
+        gradual_scroll(page)
 
-        except requests.exceptions.RequestException as e:
-            print(f"[TheSportsDB-Debug] Error fetching next events from API for League ID {league_id}: {e}")
-        except json.JSONDecodeError:
-            print(f"[TheSportsDB-Debug] Error decoding JSON response (Next Events) from API for League ID {league_id}.")
+        js = r"""
+            () => {
+                const cards = [];
+                document.querySelectorAll('.AY_Inner').forEach((inner, idx) => {
+                    const root = inner.parentElement || inner;
+                    const qText = (sel) => {
+                        const el = root.querySelector(sel);
+                        return el ? el.textContent.trim() : "";
+                    };
+                    const qAttr = (sel, attr) => {
+                        const el = root.querySelector(sel);
+                        if (!el) return "";
+                        return el.getAttribute(attr) || el.getAttribute('data-' + attr) || "";
+                    };
 
-        # --- Fetch Past Events ---
-        past_events_url = f"{BASE_API_URL}eventspastleague.php?id={league_id}"
-        print(f"[TheSportsDB-Debug] Fetching past events from: {past_events_url}")
-        try:
-            response = requests.get(past_events_url, timeout=30)
-            response.raise_for_status()
-            data = response.json()
-            print(f"[TheSportsDB-Debug] Raw API Response (Past Events): {response.text}") # DEBUG PRINT
+                    const home = qText('.MT_Team.TM1 .TM_Name');
+                    const away = qText('.MT_Team.TM2 .TM_Name');
+                    const homeLogo = qAttr('.MT_Team.TM1 .TM_Logo img', 'src') || qAttr('.MT_Team.TM1 .TM_Logo img', 'data-src');
+                    const awayLogo = qAttr('.MT_Team.TM2 .TM_Logo img', 'src') || qAttr('.MT_Team.TM2 .TM_Logo img', 'data-src');
+                    const time = qText('.MT_Data .MT_Time');
+                    const result = qText('.MT_Data .MT_Result');
+                    const status = qText('.MT_Data .MT_Stat');
+                    const infoLis = Array.from(root.querySelectorAll('.MT_Info li span')).map(x => x.textContent.trim());
+                    const channel = infoLis[0] || "";
+                    const commentator = infoLis[1] || "";
+                    const competition = infoLis[2] || "";
 
-            if data and data.get("events"): # The API returns a dict with a key 'events'
-                print(f"[TheSportsDB-Debug] Found {len(data["events"])} past events for League ID {league_id}.")
-                for event in data["events"]:
-                    # Filter for today's events
-                    if event.get("dateEvent") == today_date_str:
-                        all_matches.append(event)
-            else:
-                print(f"[TheSportsDB-Debug] No past events found for League ID {league_id} or API response was empty/malformed.")
+                    cards.push({
+                        home,
+                        away,
+                        home_logo: homeLogo,
+                        away_logo: awayLogo,
+                        time_local: time,
+                        result_text: result,
+                        status_text: status,
+                        channel,
+                        commentator,
+                        competition
+                    });
+                });
+                return cards;
+            }
+        """
+        cards = page.evaluate(js)
+        browser.close()
+        print(f"[found] {len(cards)} cards")
 
-        except requests.exceptions.RequestException as e:
-            print(f"[TheSportsDB-Debug] Error fetching past events from API for League ID {league_id}: {e}")
-        except json.JSONDecodeError:
-            print(f"[TheSportsDB-Debug] Error decoding JSON response (Past Events) from API for League ID {league_id}.")
+    def normalize_status(ar_text: str) -> str:
+        t = (ar_text or "").strip()
+        if not t:
+            return "NS"
+        if "انتهت" in t or "نتهت" in t:
+            return "FT"
+        if "مباشر" in t or "الشوط" in t:
+            return "LIVE"
+        if "لم" in t and "تبدأ" in t:
+            return "NS"
+        return "NS"
 
-    # Process all collected matches
-    final_matches_for_output = []
-    for event in all_matches:
-        home_team = event.get("strHomeTeam", "Unknown Home")
-        away_team = event.get("strAwayTeam", "Unknown Away")
-        competition = event.get("strLeague", "Unknown League")
-        event_time = event.get("strTime", "")
-        event_date = event.get("dateEvent", today_date_str)
-        event_status = event.get("strStatus", "NS")
-        final_score = event.get("strResult", "")
+    out = {
+        "date": today,
+        "source_url": url,
+        "matches": []
+    }
 
-        match_id = f"{home_team[:12]}-{away_team[:12]}-{event_date}".replace(" ", "")
+    for c in cards:
+        # Translate fields from Arabic to English
+        translated_home = translator.translate(c["home"], src='ar', dest='en').text
+        translated_away = translator.translate(c["away"], src='ar', dest='en').text
+        translated_competition = translator.translate(c["competition"], src='ar', dest='en').text
+        translated_status_text = translator.translate(c["status_text"], src='ar', dest='en').text
+        translated_result_text = translator.translate(c["result_text"], src='ar', dest='en').text # Translate result text too
 
-        home_logo = event.get("strHomeTeamBadge", "https://via.placeholder.com/50?text=H")
-        away_logo = event.get("strAwayTeamBadge", "https://via.placeholder.com/50?text=A")
-
-        status_code = "NS"
-        status_text = "Not Started"
-        if event_status == "FT":
-            status_code = "FT"
-            status_text = "Full-Time"
-        elif event_status == "HT":
-            status_code = "HT"
-            status_text = "Half-Time"
-        elif event_status and event_status != "NS":
-            status_code = "PST"
-            status_text = event_status
-
-        final_matches_for_output.append({
-            "id": match_id,
-            "home": home_team,
-            "away": away_team,
-            "home_logo": home_logo,
-            "away_logo": away_logo,
-            "time_baghdad": event_time,
-            "status": status_code,
-            "status_text": status_text,
-            "result_text": final_score,
-            "channel": event.get("strTVStation", None),
-            "commentator": None,
-            "competition": competition,
-            "_source": "thesportsdb"
+        mid = f"{translated_home[:12]}-{translated_away[:12]}-{today}".replace(" ", "")
+        out["matches"].append({
+            "id": mid,
+            "home": translated_home,
+            "away": translated_away,
+            "home_logo": c["home_logo"],
+            "away_logo": c["away_logo"],
+            "time_baghdad": c["time_local"],
+            "status": normalize_status(c["status_text"]), # Keep original status for normalization
+            "status_text": translated_status_text,
+            "result_text": translated_result_text,
+            "channel": c["channel"] or None,
+            "commentator": c["commentator"] or None,
+            "competition": translated_competition,
+            "_source": "yalla1shoot_translated" # Indicate translated source
         })
 
-    return final_matches_for_output
-
-def main():
-    matches = scrape_thesportsdb()
-    if not matches:
-        print("No matches were scraped. Writing empty list to JSON.")
-        output_data = {"date": get_today_date_str(), "source_url": "TheSportsDB API (multiple leagues)", "matches": []}
-    else:
-        print(f"[write] Scraped {len(matches)} matches in total.")
-        output_data = {"date": get_today_date_str(), "source_url": "TheSportsDB API (multiple leagues)", "matches": matches}
     with OUT_PATH.open("w", encoding="utf-8") as f:
-        json.dump(output_data, f, ensure_ascii=False, indent=2)
-    print(f"[write] Wrote {len(output_data['matches'])} matches to {OUT_PATH}.")
+        json.dump(out, f, ensure_ascii=False, indent=2)
+
+    print(f"[write] {OUT_PATH} with {len(out['matches'])} matches.")
+
 
 if __name__ == "__main__":
-    main()
+    scrape()
