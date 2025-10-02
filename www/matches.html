@@ -686,6 +686,27 @@
             // Try to find the channel in each playlist
             let channelFound = false;
             
+            // M3U parsing function (same as in app.js)
+            function parseM3U(m3uContent) {
+                const channels = [];
+                const lines = m3uContent.split(/\r?\n/);
+                for (let i = 0; i < lines.length; i++) {
+                    const line = lines[i].trim();
+                    if (line.startsWith('#EXTINF:')) {
+                        const nextLine = lines[i + 1] ? lines[i + 1].trim() : '';
+                        if (!nextLine || nextLine.startsWith('#')) continue;
+                        const commaIndex = line.lastIndexOf(',');
+                        if (commaIndex === -1) continue;
+                        const name = line.substring(commaIndex + 1).trim();
+                        let logo = 'https://via.placeholder.com/60?text=N/A';
+                        const logoMatch = line.match(/tvg-logo="([^"]*)"/);
+                        if (logoMatch && logoMatch[1]) logo = logoMatch[1];
+                        if (name) channels.push({ name, logo, url: nextLine });
+                    }
+                }
+                return channels;
+            }
+            
             // Function to search in a specific playlist
             async function searchInPlaylist(playlist, index) {
                 if (index >= playlists.length) {
@@ -706,49 +727,31 @@
                     }
                     
                     const m3uContent = await response.text();
-                    const lines = m3uContent.split(/\r?\n/);
+                    const channels = parseM3U(m3uContent);
                     
-                    // Look for the channel in the playlist
-                    for (let i = 0; i < lines.length; i++) {
-                        const line = lines[i].trim();
-                        if (line.startsWith('#EXTINF:')) {
-                            // Extract just the channel name from the EXTINF line for more accurate matching
-                            let channelNameFromLine = line;
-                            
-                            // Extract the channel name part after the comma
-                            const lastCommaIndex = line.lastIndexOf(',');
-                            if (lastCommaIndex !== -1) {
-                                channelNameFromLine = line.substring(lastCommaIndex + 1).trim();
-                            }
-                            
-                            // Check if the channel name matches with various search strategies
-                            const matchesChannel = 
-                                // Direct match
-                                channelNameFromLine.toLowerCase().includes(channelName.toLowerCase()) ||
-                                // Match with common abbreviations
-                                channelNameFromLine.toLowerCase().replace(/\s+/g, '').includes(channelName.toLowerCase().replace(/\s+/g, '')) ||
-                                // Check if beIN is in the name (for cases like bein sport 3 hd vs beIN Sports 3 HD)
-                                (channelName.toLowerCase().includes('bein') && channelNameFromLine.toLowerCase().includes('bein')) ||
-                                // Check for numeric matches like "bein sport 3" vs "bein sports hd 3"
-                                (/\d/.test(channelName) && /\d/.test(channelNameFromLine) && 
-                                 channelName.replace(/\D/g, '') === channelNameFromLine.replace(/\D/g, '')) ||
-                                // Match if home/away team names are in the channel name
-                                channelNameFromLine.toLowerCase().includes(homeTeam.toLowerCase()) ||
-                                channelNameFromLine.toLowerCase().includes(awayTeam.toLowerCase()) ||
-                                channelNameFromLine.toLowerCase().includes(competition.toLowerCase());
-                            
-                            if (matchesChannel) {
-                                // Get the next line which should be the URL
-                                if (i + 1 < lines.length) {
-                                    const nextLine = lines[i + 1].trim();
-                                    if (nextLine && !nextLine.startsWith('#')) {
-                                        // Channel found, redirect to player with the stream URL
-                                        window.location.href = `player.html?stream=${encodeURIComponent(nextLine)}&playlist=${encodeURIComponent(playlist)}&match=${encodeURIComponent(homeTeam + ' vs ' + awayTeam)}&channel=${encodeURIComponent(channelName)}`;
-                                        channelFound = true;
-                                        return; // Stop searching
-                                    }
-                                }
-                            }
+                    // Look for the channel in the parsed channels
+                    for (const channel of channels) {
+                        // Check if the channel name matches with various search strategies
+                        const matchesChannel = 
+                            // Direct match
+                            channel.name.toLowerCase().includes(channelName.toLowerCase()) ||
+                            // Match with common abbreviations
+                            channel.name.toLowerCase().replace(/\s+/g, '').includes(channelName.toLowerCase().replace(/\s+/g, '')) ||
+                            // Check if beIN is in the name (for cases like bein sport 3 hd vs beIN Sports 3 HD)
+                            (channelName.toLowerCase().includes('bein') && channel.name.toLowerCase().includes('bein')) ||
+                            // Check for numeric matches like "bein sport 3" vs "bein sports hd 3"
+                            (/\d/.test(channelName) && /\d/.test(channel.name) && 
+                             channelName.replace(/\D/g, '') === channel.name.replace(/\D/g, '')) ||
+                            // Match if home/away team names are in the channel name
+                            channel.name.toLowerCase().includes(homeTeam.toLowerCase()) ||
+                            channel.name.toLowerCase().includes(awayTeam.toLowerCase()) ||
+                            channel.name.toLowerCase().includes(competition.toLowerCase());
+                        
+                        if (matchesChannel) {
+                            // Channel found, redirect to player with the stream URL
+                            window.location.href = `player.html?stream=${encodeURIComponent(channel.url)}&playlist=${encodeURIComponent(playlist)}&match=${encodeURIComponent(homeTeam + ' vs ' + awayTeam)}&channel=${encodeURIComponent(channelName)}`;
+                            channelFound = true;
+                            return; // Stop searching
                         }
                     }
                     
