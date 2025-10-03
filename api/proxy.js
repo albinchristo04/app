@@ -12,8 +12,7 @@ function doProxy(req, res, targetUrlString) {
     const options = {
         headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-            'Referer': 'https://chaine-en-live.vercel.app/',
-            'Authorization': 'Basic YW5jaGFycmllcmUxOkRhSm1tNUd2dVk='
+            'Referer': 'https://chaine-en-live.vercel.app/'
         }
     };
 

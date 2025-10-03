@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             const channelItem = document.createElement('a');
 
             let streamUrl = channel.url;
-            const destinationUrl = `player.html?stream=${encodeURIComponent(streamUrl)}&playlist=${encodeURIComponent(playlistFile)}`;
+            const destinationUrl = `player.html?stream=${encodeURIComponent(`https://chaine-en-live.vercel.app/api/proxy?url=${streamUrl}`)}&playlist=${encodeURIComponent(playlistFile)}`;
             
             channelItem.href = destinationUrl;
             channelItem.title = channel.name;
 
-            if (playlistFile === 'dazn.m3u' || playlistFile === 'bein.m3u') {
+            if (playlistFile === 'dazn.m3u' || playlistFile === 'bein.m3u' || playlistFile === 'bein_sports_arabic.m3u' || playlistFile === 'bein_sports_other_languages.m3u' || playlistFile === 'bein_sports_turkish.m3u' || playlistFile === 'dazn_channels.m3u') {
                 channelItem.className = 'channel-item-image';
                 
                 let imagePath = channel.logo;

@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecteur de Chaîne</title>
+    <title>Lecteur de Chaîne (Debug)</title>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <style>
-        body { margin: 0; padding: 0; background-color: #000; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial, sans-serif; color: white; }
+        body { margin: 0; padding: 0; background-color: #000; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; font-family: Arial, sans-serif; color: white; }
         #player-container { width: 100%; max-width: 800px; text-align: center; }
         #video-player { width: 100%; max-height: 70vh; background-color: #000; }
         #back-button { margin-top: 10px; padding: 10px 20px; background-color: #333; color: white; border: none; border-radius: 4px; cursor: pointer; }
         #loading { color: white; font-size: 18px; }
+        #debug-log {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20vh;
+            background-color: rgba(0,0,0,0.8);
+            color: #0f0;
+            font-family: monospace;
+            font-size: 12px;
+            overflow-y: scroll;
+            padding: 5px;
+            border-top: 1px solid #444;
+            z-index: 1000;
+        }
     </style>
 </head>
 <body>
@@ -19,9 +34,41 @@
         <video id="video-player" controls></video>
         <button id="back-button">Retour à la liste</button>
     </div>
+    <div id="debug-log"></div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const debugLog = document.getElementById('debug-log');
+            
+            // --- Override Console ---
+            function createLogger(original, color) {
+                return function(...args) {
+                    const message = args.map(arg => {
+                        if (typeof arg === 'object' && arg !== null) {
+                            try {
+                                return JSON.stringify(arg, null, 2);
+                            } catch (e) {
+                                return 'Unserializable Object';
+                            }
+                        }
+                        return String(arg);
+                    }).join(' ');
+
+                    const logEntry = document.createElement('div');
+                    logEntry.style.color = color;
+                    logEntry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+                    debugLog.appendChild(logEntry);
+                    debugLog.scrollTop = debugLog.scrollHeight;
+                    original.apply(console, args);
+                }
+            }
+            console.log = createLogger(console.log, '#0f0');
+            console.error = createLogger(console.error, '#f00');
+            console.warn = createLogger(console.warn, '#ff0');
+
+            console.log('Debug console initialized.');
+
+            // --- App Logic ---
             const urlParams = new URLSearchParams(window.location.search);
             const streamUrl = urlParams.get('stream');
             
@@ -43,29 +90,32 @@
                     hls.loadSource(url);
                     hls.attachMedia(videoPlayer);
                     hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                        console.log("HLS.js: Manifest parsed.");
                         videoPlayer.play().catch(e => console.error("HLS.js autoplay was prevented.", e));
                     });
                     hls.on(Hls.Events.ERROR, function(event, data) {
+                        console.error('HLS.js FATAL ERROR:', JSON.stringify(data, null, 2));
                         if (data.fatal) {
-                            console.error('Fatal HLS.js error:', data);
                             loadingElement.style.display = 'block';
-                            loadingElement.textContent = 'Erreur: Impossible de charger ce flux vidéo.';
+                            loadingElement.textContent = 'Erreur HLS.js. Voir log de débogage.';
                         }
                     });
                 } else {
+                    console.error('HLS.js is not supported in this browser.');
                     loadingElement.textContent = 'Votre navigateur ne supporte pas la lecture de ce type de flux.';
                 }
             }
 
             if (streamUrl) {
                 const decodedStreamUrl = decodeURIComponent(streamUrl);
+                console.log(`Attempting to play stream: ${decodedStreamUrl}`);
                 
                 videoPlayer.style.display = 'block';
                 loadingElement.style.display = 'none';
 
                 videoPlayer.addEventListener('error', function(e) {
                     if (!hlsUsed) {
-                        console.error("Native player failed. Trying HLS.js fallback. Error:", e);
+                        console.error("Native player failed. Trying HLS.js fallback. Error Event:", e);
                         playWithHls(decodedStreamUrl);
                     }
                 });
@@ -77,6 +127,7 @@
                 });
 
             } else {
+                console.error('No stream URL specified in query parameters.');
                 loadingElement.textContent = 'Aucune URL de diffusion spécifiée.';
             }
             
