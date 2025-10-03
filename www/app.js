@@ -36,7 +36,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             const channelItem = document.createElement('a');
 
             let streamUrl = channel.url;
-            const destinationUrl = `player.html?stream=${encodeURIComponent(`https://chaine-en-live.vercel.app/api/proxy?url=${streamUrl}`)}&playlist=${encodeURIComponent(playlistFile)}`;
+            // Ensure the inner URL is properly encoded to survive querystring nesting
+            const proxied = `https://chaine-en-live.vercel.app/api/proxy?url=${encodeURIComponent(streamUrl)}`;
+            const destinationUrl = `player.html?stream=${encodeURIComponent(proxied)}&playlist=${encodeURIComponent(playlistFile)}`;
             
             channelItem.href = destinationUrl;
             channelItem.title = channel.name;
