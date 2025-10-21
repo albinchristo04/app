@@ -14,5 +14,9 @@
     "@capacitor/browser": "^7.0.2",
     "claude": "^0.1.1",
     "cordova-plugin-intent": "^0.1.2"
+  },
+  "devDependencies": {
+    "@capacitor/core": "^latest",
+    "@capacitor/cli": "^latest"
   }
 }
