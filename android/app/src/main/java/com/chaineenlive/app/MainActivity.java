@@ -15,8 +15,21 @@ import com.unity3d.services.banners.BannerErrorInfo;
 import com.unity3d.services.banners.BannerView;
 import com.unity3d.services.banners.UnityBannerSize;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import android.content.Context;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.ViewGroup;
+import android.webkit.JavascriptInterface;
+import android.widget.RelativeLayout;
+
+import com.getcapacitor.BridgeActivity;
+import com.unity3d.ads.IUnityAdsInitializationListener;
+import com.unity3d.ads.IUnityAdsLoadListener;
+import com.unity3d.ads.IUnityAdsShowListener;
+import com.unity3d.ads.UnityAds;
+import com.unity3d.services.banners.BannerErrorInfo;
+import com.unity3d.services.banners.BannerView;
+import com.unity3d.services.banners.UnityBannerSize;
 
 public class MainActivity extends BridgeActivity {
 
@@ -24,26 +37,56 @@ public class MainActivity extends BridgeActivity {
     private static final String UNITY_GAME_ID = "5955100";
     private static final String BANNER_AD_UNIT_ID = "banner";
     private static final String INTERSTITIAL_AD_UNIT_ID = "interstitial-android";
-    private static final boolean TEST_MODE = false; // Mettre  false en production
-    private static final long INTERSTITIAL_INTERVAL = 15 * 60 * 1000; // 15 minutes
+    private static final boolean TEST_MODE = false; // Mettre false en production
 
     private BannerView bannerView;
-    private Timer interstitialTimer;
+    private IUnityAdsLoadListener interstitialLoadListener;
+
+    // --- JavaScript Interface for Ads ---
+    public class WebAppInterface {
+        Context mContext;
+
+        WebAppInterface(Context c) {
+            mContext = c;
+        }
+
+        @JavascriptInterface
+        public void showInterstitialAd() {
+            Log.d(TAG, "JavaScript called showInterstitialAd()");
+            loadAndShowInterstitialAd();
+        }
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Autoriser le contenu mixte (HTTP/HTTPS) et les cookies tiers pour corriger les problèmes de lecture de flux vidéo.
         android.webkit.WebView webView = getBridge().getWebView();
+
+        // --- Webview Settings ---
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
             android.webkit.CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true);
             webView.getSettings().setMixedContentMode(android.webkit.WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         }
-        // Ajout de règles supplémentaires pour être moins strict sur les origines des flux
         webView.getSettings().setAllowUniversalAccessFromFileURLs(true);
         webView.getSettings().setAllowFileAccessFromFileURLs(true);
+        // Enable JavaScript
+        webView.getSettings().setJavaScriptEnabled(true);
+        // Add JavaScript interface
+        webView.addJavascriptInterface(new WebAppInterface(this), "Android");
 
+        // Initialize interstitial load listener
+        interstitialLoadListener = new IUnityAdsLoadListener() {
+            @Override
+            public void onUnityAdsAdLoaded(String placementId) {
+                Log.d(TAG, "Interstitial Ad pre-loaded: " + placementId);
+            }
+
+            @Override
+            public void onUnityAdsFailedToLoad(String placementId, UnityAds.UnityAdsLoadError error, String message) {
+                Log.e(TAG, "Interstitial Ad pre-load failed: [" + error + "] " + message);
+            }
+        };
 
         initializeUnityAds();
     }
@@ -57,7 +100,7 @@ public class MainActivity extends BridgeActivity {
                 Log.d(TAG, "Unity Ads initialization complete.");
                 runOnUiThread(() -> {
                     showBannerAd();
-                    startInterstitialTimer();
+                    UnityAds.load(INTERSTITIAL_AD_UNIT_ID, interstitialLoadListener); // Pre-load interstitial
                 });
             }
 
@@ -82,6 +125,7 @@ public class MainActivity extends BridgeActivity {
             @Override
             public void onBannerLoaded(BannerView bn) {
                 Log.d(TAG, "Banner loaded successfully.");
+                bn.bringToFront();
                 adjustWebViewMarginForBanner();
             }
 
@@ -115,7 +159,8 @@ public class MainActivity extends BridgeActivity {
         if (root != null) {
             root.addView(bannerView, bannerParams);
             bannerView.load();
-        } else {
+        }
+        else {
             Log.e(TAG, "Root view not found, can't add banner.");
         }
     }
@@ -125,7 +170,6 @@ public class MainActivity extends BridgeActivity {
             android.view.View webView = getBridge().getWebView();
             if (webView != null) {
                 ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) webView.getLayoutParams();
-                // Convert 50dp to pixels for the margin
                 int bannerHeight = (int) (50 * getResources().getDisplayMetrics().density);
                 if (params.bottomMargin != bannerHeight) {
                     params.bottomMargin = bannerHeight;
@@ -135,67 +179,47 @@ public class MainActivity extends BridgeActivity {
         });
     }
 
-    private void startInterstitialTimer() {
-        if (interstitialTimer != null) {
-            interstitialTimer.cancel();
-        }
-        interstitialTimer = new Timer();
-        interstitialTimer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                loadAndShowInterstitialAd();
-            }
-        }, INTERSTITIAL_INTERVAL, INTERSTITIAL_INTERVAL);
-    }
-
     private void loadAndShowInterstitialAd() {
-        Log.d(TAG, "Timer triggered. Loading Interstitial Ad...");
+        Log.d(TAG, "On-demand Interstitial Ad triggered. Attempting to show...");
         runOnUiThread(() -> {
-            UnityAds.load(INTERSTITIAL_AD_UNIT_ID, new IUnityAdsLoadListener() {
+            UnityAds.show(MainActivity.this, INTERSTITIAL_AD_UNIT_ID, new IUnityAdsShowListener() {
                 @Override
-                public void onUnityAdsAdLoaded(String placementId) {
-                    Log.d(TAG, "Interstitial Ad loaded: " + placementId);
-                    UnityAds.show(MainActivity.this, placementId, new IUnityAdsShowListener() {
-                        @Override
-                        public void onUnityAdsShowFailure(String pId, UnityAds.UnityAdsShowError error, String message) {
-                            Log.e(TAG, "Interstitial Ad failed to show: [" + error + "] " + message);
-                        }
-
-                        @Override
-                        public void onUnityAdsShowStart(String pId) {
-                            Log.d(TAG, "Interstitial Ad started: " + pId);
-                        }
-
-                        @Override
-                        public void onUnityAdsShowClick(String pId) {}
-
-                        @Override
-                        public void onUnityAdsShowComplete(String pId, UnityAds.UnityAdsShowCompletionState state) {
-                            Log.d(TAG, "Interstitial Ad finished: " + pId);
-                            // Ad is closed, now tell the WebView to resume.
-                            runOnUiThread(() -> {
-                                if (bridge != null && bridge.getWebView() != null) {
-                                    bridge.getWebView().evaluateJavascript("if (typeof resumePlayback === 'function') { resumePlayback(); }", null);
-                                }
-                            });
-                        }
-                    });
+                public void onUnityAdsShowFailure(String pId, UnityAds.UnityAdsShowError error, String message) {
+                    Log.e(TAG, "Interstitial Ad failed to show: [" + error + "] " + message);
+                    triggerJsNavigation(); // Navigate if ad fails to show
+                    // After failure, try to pre-load the next ad
+                    UnityAds.load(INTERSTITIAL_AD_UNIT_ID, interstitialLoadListener);
                 }
 
                 @Override
-                public void onUnityAdsFailedToLoad(String placementId, UnityAds.UnityAdsLoadError error, String message) {
-                    Log.e(TAG, "Interstitial Ad failed to load: [" + error + "] " + message);
+                public void onUnityAdsShowStart(String pId) {
+                    Log.d(TAG, "Interstitial Ad started: " + pId);
+                }
+
+                @Override
+                public void onUnityAdsShowClick(String pId) {}
+
+                @Override
+                public void onUnityAdsShowComplete(String pId, UnityAds.UnityAdsShowCompletionState state) {
+                    Log.d(TAG, "Interstitial Ad finished: " + pId);
+                    triggerJsNavigation();
+                    // After showing, try to pre-load the next ad
+                    UnityAds.load(INTERSTITIAL_AD_UNIT_ID, interstitialLoadListener);
                 }
             });
         });
     }
 
+    private void triggerJsNavigation() {
+        runOnUiThread(() -> {
+            if (bridge != null && bridge.getWebView() != null) {
+                bridge.getWebView().evaluateJavascript("if (typeof navigateAfterAd === 'function') { navigateAfterAd(); } else { console.error('navigateAfterAd function not found'); }", null);
+            }
+        });
+    }
+
     @Override
     public void onDestroy() {
-        if (interstitialTimer != null) {
-            interstitialTimer.cancel();
-            interstitialTimer = null;
-        }
         if (bannerView != null) {
             bannerView.destroy();
             bannerView = null;

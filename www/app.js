@@ -1,6 +1,39 @@
+let destinationUrlAfterAd = '';
+
+function navigateAfterAd() {
+    if (destinationUrlAfterAd) {
+        window.location.href = destinationUrlAfterAd;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     const playlistSelect = document.getElementById('playlist-select');
     const channelListContainer = document.getElementById('channel-list');
+    const languageSelect = document.getElementById('language-select');
+
+    let currentLanguage = 'ar';
+    let translations = {};
+
+    async function setLanguage(lang) {
+        currentLanguage = lang;
+        const response = await fetch(`lang/${lang}.json`);
+        translations = await response.json();
+        applyTranslations();
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        localStorage.setItem('language', lang);
+    }
+
+    function applyTranslations() {
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.getAttribute('data-translate');
+            element.textContent = translations[key] || element.textContent;
+        });
+    }
+
+    languageSelect.addEventListener('change', (e) => {
+        setLanguage(e.target.value);
+    });
 
     // --- Logique de l'application ---
 
@@ -16,8 +49,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (commaIndex === -1) continue;
                 const name = line.substring(commaIndex + 1).trim();
                 let logo = 'https://via.placeholder.com/60?text=N/A';
-                const logoMatch = line.match(/tvg-logo="([^"]*)"/
-);
+                const logoMatch = line.match(/tvg-logo="([^"]*)"/);
                 if (logoMatch && logoMatch[1]) logo = logoMatch[1];
                 if (name) channels.push({ name, logo, url: nextLine });
             }
@@ -28,20 +60,47 @@ document.addEventListener('DOMContentLoaded', async () => {
     function displayChannels(channels, playlistFile) {
         channelListContainer.innerHTML = '';
         if (channels.length === 0) {
-            channelListContainer.innerHTML = '<p class="error-message">Aucune chaîne trouvée...</p>';
+            channelListContainer.innerHTML = `<p class="error-message">${translations.no_channels || 'Aucune chaîne trouvée...'}</p>`;
             return;
         }
 
         channels.forEach(channel => {
             const channelItem = document.createElement('a');
-
-            let streamUrl = channel.url;
-            const destinationUrl = `player.html?stream=${encodeURIComponent(`https://chaine-en-live.vercel.app/api/proxy?url=${streamUrl}`)}&playlist=${encodeURIComponent(playlistFile)}`;
-            
-            channelItem.href = destinationUrl;
             channelItem.title = channel.name;
+            channelItem.href = "#"; // Prevent default navigation and provide a fallback
 
-            if (playlistFile === 'dazn.m3u' || playlistFile === 'bein.m3u' || playlistFile === 'bein_sports_arabic.m3u' || playlistFile === 'bein_sports_other_languages.m3u' || playlistFile === 'bein_sports_turkish.m3u' || playlistFile === 'dazn_channels.m3u') {
+            channelItem.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                let streamUrl = channel.url;
+                let finalPlayerUrl;
+
+                if (playlistFile === 'lista.m3u') {
+                    const aceIdMatch = streamUrl.match(/id=([a-f0-9]{40})/);
+                    if (aceIdMatch && aceIdMatch[1]) {
+                        const contentId = aceIdMatch[1];
+                        finalPlayerUrl = `http://127.0.0.1:6878/ace/manifest.m3u8?id=${contentId}`;
+                    } else {
+                        finalPlayerUrl = `https://chaine-en-live.vercel.app/api/proxy?url=${encodeURIComponent(streamUrl)}`;
+                    }
+                } else {
+                    finalPlayerUrl = `https://chaine-en-live.vercel.app/api/proxy?url=${encodeURIComponent(streamUrl)}`;
+                }
+
+                const destinationUrl = `player.html?stream=${encodeURIComponent(finalPlayerUrl)}&playlist=${encodeURIComponent(playlistFile)}`;
+                
+                // Ad logic: store destination and call native ad interface
+                destinationUrlAfterAd = destinationUrl;
+                if (window.Android && typeof window.Android.showInterstitialAd === 'function') {
+                    window.Android.showInterstitialAd();
+                } else {
+                    // Fallback for web browser testing
+                    console.log('Android interface not found. Navigating directly.');
+                    window.location.href = destinationUrl;
+                }
+            });
+
+            if (playlistFile === 'dazn.m3u' || playlistFile === 'bein.m3u' || playlistFile === 'sport-espn.m3u' || playlistFile === 'bein_sports_arabic.m3u' || playlistFile === 'bein_sports_other_languages.m3u' || playlistFile === 'bein_sports_turkish.m3u' || playlistFile === 'dazn_channels.m3u') {
                 channelItem.className = 'channel-item-image';
                 
                 let imagePath = channel.logo;
@@ -63,6 +122,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                     else if (channel.name.toLowerCase().includes('bein sports 7')) imagePath = 'images/beinsports7.png';
                     else if (channel.name.toLowerCase().includes('bein sports 8')) imagePath = 'images/beinsports8.png';
                     else if (channel.name.toLowerCase().includes('bein sports 9')) imagePath = 'images/beinsports9.png';
+                } else if (playlistFile === 'sport-espn.m3u') {
+                    if (channel.name.toLowerCase().includes('espn 2')) imagePath = 'images/ESPN2.png';
+                    else if (channel.name.toLowerCase().includes('espn 3')) imagePath = 'images/ESPN3.png';
+                    else if (channel.name.toLowerCase().includes('espn 4')) imagePath = 'images/ESPN4.png';
+                    else if (channel.name.toLowerCase().includes('espn 6')) imagePath = 'images/ESPN6.png';
+                    else if (channel.name.toLowerCase().includes('espn 7')) imagePath = 'images/ESPN7.png';
+                    else if (channel.name.toLowerCase().includes('espn')) imagePath = 'images/ESPN1.png';
                 }
                 
                 const logo = document.createElement('img');
@@ -88,52 +154,29 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    function displayMatches(matchesData) {
-        channelListContainer.innerHTML = ''; // Clear existing content
-        channelListContainer.className = 'matches-grid'; // Add a class for styling
-        
-        if (matchesData && matchesData.matches && matchesData.matches.length > 0) {
-            matchesData.matches.forEach(match => {
-                const matchCard = document.createElement('div');
-                matchCard.className = 'match-card';
 
-                matchCard.innerHTML = `
-                    <img src="${match.home_logo}" alt="${match.home} logo" onerror="this.onerror=null;this.src='https://via.placeholder.com/50';">
-                    <div class="match-info">
-                        <h3><span class="team-name">${match.home}</span> vs <span class="team-name">${match.away}</span></h3>
-                        <p>Heure : ${match.time_baghdad} (Baghdad)</p>
-                        <p>Statut : ${match.status_text} (<span class="result">${match.result_text}</span>)</p>
-                        <p>Compétition : ${match.competition}</p>
-                        <p class="channel">Chaîne : ${match.channel || 'Non spécifiée'}</p>
-                    </div>
-                    <img src="${match.away_logo}" alt="${match.away} logo" onerror="this.onerror=null;this.src='https://via.placeholder.com/50';">
-                `;
-                channelListContainer.appendChild(matchCard);
-            });
-        } else {
-            channelListContainer.innerHTML = '<p class="error-message">Aucun match trouvé pour aujourd\'hui.</p>';
-        }
-    }
+
+
 
     async function loadPlaylist(playlistFile) {
+        if (playlistFile === 'matches_today.json') {
+            window.location.href = 'matches.html';
+            return;
+        }
+
         try {
-            if (playlistFile === 'matches_today.json') {
-                const response = await fetch('matches/today.json');
-                if (!response.ok) throw new Error(`Erreur réseau: Impossible de charger les matchs du jour. Statut: ${response.status}`);
-                const matchesData = await response.json();
-                displayMatches(matchesData);
-            } else {
-                const response = await fetch(playlistFile);
-                if (!response.ok) throw new Error(`Erreur réseau: Impossible de charger la playlist. Statut: ${response.status}`);
-                const m3uContent = await response.text();
-                const channels = parseM3U(m3uContent);
-                displayChannels(channels, playlistFile);
-            }
+            const response = await fetch(playlistFile);
+            if (!response.ok) throw new Error(`Erreur réseau: Impossible de charger la playlist. Statut: ${response.status}`);
+            const m3uContent = await response.text();
+            const channels = parseM3U(m3uContent);
+            displayChannels(channels, playlistFile);
         } catch (error) {
             console.error('Erreur chargement playlist ou matchs', error);
-            channelListContainer.innerHTML = `<p class="error-message">Impossible de charger les données.</p>`;
+            channelListContainer.innerHTML = `<p class="error-message">${translations.load_error || 'Impossible de charger les données.'}</p>`;
         }
     }
+    
+
 
     playlistSelect.addEventListener('change', (e) => {
         const selectedValue = e.target.value;
@@ -144,10 +187,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     const lastPlaylist = localStorage.getItem('lastPlaylist');
     if (lastPlaylist) {
         playlistSelect.value = lastPlaylist;
-        loadPlaylist(lastPlaylist);
     } else {
         const defaultPlaylist = 'bein.m3u';
         playlistSelect.value = defaultPlaylist;
-        loadPlaylist(defaultPlaylist);
     }
+
+    const savedLanguage = localStorage.getItem('language') || 'ar';
+    languageSelect.value = savedLanguage;
+    await setLanguage(savedLanguage);
+
+    loadPlaylist(playlistSelect.value);
 });

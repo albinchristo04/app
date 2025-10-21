@@ -3,39 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Channels</title>
+    <title data-translate="title">IPTV Player</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Live Channels</h1>
+        <h1 data-translate="header_title">IPTV Player</h1>
         <div class="file-selector">
-            <label for="playlist-select">Choose a playlist:</label>
+            <label for="playlist-select" data-translate="playlist_label">Choose a channel list:</label>
             <select id="playlist-select">
-                <option value="sport-espn.m3u">ESPN</option>
-                <option value="dazn.m3u">DAZN</option>
-                <option value="bein.m3u">BeIn Sports</option>
-                <option value="SSC.m3u">SSC</option>
-                <option value="mbc.m3u">MBC</option>
-                <option value="ptv_sports.m3u">PTV Sports</option>
-                <option value="sky_sports.m3u">Sky Sports</option>
-                <option value="star_sports.m3u">Star Sports</option>
-                <option value="tnt_sports.m3u">TNT Sports</option>
-                <option value="willow.m3u">Willow</option>
-                <option value="bein_sports_arabic.m3u">BeIn Sports Arabic</option>
-                <option value="bein_sports_other_languages.m3u">BeIn Sports (Autres)</option>
-                <option value="bein_sports_turkish.m3u">BeIn Sports (Turc)</option>
-                <option value="dazn_channels.m3u">DAZN Channels</option>
+                <option value="bein.m3u" selected data-translate="bein_sports">Bein Sports</option>
+                <option value="bein_sports_arabic.m3u" data-translate="bein_sports_arabic">Bein Sports Arabic</option>
+                <option value="bein_sports_other_languages.m3u" data-translate="bein_sports_other_languages">Bein Sports Other Languages</option>
+                <option value="bein_sports_turkish.m3u" data-translate="bein_sports_turkish">Bein Sports Turkish</option>
+                <option value="sport-espn.m3u" data-translate="espn">ESPN</option>
             </select>
         </div>
-        <a href="matches.html" id="matches-button">Today's Matches</a>
+        <div class="language-selector">
+            <label for="language-select" data-translate="language_switcher_label">Language:</label>
+            <select id="language-select">
+                <option value="ar">العربية</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <a href="matches.html" id="matches-button" data-translate="matches_button">Today's Matches</a>
     </header>
-    <div id="banner-ad"></div>
     <main>
         <div id="channel-list">
             <!-- Channels will be injected here by JavaScript -->
         </div>
     </main>
+    <script>
+        // Rediriger vers la page des matches par défaut
+        if (!new URLSearchParams(window.location.search).get('noredirect')) {
+            window.location.href = 'matches.html';
+        }
+    </script>
     <script src="app.js"></script>
 </body>
 </html>
