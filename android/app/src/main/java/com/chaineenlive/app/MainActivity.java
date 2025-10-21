@@ -211,6 +211,7 @@ public class MainActivity extends BridgeActivity {
     }
 
     private void triggerJsNavigation() {
+        Log.d(TAG, "triggerJsNavigation() called");
         runOnUiThread(() -> {
             if (bridge != null && bridge.getWebView() != null) {
                 bridge.getWebView().evaluateJavascript("if (typeof navigateAfterAd === 'function') { navigateAfterAd(); } else { console.error('navigateAfterAd function not found'); }", null);

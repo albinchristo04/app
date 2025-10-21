@@ -35,7 +35,10 @@
     </main>
     <script>
         // Rediriger vers la page des matches par défaut
-        if (!new URLSearchParams(window.location.search).get('noredirect')) {
+        const noredirectParam = new URLSearchParams(window.location.search).get('noredirect');
+        console.log('JS_LOG: index.html loaded. noredirect param:', noredirectParam);
+        if (!noredirectParam) {
+            console.log('JS_LOG: Redirecting to matches.html');
             window.location.href = 'matches.html';
         }
     </script>

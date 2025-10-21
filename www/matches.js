@@ -1,3 +1,10 @@
+function navigateAfterAd() {
+    console.log('JS_LOG: navigateAfterAd called, navigating to:', destinationUrlAfterAd);
+    if (destinationUrlAfterAd) {
+        window.location.href = destinationUrlAfterAd;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const matchesContainer = document.getElementById('matches-container');
     const loadingDiv = document.querySelector('.loading');
@@ -8,8 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
     
     async function setLanguage(lang) {
         currentLanguage = lang;
+        console.log('JS_LOG: Setting language to:', lang);
         const response = await fetch(`lang/${lang}.json`);
         translations = await response.json();
+        console.log('JS_LOG: Translations loaded:', translations);
         applyTranslations();
         document.documentElement.lang = lang;
         document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -33,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Load saved language or default to Arabic
     const savedLanguage = localStorage.getItem('language') || 'ar';
+    console.log('JS_LOG: Saved language:', savedLanguage);
     if (languageSelect) languageSelect.value = savedLanguage;
     setLanguage(savedLanguage);
 
@@ -89,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            console.log('Fetched match data:', data); // Debug log
+            console.log('JS_LOG: Fetched match data:', data); // Debug log
 
             if (loadingDiv) {
                 loadingDiv.remove();
@@ -105,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 acc[competition].push(match);
                 return acc;
             }, {});
-            console.log('Grouped matches:', groupedMatches); // Debug log
+            console.log('JS_LOG: Grouped matches:', groupedMatches); // Debug log
 
             for (const competition in groupedMatches) {
                 const competitionGroup = document.createElement('div');
@@ -157,22 +167,14 @@ document.addEventListener('DOMContentLoaded', function () {
                         // If match time is within 3 hours in the past and has a "Not Started" status,
                         // but it's likely finished (maybe 90-120 minutes match + buffer)
                         if (timeDiff > 0 && timeDiff <= 300 && matchOriginalStatus === 'NS') {
-                            // Check if match has likely finished based on typical match duration
-                            if (timeDiff > 180) { // More than 3 hours (likely finished)
+                            // Check if we have result information to determine if it's live or finished
+                            if (match.result_text && match.result_text !== '0-0' && !match.result_text.includes('-')) {
+                                // If result exists and it's not 0-0, and time has passed, it's likely finished
                                 return { status: 'FT', status_text: 'إنتهت' };
                             }
-                            
-                            // If it's between 0-180 minutes, might be LIVE
-                            if (timeDiff <= 180 && timeDiff >= -30) { // Started within last 3 hours
-                                // Check if we have result information to determine if it's live or finished
-                                if (match.result_text && match.result_text !== '0-0' && !match.result_text.includes('-')) {
-                                    // If result exists and it's not 0-0, and time has passed, it's likely finished
-                                    return { status: 'FT', status_text: 'إنتهت' };
-                                }
-                                // For now, if it should have started but no result yet, consider LIVE
-                                if (timeDiff <= 120) { // Within 2 hours of match time
-                                    return { status: 'LIVE', status_text: 'مباشر' };
-                                }
+                            // For now, if it should have started but no result yet, consider LIVE
+                            if (timeDiff <= 120) { // Within 2 hours of match time
+                                return { status: 'LIVE', status_text: 'مباشر' };
                             }
                         }
                         
@@ -223,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             </div>
                         </div>
                         <div class="match-footer">
-                            <div class="match-competition">${lang === 'en' ? transliterateToEnglish(match.competition) : match.competition}</div>
+                            <div class="match-competition">${lang === 'en' ? transliterateToEnglish(competition) : competition}</div>
                             <div class="match-channel">📺 ${match.channel || 'Channel not specified'}</div>
                         </div>
                     `;
@@ -250,11 +252,12 @@ document.addEventListener('DOMContentLoaded', function () {
                                 
                                 // Ad logic: store destination and call native ad interface
                                 destinationUrlAfterAd = destinationUrl;
+                                console.log('JS_LOG: Match click detected. Destination URL stored:', destinationUrlAfterAd);
                                 if (window.Android && typeof window.Android.showInterstitialAd === 'function') {
+                                    console.log('JS_LOG: window.Android.showInterstitialAd is available. Calling native ad.');
                                     window.Android.showInterstitialAd();
                                 } else {
-                                    // Fallback for web browser testing
-                                    console.log('Android interface not found. Navigating directly.');
+                                    console.log('JS_LOG: window.Android.showInterstitialAd NOT available. Navigating directly.');
                                     window.location.href = destinationUrl;
                                 }
                             } else {
@@ -270,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 matchesContainer.appendChild(competitionGroup);
             }
         } catch (error) {
-            console.error('Error loading matches:', error);
+            console.error('JS_LOG: Error loading matches:', error);
             if (loadingDiv) {
                 loadingDiv.textContent = `Failed to load matches: ${error.message || error}`;
                 loadingDiv.className = 'error';
@@ -316,7 +319,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
             } catch (error) {
-                console.error(`Error searching in playlist ${playlist}:`, error);
+                console.error(`JS_LOG: Error searching in playlist ${playlist}:`, error);
             }
         }
 
