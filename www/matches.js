@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to fetch and display matches
     async function loadMatches() {
         try {
-            const response = await fetch('https://amouradore.github.io/chaine-en-live/today.json');
+            const response = await fetch('https://amouradore.github.io/chaine-en-live/matches/today.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
