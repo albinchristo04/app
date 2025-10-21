@@ -16,7 +16,7 @@
     "cordova-plugin-intent": "^0.1.2"
   },
   "devDependencies": {
-    "@capacitor/core": "^latest",
-    "@capacitor/cli": "^latest"
+    "@capacitor/core": "latest",
+    "@capacitor/cli": "latest"
   }
 }
