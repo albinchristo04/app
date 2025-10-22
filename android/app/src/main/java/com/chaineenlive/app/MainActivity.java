@@ -64,6 +64,7 @@ public class MainActivity extends BridgeActivity {
         android.webkit.WebView webView = getBridge().getWebView();
 
         // --- Webview Settings ---
+        android.webkit.WebView.setWebContentsDebuggingEnabled(true); // Enable WebView debugging
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
             android.webkit.CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true);
             webView.getSettings().setMixedContentMode(android.webkit.WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
