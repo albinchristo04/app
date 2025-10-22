@@ -1,13 +1,22 @@
 let destinationUrlAfterAd = '';
 
+function logToNative(message) {
+    if (window.Android && typeof window.Android.log === 'function') {
+        window.Android.log(message);
+    } else {
+        console.log(message);
+    }
+}
+
 function navigateAfterAd() {
-    console.log('JS_LOG: navigateAfterAd called, navigating to:', destinationUrlAfterAd);
+    logToNative('JS_LOG: navigateAfterAd called, navigating to:' + destinationUrlAfterAd);
     if (destinationUrlAfterAd) {
         window.location.href = destinationUrlAfterAd;
     }
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    logToNative('JS_LOG: app.js script loaded and DOMContentLoaded.');
     const playlistSelect = document.getElementById('playlist-select');
     const channelListContainer = document.getElementById('channel-list');
     const languageSelect = document.getElementById('language-select');
@@ -17,10 +26,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function setLanguage(lang) {
         currentLanguage = lang;
-        console.log('JS_LOG: Setting language to:', lang);
+        logToNative('JS_LOG: Setting language to:' + lang);
         const response = await fetch(`lang/${lang}.json`);
         translations = await response.json();
-        console.log('JS_LOG: Translations loaded:', translations);
+        logToNative('JS_LOG: Translations loaded:' + JSON.stringify(translations));
         applyTranslations();
         document.documentElement.lang = lang;
         document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -90,16 +99,19 @@ document.addEventListener('DOMContentLoaded', async () => {
                     finalPlayerUrl = `https://chaine-en-live.vercel.app/api/proxy?url=${encodeURIComponent(streamUrl)}`;
                 }
 
+                logToNative('JS_LOG: Final player URL constructed:' + finalPlayerUrl);
+
                 const destinationUrl = `player.html?stream=${encodeURIComponent(finalPlayerUrl)}&playlist=${encodeURIComponent(playlistFile)}`;
                 
                 // Ad logic: store destination and call native ad interface
                 destinationUrlAfterAd = destinationUrl;
-                console.log('JS_LOG: Channel click detected. Destination URL stored:', destinationUrlAfterAd);
+                logToNative('JS_LOG: Channel click detected. Destination URL stored:' + destinationUrlAfterAd);
+                logToNative('JS_LOG: Checking window.Android availability: ' + (!!window.Android) + ', typeof showInterstitialAd: ' + (typeof window.Android.showInterstitialAd));
                 if (window.Android && typeof window.Android.showInterstitialAd === 'function') {
-                    console.log('JS_LOG: window.Android.showInterstitialAd is available. Calling native ad.');
+                    logToNative('JS_LOG: window.Android.showInterstitialAd is available. Calling native ad.');
                     window.Android.showInterstitialAd();
                 } else {
-                    console.log('JS_LOG: window.Android.showInterstitialAd NOT available. Navigating directly.');
+                    logToNative('JS_LOG: window.Android.showInterstitialAd NOT available. Navigating directly.');
                     window.location.href = destinationUrl;
                 }
             });
@@ -176,7 +188,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const channels = parseM3U(m3uContent);
             displayChannels(channels, playlistFile);
         } catch (error) {
-            console.error('JS_LOG: Erreur chargement playlist ou matchs', error);
+            logToNative('JS_LOG: Erreur chargement playlist ou matchs:' + error);
             channelListContainer.innerHTML = `<p class="error-message">${translations.load_error || 'Impossible de charger les données.'}</p>`;
         }
     }
@@ -190,7 +202,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
     
     const lastPlaylist = localStorage.getItem('lastPlaylist');
-    console.log('JS_LOG: Saved language:', savedLanguage, 'Saved playlist:', lastPlaylist);
+    logToNative('JS_LOG: Saved language:' + savedLanguage + ', Saved playlist:' + lastPlaylist);
     if (lastPlaylist) {
         playlistSelect.value = lastPlaylist;
     } else {
@@ -199,7 +211,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const savedLanguage = localStorage.getItem('language') || 'ar';
-    console.log('JS_LOG: Saved language:', savedLanguage);
+    logToNative('JS_LOG: Saved language:' + savedLanguage);
     languageSelect.value = savedLanguage;
     await setLanguage(savedLanguage);
 

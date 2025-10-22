@@ -1,11 +1,20 @@
+function logToNative(message) {
+    if (window.Android && typeof window.Android.log === 'function') {
+        window.Android.log(message);
+    } else {
+        console.log(message);
+    }
+}
+
 function navigateAfterAd() {
-    console.log('JS_LOG: navigateAfterAd called, navigating to:', destinationUrlAfterAd);
+    logToNative('JS_LOG: navigateAfterAd called, navigating to:' + destinationUrlAfterAd);
     if (destinationUrlAfterAd) {
         window.location.href = destinationUrlAfterAd;
     }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    logToNative('JS_LOG: matches.js script loaded and DOMContentLoaded.');
     const matchesContainer = document.getElementById('matches-container');
     const loadingDiv = document.querySelector('.loading');
     
@@ -15,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
     
     async function setLanguage(lang) {
         currentLanguage = lang;
-        console.log('JS_LOG: Setting language to:', lang);
+        logToNative('JS_LOG: Setting language to:' + lang);
         const response = await fetch(`lang/${lang}.json`);
         translations = await response.json();
-        console.log('JS_LOG: Translations loaded:', translations);
+        logToNative('JS_LOG: Translations loaded:' + JSON.stringify(translations));
         applyTranslations();
         document.documentElement.lang = lang;
         document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -42,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Load saved language or default to Arabic
     const savedLanguage = localStorage.getItem('language') || 'ar';
-    console.log('JS_LOG: Saved language:', savedLanguage);
+    logToNative('JS_LOG: Saved language:' + savedLanguage);
     if (languageSelect) languageSelect.value = savedLanguage;
     setLanguage(savedLanguage);
 
@@ -99,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            console.log('JS_LOG: Fetched match data:', data); // Debug log
+            logToNative('JS_LOG: Fetched match data:' + JSON.stringify(data)); // Debug log
 
             if (loadingDiv) {
                 loadingDiv.remove();
@@ -115,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 acc[competition].push(match);
                 return acc;
             }, {});
-            console.log('JS_LOG: Grouped matches:', groupedMatches); // Debug log
+            logToNative('JS_LOG: Grouped matches:' + JSON.stringify(groupedMatches)); // Debug log
 
             for (const competition in groupedMatches) {
                 const competitionGroup = document.createElement('div');
@@ -239,37 +248,40 @@ document.addEventListener('DOMContentLoaded', function () {
                                 let streamUrl = channelStream.url;
                                 let finalPlayerUrl;
 
-                                console.log('JS_LOG: Original streamUrl from findChannelStream:', streamUrl);
+                                logToNative('JS_LOG: Original streamUrl from findChannelStream:' + streamUrl);
 
                                 // Check if it's an ace stream URL (contains 'id=' with 40-character hex string)
                                 const aceIdMatch = streamUrl.match(/id=([a-f0-9]{40})/);
-                                console.log('JS_LOG: aceIdMatch result:', aceIdMatch);
+                                logToNative('JS_LOG: aceIdMatch result:' + aceIdMatch);
                                 if (aceIdMatch && aceIdMatch[1]) {
                                     const contentId = aceIdMatch[1];
                                     finalPlayerUrl = `http://127.0.0.1:6878/ace/manifest.m3u8?id=${contentId}`;
                                 } else {
-                                    console.log('JS_LOG: Not an ace stream. Applying proxy.');
+                                    logToNative('JS_LOG: Not an ace stream. Applying proxy.');
                                     finalPlayerUrl = `https://chaine-en-live.vercel.app/api/proxy?url=${encodeURIComponent(streamUrl)}`;
                                 }
 
-                                console.log('JS_LOG: Final player URL constructed:', finalPlayerUrl);
+                                logToNative('JS_LOG: Final player URL constructed:' + finalPlayerUrl);
 
                                 const destinationUrl = `player.html?stream=${encodeURIComponent(finalPlayerUrl)}`;
                                 
                                 // Ad logic: store destination and call native ad interface
                                 destinationUrlAfterAd = destinationUrl;
-                                console.log('JS_LOG: Match click detected. Destination URL stored:', destinationUrlAfterAd);
+                                logToNative('JS_LOG: Match click detected. Destination URL stored:' + destinationUrlAfterAd);
+                                logToNative('JS_LOG: Checking window.Android availability: ' + (!!window.Android) + ', typeof showInterstitialAd: ' + (typeof window.Android.showInterstitialAd));
                                 if (window.Android && typeof window.Android.showInterstitialAd === 'function') {
-                                    console.log('JS_LOG: window.Android.showInterstitialAd is available. Calling native ad.');
+                                    logToNative('JS_LOG: window.Android.showInterstitialAd is available. Calling native ad.');
                                     window.Android.showInterstitialAd();
                                 } else {
-                                    console.log('JS_LOG: window.Android.showInterstitialAd NOT available. Navigating directly.');
+                                    logToNative('JS_LOG: window.Android.showInterstitialAd NOT available. Navigating directly.');
                                     window.location.href = destinationUrl;
                                 }
-                            } else {
+                            }
+                            else {
                                 alert(`Channel "${match.channel}" not found in playlists.`);
                             }
-                        } else {
+                        }
+                        else {
                             alert('No channel specified for this match.');
                         }
                     });
@@ -279,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 matchesContainer.appendChild(competitionGroup);
             }
         } catch (error) {
-            console.error('JS_LOG: Error loading matches:', error);
+            logToNative('JS_LOG: Error loading matches:' + error);
             if (loadingDiv) {
                 loadingDiv.textContent = `Failed to load matches: ${error.message || error}`;
                 loadingDiv.className = 'error';
@@ -325,7 +337,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
             } catch (error) {
-                console.error(`JS_LOG: Error searching in playlist ${playlist}:`, error);
+                logToNative(`JS_LOG: Error searching in playlist ${playlist}:` + error);
             }
         }
 

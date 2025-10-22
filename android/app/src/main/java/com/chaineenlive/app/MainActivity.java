@@ -52,8 +52,13 @@ public class MainActivity extends BridgeActivity {
 
         @JavascriptInterface
         public void showInterstitialAd() {
-            Log.d(TAG, "JavaScript called showInterstitialAd()");
+            Log.d(TAG, "JS_CALL: JavaScript called showInterstitialAd()");
             loadAndShowInterstitialAd();
+        }
+
+        @JavascriptInterface
+        public void log(String message) {
+            Log.d(TAG, "JS_LOG_FROM_WEB: " + message);
         }
     }
 

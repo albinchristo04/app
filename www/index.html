@@ -34,11 +34,19 @@
         </div>
     </main>
     <script>
+        function logToNative(message) {
+            if (window.Android && typeof window.Android.log === 'function') {
+                window.Android.log(message);
+            } else {
+                console.log(message);
+            }
+        }
+
         // Rediriger vers la page des matches par défaut
         const noredirectParam = new URLSearchParams(window.location.search).get('noredirect');
-        console.log('JS_LOG: index.html loaded. noredirect param:', noredirectParam);
+        logToNative('JS_LOG: index.html loaded. noredirect param:' + noredirectParam);
         if (!noredirectParam) {
-            console.log('JS_LOG: Redirecting to matches.html');
+            logToNative('JS_LOG: Redirecting to matches.html');
             window.location.href = 'matches.html';
         }
     </script>
