@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to fetch and display matches
     async function loadMatches() {
         try {
-            const response = await fetch('https://amouradore.github.io/chaine-en-live/matches/today.json');
+            const response = await fetch('https://amouradore.github.io/chaine-en-live/today.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -239,14 +239,20 @@ document.addEventListener('DOMContentLoaded', function () {
                                 let streamUrl = channelStream.url;
                                 let finalPlayerUrl;
 
+                                console.log('JS_LOG: Original streamUrl from findChannelStream:', streamUrl);
+
                                 // Check if it's an ace stream URL (contains 'id=' with 40-character hex string)
                                 const aceIdMatch = streamUrl.match(/id=([a-f0-9]{40})/);
+                                console.log('JS_LOG: aceIdMatch result:', aceIdMatch);
                                 if (aceIdMatch && aceIdMatch[1]) {
                                     const contentId = aceIdMatch[1];
                                     finalPlayerUrl = `http://127.0.0.1:6878/ace/manifest.m3u8?id=${contentId}`;
                                 } else {
+                                    console.log('JS_LOG: Not an ace stream. Applying proxy.');
                                     finalPlayerUrl = `https://chaine-en-live.vercel.app/api/proxy?url=${encodeURIComponent(streamUrl)}`;
                                 }
+
+                                console.log('JS_LOG: Final player URL constructed:', finalPlayerUrl);
 
                                 const destinationUrl = `player.html?stream=${encodeURIComponent(finalPlayerUrl)}`;
                                 
