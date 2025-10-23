@@ -1,0 +1,23 @@
+{
+  "title": "مشغل IPTV",
+  "header_title": "مشغل IPTV",
+  "playlist_label": "اختر قائمة القنوات:",
+  "matches_button": "مباريات اليوم",
+  "bein_sports": "بي ان سبورتس",
+  "bein_sports_arabic": "بي ان سبورتس العربية",
+  "bein_sports_other_languages": "بي ان سبورتس لغات أخرى",
+  "bein_sports_turkish": "بي ان سبورتس التركية",
+  "espn": "ESPN",
+  "no_channels": "لم يتم العثور على قنوات...",
+  "load_error": "لا يمكن تحميل البيانات.",
+  "no_matches": "لم يتم العثور على مباريات لهذا اليوم.",
+  "match_time": "الوقت",
+  "match_status": "الحالة",
+  "match_competition": "المنافسة",
+  "match_channel": "القناة",
+  "language_switcher_label": "اللغة:",
+  "matches_title": "مباريات اليوم",
+  "back_to_channels": "العودة إلى القنوات",
+  "channels": "القنوات",
+  "loading_matches": "جاري تحميل المباريات..."
+}

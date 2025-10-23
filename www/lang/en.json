@@ -1,0 +1,23 @@
+{
+  "title": "IPTV Player",
+  "header_title": "IPTV Player",
+  "playlist_label": "Choose a channel list:",
+  "matches_button": "Today's Matches",
+  "bein_sports": "Bein Sports",
+  "bein_sports_arabic": "Bein Sports Arabic",
+  "bein_sports_other_languages": "Bein Sports Other Languages",
+  "bein_sports_turkish": "Bein Sports Turkish",
+  "espn": "ESPN",
+  "no_channels": "No channels found...",
+  "load_error": "Could not load data.",
+  "no_matches": "No matches found for today.",
+  "match_time": "Time",
+  "match_status": "Status",
+  "match_competition": "Competition",
+  "match_channel": "Channel",
+  "language_switcher_label": "Language:",
+  "matches_title": "Today's Matches",
+  "back_to_channels": "Back to Channels",
+  "channels": "Channels",
+  "loading_matches": "Loading matches..."
+}

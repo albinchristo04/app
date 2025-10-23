@@ -270,8 +270,10 @@ document.addEventListener('DOMContentLoaded', function () {
                                 logToNative('JS_LOG: Match click detected. Destination URL stored:' + destinationUrlAfterAd);
                                 logToNative('JS_LOG: Checking window.Android availability: ' + (!!window.Android) + ', typeof showInterstitialAd: ' + (typeof window.Android.showInterstitialAd));
                                 if (window.Android && typeof window.Android.showInterstitialAd === 'function') {
-                                    logToNative('JS_LOG: window.Android.showInterstitialAd is available. Calling native ad.');
-                                    window.Android.showInterstitialAd();
+                                    logToNative('JS_LOG: window.Android.showInterstitialAd is available. Calling native ad with delay.');
+                                    setTimeout(() => {
+                                        window.Android.showInterstitialAd();
+                                    }, 500); // Add a small delay to ensure native interface is ready
                                 } else {
                                     logToNative('JS_LOG: window.Android.showInterstitialAd NOT available. Navigating directly.');
                                     window.location.href = destinationUrl;
