@@ -30,8 +30,7 @@ jobs:
     - name: Clean Capacitor web assets
       run: rm -rf www
 
-    - name: Clean Capacitor Android project
-      run: npx cap clean android
+
 
     - name: Sync Capacitor with Android project
       run: npx cap sync android
