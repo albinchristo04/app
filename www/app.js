@@ -108,8 +108,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 logToNative('JS_LOG: Channel click detected. Destination URL stored:' + destinationUrlAfterAd);
                 logToNative('JS_LOG: Checking window.Android availability: ' + (!!window.Android) + ', typeof showInterstitialAd: ' + (typeof window.Android.showInterstitialAd));
                 if (window.Android && typeof window.Android.showInterstitialAd === 'function') {
-                    logToNative('JS_LOG: window.Android.showInterstitialAd is available. Calling native ad.');
-                    window.Android.showInterstitialAd();
+                    logToNative('JS_LOG: window.Android.showInterstitialAd is available. Calling native ad with delay.');
+                    setTimeout(() => {
+                        window.Android.showInterstitialAd();
+                    }, 500); // Add a small delay to ensure native interface is ready
                 } else {
                     logToNative('JS_LOG: window.Android.showInterstitialAd NOT available. Navigating directly.');
                     window.location.href = destinationUrl;
@@ -201,19 +203,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         localStorage.setItem('lastPlaylist', selectedValue);
     });
     
-    const lastPlaylist = localStorage.getItem('lastPlaylist');
-    logToNative('JS_LOG: Saved language:' + savedLanguage + ', Saved playlist:' + lastPlaylist);
-    if (lastPlaylist) {
-        playlistSelect.value = lastPlaylist;
-    } else {
-        const defaultPlaylist = 'bein.m3u';
-        playlistSelect.value = defaultPlaylist;
-    }
-
     const savedLanguage = localStorage.getItem('language') || 'ar';
-    logToNative('JS_LOG: Saved language:' + savedLanguage);
-    languageSelect.value = savedLanguage;
-    await setLanguage(savedLanguage);
+    logToNative('JS_LOG: Saved language:' + savedLanguage + ', Saved playlist:' + lastPlaylist);
+    // Explicitly set language to Arabic to ensure default
+    localStorage.setItem('language', 'ar');
+    languageSelect.value = 'ar';
+    await setLanguage('ar');
 
-    loadPlaylist(playlistSelect.value);
-});
+

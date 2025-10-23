@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script>
+        // Redirige vers matches.html si index.html est chargé et qu'aucun paramètre 'showchannels' n'est présent.
+        const urlParams = new URLSearchParams(window.location.search);
+        if (window.location.pathname.endsWith('index.html') && !urlParams.has('showchannels')) {
+            window.location.replace('matches.html');
+        }
+    </script>
     <header>
         <h1 data-translate="header_title">IPTV Player</h1>
         <div class="file-selector">
