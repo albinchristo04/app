@@ -30,7 +30,6 @@ jobs:
       run: ls -la
     - name: Sync Capacitor with Android project
       run: npx cap sync android
-
     - name: Clean Android Gradle build
       run: cd android && ./gradlew clean
 
