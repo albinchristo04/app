@@ -24,16 +24,21 @@ jobs:
         distribution: 'temurin'
         java-version: '17' # Version de Java compatible avec Android
 
-    - name: Install npm dependencies
-      run: npm install
+        - name: Install npm dependencies
 
-    - name: Clean Capacitor web assets
-      run: rm -rf www
+          run: npm install
 
+    
 
+        - name: Debug: List directory contents
 
-    - name: Sync Capacitor with Android project
-      run: npx cap sync android
+          run: ls -la
+
+    
+
+        - name: Sync Capacitor with Android project
+
+          run: npx cap sync android
 
     - name: Clean Android Gradle build
       run: cd android && ./gradlew clean
