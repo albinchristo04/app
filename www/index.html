@@ -33,23 +33,7 @@
             <!-- Channels will be injected here by JavaScript -->
         </div>
     </main>
-    <script>
-        function logToNative(message) {
-            if (window.Android && typeof window.Android.log === 'function') {
-                window.Android.log(message);
-            } else {
-                console.log(message);
-            }
-        }
 
-        // Rediriger vers la page des matches par défaut
-        const noredirectParam = new URLSearchParams(window.location.search).get('noredirect');
-        logToNative('JS_LOG: index.html loaded. noredirect param:' + noredirectParam);
-        if (!noredirectParam) {
-            logToNative('JS_LOG: Redirecting to matches.html');
-            window.location.href = 'matches.html';
-        }
-    </script>
     <script src="app.js"></script>
 </body>
 </html>
