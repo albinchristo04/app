@@ -10,7 +10,7 @@
     <script>
         // Redirige vers matches.html si index.html est chargé et qu'aucun paramètre 'showchannels' n'est présent.
         const urlParams = new URLSearchParams(window.location.search);
-        if (window.location.pathname.endsWith('index.html') && !urlParams.has('showchannels')) {
+        if (!urlParams.has('showchannels')) {
             window.location.replace('matches.html');
         }
     </script>
