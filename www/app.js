@@ -204,10 +204,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
     
     const savedLanguage = localStorage.getItem('language') || 'ar';
-    logToNative('JS_LOG: Saved language:' + savedLanguage + ', Saved playlist:' + lastPlaylist);
+    logToNative('JS_LOG: Saved language:' + savedLanguage);
     // Explicitly set language to Arabic to ensure default
     localStorage.setItem('language', 'ar');
     languageSelect.value = 'ar';
     await setLanguage('ar');
 
-
+    // Load initial playlist only if on channels page (index.html) and not redirecting
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('showchannels')) {
+        const lastPlaylist = localStorage.getItem('lastPlaylist') || playlistSelect.value;
+        playlistSelect.value = lastPlaylist;
+        loadPlaylist(lastPlaylist);
+    }
+});
