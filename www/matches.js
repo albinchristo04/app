@@ -235,7 +235,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                         <div class="match-footer">
                             <div class="match-competition">${lang === 'en' ? transliterateToEnglish(competition) : competition}</div>
-                            <div class="match-channel">📺 ${match.channel || 'Channel not specified'}</div>
+                            <div class="match-details-bottom">
+                                <div class="match-channel">📺 ${match.channel || 'Channel not specified'}</div>
+                                ${match.commentator && match.commentator !== 'غير معروف' ? `<div class="match-commentator">🎤 ${match.commentator}</div>` : ''}
+                            </div>
                         </div>
                     `;
                     matchCard.style.cursor = 'pointer';
