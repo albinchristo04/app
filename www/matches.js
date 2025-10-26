@@ -100,6 +100,34 @@ document.addEventListener('DOMContentLoaded', function () {
         return arabicMap[text] || text;
     }
 
+    // Function to play a default channel (fallback)
+    async function playDefaultChannel() {
+        logToNative('JS_LOG: Fallback triggered. Playing default channel ESPN 1.');
+        const defaultChannel = {
+            name: 'ESPN',
+            url: 'http://181.119.86.68:8000/play/b031/index.m3u8' // URL for ESPN 1
+        };
+
+        // Proxy the URL
+        const finalPlayerUrl = `https://chaine-en-live.vercel.app/api/proxy?url=${encodeURIComponent(defaultChannel.url)}`;
+        logToNative('JS_LOG: Default channel final player URL: ' + finalPlayerUrl);
+
+        const destinationUrl = `player.html?stream=${encodeURIComponent(finalPlayerUrl)}`;
+        
+        // Ad logic
+        destinationUrlAfterAd = destinationUrl;
+        logToNative('JS_LOG: Default channel destination URL stored: ' + destinationUrlAfterAd);
+        if (window.Android && typeof window.Android.showInterstitialAd === 'function') {
+            logToNative('JS_LOG: Calling native ad for default channel.');
+            setTimeout(() => {
+                window.Android.showInterstitialAd();
+            }, 500);
+        } else {
+            logToNative('JS_LOG: Navigating directly to default channel.');
+            window.location.href = destinationUrl;
+        }
+    }
+
     // Function to fetch and display matches
     async function loadMatches() {
         try {
@@ -283,11 +311,13 @@ document.addEventListener('DOMContentLoaded', function () {
                                 }
                             }
                             else {
-                                alert(`Channel "${match.channel}" not found in playlists.`);
+                                // Fallback: Play ESPN 1 if channel is not found
+                                playDefaultChannel();
                             }
                         }
                         else {
-                            alert('No channel specified for this match.');
+                            // Fallback: Play ESPN 1 if no channel is specified
+                            playDefaultChannel();
                         }
                     });
 
