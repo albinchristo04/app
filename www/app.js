@@ -193,6 +193,13 @@ document.addEventListener('DOMContentLoaded', async () => {
      * @param {string} playlistFile - Le nom du fichier de la playlist (ex: 'bein.m3u').
      */
     async function managePlaylist(playlistFile) {
+        logToNative(`JS_LOG: managePlaylist called for: ${playlistFile}`);
+        if (!Capacitor || !Capacitor.Plugins || !Capacitor.Plugins.Filesystem) {
+            logToNative('JS_LOG: Capacitor Filesystem plugin not available!');
+            showStatus(translations.load_error || 'Erreur: Plugin de fichiers non disponible.', true);
+            return;
+        }
+
         if (playlistFile === 'matches_today.json') {
             window.location.href = 'matches.html';
             return;
@@ -200,69 +207,77 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const remoteUrl = `https://raw.githubusercontent.com/amouradore/chaine-en-live/main/www/${playlistFile}`;
         const localPath = `playlists/${playlistFile}`;
+        logToNative(`JS_LOG: Remote URL: ${remoteUrl}, Local Path: ${localPath}`);
 
         try {
             // 1. Essayer de lire la version locale en premier
-            logToNative(`JS_LOG: Trying to read local playlist: ${localPath}`);
-            const localData = await Filesystem.readFile({
+            logToNative(`JS_LOG: Attempting to read local playlist: ${localPath}`);
+            const localData = await Capacitor.Plugins.Filesystem.readFile({
                 path: localPath,
-                directory: Directory.Data,
-                encoding: Encoding.UTF8
+                directory: Capacitor.Plugins.Filesystem.Directory.Data,
+                encoding: Capacitor.Plugins.Filesystem.Encoding.UTF8
             });
-            logToNative(`JS_LOG: Local playlist ${playlistFile} found. Displaying it.`);
+            logToNative(`JS_LOG: Successfully read local playlist ${playlistFile}. Content length: ${localData.data.length}`);
             const channels = parseM3U(localData.data);
+            logToNative(`JS_LOG: Parsed ${channels.length} channels from local ${playlistFile}.`);
             displayChannels(channels, playlistFile);
+            logToNative(`JS_LOG: Displayed channels from local ${playlistFile}.`);
 
             // 2. En arrière-plan, vérifier les mises à jour
-            logToNative(`JS_LOG: Checking for updates for ${playlistFile} in the background.`);
+            logToNative(`JS_LOG: Checking for updates for ${playlistFile} in the background from ${remoteUrl}.`);
             try {
                 const response = await fetch(remoteUrl);
-                if (!response.ok) throw new Error('Network response was not ok.');
+                if (!response.ok) throw new Error(`Network response was not ok. Status: ${response.status}`);
                 const remoteContent = await response.text();
+                logToNative(`JS_LOG: Downloaded remote content for ${playlistFile}. Content length: ${remoteContent.length}`);
 
                 if (remoteContent.trim() !== localData.data.trim()) {
                     logToNative(`JS_LOG: New content found for ${playlistFile}. Updating local cache.`);
-                    await Filesystem.writeFile({
+                    await Capacitor.Plugins.Filesystem.writeFile({
                         path: localPath,
                         data: remoteContent,
-                        directory: Directory.Data,
-                        encoding: Encoding.UTF8,
+                        directory: Capacitor.Plugins.Filesystem.Directory.Data,
+                        encoding: Capacitor.Plugins.Filesystem.Encoding.UTF8,
                         recursive: true // Crée le dossier 'playlists' si nécessaire
                     });
+                    logToNative(`JS_LOG: Local cache updated for ${playlistFile}.`);
                 } else {
                     logToNative(`JS_LOG: Local playlist ${playlistFile} is already up to date.`);
                 }
             } catch (updateError) {
-                logToNative(`JS_LOG: Could not check for updates for ${playlistFile}: ${updateError}`);
+                logToNative(`JS_LOG: Could not check for updates for ${playlistFile}: ${updateError.message || updateError}`);
                 // Pas besoin de notifier l'utilisateur, l'app fonctionne avec le cache
             }
 
         } catch (e) {
             // 3. Le fichier local n'existe pas (ou erreur de lecture), le télécharger
-            logToNative(`JS_LOG: Local playlist ${playlistFile} not found. Downloading from remote.`);
+            logToNative(`JS_LOG: Local playlist ${playlistFile} not found or error reading. Attempting to download from remote.`);
             showStatus(translations.updating_channels || 'Mise à jour des chaînes...');
 
             try {
                 const response = await fetch(remoteUrl);
                 if (!response.ok) throw new Error(`Network error! Status: ${response.status}`);
                 const remoteContent = await response.text();
+                logToNative(`JS_LOG: Downloaded remote content for ${playlistFile}. Content length: ${remoteContent.length}`);
 
                 // Sauvegarder pour la prochaine fois
-                await Filesystem.writeFile({
+                await Capacitor.Plugins.Filesystem.writeFile({
                     path: localPath,
                     data: remoteContent,
-                    directory: Directory.Data,
-                    encoding: Encoding.UTF8,
+                    directory: Capacitor.Plugins.Filesystem.Directory.Data,
+                    encoding: Capacitor.Plugins.Filesystem.Encoding.UTF8,
                     recursive: true
                 });
                 logToNative(`JS_LOG: Playlist ${playlistFile} downloaded and cached.`);
 
                 // Afficher les chaînes
                 const channels = parseM3U(remoteContent);
+                logToNative(`JS_LOG: Parsed ${channels.length} channels from remote ${playlistFile}.`);
                 displayChannels(channels, playlistFile);
+                logToNative(`JS_LOG: Displayed channels from remote ${playlistFile}.`);
 
             } catch (downloadError) {
-                logToNative(`JS_LOG: Failed to download playlist ${playlistFile}: ${downloadError}`);
+                logToNative(`JS_LOG: Failed to download playlist ${playlistFile}: ${downloadError.message || downloadError}`);
                 showStatus(translations.load_error || 'Impossible de charger les données. Vérifiez votre connexion.', true);
             }
         }
