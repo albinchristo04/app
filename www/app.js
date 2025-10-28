@@ -318,9 +318,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     // NEW: Function to safely load the initial playlist
     async function safelyLoadInitialPlaylist() {
         logToNative('JS_LOG: Attempting to safely load initial playlist.');
+        logToNative(`JS_LOG: Capacitor object: ${JSON.stringify(Capacitor)}`);
+        logToNative(`JS_LOG: Capacitor.Plugins object: ${JSON.stringify(Capacitor.Plugins)}`);
         // Check for Capacitor Filesystem availability repeatedly
-        if (!Capacitor || !Capacitor.Plugins || !Capacitor.Plugins.Filesystem || !Capacitor.Plugins.Filesystem.Directory || !Capacitor.Plugins.Filesystem.Encoding) {
-            logToNative('JS_LOG: Capacitor Filesystem not fully ready yet. Retrying in 100ms...');
+        if (!Capacitor.isPluginAvailable('Filesystem')) {
+            logToNative('JS_LOG: Capacitor Filesystem plugin not available yet. Retrying in 100ms...');
             setTimeout(safelyLoadInitialPlaylist, 100); // Retry after 100ms
             return;
         }

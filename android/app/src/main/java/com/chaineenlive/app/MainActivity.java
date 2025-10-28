@@ -68,8 +68,10 @@ public class MainActivity extends BridgeActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         registerPlugin(FilesystemPlugin.class); // Enregistrer explicitement le plugin Filesystem
+        Log.d(TAG, "FilesystemPlugin registered."); // ADD THIS LOG
 
         android.webkit.WebView webView = getBridge().getWebView();
+        Log.d(TAG, "Capacitor Bridge WebView obtained."); // ADD THIS LOG
 
         // --- Webview Settings ---
         android.webkit.WebView.setWebContentsDebuggingEnabled(true); // Enable WebView debugging
