@@ -315,11 +315,29 @@ document.addEventListener('DOMContentLoaded', async () => {
     languageSelect.value = 'ar';
     await setLanguage('ar');
 
-    // Load initial playlist only if on channels page (index.html) and not redirecting
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('showchannels')) {
-        const lastPlaylist = localStorage.getItem('lastPlaylist') || playlistSelect.value;
-        playlistSelect.value = lastPlaylist;
-        loadPlaylist(lastPlaylist);
+    // NEW: Function to safely load the initial playlist
+    async function safelyLoadInitialPlaylist() {
+        logToNative('JS_LOG: Attempting to safely load initial playlist.');
+        // Check for Capacitor Filesystem availability repeatedly
+        if (!Capacitor || !Capacitor.Plugins || !Capacitor.Plugins.Filesystem || !Capacitor.Plugins.Filesystem.Directory || !Capacitor.Plugins.Filesystem.Encoding) {
+            logToNative('JS_LOG: Capacitor Filesystem not fully ready yet. Retrying in 100ms...');
+            setTimeout(safelyLoadInitialPlaylist, 100); // Retry after 100ms
+            return;
+        }
+        logToNative('JS_LOG: Capacitor Filesystem is ready.');
+
+        // Load initial playlist only if on channels page (index.html) and not redirecting
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('showchannels')) {
+            const lastPlaylist = localStorage.getItem('lastPlaylist') || playlistSelect.value;
+            playlistSelect.value = lastPlaylist;
+            loadPlaylist(lastPlaylist);
+        } else {
+            // If not showchannels, load the default selected playlist
+            loadPlaylist(playlistSelect.value);
+        }
     }
+
+    // Call the safe loader wrapped in a timeout to ensure all DOM is rendered
+    setTimeout(safelyLoadInitialPlaylist, 0); // Execute as soon as possible after current event loop, giving the bridge a chance
 });
