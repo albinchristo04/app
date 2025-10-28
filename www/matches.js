@@ -339,8 +339,7 @@ document.addEventListener('DOMContentLoaded', function () {
     async function findChannelStream(channelName) {
         const playlists = [
             'bein.m3u', 'bein_sports_arabic.m3u', 'bein_sports_other_languages.m3u',
-            'bein_sports_turkish.m3u', 'sport-espn.m3u', 'dazn.m3u', 'dazn_channels.m3u',
-            'france-sport.m3u', 'chaine-us.m3u', 'mbc.m3u'
+            'bein_sports_turkish.m3u', 'sport-espn.m3u', 'dazn_channels.m3u', 'mbc.m3u'
         ];
 
         // Normalize channel name for robust comparison
@@ -356,8 +355,29 @@ document.addEventListener('DOMContentLoaded', function () {
         const searchName = normalize(channelName);
 
         for (const playlist of playlists) {
-            const localPath = `playlists/${playlist}`;
+            // First try to read from the app's assets directory (www folder)
             try {
+                const response = await fetch(playlist);
+                if (response.ok) {
+                    const m3uContent = await response.text();
+                    const channels = parseM3U(m3uContent);
+
+                    for (const channel of channels) {
+                        const playlistChannelName = normalize(channel.name);
+
+                        if (playlistChannelName.includes(searchName)) {
+                            logToNative(`JS_LOG: Found channel "${channelName}" in playlist ${playlist}`);
+                            return { name: channel.name, url: channel.url, logo: channel.logo };
+                        }
+                    }
+                }
+            } catch (error) {
+                logToNative(`JS_LOG: Could not read playlist ${playlist} from assets. Error: ${error}`);
+            }
+            
+            // Then try to read from the device's data directory (for cached playlists)
+            try {
+                const localPath = `${playlist}`;
                 // Read the cached playlist from the device's data directory
                 const m3uFile = await Filesystem.readFile({
                     path: localPath,
@@ -383,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        logToNative(`JS_LOG: Channel "${channelName}" not found in any cached playlists.`);
+        logToNative(`JS_LOG: Channel "${channelName}" not found in any playlists.`);
         return null; // Channel not found
     }
 
