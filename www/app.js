@@ -194,6 +194,8 @@ document.addEventListener('DOMContentLoaded', async () => {
      */
     async function managePlaylist(playlistFile) {
         logToNative(`JS_LOG: managePlaylist called for: ${playlistFile}`);
+        logToNative(`JS_LOG: Capacitor.Plugins.Filesystem: ${JSON.stringify(Capacitor.Plugins.Filesystem)}`);
+        logToNative(`JS_LOG: Capacitor.Plugins.Filesystem.Directory: ${JSON.stringify(Capacitor.Plugins.Filesystem.Directory)}`);
         if (!Capacitor || !Capacitor.Plugins || !Capacitor.Plugins.Filesystem) {
             logToNative('JS_LOG: Capacitor Filesystem plugin not available!');
             showStatus(translations.load_error || 'Erreur: Plugin de fichiers non disponible.', true);
