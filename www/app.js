@@ -194,11 +194,9 @@ document.addEventListener('DOMContentLoaded', async () => {
      */
     async function managePlaylist(playlistFile) {
         logToNative(`JS_LOG: managePlaylist called for: ${playlistFile}`);
-        logToNative(`JS_LOG: Capacitor.Plugins.Filesystem: ${JSON.stringify(Capacitor.Plugins.Filesystem)}`);
-        logToNative(`JS_LOG: Capacitor.Plugins.Filesystem.Directory: ${JSON.stringify(Capacitor.Plugins.Filesystem.Directory)}`);
-        if (!Capacitor || !Capacitor.Plugins || !Capacitor.Plugins.Filesystem) {
-            logToNative('JS_LOG: Capacitor Filesystem plugin not available!');
-            showStatus(translations.load_error || 'Erreur: Plugin de fichiers non disponible.', true);
+        if (!Capacitor || !Capacitor.Plugins || !Capacitor.Plugins.Filesystem || !Capacitor.Plugins.Filesystem.Directory || !Capacitor.Plugins.Filesystem.Encoding) {
+            logToNative('JS_LOG: Capacitor Filesystem plugin or its enums (Directory/Encoding) not fully available!');
+            showStatus(translations.load_error || 'Erreur: Plugin de fichiers non disponible ou non initialisé.', true);
             return;
         }
 
@@ -210,6 +208,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         const remoteUrl = `https://raw.githubusercontent.com/amouradore/chaine-en-live/main/www/${playlistFile}`;
         const localPath = `playlists/${playlistFile}`;
         logToNative(`JS_LOG: Remote URL: ${remoteUrl}, Local Path: ${localPath}`);
+
+        try {
+            // Explicitly create the directory first
+            logToNative(`JS_LOG: Ensuring directory 'playlists' exists.`);
+            await Capacitor.Plugins.Filesystem.mkdir({
+                path: 'playlists',
+                directory: Capacitor.Plugins.Filesystem.Directory.Data,
+                recursive: true
+            });
+            logToNative(`JS_LOG: Directory 'playlists' ensured.`);
+        } catch (dirError) {
+            logToNative(`JS_LOG: Error ensuring 'playlists' directory: ${dirError.message || dirError}`);
+            showStatus(translations.load_error || 'Erreur: Impossible de créer le dossier de playlists.', true);
+            return;
+        }
 
         try {
             // 1. Essayer de lire la version locale en premier
