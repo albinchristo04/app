@@ -14,7 +14,7 @@ function navigateAfterAd() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const { Filesystem, Directory, Encoding } = capacitorExports['@capacitor/filesystem'];
+    const { Filesystem, Directory, Encoding } = Capacitor.Plugins;
     logToNative('JS_LOG: matches.js script loaded and DOMContentLoaded.');
     const matchesContainer = document.getElementById('matches-container');
     const loadingDiv = document.querySelector('.loading');

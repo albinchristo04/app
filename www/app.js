@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // NOUVELLE LOGIQUE DE CHARGEMENT DYNAMIQUE DES PLAYLISTS
     // =================================================================================
 
-    const { Filesystem, Directory, Encoding } = capacitorExports['@capacitor/filesystem'];
+    const { Filesystem, Directory, Encoding } = Capacitor.Plugins;
 
     /**
      * Affiche un message d'état ou d'erreur dans le conteneur de la liste des chaînes.
