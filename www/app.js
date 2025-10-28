@@ -173,27 +173,102 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    // =================================================================================
+    // NOUVELLE LOGIQUE DE CHARGEMENT DYNAMIQUE DES PLAYLISTS
+    // =================================================================================
 
+    const { Filesystem, Directory, Encoding } = capacitorExports['@capacitor/filesystem'];
 
+    /**
+     * Affiche un message d'état ou d'erreur dans le conteneur de la liste des chaînes.
+     * @param {string} message - Le message à afficher.
+     * @param {boolean} isError - Si vrai, affiche le message en tant qu'erreur.
+     */
+    function showStatus(message, isError = false) {
+        channelListContainer.innerHTML = `<p class="${isError ? 'error-message' : 'status-message'}">${message}</p>`;
+    }
 
-
-    async function loadPlaylist(playlistFile) {
+    /**
+     * Gère le téléchargement, la mise en cache et l'affichage d'une playlist.
+     * @param {string} playlistFile - Le nom du fichier de la playlist (ex: 'bein.m3u').
+     */
+    async function managePlaylist(playlistFile) {
         if (playlistFile === 'matches_today.json') {
             window.location.href = 'matches.html';
             return;
         }
 
+        const remoteUrl = `https://raw.githubusercontent.com/amouradore/chaine-en-live/main/www/${playlistFile}`;
+        const localPath = `playlists/${playlistFile}`;
+
         try {
-            const response = await fetch(playlistFile);
-            if (!response.ok) throw new Error(`Erreur réseau: Impossible de charger la playlist. Statut: ${response.status}`);
-            const m3uContent = await response.text();
-            const channels = parseM3U(m3uContent);
+            // 1. Essayer de lire la version locale en premier
+            logToNative(`JS_LOG: Trying to read local playlist: ${localPath}`);
+            const localData = await Filesystem.readFile({
+                path: localPath,
+                directory: Directory.Data,
+                encoding: Encoding.UTF8
+            });
+            logToNative(`JS_LOG: Local playlist ${playlistFile} found. Displaying it.`);
+            const channels = parseM3U(localData.data);
             displayChannels(channels, playlistFile);
-        } catch (error) {
-            logToNative('JS_LOG: Erreur chargement playlist ou matchs:' + error);
-            channelListContainer.innerHTML = `<p class="error-message">${translations.load_error || 'Impossible de charger les données.'}</p>`;
+
+            // 2. En arrière-plan, vérifier les mises à jour
+            logToNative(`JS_LOG: Checking for updates for ${playlistFile} in the background.`);
+            try {
+                const response = await fetch(remoteUrl);
+                if (!response.ok) throw new Error('Network response was not ok.');
+                const remoteContent = await response.text();
+
+                if (remoteContent.trim() !== localData.data.trim()) {
+                    logToNative(`JS_LOG: New content found for ${playlistFile}. Updating local cache.`);
+                    await Filesystem.writeFile({
+                        path: localPath,
+                        data: remoteContent,
+                        directory: Directory.Data,
+                        encoding: Encoding.UTF8,
+                        recursive: true // Crée le dossier 'playlists' si nécessaire
+                    });
+                } else {
+                    logToNative(`JS_LOG: Local playlist ${playlistFile} is already up to date.`);
+                }
+            } catch (updateError) {
+                logToNative(`JS_LOG: Could not check for updates for ${playlistFile}: ${updateError}`);
+                // Pas besoin de notifier l'utilisateur, l'app fonctionne avec le cache
+            }
+
+        } catch (e) {
+            // 3. Le fichier local n'existe pas (ou erreur de lecture), le télécharger
+            logToNative(`JS_LOG: Local playlist ${playlistFile} not found. Downloading from remote.`);
+            showStatus(translations.updating_channels || 'Mise à jour des chaînes...');
+
+            try {
+                const response = await fetch(remoteUrl);
+                if (!response.ok) throw new Error(`Network error! Status: ${response.status}`);
+                const remoteContent = await response.text();
+
+                // Sauvegarder pour la prochaine fois
+                await Filesystem.writeFile({
+                    path: localPath,
+                    data: remoteContent,
+                    directory: Directory.Data,
+                    encoding: Encoding.UTF8,
+                    recursive: true
+                });
+                logToNative(`JS_LOG: Playlist ${playlistFile} downloaded and cached.`);
+
+                // Afficher les chaînes
+                const channels = parseM3U(remoteContent);
+                displayChannels(channels, playlistFile);
+
+            } catch (downloadError) {
+                logToNative(`JS_LOG: Failed to download playlist ${playlistFile}: ${downloadError}`);
+                showStatus(translations.load_error || 'Impossible de charger les données. Vérifiez votre connexion.', true);
+            }
         }
     }
+
+    const loadPlaylist = managePlaylist;
     
 
 
