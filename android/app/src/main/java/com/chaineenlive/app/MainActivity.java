@@ -31,6 +31,8 @@ import com.unity3d.services.banners.BannerErrorInfo;
 import com.unity3d.services.banners.BannerView;
 import com.unity3d.services.banners.UnityBannerSize;
 
+import com.capacitorjs.plugins.filesystem.FilesystemPlugin;
+
 public class MainActivity extends BridgeActivity {
 
     private static final String TAG = "MainActivityAds";
@@ -65,6 +67,7 @@ public class MainActivity extends BridgeActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        registerPlugin(FilesystemPlugin.class); // Enregistrer explicitement le plugin Filesystem
 
         android.webkit.WebView webView = getBridge().getWebView();
 
