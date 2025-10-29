@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: '828105f'
 
       - name: Set up Python
         uses: actions/setup-python@v5
