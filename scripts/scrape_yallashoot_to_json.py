@@ -48,7 +48,9 @@ def scrape():
 
         gradual_scroll(page)
 
-        page.screenshot(path="debug_screenshot.png", full_page=True)
+        screenshot_path = REPO_ROOT / "debug_screenshot.png"
+        page.screenshot(path=screenshot_path, full_page=True)
+        print(f"[screenshot] Saved screenshot to {screenshot_path}")
 
         js = r"""
             () => {
