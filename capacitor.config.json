@@ -4,8 +4,8 @@
   "webDir": "www",
   "bundledWebRuntime": false,
   "server": {
-    "androidScheme": "http",
-    "startPage": "webtv.html"
+    "androidScheme": "https",
+    "startPage": "matches.html"
   },
   "cordova": {
     "includePlugins": true
