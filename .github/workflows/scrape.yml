@@ -33,6 +33,12 @@ jobs:
       - name: Run scraper
         run: python scripts/scrape_yallashoot_to_json.py
 
+      - name: Upload debug screenshot
+        uses: actions/upload-artifact@v3
+        with:
+          name: debug-screenshot
+          path: debug_screenshot.png
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
       

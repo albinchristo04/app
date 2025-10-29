@@ -34,7 +34,6 @@ def scrape():
             viewport={"width": 1366, "height": 864},
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127 Safari/537.36",
             locale="ar",
-            # 👇 أهم سطر: خلي المتصفح على توقit بغداد حتى الموقع يطلع الأوقات صح
             timezone_id="Asia/Baghdad",
         )
         page = ctx.new_page()
@@ -48,6 +47,8 @@ def scrape():
             pass
 
         gradual_scroll(page)
+
+        page.screenshot(path="debug_screenshot.png", full_page=True)
 
         js = r"""
             () => {

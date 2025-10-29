@@ -1,0 +1,7 @@
+node_modules/
+/android/
+logs.jpg
+logs.txt
+logs2.jpg
+
+.aider*
