@@ -14,7 +14,6 @@ function navigateAfterAd() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const { Filesystem, Directory, Encoding } = Capacitor.Plugins;
     logToNative('JS_LOG: matches.js script loaded and DOMContentLoaded.');
     const matchesContainer = document.getElementById('matches-container');
     const loadingDiv = document.querySelector('.loading');
@@ -355,9 +354,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const searchName = normalize(channelName);
 
         for (const playlist of playlists) {
-            // First try to read from the app's assets directory (www folder)
+            // Always try to read from the app's assets directory (www folder) or remote GitHub
             try {
-                const response = await fetch(playlist);
+                const remoteUrl = `https://raw.githubusercontent.com/amouradore/chaine-en-live/main/www/${playlist}`;
+                const response = await fetch(remoteUrl);
                 if (response.ok) {
                     const m3uContent = await response.text();
                     const channels = parseM3U(m3uContent);
@@ -372,34 +372,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
             } catch (error) {
-                logToNative(`JS_LOG: Could not read playlist ${playlist} from assets. Error: ${error}`);
-            }
-            
-            // Then try to read from the device's data directory (for cached playlists)
-            try {
-                const localPath = `playlists/${playlist}`;
-                // Read the cached playlist from the device's data directory
-                const m3uFile = await Filesystem.readFile({
-                    path: localPath,
-                    directory: Directory.Data,
-                    encoding: Encoding.UTF8
-                });
-
-                const m3uContent = m3uFile.data;
-                const channels = parseM3U(m3uContent);
-
-                for (const channel of channels) {
-                    const playlistChannelName = normalize(channel.name);
-
-                    if (playlistChannelName.includes(searchName)) {
-                        logToNative(`JS_LOG: Found channel "${channelName}" in cached playlist ${playlist}`);
-                        return { name: channel.name, url: channel.url, logo: channel.logo };
-                    }
-                }
-            } catch (error) {
-                // This error is expected if the playlist hasn't been cached yet.
-                // We can log it for debugging but it's not a critical failure.
-                logToNative(`JS_LOG: Could not read cached playlist ${localPath}. It might not be cached yet. Error: ${error}`);
+                logToNative(`JS_LOG: Could not read playlist ${playlist} from remote. Error: ${error}`);
             }
         }
 
