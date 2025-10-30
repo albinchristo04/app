@@ -3,8 +3,7 @@ let destinationUrlAfterAd = '';
 function logToNative(message) {
     if (window.Android && typeof window.Android.log === 'function') {
         window.Android.log(message);
-    }
-} else {
+    } else {
         console.log(message);
     }
 }
