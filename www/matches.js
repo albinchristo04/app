@@ -282,11 +282,11 @@ document.addEventListener('DOMContentLoaded', function () {
                                 // Fallback to custom logic if no valid logo from M3U
                                 const normalizedChannelName = match.channel.toLowerCase().replace(/[^a-z0-9]/g, '');
                                 if (normalizedChannelName.includes('bein') && normalizedChannelName.includes('sports')) {
-                                    const matchNum = normalizedChannelName.match(/beinsports(\d+)/);
+                                    const matchNum = normalizedChannelName.match(/beinsport(\d+)/); // Changed regex
                                     if (matchNum && matchNum[1]) {
-                                        channelLogoPath = `images/beinsports${matchNum[1]}.png`;
+                                        channelLogoPath = `images/beinsport${matchNum[1]}.png`; // Corrected path
                                     } else {
-                                        channelLogoPath = `images/beinsports.png`; // Generic beIN logo
+                                        channelLogoPath = `images/beinsport.png`; // Generic beIN logo
                                     }
                                 } else if (normalizedChannelName.includes('espn')) {
                                     const matchNum = normalizedChannelName.match(/espn(\d+)/);

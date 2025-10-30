@@ -79,21 +79,21 @@ function displayChannels(channels, playlistFile) {
 
                                         const normalizedChannelName = channel.name.toLowerCase().replace(/[^a-z0-9]/g, '');
 
-                                        if (normalizedChannelName.includes('bein') && normalizedChannelName.includes('sports')) {
+                                                            if (normalizedChannelName.includes('bein') && normalizedChannelName.includes('sports')) {
 
-                                            const match = normalizedChannelName.match(/beinsports(\d+)/);
+                                                                const match = normalizedChannelName.match(/beinsport(\d+)/); // Changed regex to match 'beinsport' without 's'
 
-                                            if (match && match[1]) {
+                                                                if (match && match[1]) {
 
-                                                imagePath = `images/beinsports${match[1]}.png`;
+                                                                    imagePath = `images/beinsport${match[1]}.png`; // Corrected path
 
-                                            } else {
+                                                                } else {
 
-                                                imagePath = `images/beinsports.png`; // Generic beIN logo
+                                                                    imagePath = `images/beinsport.png`; // Generic beIN logo (if exists)
 
-                                            }
+                                                                }
 
-                                        } else if (normalizedChannelName.includes('espn')) {
+                                                            } else if (normalizedChannelName.includes('espn')) {
 
                                             const match = normalizedChannelName.match(/espn(\d+)/);
 
