@@ -65,30 +65,51 @@ function displayChannels(channels, playlistFile) {
             }
         });
 
-        if (playlistFile === 'dazn.m3u' || playlistFile === 'bein.m3u' || playlistFile === 'sport-espn.m3u' || playlistFile === 'bein_sports_arabic.m3u' || playlistFile === 'bein_sports_other_languages.m3u' || playlistFile === 'bein_sports_turkish.m3u' || playlistFile === 'dazn_channels.m3u') {
-            channelItem.className = 'channel-item-image';
-            let imagePath = channel.logo;
-            // ... (rest of your image path logic)
-            const logo = document.createElement('img');
-            logo.src = imagePath;
-            logo.alt = channel.name;
-            logo.className = 'channel-logo';
-            logo.onerror = () => { logo.src = 'https://via.placeholder.com/60?text=N/A'; };
-            channelItem.appendChild(logo);
-        } else {
-            channelItem.className = 'channel-item';
-            const logo = document.createElement('img');
-            logo.src = channel.logo;
-            logo.alt = channel.name;
-            logo.className = 'channel-logo';
-            logo.onerror = () => { logo.src = 'https://via.placeholder.com/60?text=N/A'; };
-            const name = document.createElement('span');
-            name.className = 'channel-name';
-            name.textContent = channel.name;
-            channelItem.appendChild(logo);
-            channelItem.appendChild(name);
-        }
-        channelListContainer.appendChild(channelItem);
+                    if (playlistFile === 'dazn.m3u' || playlistFile === 'bein.m3u' || playlistFile === 'sport-espn.m3u' || playlistFile === 'bein_sports_arabic.m3u' || playlistFile === 'bein_sports_other_languages.m3u' || playlistFile === 'bein_sports_turkish.m3u' || playlistFile === 'dazn_channels.m3u') {
+                        channelItem.className = 'channel-item-image';
+                        let imagePath = channel.logo;
+        
+                        // Custom logic to construct logo path based on channel name
+                        const normalizedChannelName = channel.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+                        if (normalizedChannelName.includes('bein') && normalizedChannelName.includes('sports')) {
+                            const match = normalizedChannelName.match(/beinsports(\d+)/);
+                            if (match && match[1]) {
+                                imagePath = `images/beinsports${match[1]}.png`;
+                            } else {
+                                // Handle cases like 'beIN SPORTS' without a number if needed
+                                imagePath = `images/beinsports.png`; // Generic beIN logo
+                            }
+                        } else if (normalizedChannelName.includes('espn')) {
+                            const match = normalizedChannelName.match(/espn(\d+)/);
+                            if (match && match[1]) {
+                                imagePath = `images/espn${match[1]}.png`;
+                            } else {
+                                imagePath = `images/espn.png`; // Generic ESPN logo
+                            }
+                        } else {
+                            // Fallback for other channels or if no specific logo logic applies
+                            imagePath = channel.logo || 'https://via.placeholder.com/60?text=N/A';
+                        }
+        
+                        const logo = document.createElement('img');
+                        logo.src = imagePath;
+                        logo.alt = channel.name;
+                        logo.className = 'channel-logo';
+                        logo.onerror = () => { logo.src = 'https://via.placeholder.com/60?text=N/A'; };
+                        channelItem.appendChild(logo);
+                    } else {
+                        channelItem.className = 'channel-item';
+                        const logo = document.createElement('img');
+                        logo.src = channel.logo;
+                        logo.alt = channel.name;
+                        logo.className = 'channel-logo';
+                        logo.onerror = () => { logo.src = 'https://via.placeholder.com/60?text=N/A'; };
+                        const name = document.createElement('span');
+                        name.className = 'channel-name';
+                        name.textContent = channel.name;
+                        channelItem.appendChild(logo);
+                        channelItem.appendChild(name);
+                    }        channelListContainer.appendChild(channelItem);
     });
 }
 
