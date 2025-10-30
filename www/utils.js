@@ -1,4 +1,6 @@
 
+logToNative('JS_LOG: utils.js loaded.');
+
 function parseM3U(m3uContent) {
     const channels = [];
     const lines = m3uContent.split(/\r\n|\n/);
