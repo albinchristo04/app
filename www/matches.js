@@ -273,26 +273,31 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Add click event listener to open the channel stream
                     matchCard.addEventListener('click', async function() {
                         if (match.channel) {
-                            // Custom logic to construct logo path based on channel name
                             let channelLogoPath = 'https://via.placeholder.com/60?text=N/A';
-                            const normalizedChannelName = match.channel.toLowerCase().replace(/[^a-z0-9]/g, '');
-                            if (normalizedChannelName.includes('bein') && normalizedChannelName.includes('sports')) {
-                                const matchNum = normalizedChannelName.match(/beinsports(\d+)/);
-                                if (matchNum && matchNum[1]) {
-                                    channelLogoPath = `images/beinsports${matchNum[1]}.png`;
-                                } else {
-                                    channelLogoPath = `images/beinsports.png`; // Generic beIN logo
-                                }
-                            } else if (normalizedChannelName.includes('espn')) {
-                                const matchNum = normalizedChannelName.match(/espn(\d+)/);
-                                if (matchNum && matchNum[1]) {
-                                    channelLogoPath = `images/espn${matchNum[1]}.png`;
-                                } else {
-                                    channelLogoPath = `images/espn.png`; // Generic ESPN logo
+                            // Prioritize channel.logo from M3U, if available and not a placeholder
+                            const channelStream = await findChannelStream(match.channel);
+                            if (channelStream && channelStream.logo && channelStream.logo !== 'https://via.placeholder.com/60?text=N/A') {
+                                channelLogoPath = channelStream.logo;
+                            } else {
+                                // Fallback to custom logic if no valid logo from M3U
+                                const normalizedChannelName = match.channel.toLowerCase().replace(/[^a-z0-9]/g, '');
+                                if (normalizedChannelName.includes('bein') && normalizedChannelName.includes('sports')) {
+                                    const matchNum = normalizedChannelName.match(/beinsports(\d+)/);
+                                    if (matchNum && matchNum[1]) {
+                                        channelLogoPath = `images/beinsports${matchNum[1]}.png`;
+                                    } else {
+                                        channelLogoPath = `images/beinsports.png`; // Generic beIN logo
+                                    }
+                                } else if (normalizedChannelName.includes('espn')) {
+                                    const matchNum = normalizedChannelName.match(/espn(\d+)/);
+                                    if (matchNum && matchNum[1]) {
+                                        channelLogoPath = `images/espn${matchNum[1]}.png`;
+                                    } else {
+                                        channelLogoPath = `images/espn.png`; // Generic ESPN logo
+                                    }
                                 }
                             }
 
-                            const channelStream = await findChannelStream(match.channel);
                             if (channelStream) {
                                 // Determine the final player URL based on the stream type, similar to app.js
                                 let streamUrl = channelStream.url;
