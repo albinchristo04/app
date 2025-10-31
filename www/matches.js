@@ -131,7 +131,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to fetch and display matches
     async function loadMatches() {
         try {
-            const response = await fetch('https://amouradore.github.io/chaine-en-live/matches/today.json');
+            // Try fetching from GitHub Pages first, then fall back to relative path
+            const response = await fetch('matches/today.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
