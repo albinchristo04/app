@@ -13,7 +13,7 @@ function parseM3U(m3uContent) {
             if (commaIndex === -1) continue;
             const name = line.substring(commaIndex + 1).trim();
             let logo = 'https://via.placeholder.com/60?text=N/A';
-            const logoMatch = line.match(/tvg-logo="([^"]*)" પર);
+            const logoMatch = line.match(/tvg-logo="([^"]*)"/);
             if (logoMatch && logoMatch[1]) logo = logoMatch[1];
             if (name) channels.push({ name, logo, url: nextLine });
         }
