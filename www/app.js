@@ -80,50 +80,34 @@ function displayChannels(channels, playlistFile) {
                                         // Create a more robust mapping based on actual channel names and image files
                                         const channelName = channel.name.trim();
 
-                                        // For beIN Sports channels
+                                        // For beIN Sports channels - simplify the logic to handle the naming inconsistency
                                         if (channelName.toLowerCase().includes('bein') && channelName.toLowerCase().includes('sport')) {
-                                            // Handle different formats like "beIN SPORTS 1", "beIN SPORTS 2", etc.
-                                            const match = channelName.match(/bein\s+sports\s+(\d+)/i);
+                                            // Extract the channel number from the name
+                                            const match = channelName.match(/(\d+)/);
                                             if (match && match[1]) {
                                                 const channelNum = match[1];
-                                                // Check for exact image file match
-                                                imagePath = `images/beinsport${channelNum}.png`;
-                                            } else if (channelName.toLowerCase().includes('bein sports 1')) {
-                                                imagePath = `images/beinsport1.png`;
-                                            } else if (channelName.toLowerCase().includes('bein sports 2')) {
-                                                imagePath = `images/beinsports2.png`;
-                                            } else if (channelName.toLowerCase().includes('bein sports 3')) {
-                                                imagePath = `images/beinsports3.png`;
-                                            } else if (channelName.toLowerCase().includes('bein sports 4')) {
-                                                imagePath = `images/beinsports4.png`;
-                                            } else if (channelName.toLowerCase().includes('bein sports 5')) {
-                                                imagePath = `images/beinsports5.png`;
-                                            } else if (channelName.toLowerCase().includes('bein sports 6')) {
-                                                imagePath = `images/beinsports6.png`;
-                                            } else if (channelName.toLowerCase().includes('bein sports 7')) {
-                                                imagePath = `images/beinsports7.png`;
-                                            } else if (channelName.toLowerCase().includes('bein sports 8')) {
-                                                imagePath = `images/beinsports8.png`;
-                                            } else if (channelName.toLowerCase().includes('bein sports 9')) {
-                                                imagePath = `images/beinsports9.png`;
+                                                // Use "beinsport" for channel 1, "beinsports" for other numbers based on actual file names
+                                                if (channelNum === '1') {
+                                                    imagePath = `images/beinsport${channelNum}.png`;
+                                                } else {
+                                                    imagePath = `images/beinsports${channelNum}.png`;
+                                                }
                                             } else {
                                                 imagePath = `images/beinsport.png`; // Generic beIN logo (if exists)
                                             }
+                                        }
 
                                         } else if (channelName.toLowerCase().includes('espn')) {
-                                            
-                                            // Handle ESPN channels like "ESPN", "ESPN 2", "ESPN 3", etc.
-                                            const match = channelName.match(/ESPN\s+(\d+)/i);
+                                            // Extract the channel number from the name, if any
+                                            const match = channelName.match(/(\d+)/);
                                             if (match && match[1]) {
                                                 // For "ESPN 2", "ESPN 3", etc., use ESPN2.png, ESPN3.png, etc.
                                                 imagePath = `images/ESPN${match[1]}.png`;
-                                            } else if (channelName.toLowerCase() === 'espn') {
-                                                // For "ESPN" without a number, use ESPN1.png (assuming this is the main channel)
+                                            } else {
+                                                // For "ESPN" without a number, use ESPN1.png
                                                 imagePath = `images/ESPN1.png`;
-                                            } else if (channelName.toLowerCase().includes('espn')) {
-                                                // For other ESPN variations, try to find a match
-                                                imagePath = `images/ESPN1.png`; // fallback for ESPN without number
                                             }
+                                        }
 
                                         } else if (channelName.toLowerCase().includes('dazn')) {
                                             // Handle DAZN channels
