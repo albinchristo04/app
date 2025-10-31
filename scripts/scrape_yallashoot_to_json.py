@@ -55,42 +55,153 @@ def scrape():
         js = r"""
             () => {
                 const cards = [];
-                document.querySelectorAll('.AY_Inner').forEach((inner, idx) => {
-                    const root = inner.parentElement || inner;
-                    const qText = (sel) => {
-                        const el = root.querySelector(sel);
-                        return el ? el.textContent.trim() : "";
+                
+                // Try multiple possible selectors for match cards
+                let matchElements = document.querySelectorAll('.AY_Inner');
+                if (matchElements.length === 0) {
+                    matchElements = document.querySelectorAll('[class*="Match"]'); // Generic match class
+                }
+                if (matchElements.length === 0) {
+                    matchElements = document.querySelectorAll('.match-item'); // Another common class
+                }
+                if (matchElements.length === 0) {
+                    matchElements = document.querySelectorAll('[id*="match"]'); // Match in id
+                }
+                if (matchElements.length === 0) {
+                    // Fallback to any element that might contain match data
+                    matchElements = document.querySelectorAll('div[data-*], div[class*="card"], div[class*="match"]');
+                }
+                
+                matchElements.forEach((element, idx) => {
+                    // Try multiple selector strategies for each field
+                    const qText = (selArray) => {
+                        if (!Array.isArray(selArray)) selArray = [selArray];
+                        for (const sel of selArray) {
+                            const el = element.querySelector(sel);
+                            if (el) return el.textContent.trim();
+                        }
+                        return "";
                     };
-                    const qAttr = (sel, attr) => {
-                        const el = root.querySelector(sel);
-                        if (!el) return "";
-                        return el.getAttribute(attr) || el.getAttribute('data-' + attr) || "";
+                    
+                    const qAttr = (selArray, attr) => {
+                        if (!Array.isArray(selArray)) selArray = [selArray];
+                        for (const sel of selArray) {
+                            const el = element.querySelector(sel);
+                            if (el) {
+                                return el.getAttribute(attr) || el.getAttribute('data-' + attr) || "";
+                            }
+                        }
+                        return "";
                     };
-
-                    const home = qText('.MT_Team.TM1 .TM_Name');
-                    const away = qText('.MT_Team.TM2 .TM_Name');
-                    const homeLogo = qAttr('.MT_Team.TM1 .TM_Logo img', 'src') || qAttr('.MT_Team.TM1 .TM_Logo img', 'data-src');
-                    const awayLogo = qAttr('.MT_Team.TM2 .TM_Logo img', 'src') || qAttr('.MT_Team.TM2 .TM_Logo img', 'data-src');
-                    const time = qText('.MT_Data .MT_Time');
-                    const result = qText('.MT_Data .MT_Result');
-                    const status = qText('.MT_Data .MT_Stat');
-                    const infoLis = Array.from(root.querySelectorAll('.MT_Info li span')).map(x => x.textContent.trim());
-                    const channel = infoLis[0] || "";
-                    const commentator = infoLis[1] || "";
-                    const competition = infoLis[2] || "";
-
-                    cards.push({
-                        home,
-                        away,
-                        home_logo: homeLogo,
-                        away_logo: awayLogo,
-                        time_local: time,
-                        result_text: result,
-                        status_text: status,
-                        channel,
-                        commentator,
-                        competition
-                    });
+                    
+                    // Define multiple possible selectors for each field
+                    const home = qText([
+                        '.MT_Team.TM1 .TM_Name', 
+                        '[class*="home"] [class*="name"]', 
+                        '[class*="team1"]', 
+                        '.home-team',
+                        '[class*="team"] .name:first-child',
+                        '.match-teams > div:first-child [class*="name"]'
+                    ]);
+                    
+                    const away = qText([
+                        '.MT_Team.TM2 .TM_Name', 
+                        '[class*="away"] [class*="name"]', 
+                        '[class*="team2"]', 
+                        '.away-team',
+                        '[class*="team"] .name:last-child',
+                        '.match-teams > div:last-child [class*="name"]'
+                    ]);
+                    
+                    const homeLogo = qAttr([
+                        '.MT_Team.TM1 .TM_Logo img', 
+                        '[class*="home"] img', 
+                        '[class*="team1"] img',
+                        '.home-team img'
+                    ], 'src') || qAttr([
+                        '.MT_Team.TM1 .TM_Logo img', 
+                        '[class*="home"] img', 
+                        '[class*="team1"] img',
+                        '.home-team img'
+                    ], 'data-src');
+                    
+                    const awayLogo = qAttr([
+                        '.MT_Team.TM2 .TM_Logo img', 
+                        '[class*="away"] img', 
+                        '[class*="team2"] img',
+                        '.away-team img'
+                    ], 'src') || qAttr([
+                        '.MT_Team.TM2 .TM_Logo img', 
+                        '[class*="away"] img', 
+                        '[class*="team2"] img',
+                        '.away-team img'
+                    ], 'data-src');
+                    
+                    const time = qText([
+                        '.MT_Data .MT_Time', 
+                        '[class*="time"]', 
+                        '.match-time',
+                        '[class*="clock"]'
+                    ]);
+                    
+                    const result = qText([
+                        '.MT_Data .MT_Result', 
+                        '[class*="result"]', 
+                        '.match-result',
+                        '[class*="score"]'
+                    ]);
+                    
+                    const status = qText([
+                        '.MT_Data .MT_Stat', 
+                        '[class*="status"]', 
+                        '.match-status',
+                        '[class*="state"]'
+                    ]);
+                    
+                    // For channels, commentators, and competitions, try different approaches
+                    let channel = '', commentator = '', competition = '';
+                    
+                    // Try the original method first
+                    const infoLis = element.querySelectorAll('.MT_Info li span');
+                    if (infoLis.length >= 3) {
+                        channel = infoLis[0] ? infoLis[0].textContent.trim() : "";
+                        commentator = infoLis[1] ? infoLis[1].textContent.trim() : "";
+                        competition = infoLis[2] ? infoLis[2].textContent.trim() : "";
+                    } else {
+                        // Alternative method: try to find these in other ways
+                        const possibleChannel = qText([
+                            '[class*="channel"]', 
+                            '[class*="broadcast"]',
+                            '.channel-name',
+                            '.tv-channel'
+                        ]);
+                        channel = possibleChannel;
+                        
+                        const possibleCompetition = qText([
+                            '[class*="competition"]', 
+                            '[class*="league"]', 
+                            '[class*="tournament"]',
+                            '.competition-name',
+                            '.league-name'
+                        ]);
+                        competition = possibleCompetition;
+                    }
+                    
+                    // Only add if we have at least home and away teams
+                    if (home && away) {
+                        cards.push({
+                            home,
+                            away,
+                            home_logo: homeLogo,
+                            away_logo: awayLogo,
+                            time_local: time,
+                            result_text: result,
+                            status_text: status,
+                            channel,
+                            commentator,
+                            competition
+                        });
+                    }
                 });
                 return cards;
             }
