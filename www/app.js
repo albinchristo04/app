@@ -95,8 +95,6 @@ function displayChannels(channels, playlistFile) {
                                             } else {
                                                 imagePath = `images/beinsport.png`; // Generic beIN logo (if exists)
                                             }
-                                        }
-
                                         } else if (channelName.toLowerCase().includes('espn')) {
                                             // Extract the channel number from the name, if any
                                             const match = channelName.match(/(\d+)/);
@@ -107,8 +105,6 @@ function displayChannels(channels, playlistFile) {
                                                 // For "ESPN" without a number, use ESPN1.png
                                                 imagePath = `images/ESPN1.png`;
                                             }
-                                        }
-
                                         } else if (channelName.toLowerCase().includes('dazn')) {
                                             // Handle DAZN channels
                                             const match = channelName.match(/DAZN\s+(\d+)/i);
