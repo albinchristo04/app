@@ -8,7 +8,8 @@ BAGHDAD_TZ = ZoneInfo("Asia/Baghdad")
 DEFAULT_URL = "https://www.yalla-shoot.info/matches-today/"
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = REPO_ROOT / "matches"
+# For GitHub Pages, the output should be in the www directory to be served correctly
+OUT_DIR = REPO_ROOT / "www" / "matches"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 OUT_PATH = OUT_DIR / "today.json"
 
