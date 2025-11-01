@@ -1,0 +1,24 @@
+name: Fetch Latest Matches
+
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Toutes les 5 minutes
+  workflow_dispatch: # Pour un déclenchement manuel
+
+jobs:
+  fetch-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Fetch matches data
+        run: |
+          curl -o www/matches/today.json https://raw.githubusercontent.com/amouradore/chaine-en-live/main/matches/today.json
+
+      - name: Commit and push if there are changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add www/matches/today.json
+          git diff --staged --quiet || git commit -m "Update today.json with latest matches" && git push
