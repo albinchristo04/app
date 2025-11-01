@@ -131,10 +131,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to fetch and display matches
     async function loadMatches() {
         try {
-            // Try fetching from GitHub Pages first, then fall back to relative path
-            // Add timestamp and cache busting headers to avoid any cache issues
+            // Fetch from the direct GitHub raw URL to ensure we get the latest data
+            // This bypasses GitHub Pages caching issues
             const timestamp = new Date().getTime();
-            const response = await fetch(`matches/today.json?t=${timestamp}`, {
+            const response = await fetch(`https://raw.githubusercontent.com/amouradore/chaine-en-live/main/matches/today.json?t=${timestamp}`, {
                 cache: 'no-cache',
                 headers: {
                     'Cache-Control': 'no-cache, no-store, must-revalidate',
