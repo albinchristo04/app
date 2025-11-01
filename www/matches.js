@@ -132,9 +132,16 @@ document.addEventListener('DOMContentLoaded', function () {
     async function loadMatches() {
         try {
             // Try fetching from GitHub Pages first, then fall back to relative path
-            // Add timestamp to avoid cache issues
+            // Add timestamp and cache busting headers to avoid any cache issues
             const timestamp = new Date().getTime();
-            const response = await fetch(`matches/today.json?t=${timestamp}`);
+            const response = await fetch(`matches/today.json?t=${timestamp}`, {
+                cache: 'no-cache',
+                headers: {
+                    'Cache-Control': 'no-cache, no-store, must-revalidate',
+                    'Pragma': 'no-cache',
+                    'Expires': '0'
+                }
+            });
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
