@@ -12,9 +12,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -27,9 +27,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN Sports 5 HD",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -42,9 +42,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN Sports 6 HD",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -57,9 +57,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -72,9 +72,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN Sports Xtra 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -87,9 +87,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "أون سبورت 1",
-      "commentator": "غير معروف",
-      "competition": "مصر, الدوري المصري",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -102,9 +102,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN SPORTS HD 4",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -117,9 +117,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -132,9 +132,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, الدوري الفرنسي",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -147,9 +147,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -162,9 +162,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -177,9 +177,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "MBC Action",
-      "commentator": "غير معروف",
-      "competition": "ألمانيا, الدوري الألماني",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -192,9 +192,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -207,9 +207,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "أون سبورت 1",
-      "commentator": "غير معروف",
-      "competition": "مصر, الدوري المصري",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -222,9 +222,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "أون سبورت 2",
-      "commentator": "غير معروف",
-      "competition": "مصر, الدوري المصري",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -237,9 +237,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN SPORTS HD 4",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, الدوري الفرنسي",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -252,9 +252,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -267,9 +267,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -282,9 +282,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     },
     {
@@ -297,9 +297,9 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, الدوري الفرنسي",
+      "channel": null,
+      "commentator": null,
+      "competition": null,
       "_source": "yalla1shoot"
     }
   ]
