@@ -132,7 +132,9 @@ document.addEventListener('DOMContentLoaded', function () {
     async function loadMatches() {
         try {
             // Try fetching from GitHub Pages first, then fall back to relative path
-            const response = await fetch('matches/today.json');
+            // Add timestamp to avoid cache issues
+            const timestamp = new Date().getTime();
+            const response = await fetch(`matches/today.json?t=${timestamp}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
