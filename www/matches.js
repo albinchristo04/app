@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             const timestamp = new Date().getTime();
-            const response = await fetch(`https://chaine-en-live.vercel.app/api/proxy?url=${encodeURIComponent(`https://raw.githubusercontent.com/amouradore/chaine-en-live/main/matches/today.json`)}&v=${timestamp}`, {
+            const response = await fetch(`https://corsproxy.io/?${encodeURIComponent(`https://raw.githubusercontent.com/amouradore/chaine-en-live/main/www/matches/today.json`)}`, {
                 cache: 'no-cache',
                 headers: {
                     'Cache-Control': 'no-cache, no-store, must-revalidate',
