@@ -45,12 +45,12 @@ jobs:
 
       - name: Show output
         run: |
-          echo "---- matches/today.json ----"
-          cat matches/today.json || true
+          echo "---- www/matches/today.json ----"
+          cat www/matches/today.json || true
 
       - name: Commit & push if changed
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           branch: main
           commit_message: "chore: update matches/today.json (scraped)"
-          file_pattern: matches/today.json
+          file_pattern: www/matches/today.json
