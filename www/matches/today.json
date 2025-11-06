@@ -213,18 +213,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ماينز05-فيورنتينا-2025-11-06",
-      "home": "ماينز 05",
-      "away": "فيورنتينا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/297.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/323.png",
+      "id": "ديناموزغرب-سيلتافيجو-2025-11-06",
+      "home": "دينامو زغرب",
+      "away": "سيلتا فيجو",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2245.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/117.png",
       "time_baghdad": "19:45",
       "status": "FT",
       "status_text": "انتهت",
-      "result_text": "2-1",
-      "channel": "غير معروف",
+      "result_text": "0-0",
+      "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
-      "competition": "أوروبا, دوري المؤتمر الأوروبي",
+      "competition": "أوروبا, الدوري الأوروبي",
       "_source": "yalla1shoot"
     },
     {
@@ -258,18 +258,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ديناموزغرب-سيلتافيجو-2025-11-06",
-      "home": "دينامو زغرب",
-      "away": "سيلتا فيجو",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2245.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/117.png",
+      "id": "ماينز05-فيورنتينا-2025-11-06",
+      "home": "ماينز 05",
+      "away": "فيورنتينا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/297.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/323.png",
       "time_baghdad": "19:45",
       "status": "FT",
       "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
+      "result_text": "2-1",
+      "channel": "غير معروف",
       "commentator": "غير معروف",
-      "competition": "أوروبا, الدوري الأوروبي",
+      "competition": "أوروبا, دوري المؤتمر الأوروبي",
       "_source": "yalla1shoot"
     }
   ]
