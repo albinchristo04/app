@@ -18,6 +18,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "الأرجنتينتح-تونستحت17-2025-11-06",
+      "home": "الأرجنتين تحت 17",
+      "away": "تونس تحت 17",
+      "home_logo": "https://www.yalla-shot.info/wp-content/uploads/2025/11/5270.png",
+      "away_logo": "https://www.yalla-shot.info/wp-content/uploads/2025/11/2334.png",
+      "time_baghdad": "15:30",
+      "status": "NS",
+      "status_text": "جارية الان",
+      "result_text": "0-0",
+      "channel": "beIN Sports HD",
+      "commentator": "غير معروف",
+      "competition": "دولي, كأس العالم تحت 17",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "الترجي-الشبيبةالري-2025-11-06",
       "home": "الترجي",
       "away": "الشبيبة الرياضية بالعمران",
@@ -25,7 +40,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/13813.png",
       "time_baghdad": "15:30",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "غير معروف",
       "commentator": "غير معروف",
@@ -40,26 +55,11 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8239.png",
       "time_baghdad": "15:30",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "تونس, الرابطة التونسية المحترفة الأولى",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "الأرجنتينتح-تونستحت17-2025-11-06",
-      "home": "الأرجنتين تحت 17",
-      "away": "تونس تحت 17",
-      "home_logo": "https://www.yalla-shot.info/wp-content/uploads/2025/11/5270.png",
-      "away_logo": "https://www.yalla-shot.info/wp-content/uploads/2025/11/2334.png",
-      "time_baghdad": "15:30",
-      "status": "NS",
-      "status_text": "بعد قليل",
-      "result_text": "0-0",
-      "channel": "beIN Sports HD",
-      "commentator": "غير معروف",
-      "competition": "دولي, كأس العالم تحت 17",
       "_source": "yalla1shoot"
     },
     {
