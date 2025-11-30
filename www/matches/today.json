@@ -78,21 +78,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بيسا-إنترميلان-2025-11-30",
-      "home": "بيسا",
-      "away": "إنتر ميلان",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/248.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/224.png",
-      "time_baghdad": "16:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Starzplay",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ستراسبورج-بريست-2025-11-30",
       "home": "ستراسبورج",
       "away": "بريست",
@@ -105,6 +90,21 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "فرنسا, الدوري الفرنسي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "بيسا-إنترميلان-2025-11-30",
+      "home": "بيسا",
+      "away": "إنتر ميلان",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/248.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/224.png",
+      "time_baghdad": "16:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Starzplay",
+      "commentator": "غير معروف",
+      "competition": "إيطاليا, الدوري الإيطالي",
       "_source": "yalla1shoot"
     },
     {
