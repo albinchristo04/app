@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "الأهلي-الرجاءالبيض-2025-12-12",
-      "home": "الأهلي",
-      "away": "الرجاء البيضاوي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/451.png",
-      "time_baghdad": "18:20",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "دولي, المباريات الوديّة الدوليّة",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الجزائر-الإمارات-2025-12-12",
       "home": "الجزائر",
       "away": "الإمارات",
@@ -135,6 +120,21 @@
       "channel": "أبو ظبي الرياضية 1",
       "commentator": "غير معروف",
       "competition": "دولي, كأس العرب - ربع النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الأهلي-الرجاءالبيض-2025-12-12",
+      "home": "الأهلي",
+      "away": "الرجاء البيضاوي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/451.png",
+      "time_baghdad": "18:20",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "دولي, المباريات الوديّة الدوليّة",
       "_source": "yalla1shoot"
     }
   ]
