@@ -3,18 +3,18 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "سانمورلوزي-ليل-2025-12-20",
-      "home": "سان مور لوزي",
-      "away": "ليل",
-      "home_logo": "https://www.kora-shoot.us/wp-content/uploads/2025/12/11354.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/310.png",
-      "time_baghdad": "16:30",
+      "id": "وولفرهامبتون-برينتفورد-2025-12-20",
+      "home": "وولفرهامبتون",
+      "away": "برينتفورد",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1920.png",
+      "time_baghdad": "17:00",
       "status": "NS",
       "status_text": "جارية الان",
       "result_text": "0-0",
-      "channel": "beIN SPORTS HD 9",
+      "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
-      "competition": "فرنسا, كأس فرنسا - دور الـ64",
+      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     },
     {
@@ -93,21 +93,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "وولفرهامبتون-برينتفورد-2025-12-20",
-      "home": "وولفرهامبتون",
-      "away": "برينتفورد",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1920.png",
-      "time_baghdad": "17:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 4",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ليفانتي-ريالسوسيداد-2025-12-20",
       "home": "ليفانتي",
       "away": "ريال سوسيداد",
@@ -145,7 +130,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/290.png",
       "time_baghdad": "19:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "Starzplay",
       "commentator": "غير معروف",
@@ -315,6 +300,21 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "سانمورلوزي-ليل-2025-12-20",
+      "home": "سان مور لوزي",
+      "away": "ليل",
+      "home_logo": "https://www.kora-shoot.us/wp-content/uploads/2025/12/11354.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/310.png",
+      "time_baghdad": "16:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 9",
+      "commentator": "غير معروف",
+      "competition": "فرنسا, كأس فرنسا - دور الـ64",
       "_source": "yalla1shoot"
     }
   ]
