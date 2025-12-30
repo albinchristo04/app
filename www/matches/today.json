@@ -33,21 +33,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "السودان-بوركينافاسو-2025-12-31",
-      "home": "السودان",
-      "away": "بوركينا فاسو",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5099.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5420.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports Max 2 HD",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة ه",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "غينياالاستو-الجزائر-2025-12-31",
       "home": "غينيا الاستوائية",
       "away": "الجزائر",
@@ -58,6 +43,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "الجزائرية الأولى",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة ه",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "السودان-بوركينافاسو-2025-12-31",
+      "home": "السودان",
+      "away": "بوركينا فاسو",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5099.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5420.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports Max 2 HD",
       "commentator": "غير معروف",
       "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة ه",
       "_source": "yalla1shoot"
@@ -78,21 +78,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الجابون-كوتديفوار-2025-12-31",
-      "home": "الجابون",
-      "away": "كوت ديفوار",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/03/386.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2385.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS MAX 1",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة و",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "موزمبيق-الكاميرون-2025-12-31",
       "home": "موزمبيق",
       "away": "الكاميرون",
@@ -103,6 +88,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "beIN Sports Max 2 HD",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة و",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الجابون-كوتديفوار-2025-12-31",
+      "home": "الجابون",
+      "away": "كوت ديفوار",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/03/386.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2385.png",
+      "time_baghdad": "21:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS MAX 1",
       "commentator": "غير معروف",
       "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة و",
       "_source": "yalla1shoot"
