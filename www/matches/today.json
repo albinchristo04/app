@@ -33,21 +33,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "غينياالاستو-الجزائر-2025-12-31",
-      "home": "غينيا الاستوائية",
-      "away": "الجزائر",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/5419.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5109.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "الجزائرية الأولى",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة ه",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "السودان-بوركينافاسو-2025-12-31",
       "home": "السودان",
       "away": "بوركينا فاسو",
@@ -58,6 +43,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "beIN Sports Max 2 HD",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة ه",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "غينياالاستو-الجزائر-2025-12-31",
+      "home": "غينيا الاستوائية",
+      "away": "الجزائر",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/5419.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5109.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "الجزائرية الأولى",
       "commentator": "غير معروف",
       "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة ه",
       "_source": "yalla1shoot"
