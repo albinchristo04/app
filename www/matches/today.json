@@ -48,21 +48,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أوغندا-نيجيريا-2025-12-30",
-      "home": "أوغندا",
-      "away": "نيجيريا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/03/391.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2386.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN Sports Max 2 HD",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة ج",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "تنزانيا-تونس-2025-12-30",
       "home": "تنزانيا",
       "away": "تونس",
@@ -73,6 +58,21 @@
       "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "beIN SPORTS MAX 1",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة ج",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "أوغندا-نيجيريا-2025-12-30",
+      "home": "أوغندا",
+      "away": "نيجيريا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/03/391.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2386.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "جارية الان",
+      "result_text": "0-0",
+      "channel": "beIN Sports Max 2 HD",
       "commentator": "غير معروف",
       "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة ج",
       "_source": "yalla1shoot"
@@ -198,21 +198,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "مانشستريونا-وولفرهامبتون-2025-12-30",
-      "home": "مانشستر يونايتد",
-      "away": "وولفرهامبتون",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/95.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
-      "time_baghdad": "22:15",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "أرسنال-أستونفيلا-2025-12-30",
       "home": "أرسنال",
       "away": "أستون فيلا",
@@ -223,6 +208,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "مانشستريونا-وولفرهامبتون-2025-12-30",
+      "home": "مانشستر يونايتد",
+      "away": "وولفرهامبتون",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/95.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
+      "time_baghdad": "22:15",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
