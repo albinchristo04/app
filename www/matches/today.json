@@ -3,18 +3,18 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "زد-حرسالحدود-2025-12-31",
-      "home": "زد",
-      "away": "حرس الحدود",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1683.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/149.png",
-      "time_baghdad": "20:00",
+      "id": "الجابون-كوتديفوار-2025-12-31",
+      "home": "الجابون",
+      "away": "كوت ديفوار",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/03/386.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2385.png",
+      "time_baghdad": "21:00",
       "status": "NS",
       "status_text": "جارية الان",
       "result_text": "0-0",
-      "channel": "أون سبورت 1",
+      "channel": "beIN SPORTS MAX 1",
       "commentator": "غير معروف",
-      "competition": "مصر, كأس الرابطة المصرية",
+      "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة و",
       "_source": "yalla1shoot"
     },
     {
@@ -28,21 +28,6 @@
       "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "beIN Sports Max 2 HD",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة و",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "الجابون-كوتديفوار-2025-12-31",
-      "home": "الجابون",
-      "away": "كوت ديفوار",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/03/386.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2385.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS MAX 1",
       "commentator": "غير معروف",
       "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة و",
       "_source": "yalla1shoot"
@@ -105,6 +90,21 @@
       "channel": "الجزائرية الأولى",
       "commentator": "غير معروف",
       "competition": "أفريقيا, كأس أمم إفريقيا - المجموعة ه",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "زد-حرسالحدود-2025-12-31",
+      "home": "زد",
+      "away": "حرس الحدود",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1683.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/149.png",
+      "time_baghdad": "20:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "أون سبورت 1",
+      "commentator": "غير معروف",
+      "competition": "مصر, كأس الرابطة المصرية",
       "_source": "yalla1shoot"
     }
   ]
