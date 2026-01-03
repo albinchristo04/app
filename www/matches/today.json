@@ -168,21 +168,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بورنموث-أرسنال-2026-01-03",
-      "home": "بورنموث",
-      "away": "أرسنال",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1453.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/83.png",
-      "time_baghdad": "19:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "إلتشي-فياريال-2026-01-03",
       "home": "إلتشي",
       "away": "فياريال",
@@ -195,6 +180,21 @@
       "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "بورنموث-أرسنال-2026-01-03",
+      "home": "بورنموث",
+      "away": "أرسنال",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1453.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/83.png",
+      "time_baghdad": "19:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     },
     {
