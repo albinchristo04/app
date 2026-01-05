@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "البنكالاهلي-واديدجلة-2026-01-05",
-      "home": "البنك الاهلي",
-      "away": "وادي دجلة",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/50527.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1016.png",
-      "time_baghdad": "20:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "2-1",
-      "channel": "أون سبورت 1",
-      "commentator": "غير معروف",
-      "competition": "مصر, كأس الرابطة المصرية",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "نيجيريا-موزمبيق-2026-01-05",
       "home": "نيجيريا",
       "away": "موزمبيق",
@@ -40,7 +25,7 @@
       "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/5.png",
       "time_baghdad": "22:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "غير معروف",
       "commentator": "غير معروف",
@@ -105,6 +90,21 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "تركيا, كأس السوبر - نصف النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "البنكالاهلي-واديدجلة-2026-01-05",
+      "home": "البنك الاهلي",
+      "away": "وادي دجلة",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/50527.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1016.png",
+      "time_baghdad": "20:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "2-1",
+      "channel": "أون سبورت 1",
+      "commentator": "غير معروف",
+      "competition": "مصر, كأس الرابطة المصرية",
       "_source": "yalla1shoot"
     }
   ]
