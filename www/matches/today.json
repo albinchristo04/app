@@ -55,7 +55,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5420.png",
       "time_baghdad": "21:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "beIN SPORTS MAX 1",
       "commentator": "غير معروف",
@@ -138,21 +138,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "إنبي-سيراميكاكلي-2026-01-06",
-      "home": "إنبي",
-      "away": "سيراميكا كليوباترا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8300.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/12723.png",
-      "time_baghdad": "17:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "أون سبورت 2",
-      "commentator": "غير معروف",
-      "competition": "مصر, كأس الرابطة المصرية",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الجونة-بتروجت-2026-01-06",
       "home": "الجونة",
       "away": "بتروجت",
@@ -168,18 +153,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "السعوديةتحت-قرغيزستانتح-2026-01-06",
-      "home": "السعودية تحت 23",
-      "away": "قرغيزستان تحت 23",
-      "home_logo": "https://www.yallashootking.tv/wp-content/uploads/2025/12/28914.png",
-      "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/24948.png",
-      "time_baghdad": "18:00",
+      "id": "إنبي-سيراميكاكلي-2026-01-06",
+      "home": "إنبي",
+      "away": "سيراميكا كليوباترا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8300.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/12723.png",
+      "time_baghdad": "17:00",
       "status": "FT",
       "status_text": "انتهت",
       "result_text": "0-0",
-      "channel": "الكأس 5",
+      "channel": "أون سبورت 2",
       "commentator": "غير معروف",
-      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة أ",
+      "competition": "مصر, كأس الرابطة المصرية",
       "_source": "yalla1shoot"
     },
     {
@@ -195,6 +180,21 @@
       "channel": "الجزائرية الأولى",
       "commentator": "غير معروف",
       "competition": "أفريقيا, كأس أمم إفريقيا - دور الـ 16",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "السعوديةتحت-قرغيزستانتح-2026-01-06",
+      "home": "السعودية تحت 23",
+      "away": "قرغيزستان تحت 23",
+      "home_logo": "https://www.yallashootking.tv/wp-content/uploads/2025/12/28914.png",
+      "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/24948.png",
+      "time_baghdad": "18:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "الكأس 5",
+      "commentator": "غير معروف",
+      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة أ",
       "_source": "yalla1shoot"
     }
   ]
