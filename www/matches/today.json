@@ -48,21 +48,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الجونة-بتروجت-2026-01-06",
-      "home": "الجونة",
-      "away": "بتروجت",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/617.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/653.png",
-      "time_baghdad": "17:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "مصر, كأس الرابطة المصرية",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "إنبي-سيراميكاكلي-2026-01-06",
       "home": "إنبي",
       "away": "سيراميكا كليوباترا",
@@ -78,18 +63,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الجزائر-الكونغوالدي-2026-01-06",
-      "home": "الجزائر",
-      "away": "الكونغو الديمقراطية",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5109.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/14650.png",
-      "time_baghdad": "18:00",
+      "id": "الجونة-بتروجت-2026-01-06",
+      "home": "الجونة",
+      "away": "بتروجت",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/617.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/653.png",
+      "time_baghdad": "17:00",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "الجزائرية الأولى",
+      "channel": "غير معروف",
       "commentator": "غير معروف",
-      "competition": "أفريقيا, كأس أمم إفريقيا - دور الـ 16",
+      "competition": "مصر, كأس الرابطة المصرية",
       "_source": "yalla1shoot"
     },
     {
@@ -108,6 +93,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "الجزائر-الكونغوالدي-2026-01-06",
+      "home": "الجزائر",
+      "away": "الكونغو الديمقراطية",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5109.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/14650.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "الجزائرية الأولى",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, كأس أمم إفريقيا - دور الـ 16",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "ليتشي-روما-2026-01-06",
       "home": "ليتشي",
       "away": "روما",
@@ -123,21 +123,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الاتحادالسك-زد-2026-01-06",
-      "home": "الاتحاد السكندري",
-      "away": "زد",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/13.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1683.png",
-      "time_baghdad": "20:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "مصر, كأس الرابطة المصرية",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "غرناطة-رايوفاييكان-2026-01-06",
       "home": "غرناطة",
       "away": "رايو فاييكانو",
@@ -150,6 +135,21 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "إسبانيا, كأس ملك إسبانيا - الدور 3",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الاتحادالسك-زد-2026-01-06",
+      "home": "الاتحاد السكندري",
+      "away": "زد",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/13.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1683.png",
+      "time_baghdad": "20:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "مصر, كأس الرابطة المصرية",
       "_source": "yalla1shoot"
     },
     {
