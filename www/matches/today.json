@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "كوتديفوار-بوركينافاسو-2026-01-07",
-      "home": "كوت ديفوار",
-      "away": "بوركينا فاسو",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2385.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5420.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS MAX 1",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, كأس أمم إفريقيا - دور الـ 16",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ساسولو-يوفنتوس-2026-01-07",
       "home": "ساسولو",
       "away": "يوفنتوس",
@@ -123,21 +108,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "السعوديةتحت-قرغيزستانتح-2026-01-07",
-      "home": "السعودية تحت 23",
-      "away": "قرغيزستان تحت 23",
-      "home_logo": "https://www.yallashootking.tv/wp-content/uploads/2025/12/28914.png",
-      "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/24948.png",
-      "time_baghdad": "18:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "الكأس 5",
-      "commentator": "غير معروف",
-      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة أ",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الجزائر-الكونغوالدي-2026-01-07",
       "home": "الجزائر",
       "away": "الكونغو الديمقراطية",
@@ -150,6 +120,21 @@
       "channel": "الجزائرية الأولى",
       "commentator": "غير معروف",
       "competition": "أفريقيا, كأس أمم إفريقيا - دور الـ 16",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "السعوديةتحت-قرغيزستانتح-2026-01-07",
+      "home": "السعودية تحت 23",
+      "away": "قرغيزستان تحت 23",
+      "home_logo": "https://www.yallashootking.tv/wp-content/uploads/2025/12/28914.png",
+      "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/24948.png",
+      "time_baghdad": "18:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "الكأس 5",
+      "commentator": "غير معروف",
+      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة أ",
       "_source": "yalla1shoot"
     },
     {
@@ -195,6 +180,21 @@
       "channel": "أون سبورت 2",
       "commentator": "غير معروف",
       "competition": "مصر, كأس الرابطة المصرية",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "كوتديفوار-بوركينافاسو-2026-01-07",
+      "home": "كوت ديفوار",
+      "away": "بوركينا فاسو",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2385.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5420.png",
+      "time_baghdad": "21:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS MAX 1",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, كأس أمم إفريقيا - دور الـ 16",
       "_source": "yalla1shoot"
     }
   ]
