@@ -10,7 +10,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/28920.png",
       "time_baghdad": "13:30",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "غير معروف",
       "commentator": "غير معروف",
@@ -78,21 +78,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "السعوديةتحت-قرغيزستانتح-2026-01-06",
-      "home": "السعودية تحت 23",
-      "away": "قرغيزستان تحت 23",
-      "home_logo": "https://www.yallashootking.tv/wp-content/uploads/2025/12/28914.png",
-      "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/24948.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة أ",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الجزائر-الكونغوالدي-2026-01-06",
       "home": "الجزائر",
       "away": "الكونغو الديمقراطية",
@@ -105,6 +90,21 @@
       "channel": "الجزائرية الأولى",
       "commentator": "غير معروف",
       "competition": "أفريقيا, كأس أمم إفريقيا - دور الـ 16",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "السعوديةتحت-قرغيزستانتح-2026-01-06",
+      "home": "السعودية تحت 23",
+      "away": "قرغيزستان تحت 23",
+      "home_logo": "https://www.yallashootking.tv/wp-content/uploads/2025/12/28914.png",
+      "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/24948.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة أ",
       "_source": "yalla1shoot"
     },
     {
