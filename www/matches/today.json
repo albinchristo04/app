@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "قطرتحت23-الإماراتتحت-2026-01-07",
-      "home": "قطر تحت 23",
-      "away": "الإمارات تحت 23",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/13399.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/28922.png",
-      "time_baghdad": "18:30",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "الكأس 5",
-      "commentator": "غير معروف",
-      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة ب",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "نابولي-هيلاسفيرونا-2026-01-07",
       "home": "نابولي",
       "away": "هيلاس فيرونا",
@@ -55,26 +40,11 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/144.png",
       "time_baghdad": "21:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "تطبيق ثمانية",
       "commentator": "غير معروف",
       "competition": "إسبانيا, كأس السوبر الإسباني - نصف النهائي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "برينتفورد-سندرلاند-2026-01-07",
-      "home": "برينتفورد",
-      "away": "سندرلاند",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1920.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/117.png",
-      "time_baghdad": "21:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     },
     {
@@ -153,6 +123,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "برينتفورد-سندرلاند-2026-01-07",
+      "home": "برينتفورد",
+      "away": "سندرلاند",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1920.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/117.png",
+      "time_baghdad": "21:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "تورينو-أودينيزي-2026-01-07",
       "home": "تورينو",
       "away": "أودينيزي",
@@ -198,21 +183,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بيرنلي-مانشستريونا-2026-01-07",
-      "home": "بيرنلي",
-      "away": "مانشستر يونايتد",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/12.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/95.png",
-      "time_baghdad": "22:15",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "نيوكاسليونا-ليدزيونايتد-2026-01-07",
       "home": "نيوكاسل يونايتد",
       "away": "ليدز يونايتد",
@@ -228,18 +198,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "اليابانتحت-سورياتحت23-2026-01-07",
-      "home": "اليابان تحت 23",
-      "away": "سوريا تحت 23",
-      "home_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/28912.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/28910.png",
-      "time_baghdad": "13:30",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "4-0",
-      "channel": "الكأس 5",
+      "id": "بيرنلي-مانشستريونا-2026-01-07",
+      "home": "بيرنلي",
+      "away": "مانشستر يونايتد",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/12.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/95.png",
+      "time_baghdad": "22:15",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
-      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة ب",
+      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     },
     {
@@ -258,6 +228,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "اليابانتحت-سورياتحت23-2026-01-07",
+      "home": "اليابان تحت 23",
+      "away": "سوريا تحت 23",
+      "home_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/28912.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/28910.png",
+      "time_baghdad": "13:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "4-0",
+      "channel": "الكأس 5",
+      "commentator": "غير معروف",
+      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة ب",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "أوزبكستانتح-لبنانتحت23-2026-01-07",
       "home": "أوزبكستان تحت 23",
       "away": "لبنان تحت 23",
@@ -270,6 +255,21 @@
       "channel": "الكأس 5",
       "commentator": "غير معروف",
       "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة ج",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "قطرتحت23-الإماراتتحت-2026-01-07",
+      "home": "قطر تحت 23",
+      "away": "الإمارات تحت 23",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/13399.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/28922.png",
+      "time_baghdad": "18:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "الكأس 5",
+      "commentator": "غير معروف",
+      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة ب",
       "_source": "yalla1shoot"
     }
   ]
