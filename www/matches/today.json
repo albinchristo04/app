@@ -78,6 +78,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "فولهام-تشيلسي-2026-01-07",
+      "home": "فولهام",
+      "away": "تشيلسي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/120.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/89.png",
+      "time_baghdad": "21:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 3 HD",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "بورنموث-توتنهامهوتس-2026-01-07",
       "home": "بورنموث",
       "away": "توتنهام هوتسبر",
@@ -153,36 +168,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "فولهام-تشيلسي-2026-01-07",
-      "home": "فولهام",
-      "away": "تشيلسي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/120.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/89.png",
-      "time_baghdad": "21:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "تورينو-أودينيزي-2026-01-07",
-      "home": "تورينو",
-      "away": "أودينيزي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/144.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/145.png",
-      "time_baghdad": "21:45",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "لاتسيو-فيورنتينا-2026-01-07",
       "home": "لاتسيو",
       "away": "فيورنتينا",
@@ -213,18 +198,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بيرنلي-مانشستريونا-2026-01-07",
-      "home": "بيرنلي",
-      "away": "مانشستر يونايتد",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/12.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/95.png",
-      "time_baghdad": "22:15",
+      "id": "تورينو-أودينيزي-2026-01-07",
+      "home": "تورينو",
+      "away": "أودينيزي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/144.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/145.png",
+      "time_baghdad": "21:45",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "Bein Sports HD2",
+      "channel": "غير معروف",
       "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
+      "competition": "إيطاليا, الدوري الإيطالي",
       "_source": "yalla1shoot"
     },
     {
@@ -238,6 +223,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "بيرنلي-مانشستريونا-2026-01-07",
+      "home": "بيرنلي",
+      "away": "مانشستر يونايتد",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/12.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/95.png",
+      "time_baghdad": "22:15",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
