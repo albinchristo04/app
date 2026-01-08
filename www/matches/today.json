@@ -1,24 +1,9 @@
 {
-  "date": "2026-01-08",
+  "date": "2026-01-09",
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "أتلتيكومدري-ريالمدريد-2026-01-08",
-      "home": "أتلتيكو مدريد",
-      "away": "ريال مدريد",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/134.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/110.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "تطبيق ثمانية",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, كأس السوبر الإسباني - نصف النهائي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "ميلان-جنوى-2026-01-08",
+      "id": "ميلان-جنوى-2026-01-09",
       "home": "ميلان",
       "away": "جنوى",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/137.png",
@@ -33,7 +18,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أرسنال-ليفربول-2026-01-08",
+      "id": "أرسنال-ليفربول-2026-01-09",
       "home": "أرسنال",
       "away": "ليفربول",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/83.png",
@@ -48,7 +33,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "استرالياتحت-تايلاندتحت-2026-01-08",
+      "id": "استرالياتحت-تايلاندتحت-2026-01-09",
       "home": "استراليا تحت 23",
       "away": "تايلاند تحت 23",
       "home_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/28921.png",
@@ -63,7 +48,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "حرسالحدود-سموحة-2026-01-08",
+      "id": "حرسالحدود-سموحة-2026-01-09",
       "home": "حرس الحدود",
       "away": "سموحة",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/149.png",
@@ -78,7 +63,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "العراقتحت2-الصينتحت23-2026-01-08",
+      "id": "العراقتحت2-الصينتحت23-2026-01-09",
       "home": "العراق تحت 23",
       "away": "الصين تحت 23",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/28913.png",
@@ -93,7 +78,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الهلال-الحزم-2026-01-08",
+      "id": "الهلال-الحزم-2026-01-09",
       "home": "الهلال",
       "away": "الحزم",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/269.png",
@@ -108,7 +93,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "كريمونيسي-كالياري-2026-01-08",
+      "id": "كريمونيسي-كالياري-2026-01-09",
       "home": "كريمونيسي",
       "away": "كالياري",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/290.png",
@@ -123,7 +108,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "النصر-القادسية-2026-01-08",
+      "id": "النصر-القادسية-2026-01-09",
       "home": "النصر",
       "away": "القادسية",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/873.png",
@@ -138,7 +123,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "باريسسانجي-أولمبيكمارس-2026-01-08",
+      "id": "باريسسانجي-أولمبيكمارس-2026-01-09",
       "home": "باريس سان جيرمان",
       "away": "أولمبيك مارسيليا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/237.png",
@@ -150,6 +135,21 @@
       "channel": "beIN Sports Xtra 1",
       "commentator": "غير معروف",
       "competition": "فرنسا, السوبر الفرنسي - النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "أتلتيكومدري-ريالمدريد-2026-01-09",
+      "home": "أتلتيكو مدريد",
+      "away": "ريال مدريد",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/134.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/110.png",
+      "time_baghdad": "21:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "تطبيق ثمانية",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, كأس السوبر الإسباني - نصف النهائي",
       "_source": "yalla1shoot"
     }
   ]
