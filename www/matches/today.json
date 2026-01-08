@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "العراقتحت2-الصينتحت23-2026-01-08",
-      "home": "العراق تحت 23",
-      "away": "الصين تحت 23",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/28913.png",
-      "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/25010.png",
-      "time_baghdad": "16:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "الكأس 5",
-      "commentator": "غير معروف",
-      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة د",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الهلال-الحزم-2026-01-08",
       "home": "الهلال",
       "away": "الحزم",
@@ -26,8 +11,23 @@
       "time_baghdad": "16:55",
       "status": "NS",
       "status_text": "جارية الان",
-      "result_text": "0-0",
+      "result_text": "1-0",
       "channel": "تطبيق ثمانية",
+      "commentator": "غير معروف",
+      "competition": "السعودية, الدوري السعودي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "النصر-القادسية-2026-01-08",
+      "home": "النصر",
+      "away": "القادسية",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/873.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/179.png",
+      "time_baghdad": "19:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "ثمانية 1",
       "commentator": "غير معروف",
       "competition": "السعودية, الدوري السعودي",
       "_source": "yalla1shoot"
@@ -45,21 +45,6 @@
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "النصر-القادسية-2026-01-08",
-      "home": "النصر",
-      "away": "القادسية",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/873.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/179.png",
-      "time_baghdad": "19:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "ثمانية 1",
-      "commentator": "غير معروف",
-      "competition": "السعودية, الدوري السعودي",
       "_source": "yalla1shoot"
     },
     {
@@ -150,6 +135,21 @@
       "channel": "أون سبورت 1",
       "commentator": "غير معروف",
       "competition": "مصر, كأس مصر - دور الـ 16",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "العراقتحت2-الصينتحت23-2026-01-08",
+      "home": "العراق تحت 23",
+      "away": "الصين تحت 23",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/28913.png",
+      "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/25010.png",
+      "time_baghdad": "16:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "الكأس 5",
+      "commentator": "غير معروف",
+      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة د",
       "_source": "yalla1shoot"
     }
   ]
