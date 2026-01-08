@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "استرالياتحت-تايلاندتحت-2026-01-08",
-      "home": "استراليا تحت 23",
-      "away": "تايلاند تحت 23",
-      "home_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/28921.png",
-      "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/28918.png",
-      "time_baghdad": "13:30",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "الكأس 5",
-      "commentator": "غير معروف",
-      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة د",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "حرسالحدود-سموحة-2026-01-08",
       "home": "حرس الحدود",
       "away": "سموحة",
@@ -40,7 +25,7 @@
       "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/25010.png",
       "time_baghdad": "16:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "الكأس 5",
       "commentator": "غير معروف",
@@ -120,6 +105,21 @@
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "استرالياتحت-تايلاندتحت-2026-01-08",
+      "home": "استراليا تحت 23",
+      "away": "تايلاند تحت 23",
+      "home_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/28921.png",
+      "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/28918.png",
+      "time_baghdad": "13:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "الكأس 5",
+      "commentator": "غير معروف",
+      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة د",
       "_source": "yalla1shoot"
     }
   ]
