@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "مالي-السنغال-2026-01-09",
-      "home": "مالي",
-      "away": "السنغال",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/03/19.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5102.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS MAX 1",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, كأس أمم إفريقيا - ربع النهائي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الأردنتحت2-السعوديةتحت-2026-01-09",
       "home": "الأردن تحت 23",
       "away": "السعودية تحت 23",
@@ -90,6 +75,21 @@
       "channel": "الكأس 5",
       "commentator": "غير معروف",
       "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة أ",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "مالي-السنغال-2026-01-09",
+      "home": "مالي",
+      "away": "السنغال",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/03/19.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5102.png",
+      "time_baghdad": "18:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS MAX 1",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, كأس أمم إفريقيا - ربع النهائي",
       "_source": "yalla1shoot"
     }
   ]
