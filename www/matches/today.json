@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "الأردنتحت2-السعوديةتحت-2026-01-09",
-      "home": "الأردن تحت 23",
-      "away": "السعودية تحت 23",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/28920.png",
-      "away_logo": "https://www.yallashootking.tv/wp-content/uploads/2025/12/28914.png",
-      "time_baghdad": "18:30",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "الكأس 5",
-      "commentator": "غير معروف",
-      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة أ",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الكاميرون-المغرب-2026-01-09",
       "home": "الكاميرون",
       "away": "المغرب",
@@ -25,7 +10,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5093.png",
       "time_baghdad": "21:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "beIN SPORTS MAX 1",
       "commentator": "غير معروف",
@@ -90,6 +75,21 @@
       "channel": "beIN SPORTS MAX 1",
       "commentator": "غير معروف",
       "competition": "أفريقيا, كأس أمم إفريقيا - ربع النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الأردنتحت2-السعوديةتحت-2026-01-09",
+      "home": "الأردن تحت 23",
+      "away": "السعودية تحت 23",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/28920.png",
+      "away_logo": "https://www.yallashootking.tv/wp-content/uploads/2025/12/28914.png",
+      "time_baghdad": "18:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "الكأس 5",
+      "commentator": "غير معروف",
+      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة أ",
       "_source": "yalla1shoot"
     }
   ]
