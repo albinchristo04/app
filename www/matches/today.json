@@ -63,21 +63,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الترجي-اتحادبنقرد-2026-01-10",
-      "home": "الترجي",
-      "away": "اتحاد بن قردان",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2126.png",
-      "time_baghdad": "15:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "الوطنية 1",
-      "commentator": "غير معروف",
-      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ريالأوفييدو-ريالبيتيس-2026-01-10",
       "home": "ريال أوفييدو",
       "away": "ريال بيتيس",
@@ -90,6 +75,21 @@
       "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الترجي-اتحادبنقرد-2026-01-10",
+      "home": "الترجي",
+      "away": "اتحاد بن قردان",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2126.png",
+      "time_baghdad": "15:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "الوطنية 1",
+      "commentator": "غير معروف",
+      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
       "_source": "yalla1shoot"
     },
     {
@@ -168,21 +168,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "مانشسترسيتي-إكسيتر-2026-01-10",
-      "home": "مانشستر سيتي",
-      "away": "إكسيتر",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
-      "away_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/77.png",
-      "time_baghdad": "17:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "نيوكاسليونا-بورنموث-2026-01-10",
       "home": "نيوكاسل يونايتد",
       "away": "بورنموث",
@@ -193,6 +178,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "مانشسترسيتي-إكسيتر-2026-01-10",
+      "home": "مانشستر سيتي",
+      "away": "إكسيتر",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
+      "away_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/77.png",
+      "time_baghdad": "17:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
       "_source": "yalla1shoot"
