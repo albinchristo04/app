@@ -33,21 +33,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "تشلتنهام-ليسترسيتي-2026-01-10",
-      "home": "تشلتنهام",
-      "away": "ليستر سيتي",
-      "home_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/46.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/199.png",
-      "time_baghdad": "14:15",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "إيفرتون-سندرلاند-2026-01-10",
       "home": "إيفرتون",
       "away": "سندرلاند",
@@ -63,18 +48,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الترجي-اتحادبنقرد-2026-01-10",
-      "home": "الترجي",
-      "away": "اتحاد بن قردان",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2126.png",
-      "time_baghdad": "15:00",
+      "id": "تشلتنهام-ليسترسيتي-2026-01-10",
+      "home": "تشلتنهام",
+      "away": "ليستر سيتي",
+      "home_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/46.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/199.png",
+      "time_baghdad": "14:15",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "الوطنية 1",
+      "channel": "غير معروف",
       "commentator": "غير معروف",
-      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
+      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
       "_source": "yalla1shoot"
     },
     {
@@ -93,18 +78,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "فاركو-الأهلي-2026-01-10",
-      "home": "فاركو",
-      "away": "الأهلي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1880.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
-      "time_baghdad": "16:00",
+      "id": "الترجي-اتحادبنقرد-2026-01-10",
+      "home": "الترجي",
+      "away": "اتحاد بن قردان",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2126.png",
+      "time_baghdad": "15:00",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "أون سبورت 1",
+      "channel": "الوطنية 1",
       "commentator": "غير معروف",
-      "competition": "مصر, كأس الرابطة المصرية",
+      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
       "_source": "yalla1shoot"
     },
     {
@@ -168,18 +153,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "مانشسترسيتي-إكسيتر-2026-01-10",
-      "home": "مانشستر سيتي",
-      "away": "إكسيتر",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
-      "away_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/77.png",
-      "time_baghdad": "17:00",
+      "id": "فاركو-الأهلي-2026-01-10",
+      "home": "فاركو",
+      "away": "الأهلي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1880.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
+      "time_baghdad": "16:00",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
+      "channel": "أون سبورت 1",
       "commentator": "غير معروف",
-      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
+      "competition": "مصر, كأس الرابطة المصرية",
       "_source": "yalla1shoot"
     },
     {
@@ -193,6 +178,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "مانشسترسيتي-إكسيتر-2026-01-10",
+      "home": "مانشستر سيتي",
+      "away": "إكسيتر",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
+      "away_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/77.png",
+      "time_baghdad": "17:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
       "_source": "yalla1shoot"
@@ -378,21 +378,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "تشارلتوناثل-تشيلسي-2026-01-10",
-      "home": "تشارلتون اثلتيك",
-      "away": "تشيلسي",
-      "home_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/8-1.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/89.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "فالنسيا-إلتشي-2026-01-10",
       "home": "فالنسيا",
       "away": "إلتشي",
@@ -405,6 +390,21 @@
       "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "تشارلتوناثل-تشيلسي-2026-01-10",
+      "home": "تشارلتون اثلتيك",
+      "away": "تشيلسي",
+      "home_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/8-1.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/89.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
       "_source": "yalla1shoot"
     }
   ]
