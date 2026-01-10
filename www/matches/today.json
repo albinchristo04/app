@@ -1,24 +1,9 @@
 {
-  "date": "2026-01-10",
+  "date": "2026-01-11",
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "مصر-كوتديفوار-2026-01-10",
-      "home": "مصر",
-      "away": "كوت ديفوار",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/5100.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2385.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "3-2",
-      "channel": "beIN SPORTS MAX 1",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, كأس أمم إفريقيا - ربع النهائي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "أتالانتا-تورينو-2026-01-10",
+      "id": "أتالانتا-تورينو-2026-01-11",
       "home": "أتالانتا",
       "away": "تورينو",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/128.png",
@@ -33,7 +18,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "فالنسيا-إلتشي-2026-01-10",
+      "id": "فالنسيا-إلتشي-2026-01-11",
       "home": "فالنسيا",
       "away": "إلتشي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/112.png",
@@ -48,7 +33,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "تشارلتوناثل-تشيلسي-2026-01-10",
+      "id": "تشارلتوناثل-تشيلسي-2026-01-11",
       "home": "تشارلتون اثلتيك",
       "away": "تشيلسي",
       "home_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/8-1.png",
@@ -63,7 +48,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "لبنانتحت23-كورياالجنوب-2026-01-10",
+      "id": "لبنانتحت23-كورياالجنوب-2026-01-11",
       "home": "لبنان تحت 23",
       "away": "كوريا الجنوبية تحت 23",
       "home_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/48242.png",
@@ -78,7 +63,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الإماراتتحت-اليابانتحت-2026-01-10",
+      "id": "الإماراتتحت-اليابانتحت-2026-01-11",
       "home": "الإمارات تحت 23",
       "away": "اليابان تحت 23",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/28922.png",
@@ -93,7 +78,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "إيفرتون-سندرلاند-2026-01-10",
+      "id": "إيفرتون-سندرلاند-2026-01-11",
       "home": "إيفرتون",
       "away": "سندرلاند",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/90.png",
@@ -108,7 +93,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "تشلتنهام-ليسترسيتي-2026-01-10",
+      "id": "تشلتنهام-ليسترسيتي-2026-01-11",
       "home": "تشلتنهام",
       "away": "ليستر سيتي",
       "home_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/46.png",
@@ -123,7 +108,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ريالأوفييدو-ريالبيتيس-2026-01-10",
+      "id": "ريالأوفييدو-ريالبيتيس-2026-01-11",
       "home": "ريال أوفييدو",
       "away": "ريال بيتيس",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/193.png",
@@ -138,7 +123,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الترجي-اتحادبنقرد-2026-01-10",
+      "id": "الترجي-اتحادبنقرد-2026-01-11",
       "home": "الترجي",
       "away": "اتحاد بن قردان",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
@@ -153,7 +138,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "واديدجلة-بيراميدز-2026-01-10",
+      "id": "واديدجلة-بيراميدز-2026-01-11",
       "home": "وادي دجلة",
       "away": "بيراميدز",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1016.png",
@@ -168,7 +153,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "فاركو-الأهلي-2026-01-10",
+      "id": "فاركو-الأهلي-2026-01-11",
       "home": "فاركو",
       "away": "الأهلي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1880.png",
@@ -183,7 +168,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "كومو-بولونيا-2026-01-10",
+      "id": "كومو-بولونيا-2026-01-11",
       "home": "كومو",
       "away": "بولونيا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/132.png",
@@ -198,7 +183,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "إيرانتحت23-أوزبكستانتح-2026-01-10",
+      "id": "إيرانتحت23-أوزبكستانتح-2026-01-11",
       "home": "إيران تحت 23",
       "away": "أوزبكستان تحت 23",
       "home_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/28911.png",
@@ -213,7 +198,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أودينيزي-بيسا-2026-01-10",
+      "id": "أودينيزي-بيسا-2026-01-11",
       "home": "أودينيزي",
       "away": "بيسا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/145.png",
@@ -228,7 +213,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نيوكاسليونا-بورنموث-2026-01-10",
+      "id": "نيوكاسليونا-بورنموث-2026-01-11",
       "home": "نيوكاسل يونايتد",
       "away": "بورنموث",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/97.png",
@@ -243,7 +228,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "مانشسترسيتي-إكسيتر-2026-01-10",
+      "id": "مانشسترسيتي-إكسيتر-2026-01-11",
       "home": "مانشستر سيتي",
       "away": "إكسيتر",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
@@ -258,7 +243,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "فياريال-ألافيس-2026-01-10",
+      "id": "فياريال-ألافيس-2026-01-11",
       "home": "فياريال",
       "away": "ألافيس",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/127.png",
@@ -273,7 +258,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "غلطةسراي-فنربخشة-2026-01-10",
+      "id": "غلطةسراي-فنربخشة-2026-01-11",
       "home": "غلطة سراي",
       "away": "فنربخشة",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/945.png",
@@ -288,7 +273,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الوحدة-الشارقة-2026-01-10",
+      "id": "الوحدة-الشارقة-2026-01-11",
       "home": "الوحدة",
       "away": "الشارقة",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/876.png",
@@ -303,7 +288,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الجزائر-نيجيريا-2026-01-10",
+      "id": "الجزائر-نيجيريا-2026-01-11",
       "home": "الجزائر",
       "away": "نيجيريا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5109.png",
@@ -318,7 +303,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "سورياتحت23-قطرتحت23-2026-01-10",
+      "id": "سورياتحت23-قطرتحت23-2026-01-11",
       "home": "سوريا تحت 23",
       "away": "قطر تحت 23",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/28910.png",
@@ -333,7 +318,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "كهرباءالاسم-المصري-2026-01-10",
+      "id": "كهرباءالاسم-المصري-2026-01-11",
       "home": "كهرباء الاسماعيلية",
       "away": "المصري",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/19506.png",
@@ -348,7 +333,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "روما-ساسولو-2026-01-10",
+      "id": "روما-ساسولو-2026-01-11",
       "home": "روما",
       "away": "ساسولو",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/143.png",
@@ -363,7 +348,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "جيرونا-أوساسونا-2026-01-10",
+      "id": "جيرونا-أوساسونا-2026-01-11",
       "home": "جيرونا",
       "away": "أوساسونا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2014.png",
@@ -378,7 +363,22 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "توتنهامهوتس-أستونفيلا-2026-01-10",
+      "id": "بريستولسيتي-واتفورد-2026-01-11",
+      "home": "بريستول سيتي",
+      "away": "واتفورد",
+      "home_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/6.png",
+      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "time_baghdad": "19:45",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "توتنهامهوتس-أستونفيلا-2026-01-11",
       "home": "توتنهام هوتسبر",
       "away": "أستون فيلا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/114.png",
@@ -393,18 +393,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بريستولسيتي-واتفورد-2026-01-10",
-      "home": "بريستول سيتي",
-      "away": "واتفورد",
-      "home_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/6.png",
-      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-      "time_baghdad": "19:45",
+      "id": "مصر-كوتديفوار-2026-01-11",
+      "home": "مصر",
+      "away": "كوت ديفوار",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/5100.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2385.png",
+      "time_baghdad": "21:00",
       "status": "FT",
       "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "غير معروف",
+      "result_text": "3-2",
+      "channel": "beIN SPORTS MAX 1",
       "commentator": "غير معروف",
-      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
+      "competition": "أفريقيا, كأس أمم إفريقيا - ربع النهائي",
       "_source": "yalla1shoot"
     }
   ]
