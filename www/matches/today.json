@@ -3,36 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "الصينتحت23-استرالياتحت-2026-01-11",
-      "home": "الصين تحت 23",
-      "away": "استراليا تحت 23",
-      "home_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/25010.png",
-      "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/28921.png",
-      "time_baghdad": "13:30",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "الكأس 5",
-      "commentator": "غير معروف",
-      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة د",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "ليتشي-بارما-2026-01-11",
-      "home": "ليتشي",
-      "away": "بارما",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/204.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/139.png",
-      "time_baghdad": "13:30",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "Starzplay",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "رايوفاييكان-ريالمايوركا-2026-01-11",
       "home": "رايو فاييكانو",
       "away": "ريال مايوركا",
@@ -48,6 +18,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "بورتسموث-أرسنال-2026-01-11",
+      "home": "بورتسموث",
+      "away": "أرسنال",
+      "home_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/111.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/83.png",
+      "time_baghdad": "16:00",
+      "status": "NS",
+      "status_text": "بعد قليل",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "تايلاندتحت-العراقتحت2-2026-01-11",
       "home": "تايلاند تحت 23",
       "away": "العراق تحت 23",
@@ -55,7 +40,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/28913.png",
       "time_baghdad": "16:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "الكأس 5",
       "commentator": "غير معروف",
@@ -70,26 +55,11 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/137.png",
       "time_baghdad": "16:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "بورتسموث-أرسنال-2026-01-11",
-      "home": "بورتسموث",
-      "away": "أرسنال",
-      "home_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/111.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/83.png",
-      "time_baghdad": "16:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
       "_source": "yalla1shoot"
     },
     {
@@ -108,21 +78,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الزمالك-زد-2026-01-11",
-      "home": "الزمالك",
-      "away": "زد",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/2.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1683.png",
-      "time_baghdad": "17:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "أون سبورت 1",
-      "commentator": "غير معروف",
-      "competition": "مصر, كأس الرابطة المصرية",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بتروجت-مودرنسبورت-2026-01-11",
       "home": "بتروجت",
       "away": "مودرن سبورت",
@@ -133,6 +88,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "أون سبورت 2",
+      "commentator": "غير معروف",
+      "competition": "مصر, كأس الرابطة المصرية",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الزمالك-زد-2026-01-11",
+      "home": "الزمالك",
+      "away": "زد",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/2.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1683.png",
+      "time_baghdad": "17:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "أون سبورت 1",
       "commentator": "غير معروف",
       "competition": "مصر, كأس الرابطة المصرية",
       "_source": "yalla1shoot"
@@ -270,6 +240,36 @@
       "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
       "competition": "فرنسا, كأس فرنسا - دور الـ 32",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الصينتحت23-استرالياتحت-2026-01-11",
+      "home": "الصين تحت 23",
+      "away": "استراليا تحت 23",
+      "home_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/25010.png",
+      "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/28921.png",
+      "time_baghdad": "13:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "الكأس 5",
+      "commentator": "غير معروف",
+      "competition": "آسيا, كأس آسيا تحت 23 سنة - المجموعة د",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ليتشي-بارما-2026-01-11",
+      "home": "ليتشي",
+      "away": "بارما",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/204.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/139.png",
+      "time_baghdad": "13:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "Starzplay",
+      "commentator": "غير معروف",
+      "competition": "إيطاليا, الدوري الإيطالي",
       "_source": "yalla1shoot"
     }
   ]
