@@ -10,7 +10,7 @@
       "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/28921.png",
       "time_baghdad": "13:30",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "الكأس 5",
       "commentator": "غير معروف",
@@ -25,7 +25,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/139.png",
       "time_baghdad": "13:30",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "Starzplay",
       "commentator": "غير معروف",
@@ -45,6 +45,21 @@
       "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "بورتسموث-أرسنال-2026-01-11",
+      "home": "بورتسموث",
+      "away": "أرسنال",
+      "home_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/111.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/83.png",
+      "time_baghdad": "16:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
       "_source": "yalla1shoot"
     },
     {
@@ -78,21 +93,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بورتسموث-أرسنال-2026-01-11",
-      "home": "بورتسموث",
-      "away": "أرسنال",
-      "home_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/111.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/83.png",
-      "time_baghdad": "16:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "وستهاميونا-كوينزباركر-2026-01-11",
       "home": "وست هام يونايتد",
       "away": "كوينز بارك رينجرز",
@@ -108,21 +108,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بتروجت-مودرنسبورت-2026-01-11",
-      "home": "بتروجت",
-      "away": "مودرن سبورت",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/653.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/12724.png",
-      "time_baghdad": "17:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "أون سبورت 2",
-      "commentator": "غير معروف",
-      "competition": "مصر, كأس الرابطة المصرية",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الزمالك-زد-2026-01-11",
       "home": "الزمالك",
       "away": "زد",
@@ -133,6 +118,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "أون سبورت 1",
+      "commentator": "غير معروف",
+      "competition": "مصر, كأس الرابطة المصرية",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "بتروجت-مودرنسبورت-2026-01-11",
+      "home": "بتروجت",
+      "away": "مودرن سبورت",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/653.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/12724.png",
+      "time_baghdad": "17:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "أون سبورت 2",
       "commentator": "غير معروف",
       "competition": "مصر, كأس الرابطة المصرية",
       "_source": "yalla1shoot"
@@ -168,6 +168,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "ميتز-مونبلييه-2026-01-11",
+      "home": "ميتز",
+      "away": "مونبلييه",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/484.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/993.png",
+      "time_baghdad": "19:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "فرنسا, كأس فرنسا - دور الـ 32",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "هيلاسفيرونا-لاتسيو-2026-01-11",
       "home": "هيلاس فيرونا",
       "away": "لاتسيو",
@@ -193,21 +208,6 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 4",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, كأس فرنسا - دور الـ 32",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "ميتز-مونبلييه-2026-01-11",
-      "home": "ميتز",
-      "away": "مونبلييه",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/484.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/993.png",
-      "time_baghdad": "19:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "فرنسا, كأس فرنسا - دور الـ 32",
       "_source": "yalla1shoot"
