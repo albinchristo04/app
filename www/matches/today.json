@@ -93,21 +93,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "يوفنتوس-كريمونيسي-2026-01-12",
-      "home": "يوفنتوس",
-      "away": "كريمونيسي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/135.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/290.png",
-      "time_baghdad": "21:45",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Starzplay",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ليفربول-بارنزلي-2026-01-12",
       "home": "ليفربول",
       "away": "بارنزلي",
@@ -120,6 +105,21 @@
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 3",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "يوفنتوس-كريمونيسي-2026-01-12",
+      "home": "يوفنتوس",
+      "away": "كريمونيسي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/135.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/290.png",
+      "time_baghdad": "21:45",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Starzplay",
+      "commentator": "غير معروف",
+      "competition": "إيطاليا, الدوري الإيطالي",
       "_source": "yalla1shoot"
     },
     {
