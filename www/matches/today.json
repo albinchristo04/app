@@ -48,6 +48,36 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "نيجيريا-المغرب-2026-01-14",
+      "home": "نيجيريا",
+      "away": "المغرب",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2386.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5093.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS MAX 1",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, كأس أمم إفريقيا - نصف النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "تشيلسي-أرسنال-2026-01-14",
+      "home": "تشيلسي",
+      "away": "أرسنال",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/89.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/83.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, كأس الكاراباو - نصف النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "ألباثيتي-ريالمدريد-2026-01-14",
       "home": "ألباثيتي",
       "away": "ريال مدريد",
@@ -90,36 +120,6 @@
       "channel": "شاهد - Shahid VIP",
       "commentator": "غير معروف",
       "competition": "إسبانيا, كأس ملك إسبانيا - دور الـ 16",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "نيجيريا-المغرب-2026-01-14",
-      "home": "نيجيريا",
-      "away": "المغرب",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2386.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5093.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS MAX 1",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, كأس أمم إفريقيا - نصف النهائي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "تشيلسي-أرسنال-2026-01-14",
-      "home": "تشيلسي",
-      "away": "أرسنال",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/89.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/83.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, كأس الكاراباو - نصف النهائي",
       "_source": "yalla1shoot"
     },
     {
