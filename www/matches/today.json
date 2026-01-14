@@ -48,21 +48,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بيراميدز-بتروجت-2026-01-15",
-      "home": "بيراميدز",
-      "away": "بتروجت",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1451.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/653.png",
-      "time_baghdad": "17:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "مصر, كأس الرابطة المصرية",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الأهلي-طلائعالجيش-2026-01-15",
       "home": "الأهلي",
       "away": "طلائع الجيش",
@@ -73,6 +58,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "أون سبورت 1",
+      "commentator": "غير معروف",
+      "competition": "مصر, كأس الرابطة المصرية",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "بيراميدز-بتروجت-2026-01-15",
+      "home": "بيراميدز",
+      "away": "بتروجت",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1451.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/653.png",
+      "time_baghdad": "17:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "مصر, كأس الرابطة المصرية",
       "_source": "yalla1shoot"
