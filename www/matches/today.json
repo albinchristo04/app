@@ -3,18 +3,18 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "السنغال-مصر-2026-01-14",
-      "home": "السنغال",
-      "away": "مصر",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5102.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/5100.png",
-      "time_baghdad": "19:00",
+      "id": "فولفسبورج-سانتباولي-2026-01-14",
+      "home": "فولفسبورج",
+      "away": "سانت باولي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/163.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1042.png",
+      "time_baghdad": "19:30",
       "status": "NS",
       "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "الجزائرية الأولى",
+      "result_text": "1-1",
+      "channel": "MBC Action",
       "commentator": "غير معروف",
-      "competition": "أفريقيا, كأس أمم إفريقيا - نصف النهائي",
+      "competition": "ألمانيا, الدوري الألماني",
       "_source": "yalla1shoot"
     },
     {
@@ -33,6 +33,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "لايبزيج-فرايبورج-2026-01-14",
+      "home": "لايبزيج",
+      "away": "فرايبورج",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/7171.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/195.png",
+      "time_baghdad": "21:30",
+      "status": "NS",
+      "status_text": "بعد قليل",
+      "result_text": "0-0",
+      "channel": "شاهد - Shahid VIP",
+      "commentator": "غير معروف",
+      "competition": "ألمانيا, الدوري الألماني",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "إنترميلان-ليتشي-2026-01-14",
       "home": "إنتر ميلان",
       "away": "ليتشي",
@@ -45,6 +60,21 @@
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ألافيس-رايوفاييكان-2026-01-14",
+      "home": "ألافيس",
+      "away": "رايو فاييكانو",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/168.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/174.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "شاهد - Shahid VIP",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, كأس ملك إسبانيا - دور الـ 16",
       "_source": "yalla1shoot"
     },
     {
@@ -108,21 +138,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ألافيس-رايوفاييكان-2026-01-14",
-      "home": "ألافيس",
-      "away": "رايو فاييكانو",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/168.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/174.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "شاهد - Shahid VIP",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, كأس ملك إسبانيا - دور الـ 16",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بورتو-بنفيكا-2026-01-14",
       "home": "بورتو",
       "away": "بنفيكا",
@@ -135,6 +150,21 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "البرتغال, كأس البرتغال - ربع النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "السنغال-مصر-2026-01-14",
+      "home": "السنغال",
+      "away": "مصر",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5102.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/5100.png",
+      "time_baghdad": "19:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "1-0",
+      "channel": "الجزائرية الأولى",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, كأس أمم إفريقيا - نصف النهائي",
       "_source": "yalla1shoot"
     }
   ]
