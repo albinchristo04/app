@@ -10,7 +10,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8234.png",
       "time_baghdad": "15:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "غير معروف",
       "commentator": "غير معروف",
@@ -138,21 +138,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بورتو-بنفيكا-2026-01-15",
-      "home": "بورتو",
-      "away": "بنفيكا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/224.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/888.png",
-      "time_baghdad": "00:02",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "البرتغال, كأس البرتغال - ربع النهائي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "نيجيريا-المغرب-2026-01-15",
       "home": "نيجيريا",
       "away": "المغرب",
@@ -165,6 +150,21 @@
       "channel": "beIN SPORTS MAX 1",
       "commentator": "غير معروف",
       "competition": "أفريقيا, كأس أمم إفريقيا - نصف النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "بورتو-بنفيكا-2026-01-15",
+      "home": "بورتو",
+      "away": "بنفيكا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/224.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/888.png",
+      "time_baghdad": "00:02",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "البرتغال, كأس البرتغال - ربع النهائي",
       "_source": "yalla1shoot"
     }
   ]
