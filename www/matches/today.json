@@ -10,7 +10,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8234.png",
       "time_baghdad": "15:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "غير معروف",
       "commentator": "غير معروف",
@@ -108,21 +108,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "راسينجسانتا-برشلونة-2026-01-15",
-      "home": "راسينج سانتاندير",
-      "away": "برشلونة",
-      "home_logo": "https://www.m-yallashoot.com/wp-content/uploads/2025/12/137.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/111.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Mbc Masr 2",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, كأس ملك إسبانيا - دور الـ 16",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بورغوس-فالنسيا-2026-01-15",
       "home": "بورغوس",
       "away": "فالنسيا",
@@ -138,18 +123,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نيجيريا-المغرب-2026-01-15",
-      "home": "نيجيريا",
-      "away": "المغرب",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2386.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5093.png",
-      "time_baghdad": "00:02",
-      "status": "FT",
-      "status_text": "انتهت",
+      "id": "راسينجسانتا-برشلونة-2026-01-15",
+      "home": "راسينج سانتاندير",
+      "away": "برشلونة",
+      "home_logo": "https://www.m-yallashoot.com/wp-content/uploads/2025/12/137.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/111.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN SPORTS MAX 1",
+      "channel": "Mbc Masr 2",
       "commentator": "غير معروف",
-      "competition": "أفريقيا, كأس أمم إفريقيا - نصف النهائي",
+      "competition": "إسبانيا, كأس ملك إسبانيا - دور الـ 16",
       "_source": "yalla1shoot"
     },
     {
@@ -165,6 +150,21 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "البرتغال, كأس البرتغال - ربع النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "نيجيريا-المغرب-2026-01-15",
+      "home": "نيجيريا",
+      "away": "المغرب",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/2386.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5093.png",
+      "time_baghdad": "00:02",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS MAX 1",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, كأس أمم إفريقيا - نصف النهائي",
       "_source": "yalla1shoot"
     }
   ]
