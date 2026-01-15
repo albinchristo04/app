@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "الترجي-مستقبلقابس-2026-01-15",
-      "home": "الترجي",
-      "away": "مستقبل قابس",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8234.png",
-      "time_baghdad": "15:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الأهلي-طلائعالجيش-2026-01-15",
       "home": "الأهلي",
       "away": "طلائع الجيش",
@@ -25,7 +10,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/304.png",
       "time_baghdad": "17:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "أون سبورت 1",
       "commentator": "غير معروف",
@@ -40,7 +25,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/653.png",
       "time_baghdad": "17:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "غير معروف",
       "commentator": "غير معروف",
@@ -180,6 +165,21 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "البرتغال, كأس البرتغال - ربع النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الترجي-مستقبلقابس-2026-01-15",
+      "home": "الترجي",
+      "away": "مستقبل قابس",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8234.png",
+      "time_baghdad": "15:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
       "_source": "yalla1shoot"
     }
   ]
