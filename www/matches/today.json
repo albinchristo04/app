@@ -187,7 +187,7 @@
       "home": "نوتنجهام فورست",
       "away": "أرسنال",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/29.png",
-      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/83.png",
       "time_baghdad": "19:30",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
@@ -195,6 +195,21 @@
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "مودرنسبورت-الجونة-2026-01-17",
+      "home": "مودرن سبورت",
+      "away": "الجونة",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/12724.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/617.png",
+      "time_baghdad": "20:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "مصر, كأس الرابطة المصرية",
       "_source": "yalla1shoot"
     },
     {
@@ -210,21 +225,6 @@
       "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
       "competition": "فرنسا, الدوري الفرنسي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "مودرنسبورت-الجونة-2026-01-17",
-      "home": "مودرن سبورت",
-      "away": "الجونة",
-      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/617.png",
-      "time_baghdad": "20:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "مصر, كأس الرابطة المصرية",
       "_source": "yalla1shoot"
     },
     {
