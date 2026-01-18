@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "تورينو-روما-2026-01-18",
-      "home": "تورينو",
-      "away": "روما",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/144.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/143.png",
-      "time_baghdad": "19:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "Starzplay",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "سيلتافيجو-رايوفاييكان-2026-01-18",
       "home": "سيلتا فيجو",
       "away": "رايو فاييكانو",
@@ -40,7 +25,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/5102.png",
       "time_baghdad": "21:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "beIN SPORTS MAX 1",
       "commentator": "غير معروف",
@@ -55,7 +40,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/204.png",
       "time_baghdad": "21:45",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "Starzplay",
       "commentator": "غير معروف",
@@ -70,7 +55,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/534.png",
       "time_baghdad": "21:45",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
@@ -123,6 +108,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "وولفرهامبتون-نيوكاسليونا-2026-01-18",
+      "home": "وولفرهامبتون",
+      "away": "نيوكاسل يونايتد",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/97.png",
+      "time_baghdad": "16:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "بولونيا-فيورنتينا-2026-01-18",
       "home": "بولونيا",
       "away": "فيورنتينا",
@@ -150,21 +150,6 @@
       "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
       "competition": "فرنسا, الدوري الفرنسي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "وولفرهامبتون-نيوكاسليونا-2026-01-18",
-      "home": "وولفرهامبتون",
-      "away": "نيوكاسل يونايتد",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/97.png",
-      "time_baghdad": "16:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     },
     {
@@ -228,6 +213,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "أستونفيلا-إيفرتون-2026-01-18",
+      "home": "أستون فيلا",
+      "away": "إيفرتون",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/84.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/90.png",
+      "time_baghdad": "18:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "أوغسبورغ-فرايبورج-2026-01-18",
       "home": "أوغسبورغ",
       "away": "فرايبورج",
@@ -243,18 +243,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أستونفيلا-إيفرتون-2026-01-18",
-      "home": "أستون فيلا",
-      "away": "إيفرتون",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/84.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/90.png",
-      "time_baghdad": "18:30",
+      "id": "تورينو-روما-2026-01-18",
+      "home": "تورينو",
+      "away": "روما",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/144.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/143.png",
+      "time_baghdad": "19:00",
       "status": "FT",
       "status_text": "انتهت",
       "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
+      "channel": "Starzplay",
       "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
+      "competition": "إيطاليا, الدوري الإيطالي",
       "_source": "yalla1shoot"
     }
   ]
