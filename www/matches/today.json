@@ -40,7 +40,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/872.png",
       "time_baghdad": "18:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "الكاس 1",
       "commentator": "غير معروف",
@@ -123,21 +123,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "سبورتينجبرا-نوتنجهامفور-2026-01-22",
-      "home": "سبورتينج براغا",
-      "away": "نوتنجهام فورست",
-      "home_logo": "https://www.yallashootking.tv/wp-content/uploads/2025/12/895.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/29.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "أوروبا, الدوري الأوروبي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "نيس-غوأهيدإيغي-2026-01-22",
       "home": "نيس",
       "away": "غو أهيد إيغيلز",
@@ -178,6 +163,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 4",
+      "commentator": "غير معروف",
+      "competition": "أوروبا, الدوري الأوروبي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "سبورتينجبرا-نوتنجهامفور-2026-01-22",
+      "home": "سبورتينج براغا",
+      "away": "نوتنجهام فورست",
+      "home_logo": "https://www.yallashootking.tv/wp-content/uploads/2025/12/895.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/29.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "أوروبا, الدوري الأوروبي",
       "_source": "yalla1shoot"
