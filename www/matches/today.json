@@ -1,24 +1,9 @@
 {
-  "date": "2026-01-23",
+  "date": "2026-01-24",
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "أوكسير-باريسسانجي-2026-01-23",
-      "home": "أوكسير",
-      "away": "باريس سان جيرمان",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/302.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/237.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, الدوري الفرنسي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "إنترميلان-بيسا-2026-01-23",
+      "id": "إنترميلان-بيسا-2026-01-24",
       "home": "إنتر ميلان",
       "away": "بيسا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/224.png",
@@ -33,7 +18,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ليفانتي-إلتشي-2026-01-23",
+      "id": "ليفانتي-إلتشي-2026-01-24",
       "home": "ليفانتي",
       "away": "إلتشي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/150.png",
@@ -48,7 +33,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بنما-المكسيك-2026-01-23",
+      "id": "بنما-المكسيك-2026-01-24",
       "home": "بنما",
       "away": "المكسيك",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/5414.png",
@@ -63,22 +48,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الأهلي-يانجافريكان-2026-01-23",
-      "home": "الأهلي",
-      "away": "يانج افريكانز",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
-      "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/18957.png",
-      "time_baghdad": "18:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "2-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "الوحدة-الدحيل-2026-01-23",
+      "id": "الوحدة-الدحيل-2026-01-24",
       "home": "الوحدة",
       "away": "الدحيل",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/876.png",
@@ -93,7 +63,22 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "صنداونز-الهلالالسود-2026-01-23",
+      "id": "الأهلي-يانجافريكان-2026-01-24",
+      "home": "الأهلي",
+      "away": "يانج افريكانز",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
+      "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/18957.png",
+      "time_baghdad": "18:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "2-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "صنداونز-الهلالالسود-2026-01-24",
       "home": "صن داونز",
       "away": "الهلال السوداني",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/7277.png",
@@ -105,6 +90,21 @@
       "channel": "beIN Sports 6 HD",
       "commentator": "غير معروف",
       "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "أوكسير-باريسسانجي-2026-01-24",
+      "home": "أوكسير",
+      "away": "باريس سان جيرمان",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/302.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/237.png",
+      "time_baghdad": "21:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "فرنسا, الدوري الفرنسي",
       "_source": "yalla1shoot"
     }
   ]
