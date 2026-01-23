@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "صنداونز-الهلالالسود-2026-01-23",
-      "home": "صن داونز",
-      "away": "الهلال السوداني",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/7277.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/12778.png",
-      "time_baghdad": "20:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN Sports 6 HD",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "أوكسير-باريسسانجي-2026-01-23",
       "home": "أوكسير",
       "away": "باريس سان جيرمان",
@@ -40,7 +25,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/248.png",
       "time_baghdad": "21:45",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "Starzplay",
       "commentator": "غير معروف",
@@ -55,7 +40,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/156.png",
       "time_baghdad": "22:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
@@ -78,6 +63,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "الوحدة-الدحيل-2026-01-23",
+      "home": "الوحدة",
+      "away": "الدحيل",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/876.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/2034.png",
+      "time_baghdad": "18:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "أبو ظبي الرياضية 1",
+      "commentator": "غير معروف",
+      "competition": "آسيا, درع التحدي الإماراتي القطري - النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "الأهلي-يانجافريكان-2026-01-23",
       "home": "الأهلي",
       "away": "يانج افريكانز",
@@ -93,18 +93,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الوحدة-الدحيل-2026-01-23",
-      "home": "الوحدة",
-      "away": "الدحيل",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/876.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/2034.png",
-      "time_baghdad": "18:00",
+      "id": "صنداونز-الهلالالسود-2026-01-23",
+      "home": "صن داونز",
+      "away": "الهلال السوداني",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/7277.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/12778.png",
+      "time_baghdad": "20:00",
       "status": "FT",
       "status_text": "انتهت",
       "result_text": "0-0",
-      "channel": "أبو ظبي الرياضية 1",
+      "channel": "beIN Sports 6 HD",
       "commentator": "غير معروف",
-      "competition": "آسيا, درع التحدي الإماراتي القطري - النهائي",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
       "_source": "yalla1shoot"
     }
   ]
