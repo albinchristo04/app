@@ -3,36 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "كومو-تورينو-2026-01-24",
-      "home": "كومو",
-      "away": "تورينو",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/132.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/144.png",
-      "time_baghdad": "16:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "4-0",
-      "channel": "Starzplay",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "بايرليفركوز-فيردربريمن-2026-01-24",
-      "home": "باير ليفركوزن",
-      "away": "فيردر بريمن",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/156.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/168.png",
-      "time_baghdad": "16:30",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "1-0",
-      "channel": "شاهد - Shahid VIP",
-      "commentator": "غير معروف",
-      "competition": "ألمانيا, الدوري الألماني",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بايرنميونخ-أوغسبورغ-2026-01-24",
       "home": "بايرن ميونخ",
       "away": "أوغسبورغ",
@@ -48,18 +18,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الصينتحت23-اليابانتحت-2026-01-24",
-      "home": "الصين تحت 23",
-      "away": "اليابان تحت 23",
-      "home_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/25010.png",
-      "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/28912.png",
-      "time_baghdad": "17:00",
+      "id": "بايرليفركوز-فيردربريمن-2026-01-24",
+      "home": "باير ليفركوزن",
+      "away": "فيردر بريمن",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/156.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/168.png",
+      "time_baghdad": "16:30",
       "status": "NS",
       "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN Sports 6 HD",
+      "result_text": "1-0",
+      "channel": "شاهد - Shahid VIP",
       "commentator": "غير معروف",
-      "competition": "آسيا, كأس آسيا تحت 23 سنة - النهائي",
+      "competition": "ألمانيا, الدوري الألماني",
       "_source": "yalla1shoot"
     },
     {
@@ -108,6 +78,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "الصينتحت23-اليابانتحت-2026-01-24",
+      "home": "الصين تحت 23",
+      "away": "اليابان تحت 23",
+      "home_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/25010.png",
+      "away_logo": "https://www.yalashot.us/wp-content/uploads/2026/01/28912.png",
+      "time_baghdad": "17:00",
+      "status": "NS",
+      "status_text": "جارية الان",
+      "result_text": "0-0",
+      "channel": "beIN Sports 6 HD",
+      "commentator": "غير معروف",
+      "competition": "آسيا, كأس آسيا تحت 23 سنة - النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "فالنسيا-إسبانيول-2026-01-24",
       "home": "فالنسيا",
       "away": "إسبانيول",
@@ -123,21 +108,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ستادرين-لوريان-2026-01-24",
-      "home": "ستاد رين",
-      "away": "لوريان",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/312.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/472-1.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "بعد قليل",
-      "result_text": "0-0",
-      "channel": "beIN Sport 8 HD",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, الدوري الفرنسي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "شبيبةالقبائ-الجيشالملكي-2026-01-24",
       "home": "شبيبة القبائل",
       "away": "الجيش الملكي",
@@ -145,7 +115,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/440.png",
       "time_baghdad": "18:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
@@ -160,7 +130,7 @@
       "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
       "time_baghdad": "18:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 7",
       "commentator": "غير معروف",
@@ -175,11 +145,26 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8347.png",
       "time_baghdad": "18:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "أبو ظبي الرياضية 1",
       "commentator": "غير معروف",
       "competition": "آسيا, درع السوبر الإماراتي القطري - النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ستادرين-لوريان-2026-01-24",
+      "home": "ستاد رين",
+      "away": "لوريان",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/312.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/472-1.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "جارية الان",
+      "result_text": "0-0",
+      "channel": "beIN Sport 8 HD",
+      "commentator": "غير معروف",
+      "competition": "فرنسا, الدوري الفرنسي",
       "_source": "yalla1shoot"
     },
     {
@@ -195,21 +180,6 @@
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "يونيونبرلين-بوروسيادورت-2026-01-24",
-      "home": "يونيون برلين",
-      "away": "بوروسيا دورتموند",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/2110.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/154.png",
-      "time_baghdad": "19:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "MBC Action",
-      "commentator": "غير معروف",
-      "competition": "ألمانيا, الدوري الألماني",
       "_source": "yalla1shoot"
     },
     {
@@ -243,6 +213,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "يونيونبرلين-بوروسيادورت-2026-01-24",
+      "home": "يونيون برلين",
+      "away": "بوروسيا دورتموند",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/2110.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/154.png",
+      "time_baghdad": "19:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "MBC Action",
+      "commentator": "غير معروف",
+      "competition": "ألمانيا, الدوري الألماني",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "لوآفر-موناكو-2026-01-24",
       "home": "لو آفر",
       "away": "موناكو",
@@ -258,21 +243,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "اتحادالعاصم-دجوليباالما-2026-01-24",
-      "home": "اتحاد العاصمة",
-      "away": "دجوليبا المالي",
-      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/8220.png",
-      "away_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/19392.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sport 8 HD",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, الكونفدرالية الافريقية",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "نهضةبركان-بيراميدز-2026-01-24",
       "home": "نهضة بركان",
       "away": "بيراميدز",
@@ -285,6 +255,21 @@
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "اتحادالعاصم-دجوليباالما-2026-01-24",
+      "home": "اتحاد العاصمة",
+      "away": "دجوليبا المالي",
+      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/8220.png",
+      "away_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/19392.png",
+      "time_baghdad": "21:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sport 8 HD",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, الكونفدرالية الافريقية",
       "_source": "yalla1shoot"
     },
     {
@@ -348,6 +333,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "باورديناموز-ريفرزيونايت-2026-01-24",
+      "home": "باور ديناموز",
+      "away": "ريفرز يونايتد",
+      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/76692.png",
+      "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/6994.png",
+      "time_baghdad": "15:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "رايوفاييكان-أوساسونا-2026-01-24",
       "home": "رايو فاييكانو",
       "away": "أوساسونا",
@@ -363,18 +363,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "باورديناموز-ريفرزيونايت-2026-01-24",
-      "home": "باور ديناموز",
-      "away": "ريفرز يونايتد",
-      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/76692.png",
-      "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/6994.png",
-      "time_baghdad": "15:00",
+      "id": "كومو-تورينو-2026-01-24",
+      "home": "كومو",
+      "away": "تورينو",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/132.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/144.png",
+      "time_baghdad": "16:00",
       "status": "FT",
       "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
+      "result_text": "4-0",
+      "channel": "Starzplay",
       "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "competition": "إيطاليا, الدوري الإيطالي",
       "_source": "yalla1shoot"
     }
   ]
