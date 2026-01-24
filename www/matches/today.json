@@ -10,7 +10,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/117.png",
       "time_baghdad": "14:30",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
@@ -93,21 +93,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "فولهام-برايتون-2026-01-24",
-      "home": "فولهام",
-      "away": "برايتون",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/120.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1426.png",
-      "time_baghdad": "17:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 5 HD",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بيرنلي-توتنهامهوتس-2026-01-24",
       "home": "بيرنلي",
       "away": "توتنهام هوتسبر",
@@ -150,6 +135,21 @@
       "channel": "beIN Sports 6 HD",
       "commentator": "غير معروف",
       "competition": "آسيا, كأس آسيا تحت 23 سنة - النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "فولهام-برايتون-2026-01-24",
+      "home": "فولهام",
+      "away": "برايتون",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/120.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1426.png",
+      "time_baghdad": "17:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 5 HD",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     },
     {
