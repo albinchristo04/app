@@ -10,26 +10,11 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/117.png",
       "time_baghdad": "14:30",
       "status": "NS",
-      "status_text": "بعد قليل",
-      "result_text": "0-0",
+      "status_text": "جارية الان",
+      "result_text": "1-0",
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "باورديناموز-ريفرزيونايت-2026-01-24",
-      "home": "باور ديناموز",
-      "away": "ريفرز يونايتد",
-      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/76692.png",
-      "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/6994.png",
-      "time_baghdad": "15:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
       "_source": "yalla1shoot"
     },
     {
@@ -40,11 +25,26 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/118.png",
       "time_baghdad": "15:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "باورديناموز-ريفرزيونايت-2026-01-24",
+      "home": "باور ديناموز",
+      "away": "ريفرز يونايتد",
+      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/76692.png",
+      "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/6994.png",
+      "time_baghdad": "15:00",
+      "status": "NS",
+      "status_text": "بعد قليل",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
       "_source": "yalla1shoot"
     },
     {
@@ -63,6 +63,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "بايرنميونخ-أوغسبورغ-2026-01-24",
+      "home": "بايرن ميونخ",
+      "away": "أوغسبورغ",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/331.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/358.png",
+      "time_baghdad": "16:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "MBC Action",
+      "commentator": "غير معروف",
+      "competition": "ألمانيا, الدوري الألماني",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "بايرليفركوز-فيردربريمن-2026-01-24",
       "home": "باير ليفركوزن",
       "away": "فيردر بريمن",
@@ -78,18 +93,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بايرنميونخ-أوغسبورغ-2026-01-24",
-      "home": "بايرن ميونخ",
-      "away": "أوغسبورغ",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/331.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/358.png",
-      "time_baghdad": "16:30",
+      "id": "فولهام-برايتون-2026-01-24",
+      "home": "فولهام",
+      "away": "برايتون",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/120.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1426.png",
+      "time_baghdad": "17:00",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "MBC Action",
+      "channel": "beIN Sports 5 HD",
       "commentator": "غير معروف",
-      "competition": "ألمانيا, الدوري الألماني",
+      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     },
     {
@@ -135,21 +150,6 @@
       "channel": "beIN Sports 6 HD",
       "commentator": "غير معروف",
       "competition": "آسيا, كأس آسيا تحت 23 سنة - النهائي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "فولهام-برايتون-2026-01-24",
-      "home": "فولهام",
-      "away": "برايتون",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/120.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1426.png",
-      "time_baghdad": "17:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 5 HD",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     },
     {
