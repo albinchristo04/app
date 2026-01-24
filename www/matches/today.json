@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "لوآفر-موناكو-2026-01-24",
-      "home": "لو آفر",
-      "away": "موناكو",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/485.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/210.png",
-      "time_baghdad": "20:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 4",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, الدوري الفرنسي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "نهضةبركان-بيراميدز-2026-01-24",
       "home": "نهضة بركان",
       "away": "بيراميدز",
@@ -70,7 +55,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/110.png",
       "time_baghdad": "22:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
@@ -85,7 +70,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/309.png",
       "time_baghdad": "22:05",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "beIN Sports 6 HD",
       "commentator": "غير معروف",
@@ -375,6 +360,21 @@
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "لوآفر-موناكو-2026-01-24",
+      "home": "لو آفر",
+      "away": "موناكو",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/485.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/210.png",
+      "time_baghdad": "20:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 4",
+      "commentator": "غير معروف",
+      "competition": "فرنسا, الدوري الفرنسي",
       "_source": "yalla1shoot"
     }
   ]
