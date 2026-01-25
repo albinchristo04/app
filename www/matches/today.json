@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "أليانزاليما-انترميامي-2026-01-25",
-      "home": "أليانزا ليما",
-      "away": "انتر ميامي",
-      "home_logo": "https://www.yalla-shoot-tv.biz/wp-content/uploads/2026/01/7280.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/54729.png",
-      "time_baghdad": "00:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "دولي, المباريات الوديّة الدوليّة",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ساسولو-كريمونيسي-2026-01-25",
       "home": "ساسولو",
       "away": "كريمونيسي",
@@ -30,21 +15,6 @@
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "أتلتيكومدري-ريالمايوركا-2026-01-25",
-      "home": "أتلتيكو مدريد",
-      "away": "ريال مايوركا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/134.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/121.png",
-      "time_baghdad": "15:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 6 HD",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     },
     {
@@ -63,48 +33,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "جنوى-بولونيا-2026-01-25",
-      "home": "جنوى",
-      "away": "بولونيا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/514.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/129.png",
-      "time_baghdad": "16:00",
+      "id": "أتلتيكومدري-ريالمايوركا-2026-01-25",
+      "home": "أتلتيكو مدريد",
+      "away": "ريال مايوركا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/134.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/121.png",
+      "time_baghdad": "15:00",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "Starzplay",
+      "channel": "beIN Sports 6 HD",
       "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "أتالانتا-بارما-2026-01-25",
-      "home": "أتالانتا",
-      "away": "بارما",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/128.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/139.png",
-      "time_baghdad": "16:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Starzplay",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "كريستالبالا-تشيلسي-2026-01-25",
-      "home": "كريستال بالاس",
-      "away": "تشيلسي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/299.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/89.png",
-      "time_baghdad": "16:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
+      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     },
     {
@@ -150,6 +90,51 @@
       "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
       "competition": "فرنسا, الدوري الفرنسي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "جنوى-بولونيا-2026-01-25",
+      "home": "جنوى",
+      "away": "بولونيا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/514.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/129.png",
+      "time_baghdad": "16:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Starzplay",
+      "commentator": "غير معروف",
+      "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "أتالانتا-بارما-2026-01-25",
+      "home": "أتالانتا",
+      "away": "بارما",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/128.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/139.png",
+      "time_baghdad": "16:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Starzplay",
+      "commentator": "غير معروف",
+      "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "كريستالبالا-تشيلسي-2026-01-25",
+      "home": "كريستال بالاس",
+      "away": "تشيلسي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/299.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/89.png",
+      "time_baghdad": "16:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     },
     {
@@ -363,21 +348,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "روما-ميلان-2026-01-25",
-      "home": "روما",
-      "away": "ميلان",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/143.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/137.png",
-      "time_baghdad": "21:45",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Starzplay",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ليل-ستراسبورج-2026-01-25",
       "home": "ليل",
       "away": "ستراسبورج",
@@ -393,6 +363,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "روما-ميلان-2026-01-25",
+      "home": "روما",
+      "away": "ميلان",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/143.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/137.png",
+      "time_baghdad": "21:45",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Starzplay",
+      "commentator": "غير معروف",
+      "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "ألافيس-ريالبيتيس-2026-01-25",
       "home": "ألافيس",
       "away": "ريال بيتيس",
@@ -405,6 +390,21 @@
       "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "أليانزاليما-انترميامي-2026-01-25",
+      "home": "أليانزا ليما",
+      "away": "انتر ميامي",
+      "home_logo": "https://www.yalla-shoot-tv.biz/wp-content/uploads/2026/01/7280.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/54729.png",
+      "time_baghdad": "00:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "دولي, المباريات الوديّة الدوليّة",
       "_source": "yalla1shoot"
     },
     {
