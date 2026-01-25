@@ -48,21 +48,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "كريستالبالا-تشيلسي-2026-01-25",
-      "home": "كريستال بالاس",
-      "away": "تشيلسي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/299.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/89.png",
-      "time_baghdad": "16:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "نيوكاسليونا-أستونفيلا-2026-01-25",
       "home": "نيوكاسل يونايتد",
       "away": "أستون فيلا",
@@ -135,6 +120,21 @@
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "كريستالبالا-تشيلسي-2026-01-25",
+      "home": "كريستال بالاس",
+      "away": "تشيلسي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/299.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/89.png",
+      "time_baghdad": "16:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     },
     {
@@ -303,21 +303,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الودادالريا-مانييمايوني-2026-01-25",
-      "home": "الوداد الرياضي",
-      "away": "مانييما يونيون",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/04/434.png",
-      "away_logo": "https://www.yalla-shoot-tv.biz/wp-content/uploads/2026/01/50818.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 5 HD",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, الكونفدرالية الافريقية",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "شباببلوزداد-ستيلينبوش-2026-01-25",
       "home": "شباب بلوزداد",
       "away": "ستيلينبوش",
@@ -343,6 +328,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, الكونفدرالية الافريقية",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الودادالريا-مانييمايوني-2026-01-25",
+      "home": "الوداد الرياضي",
+      "away": "مانييما يونيون",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/04/434.png",
+      "away_logo": "https://www.yalla-shoot-tv.biz/wp-content/uploads/2026/01/50818.png",
+      "time_baghdad": "21:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 5 HD",
       "commentator": "غير معروف",
       "competition": "أفريقيا, الكونفدرالية الافريقية",
       "_source": "yalla1shoot"
