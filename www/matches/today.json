@@ -85,7 +85,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/123.png",
       "time_baghdad": "22:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
@@ -153,6 +153,36 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "كريستالبالا-تشيلسي-2026-01-25",
+      "home": "كريستال بالاس",
+      "away": "تشيلسي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/299.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/89.png",
+      "time_baghdad": "16:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "نيوكاسليونا-أستونفيلا-2026-01-25",
+      "home": "نيوكاسل يونايتد",
+      "away": "أستون فيلا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/97.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/84.png",
+      "time_baghdad": "16:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN Sports 5 HD",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "برينتفورد-نوتنجهامفور-2026-01-25",
       "home": "برينتفورد",
       "away": "نوتنجهام فورست",
@@ -213,36 +243,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "كريستالبالا-تشيلسي-2026-01-25",
-      "home": "كريستال بالاس",
-      "away": "تشيلسي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/299.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/89.png",
-      "time_baghdad": "16:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "نيوكاسليونا-أستونفيلا-2026-01-25",
-      "home": "نيوكاسل يونايتد",
-      "away": "أستون فيلا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/97.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/84.png",
-      "time_baghdad": "16:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "beIN Sports 5 HD",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بوروسيامونش-شتوتجارت-2026-01-25",
       "home": "بوروسيا مونشنجلادباخ",
       "away": "شتوتجارت",
@@ -273,21 +273,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الجزيرة-الأهلي-2026-01-25",
-      "home": "الجزيرة",
-      "away": "الأهلي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/875.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
-      "time_baghdad": "18:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "أبو ظبي الرياضية 1",
-      "commentator": "غير معروف",
-      "competition": "آسيا, كأس التحدي القطري الإماراتي - النهائي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "سانبيدرو-أولمبيكآسفي-2026-01-25",
       "home": "سان بيدرو",
       "away": "أولمبيك آسفي",
@@ -315,6 +300,21 @@
       "channel": "beIN Sport 8 HD",
       "commentator": "غير معروف",
       "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الجزيرة-الأهلي-2026-01-25",
+      "home": "الجزيرة",
+      "away": "الأهلي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/875.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
+      "time_baghdad": "18:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "أبو ظبي الرياضية 1",
+      "commentator": "غير معروف",
+      "competition": "آسيا, كأس التحدي القطري الإماراتي - النهائي",
       "_source": "yalla1shoot"
     },
     {
@@ -378,21 +378,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "يوفنتوس-نابولي-2026-01-25",
-      "home": "يوفنتوس",
-      "away": "نابولي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/135.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/757.png",
-      "time_baghdad": "19:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "Starzplay",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "اتحادتواركة-الرجاءالبيض-2026-01-25",
       "home": "اتحاد تواركة",
       "away": "الرجاء البيضاوي",
@@ -420,6 +405,21 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "المغرب, الدوري المغربي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "يوفنتوس-نابولي-2026-01-25",
+      "home": "يوفنتوس",
+      "away": "نابولي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/135.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/757.png",
+      "time_baghdad": "19:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "Starzplay",
+      "commentator": "غير معروف",
+      "competition": "إيطاليا, الدوري الإيطالي",
       "_source": "yalla1shoot"
     },
     {
