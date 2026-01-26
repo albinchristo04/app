@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "أوزبكستان-الصين-2026-01-26",
-      "home": "أوزبكستان",
-      "away": "الصين",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/03/291.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/03/505.png",
-      "time_baghdad": "16:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "دولي, مباريات ودية دولية",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "هيلاسفيرونا-أودينيزي-2026-01-26",
       "home": "هيلاس فيرونا",
       "away": "أودينيزي",
@@ -30,6 +15,21 @@
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "جيرونا-خيتافي-2026-01-26",
+      "home": "جيرونا",
+      "away": "خيتافي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2014.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/317.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 3 HD",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     },
     {
@@ -48,18 +48,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "جيرونا-خيتافي-2026-01-26",
-      "home": "جيرونا",
-      "away": "خيتافي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2014.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/317.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "id": "أوزبكستان-الصين-2026-01-26",
+      "home": "أوزبكستان",
+      "away": "الصين",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/03/291.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/03/505.png",
+      "time_baghdad": "16:00",
+      "status": "FT",
+      "status_text": "انتهت",
       "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
+      "channel": "غير معروف",
       "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
+      "competition": "دولي, مباريات ودية دولية",
       "_source": "yalla1shoot"
     }
   ]
