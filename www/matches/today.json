@@ -48,21 +48,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الترجي-شبيبةالقيرو-2026-01-27",
-      "home": "الترجي",
-      "away": "شبيبة القيروان",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/8238.png",
-      "time_baghdad": "15:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "1-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الصفاقسي-النجمالرياض-2026-01-27",
       "home": "الصفاقسي",
       "away": "النجم الرياضي بالمتلوي",
@@ -72,6 +57,21 @@
       "status": "FT",
       "status_text": "انتهت",
       "result_text": "2-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الترجي-شبيبةالقيرو-2026-01-27",
+      "home": "الترجي",
+      "away": "شبيبة القيروان",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/8238.png",
+      "time_baghdad": "15:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "1-0",
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "تونس, الرابطة التونسية المحترفة الأولى",
