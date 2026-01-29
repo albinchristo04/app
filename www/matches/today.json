@@ -18,21 +18,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "مودرنسبورت-الإسماعيلي-2026-01-29",
-      "home": "مودرن سبورت",
-      "away": "الإسماعيلي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/12724.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/5.png",
-      "time_baghdad": "20:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "أون سبورت 1",
-      "commentator": "غير معروف",
-      "competition": "مصر, الدوري المصري",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "غزلالمحلة-طلائعالجيش-2026-01-29",
       "home": "غزل المحلة",
       "away": "طلائع الجيش",
@@ -48,18 +33,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أستونفيلا-ريدبولسالز-2026-01-29",
-      "home": "أستون فيلا",
-      "away": "ريد بول سالزبورغ",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/84.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/1739.png",
-      "time_baghdad": "22:00",
+      "id": "مودرنسبورت-الإسماعيلي-2026-01-29",
+      "home": "مودرن سبورت",
+      "away": "الإسماعيلي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/12724.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/5.png",
+      "time_baghdad": "20:00",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
+      "channel": "أون سبورت 1",
       "commentator": "غير معروف",
-      "competition": "أوروبا, الدوري الأوروبي",
+      "competition": "مصر, الدوري المصري",
       "_source": "yalla1shoot"
     },
     {
@@ -163,6 +148,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 7",
+      "commentator": "غير معروف",
+      "competition": "أوروبا, الدوري الأوروبي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "أستونفيلا-ريدبولسالز-2026-01-29",
+      "home": "أستون فيلا",
+      "away": "ريد بول سالزبورغ",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/84.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/1739.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "أوروبا, الدوري الأوروبي",
       "_source": "yalla1shoot"
