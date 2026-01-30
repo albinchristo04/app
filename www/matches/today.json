@@ -3,36 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "الهلالالسود-صنداونز-2026-01-31",
-      "home": "الهلال السوداني",
-      "away": "صن داونز",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/12778.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/7277.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "كولن-فولفسبورج-2026-01-31",
-      "home": "كولن",
-      "away": "فولفسبورج",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/194.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/163.png",
-      "time_baghdad": "21:30",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "شاهد - Shahid VIP",
-      "commentator": "غير معروف",
-      "competition": "ألمانيا, الدوري الألماني",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "لاتسيو-جنوى-2026-01-31",
       "home": "لاتسيو",
       "away": "جنوى",
@@ -120,6 +90,36 @@
       "channel": "أون سبورت 2",
       "commentator": "غير معروف",
       "competition": "مصر, الدوري المصري",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الهلالالسود-صنداونز-2026-01-31",
+      "home": "الهلال السوداني",
+      "away": "صن داونز",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/12778.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/7277.png",
+      "time_baghdad": "21:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "كولن-فولفسبورج-2026-01-31",
+      "home": "كولن",
+      "away": "فولفسبورج",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/194.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/163.png",
+      "time_baghdad": "21:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "شاهد - Shahid VIP",
+      "commentator": "غير معروف",
+      "competition": "ألمانيا, الدوري الألماني",
       "_source": "yalla1shoot"
     }
   ]
