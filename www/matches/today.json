@@ -26,7 +26,7 @@
       "time_baghdad": "16:30",
       "status": "NS",
       "status_text": "جارية الان",
-      "result_text": "0-0",
+      "result_text": "0-2",
       "channel": "MBC Action",
       "commentator": "غير معروف",
       "competition": "ألمانيا, الدوري الألماني",
@@ -85,7 +85,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/127.png",
       "time_baghdad": "17:15",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
@@ -100,7 +100,7 @@
       "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/12172.png",
       "time_baghdad": "18:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
@@ -115,7 +115,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/222.png",
       "time_baghdad": "18:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "beIN Sports 6 HD",
       "commentator": "غير معروف",
@@ -135,6 +135,21 @@
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "هامبورج-بايرنميونخ-2026-01-31",
+      "home": "هامبورج",
+      "away": "بايرن ميونخ",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/334.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/331.png",
+      "time_baghdad": "19:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "MBC Action",
+      "commentator": "غير معروف",
+      "competition": "ألمانيا, الدوري الألماني",
       "_source": "yalla1shoot"
     },
     {
@@ -165,21 +180,6 @@
       "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "هامبورج-بايرنميونخ-2026-01-31",
-      "home": "هامبورج",
-      "away": "بايرن ميونخ",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/334.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/331.png",
-      "time_baghdad": "19:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "MBC Action",
-      "commentator": "غير معروف",
-      "competition": "ألمانيا, الدوري الألماني",
       "_source": "yalla1shoot"
     },
     {
@@ -273,21 +273,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ريالأوفييدو-جيرونا-2026-01-31",
-      "home": "ريال أوفييدو",
-      "away": "جيرونا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/193.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2014.png",
-      "time_baghdad": "15:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "يانجافريكان-الأهلي-2026-01-31",
       "home": "يانج افريكانز",
       "away": "الأهلي",
@@ -300,6 +285,21 @@
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ريالأوفييدو-جيرونا-2026-01-31",
+      "home": "ريال أوفييدو",
+      "away": "جيرونا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/193.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2014.png",
+      "time_baghdad": "15:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "1-0",
+      "channel": "beIN Sports 3 HD",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     }
   ]
