@@ -1,24 +1,9 @@
 {
-  "date": "2026-01-31",
+  "date": "2026-02-01",
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "الجيشالملكي-شبيبةالقبائ-2026-01-31",
-      "home": "الجيش الملكي",
-      "away": "شبيبة القبائل",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/440.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/8223.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "كالياري-هيلاسفيرونا-2026-01-31",
+      "id": "كالياري-هيلاسفيرونا-2026-02-01",
       "home": "كالياري",
       "away": "هيلاس فيرونا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/324.png",
@@ -33,7 +18,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "إلتشي-برشلونة-2026-01-31",
+      "id": "إلتشي-برشلونة-2026-02-01",
       "home": "إلتشي",
       "away": "برشلونة",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/156.png",
@@ -48,7 +33,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ليفربول-نيوكاسليونا-2026-01-31",
+      "id": "ليفربول-نيوكاسليونا-2026-02-01",
       "home": "ليفربول",
       "away": "نيوكاسل يونايتد",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/93.png",
@@ -63,7 +48,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "موناكو-ستادرين-2026-01-31",
+      "id": "موناكو-ستادرين-2026-02-01",
       "home": "موناكو",
       "away": "ستاد رين",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/210.png",
@@ -78,22 +63,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "يانجافريكان-الأهلي-2026-01-31",
-      "home": "يانج افريكانز",
-      "away": "الأهلي",
-      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/18957.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
-      "time_baghdad": "15:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "1-1",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "ريالأوفييدو-جيرونا-2026-01-31",
+      "id": "ريالأوفييدو-جيرونا-2026-02-01",
       "home": "ريال أوفييدو",
       "away": "جيرونا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/193.png",
@@ -108,7 +78,22 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بيسا-ساسولو-2026-01-31",
+      "id": "يانجافريكان-الأهلي-2026-02-01",
+      "home": "يانج افريكانز",
+      "away": "الأهلي",
+      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/18957.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
+      "time_baghdad": "15:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "1-1",
+      "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "بيسا-ساسولو-2026-02-01",
       "home": "بيسا",
       "away": "ساسولو",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/248.png",
@@ -123,7 +108,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "آينتراختفرا-بايرليفركوز-2026-01-31",
+      "id": "آينتراختفرا-بايرليفركوز-2026-02-01",
       "home": "آينتراخت فرانكفورت",
       "away": "باير ليفركوزن",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/196.png",
@@ -138,22 +123,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "وولفرهامبتون-بورنموث-2026-01-31",
-      "home": "وولفرهامبتون",
-      "away": "بورنموث",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1453.png",
-      "time_baghdad": "17:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-2",
-      "channel": "beIN Sport 8 HD",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "ليدزيونايتد-أرسنال-2026-01-31",
+      "id": "ليدزيونايتد-أرسنال-2026-02-01",
       "home": "ليدز يونايتد",
       "away": "أرسنال",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/36.png",
@@ -168,7 +138,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "برايتون-إيفرتون-2026-01-31",
+      "id": "برايتون-إيفرتون-2026-02-01",
       "home": "برايتون",
       "away": "إيفرتون",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1426.png",
@@ -183,7 +153,22 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أوساسونا-فياريال-2026-01-31",
+      "id": "وولفرهامبتون-بورنموث-2026-02-01",
+      "home": "وولفرهامبتون",
+      "away": "بورنموث",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1453.png",
+      "time_baghdad": "17:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-2",
+      "channel": "beIN Sport 8 HD",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "أوساسونا-فياريال-2026-02-01",
       "home": "أوساسونا",
       "away": "فياريال",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/118.png",
@@ -198,7 +183,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بترواتليتكو-ستادمالي-2026-01-31",
+      "id": "بترواتليتكو-ستادمالي-2026-02-01",
       "home": "بترو اتليتكو",
       "away": "ستاد مالي",
       "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
@@ -213,7 +198,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "باريسأف.سي.-أولمبيكمارس-2026-01-31",
+      "id": "باريسأف.سي.-أولمبيكمارس-2026-02-01",
       "home": "باريس أف.سي.",
       "away": "أولمبيك مارسيليا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/6075.png",
@@ -228,7 +213,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نابولي-فيورنتينا-2026-01-31",
+      "id": "نابولي-فيورنتينا-2026-02-01",
       "home": "نابولي",
       "away": "فيورنتينا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/757.png",
@@ -243,22 +228,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "هامبورج-بايرنميونخ-2026-01-31",
-      "home": "هامبورج",
-      "away": "بايرن ميونخ",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/334.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/331.png",
-      "time_baghdad": "19:30",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "MBC Action",
-      "commentator": "غير معروف",
-      "competition": "ألمانيا, الدوري الألماني",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "تشيلسي-وستهاميونا-2026-01-31",
+      "id": "تشيلسي-وستهاميونا-2026-02-01",
       "home": "تشيلسي",
       "away": "وست هام يونايتد",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/89.png",
@@ -273,7 +243,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ليفانتي-أتلتيكومدري-2026-01-31",
+      "id": "ليفانتي-أتلتيكومدري-2026-02-01",
       "home": "ليفانتي",
       "away": "أتلتيكو مدريد",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/150.png",
@@ -288,7 +258,22 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "لوريان-نانت-2026-01-31",
+      "id": "هامبورج-بايرنميونخ-2026-02-01",
+      "home": "هامبورج",
+      "away": "بايرن ميونخ",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/334.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/331.png",
+      "time_baghdad": "19:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "MBC Action",
+      "commentator": "غير معروف",
+      "competition": "ألمانيا, الدوري الألماني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "لوريان-نانت-2026-02-01",
       "home": "لوريان",
       "away": "نانت",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/472-1.png",
@@ -300,6 +285,21 @@
       "channel": "beIN Sports 5 HD",
       "commentator": "غير معروف",
       "competition": "فرنسا, الدوري الفرنسي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الجيشالملكي-شبيبةالقبائ-2026-02-01",
+      "home": "الجيش الملكي",
+      "away": "شبيبة القبائل",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/440.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/8223.png",
+      "time_baghdad": "21:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
       "_source": "yalla1shoot"
     }
   ]
