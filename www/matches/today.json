@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "ريالأوفييدو-جيرونا-2026-01-31",
-      "home": "ريال أوفييدو",
-      "away": "جيرونا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/193.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2014.png",
-      "time_baghdad": "15:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "يانجافريكان-الأهلي-2026-01-31",
       "home": "يانج افريكانز",
       "away": "الأهلي",
@@ -30,6 +15,21 @@
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ريالأوفييدو-جيرونا-2026-01-31",
+      "home": "ريال أوفييدو",
+      "away": "جيرونا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/193.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2014.png",
+      "time_baghdad": "15:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 3 HD",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     },
     {
@@ -63,6 +63,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "وولفرهامبتون-بورنموث-2026-01-31",
+      "home": "وولفرهامبتون",
+      "away": "بورنموث",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1453.png",
+      "time_baghdad": "17:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sport 8 HD",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "ليدزيونايتد-أرسنال-2026-01-31",
       "home": "ليدز يونايتد",
       "away": "أرسنال",
@@ -88,21 +103,6 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 4",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "وولفرهامبتون-بورنموث-2026-01-31",
-      "home": "وولفرهامبتون",
-      "away": "بورنموث",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1453.png",
-      "time_baghdad": "17:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sport 8 HD",
       "commentator": "غير معروف",
       "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
