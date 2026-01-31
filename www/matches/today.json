@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "يانجافريكان-الأهلي-2026-01-31",
-      "home": "يانج افريكانز",
-      "away": "الأهلي",
-      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/18957.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
-      "time_baghdad": "15:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ريالأوفييدو-جيرونا-2026-01-31",
       "home": "ريال أوفييدو",
       "away": "جيرونا",
@@ -30,6 +15,21 @@
       "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "يانجافريكان-الأهلي-2026-01-31",
+      "home": "يانج افريكانز",
+      "away": "الأهلي",
+      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/18957.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
+      "time_baghdad": "15:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
       "_source": "yalla1shoot"
     },
     {
@@ -123,21 +123,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "باريسأف.سي.-أولمبيكمارس-2026-01-31",
-      "home": "باريس أف.سي.",
-      "away": "أولمبيك مارسيليا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/6075.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/222.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 6 HD",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, الدوري الفرنسي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بترواتليتكو-ستادمالي-2026-01-31",
       "home": "بترو اتليتكو",
       "away": "ستاد مالي",
@@ -153,6 +138,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "باريسأف.سي.-أولمبيكمارس-2026-01-31",
+      "home": "باريس أف.سي.",
+      "away": "أولمبيك مارسيليا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/6075.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/222.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 6 HD",
+      "commentator": "غير معروف",
+      "competition": "فرنسا, الدوري الفرنسي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "نابولي-فيورنتينا-2026-01-31",
       "home": "نابولي",
       "away": "فيورنتينا",
@@ -165,6 +165,21 @@
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ليفانتي-أتلتيكومدري-2026-01-31",
+      "home": "ليفانتي",
+      "away": "أتلتيكو مدريد",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/150.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/134.png",
+      "time_baghdad": "19:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 3 HD",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     },
     {
@@ -195,21 +210,6 @@
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "ليفانتي-أتلتيكومدري-2026-01-31",
-      "home": "ليفانتي",
-      "away": "أتلتيكو مدريد",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/150.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/134.png",
-      "time_baghdad": "19:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     },
     {
