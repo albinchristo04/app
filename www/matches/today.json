@@ -10,26 +10,11 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/204.png",
       "time_baghdad": "13:30",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "سيمبا-الترجي-2026-02-01",
-      "home": "سيمبا",
-      "away": "الترجي",
-      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
-      "time_baghdad": "15:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
       "_source": "yalla1shoot"
     },
     {
@@ -108,6 +93,36 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "سيمبا-الترجي-2026-02-01",
+      "home": "سيمبا",
+      "away": "الترجي",
+      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
+      "time_baghdad": "15:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "نوتنجهامفور-كريستالبالا-2026-02-01",
+      "home": "نوتنجهام فورست",
+      "away": "كريستال بالاس",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/29.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/299.png",
+      "time_baghdad": "16:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sport 8 HD",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "كومو-أتالانتا-2026-02-01",
       "home": "كومو",
       "away": "أتالانتا",
@@ -168,21 +183,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نوتنجهامفور-كريستالبالا-2026-02-01",
-      "home": "نوتنجهام فورست",
-      "away": "كريستال بالاس",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/29.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/299.png",
-      "time_baghdad": "16:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sport 8 HD",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "شتوتجارت-فرايبورج-2026-02-01",
       "home": "شتوتجارت",
       "away": "فرايبورج",
@@ -213,6 +213,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "دجوليباالما-اتحادالعاصم-2026-02-01",
+      "home": "دجوليبا المالي",
+      "away": "اتحاد العاصمة",
+      "home_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/19392.png",
+      "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/8220.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 9",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, الكونفدرالية الافريقية",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "بيراميدز-نهضةبركان-2026-02-01",
       "home": "بيراميدز",
       "away": "نهضة بركان",
@@ -240,21 +255,6 @@
       "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
       "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "دجوليباالما-اتحادالعاصم-2026-02-01",
-      "home": "دجوليبا المالي",
-      "away": "اتحاد العاصمة",
-      "home_logo": "https://www.yalla-shoot-tv.com/wp-content/uploads/2026/01/19392.png",
-      "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/8220.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 9",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, الكونفدرالية الافريقية",
       "_source": "yalla1shoot"
     },
     {
