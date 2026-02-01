@@ -3,36 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "مولوديةالجز-سانتإيلويل-2026-02-02",
-      "home": "مولودية الجزائر",
-      "away": "سانت إيلوي لوبوبو",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/8218.png",
-      "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/29705.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "المصري-الزمالك-2026-02-02",
-      "home": "المصري",
-      "away": "الزمالك",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/8.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/2.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, الكونفدرالية الافريقية",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بارما-يوفنتوس-2026-02-02",
       "home": "بارما",
       "away": "يوفنتوس",
@@ -108,21 +78,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ستيلينبوش-شباببلوزداد-2026-02-02",
-      "home": "ستيلينبوش",
-      "away": "شباب بلوزداد",
-      "home_logo": "https://www.yalla-shoot-tv.biz/wp-content/uploads/2026/01/44725.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/941.png",
-      "time_baghdad": "15:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-1",
-      "channel": "beIN SPORTS HD 9",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, الكونفدرالية الافريقية",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "مستقبلقابس-النجمالساحل-2026-02-02",
       "home": "مستقبل قابس",
       "away": "النجم الساحلي",
@@ -180,6 +135,21 @@
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ستيلينبوش-شباببلوزداد-2026-02-02",
+      "home": "ستيلينبوش",
+      "away": "شباب بلوزداد",
+      "home_logo": "https://www.yalla-shoot-tv.biz/wp-content/uploads/2026/01/44725.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/941.png",
+      "time_baghdad": "15:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-1",
+      "channel": "beIN SPORTS HD 9",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, الكونفدرالية الافريقية",
       "_source": "yalla1shoot"
     },
     {
@@ -465,6 +435,36 @@
       "channel": "beIN Sports 5 HD",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "مولوديةالجز-سانتإيلويل-2026-02-02",
+      "home": "مولودية الجزائر",
+      "away": "سانت إيلوي لوبوبو",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/8218.png",
+      "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/29705.png",
+      "time_baghdad": "21:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN Sports 3 HD",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "المصري-الزمالك-2026-02-02",
+      "home": "المصري",
+      "away": "الزمالك",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/8.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/2.png",
+      "time_baghdad": "21:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, الكونفدرالية الافريقية",
       "_source": "yalla1shoot"
     }
   ]
