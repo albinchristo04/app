@@ -183,21 +183,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "توتنهامهوتس-مانشسترسيتي-2026-02-01",
-      "home": "توتنهام هوتسبر",
-      "away": "مانشستر سيتي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/114.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
-      "time_baghdad": "18:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بوروسيادورت-هايدينهايم-2026-02-01",
       "home": "بوروسيا دورتموند",
       "away": "هايدينهايم",
@@ -213,18 +198,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الرجاءالبيض-نهضةالزمامر-2026-02-01",
-      "home": "الرجاء البيضاوي",
-      "away": "نهضة الزمامرة",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/451.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/49266.png",
-      "time_baghdad": "19:00",
+      "id": "توتنهامهوتس-مانشسترسيتي-2026-02-01",
+      "home": "توتنهام هوتسبر",
+      "away": "مانشستر سيتي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/114.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
+      "time_baghdad": "18:30",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "الرياضية المغربية (3)",
+      "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
-      "competition": "المغرب, الدوري المغربي",
+      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     },
     {
@@ -240,6 +225,21 @@
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الرجاءالبيض-نهضةالزمامر-2026-02-01",
+      "home": "الرجاء البيضاوي",
+      "away": "نهضة الزمامرة",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/451.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/49266.png",
+      "time_baghdad": "19:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "الرياضية المغربية (3)",
+      "commentator": "غير معروف",
+      "competition": "المغرب, الدوري المغربي",
       "_source": "yalla1shoot"
     },
     {
