@@ -183,21 +183,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "توتنهامهوتس-مانشسترسيتي-2026-02-01",
-      "home": "توتنهام هوتسبر",
-      "away": "مانشستر سيتي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/114.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
-      "time_baghdad": "18:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بوروسيادورت-هايدينهايم-2026-02-01",
       "home": "بوروسيا دورتموند",
       "away": "هايدينهايم",
@@ -210,6 +195,21 @@
       "channel": "MBC Action",
       "commentator": "غير معروف",
       "competition": "ألمانيا, الدوري الألماني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "توتنهامهوتس-مانشسترسيتي-2026-02-01",
+      "home": "توتنهام هوتسبر",
+      "away": "مانشستر سيتي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/114.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
+      "time_baghdad": "18:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     },
     {
