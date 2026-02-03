@@ -48,21 +48,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ألباسيتي-برشلونة-2026-02-03",
-      "home": "ألباسيتي",
-      "away": "برشلونة",
-      "home_logo": "https://www.yalla-shoot-tv.biz/wp-content/uploads/2026/02/170.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/111.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "شاهد - Shahid VIP",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, كأس ملك إسبانيا - ربع النهائي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "أرسنال-تشيلسي-2026-02-03",
       "home": "أرسنال",
       "away": "تشيلسي",
@@ -75,6 +60,21 @@
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "إنجلترا, كأس الكاراباو - نصف النهائي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ألباسيتي-برشلونة-2026-02-03",
+      "home": "ألباسيتي",
+      "away": "برشلونة",
+      "home_logo": "https://www.yalla-shoot-tv.biz/wp-content/uploads/2026/02/170.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/111.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "شاهد - Shahid VIP",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, كأس ملك إسبانيا - ربع النهائي",
       "_source": "yalla1shoot"
     },
     {
