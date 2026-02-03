@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "ستادريمس-لومان-2026-02-04",
-      "home": "ستاد ريمس",
-      "away": "لومان",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1359.png",
-      "away_logo": "https://www.yalla-shoot-tv.biz/wp-content/uploads/2026/02/468.png",
-      "time_baghdad": "21:30",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, كأس فرنسا - دور الـ 16",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بولونيا-ميلان-2026-02-04",
       "home": "بولونيا",
       "away": "ميلان",
@@ -105,6 +90,21 @@
       "channel": "أون سبورت 1",
       "commentator": "غير معروف",
       "competition": "مصر, الدوري المصري",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ستادريمس-لومان-2026-02-04",
+      "home": "ستاد ريمس",
+      "away": "لومان",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1359.png",
+      "away_logo": "https://www.yalla-shoot-tv.biz/wp-content/uploads/2026/02/468.png",
+      "time_baghdad": "21:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "فرنسا, كأس فرنسا - دور الـ 16",
       "_source": "yalla1shoot"
     }
   ]
