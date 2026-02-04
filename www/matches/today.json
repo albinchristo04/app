@@ -3,11 +3,11 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "سموحة-بيراميدز-2026-02-04",
-      "home": "سموحة",
-      "away": "بيراميدز",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/860.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1451.png",
+      "id": "زد-المصري-2026-02-04",
+      "home": "زد",
+      "away": "المصري",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1683.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/8.png",
       "time_baghdad": "17:00",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
@@ -18,11 +18,11 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "زد-المصري-2026-02-04",
-      "home": "زد",
-      "away": "المصري",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1683.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/8.png",
+      "id": "سموحة-بيراميدز-2026-02-04",
+      "home": "سموحة",
+      "away": "بيراميدز",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/860.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1451.png",
       "time_baghdad": "17:00",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
