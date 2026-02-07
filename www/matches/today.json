@@ -18,36 +18,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الصفاقسي-الناديالأفر-2026-02-08",
-      "home": "الصفاقسي",
-      "away": "النادي الأفريقي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/428.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8239.png",
-      "time_baghdad": "15:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "ألافيس-خيتافي-2026-02-08",
-      "home": "ألافيس",
-      "away": "خيتافي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/168.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/317.png",
-      "time_baghdad": "15:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 5 HD",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "سانتإيلويل-صنداونز-2026-02-08",
       "home": "سانت إيلوي لوبوبو",
       "away": "صن داونز",
@@ -105,6 +75,36 @@
       "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
       "competition": "أفريقيا, الكونفدرالية الافريقية",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الصفاقسي-الناديالأفر-2026-02-08",
+      "home": "الصفاقسي",
+      "away": "النادي الأفريقي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/428.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8239.png",
+      "time_baghdad": "15:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ألافيس-خيتافي-2026-02-08",
+      "home": "ألافيس",
+      "away": "خيتافي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/168.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/317.png",
+      "time_baghdad": "15:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 5 HD",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     },
     {
@@ -183,21 +183,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ستادمالي-الترجي-2026-02-08",
-      "home": "ستاد مالي",
-      "away": "الترجي",
-      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/12172.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ريفرزيونايت-بيراميدز-2026-02-08",
       "home": "ريفرز يونايتد",
       "away": "بيراميدز",
@@ -225,6 +210,21 @@
       "channel": "beIN Sport 8 HD",
       "commentator": "غير معروف",
       "competition": "أفريقيا, الكونفدرالية الافريقية",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ستادمالي-الترجي-2026-02-08",
+      "home": "ستاد مالي",
+      "away": "الترجي",
+      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/12172.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
       "_source": "yalla1shoot"
     },
     {
