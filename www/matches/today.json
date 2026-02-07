@@ -63,21 +63,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "فولهام-إيفرتون-2026-02-07",
-      "home": "فولهام",
-      "away": "إيفرتون",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/120.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/90.png",
-      "time_baghdad": "17:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بورنموث-أستونفيلا-2026-02-07",
       "home": "بورنموث",
       "away": "أستون فيلا",
@@ -138,6 +123,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "فولهام-إيفرتون-2026-02-07",
+      "home": "فولهام",
+      "away": "إيفرتون",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/120.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/90.png",
+      "time_baghdad": "17:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "برشلونة-ريالمايوركا-2026-02-07",
       "home": "برشلونة",
       "away": "ريال مايوركا",
@@ -183,21 +183,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نيوكاسليونا-برينتفورد-2026-02-07",
-      "home": "نيوكاسل يونايتد",
-      "away": "برينتفورد",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/97.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1920.png",
-      "time_baghdad": "19:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بوروسيامونش-بايرليفركوز-2026-02-07",
       "home": "بوروسيا مونشنجلادباخ",
       "away": "باير ليفركوزن",
@@ -225,6 +210,21 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "نيوكاسليونا-برينتفورد-2026-02-07",
+      "home": "نيوكاسل يونايتد",
+      "away": "برينتفورد",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/97.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1920.png",
+      "time_baghdad": "19:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     },
     {
