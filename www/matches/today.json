@@ -168,21 +168,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "لانس-ستادرين-2026-02-07",
-      "home": "لانس",
-      "away": "ستاد رين",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/309.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/312.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, الدوري الفرنسي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بترواتليتكو-سيمبا-2026-02-07",
       "home": "بترو اتليتكو",
       "away": "سيمبا",
@@ -198,6 +183,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "لانس-ستادرين-2026-02-07",
+      "home": "لانس",
+      "away": "ستاد رين",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/309.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/312.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "فرنسا, الدوري الفرنسي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "جنوى-نابولي-2026-02-07",
       "home": "جنوى",
       "away": "نابولي",
@@ -210,6 +210,21 @@
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "إشبيلية-جيرونا-2026-02-07",
+      "home": "إشبيلية",
+      "away": "جيرونا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/126.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2014.png",
+      "time_baghdad": "19:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 3 HD",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     },
     {
@@ -240,21 +255,6 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "ألمانيا, الدوري الألماني",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "إشبيلية-جيرونا-2026-02-07",
-      "home": "إشبيلية",
-      "away": "جيرونا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/126.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2014.png",
-      "time_baghdad": "19:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     },
     {
