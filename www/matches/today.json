@@ -93,6 +93,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "برايتون-كريستالبالا-2026-02-08",
+      "home": "برايتون",
+      "away": "كريستال بالاس",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1426.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/299.png",
+      "time_baghdad": "16:00",
+      "status": "NS",
+      "status_text": "جارية الان",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 9",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "ليتشي-أودينيزي-2026-02-08",
       "home": "ليتشي",
       "away": "أودينيزي",
@@ -100,7 +115,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/145.png",
       "time_baghdad": "16:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "Starzplay",
       "commentator": "غير معروف",
@@ -115,26 +130,11 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/210.png",
       "time_baghdad": "16:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
       "competition": "فرنسا, الدوري الفرنسي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "برايتون-كريستالبالا-2026-02-08",
-      "home": "برايتون",
-      "away": "كريستال بالاس",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1426.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/299.png",
-      "time_baghdad": "16:00",
-      "status": "NS",
-      "status_text": "بعد قليل",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 9",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     },
     {
@@ -145,7 +145,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/7171.png",
       "time_baghdad": "16:30",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "شاهد - Shahid VIP",
       "commentator": "غير معروف",
@@ -165,6 +165,21 @@
       "channel": "beIN Sports 5 HD",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "سينجيدابلاك-شباببلوزداد-2026-02-08",
+      "home": "سينجيدا بلاك ستارز",
+      "away": "شباب بلوزداد",
+      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/82536.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/941.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sport 8 HD",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, الكونفدرالية الافريقية",
       "_source": "yalla1shoot"
     },
     {
@@ -210,21 +225,6 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "سينجيدابلاك-شباببلوزداد-2026-02-08",
-      "home": "سينجيدا بلاك ستارز",
-      "away": "شباب بلوزداد",
-      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/82536.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/941.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sport 8 HD",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, الكونفدرالية الافريقية",
       "_source": "yalla1shoot"
     },
     {
