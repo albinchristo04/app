@@ -10,11 +10,26 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/139.png",
       "time_baghdad": "13:30",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "نايروبييونا-الودادالريا-2026-02-08",
+      "home": "نايروبي يونايتد",
+      "away": "الوداد الرياضي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/88197.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/04/434.png",
+      "time_baghdad": "15:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 3 HD",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, الكونفدرالية الافريقية",
       "_source": "yalla1shoot"
     },
     {
@@ -88,21 +103,6 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, الكونفدرالية الافريقية",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "نايروبييونا-الودادالريا-2026-02-08",
-      "home": "نايروبي يونايتد",
-      "away": "الوداد الرياضي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/88197.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/04/434.png",
-      "time_baghdad": "15:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
       "competition": "أفريقيا, الكونفدرالية الافريقية",
       "_source": "yalla1shoot"
@@ -183,6 +183,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "سينجيدابلاك-شباببلوزداد-2026-02-08",
+      "home": "سينجيدا بلاك ستارز",
+      "away": "شباب بلوزداد",
+      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/82536.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/941.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sport 8 HD",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, الكونفدرالية الافريقية",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "سانبيدرو-اتحادالعاصم-2026-02-08",
       "home": "سان بيدرو",
       "away": "اتحاد العاصمة",
@@ -225,21 +240,6 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "سينجيدابلاك-شباببلوزداد-2026-02-08",
-      "home": "سينجيدا بلاك ستارز",
-      "away": "شباب بلوزداد",
-      "home_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/82536.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/941.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sport 8 HD",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, الكونفدرالية الافريقية",
       "_source": "yalla1shoot"
     },
     {
@@ -321,7 +321,7 @@
       "id": "أتلتيكومدري-ريالبيتيس-2026-02-08",
       "home": "أتلتيكو مدريد",
       "away": "ريال بيتيس",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/134.png",
+      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/123.png",
       "time_baghdad": "19:30",
       "status": "NS",
