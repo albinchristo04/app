@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "روما-كالياري-2026-02-10",
-      "home": "روما",
-      "away": "كالياري",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/143.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/324.png",
-      "time_baghdad": "21:45",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "Starzplay",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "فياريال-إسبانيول-2026-02-10",
       "home": "فياريال",
       "away": "إسبانيول",
@@ -99,6 +84,21 @@
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/128.png",
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/290.png",
       "time_baghdad": "19:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "Starzplay",
+      "commentator": "غير معروف",
+      "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "روما-كالياري-2026-02-10",
+      "home": "روما",
+      "away": "كالياري",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/143.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/324.png",
+      "time_baghdad": "21:45",
       "status": "FT",
       "status_text": "انتهت",
       "result_text": "0-0",
