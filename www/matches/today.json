@@ -1,24 +1,9 @@
 {
-  "date": "2026-02-11",
+  "date": "2026-02-12",
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "نوتنجهامفور-وولفرهامبتون-2026-02-11",
-      "home": "نوتنجهام فورست",
-      "away": "وولفرهامبتون",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/29.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
-      "time_baghdad": "21:30",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 9",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "كريستالبالا-بيرنلي-2026-02-11",
+      "id": "كريستالبالا-بيرنلي-2026-02-12",
       "home": "كريستال بالاس",
       "away": "بيرنلي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/299.png",
@@ -33,7 +18,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أستونفيلا-برايتون-2026-02-11",
+      "id": "أستونفيلا-برايتون-2026-02-12",
       "home": "أستون فيلا",
       "away": "برايتون",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/84.png",
@@ -48,7 +33,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "مانشسترسيتي-فولهام-2026-02-11",
+      "id": "مانشسترسيتي-فولهام-2026-02-12",
       "home": "مانشستر سيتي",
       "away": "فولهام",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
@@ -63,7 +48,22 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بايرنميونخ-لايبزيج-2026-02-11",
+      "id": "نوتنجهامفور-وولفرهامبتون-2026-02-12",
+      "home": "نوتنجهام فورست",
+      "away": "وولفرهامبتون",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/29.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
+      "time_baghdad": "21:30",
+      "status": "NS",
+      "status_text": "جارية الان",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 9",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "بايرنميونخ-لايبزيج-2026-02-12",
       "home": "بايرن ميونخ",
       "away": "لايبزيج",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/331.png",
@@ -78,7 +78,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أتلتيكبلباو-ريالسوسيداد-2026-02-11",
+      "id": "أتلتيكبلباو-ريالسوسيداد-2026-02-12",
       "home": "أتلتيك بلباو",
       "away": "ريال سوسيداد",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/144.png",
@@ -93,7 +93,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بولونيا-لاتسيو-2026-02-11",
+      "id": "بولونيا-لاتسيو-2026-02-12",
       "home": "بولونيا",
       "away": "لاتسيو",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/129.png",
@@ -108,14 +108,14 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "سندرلاند-ليفربول-2026-02-11",
+      "id": "سندرلاند-ليفربول-2026-02-12",
       "home": "سندرلاند",
       "away": "ليفربول",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/117.png",
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/93.png",
       "time_baghdad": "22:15",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
@@ -123,7 +123,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أركاداج-النصر-2026-02-11",
+      "id": "أركاداج-النصر-2026-02-12",
       "home": "أركاداج",
       "away": "النصر",
       "home_logo": "https://www.yalla-shot.info/wp-content/uploads/2025/11/74158.png",
@@ -138,22 +138,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الأهلي-الإسماعيلي-2026-02-11",
-      "home": "الأهلي",
-      "away": "الإسماعيلي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/5.png",
-      "time_baghdad": "17:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "أون سبورت 1",
-      "commentator": "غير معروف",
-      "competition": "مصر, الدوري المصري",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "إنبي-بيراميدز-2026-02-11",
+      "id": "إنبي-بيراميدز-2026-02-12",
       "home": "إنبي",
       "away": "بيراميدز",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8300.png",
@@ -168,7 +153,22 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "تضامنحضرموت-الريان-2026-02-11",
+      "id": "الأهلي-الإسماعيلي-2026-02-12",
+      "home": "الأهلي",
+      "away": "الإسماعيلي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/5.png",
+      "time_baghdad": "17:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "أون سبورت 1",
+      "commentator": "غير معروف",
+      "competition": "مصر, الدوري المصري",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "تضامنحضرموت-الريان-2026-02-12",
       "home": "تضامن حضرموت",
       "away": "الريان",
       "home_logo": "https://www.yalla-shoot-plus.com/wp-content/uploads/2026/02/78083.png",
@@ -183,7 +183,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "سباهان-الأهلي-2026-02-11",
+      "id": "سباهان-الأهلي-2026-02-12",
       "home": "سباهان",
       "away": "الأهلي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/9356.png",
@@ -198,7 +198,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "المصري-واديدجلة-2026-02-11",
+      "id": "المصري-واديدجلة-2026-02-12",
       "home": "المصري",
       "away": "وادي دجلة",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/8.png",
@@ -213,7 +213,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الزمالك-سموحة-2026-02-11",
+      "id": "الزمالك-سموحة-2026-02-12",
       "home": "الزمالك",
       "away": "سموحة",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/2.png",
