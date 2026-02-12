@@ -1,36 +1,5 @@
 {
   "date": "2026-02-13",
   "source_url": "https://www.yalla-shoot.info/matches-today/",
-  "matches": [
-    {
-      "id": "أتلتيكومدري-برشلونة-2026-02-13",
-      "home": "أتلتيكو مدريد",
-      "away": "برشلونة",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/134.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/111.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "2-0",
-      "channel": "شاهد - Shahid VIP",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, كأس ملك إسبانيا - نصف النهائي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "برينتفورد-أرسنال-2026-02-13",
-      "home": "برينتفورد",
-      "away": "أرسنال",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1920.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/83.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    }
-  ]
+  "matches": []
 }
