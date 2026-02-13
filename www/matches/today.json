@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "شبيبةالقيرو-النجمالساحل-2026-02-13",
-      "home": "شبيبة القيروان",
-      "away": "النجم الساحلي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/8238.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/231.png",
-      "time_baghdad": "15:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ستادرين-باريسسانجي-2026-02-13",
       "home": "ستاد رين",
       "away": "باريس سان جيرمان",
@@ -90,6 +75,21 @@
       "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
       "competition": "فرنسا, الدوري الفرنسي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "شبيبةالقيرو-النجمالساحل-2026-02-13",
+      "home": "شبيبة القيروان",
+      "away": "النجم الساحلي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/8238.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/231.png",
+      "time_baghdad": "15:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
       "_source": "yalla1shoot"
     },
     {
