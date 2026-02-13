@@ -1,24 +1,9 @@
 {
-  "date": "2026-02-13",
+  "date": "2026-02-14",
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "بوروسيادورت-ماينز05-2026-02-13",
-      "home": "بوروسيا دورتموند",
-      "away": "ماينز 05",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/154.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/297.png",
-      "time_baghdad": "21:30",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "شاهد - Shahid VIP",
-      "commentator": "غير معروف",
-      "competition": "ألمانيا, الدوري الألماني",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "بيسا-ميلان-2026-02-13",
+      "id": "بيسا-ميلان-2026-02-14",
       "home": "بيسا",
       "away": "ميلان",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/248.png",
@@ -33,7 +18,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "إلتشي-أوساسونا-2026-02-13",
+      "id": "إلتشي-أوساسونا-2026-02-14",
       "home": "إلتشي",
       "away": "أوساسونا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/156.png",
@@ -48,7 +33,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "موناكو-نانت-2026-02-13",
+      "id": "موناكو-نانت-2026-02-14",
       "home": "موناكو",
       "away": "نانت",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/210.png",
@@ -63,7 +48,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "شبيبةالقيرو-النجمالساحل-2026-02-13",
+      "id": "شبيبةالقيرو-النجمالساحل-2026-02-14",
       "home": "شبيبة القيروان",
       "away": "النجم الساحلي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/8238.png",
@@ -78,7 +63,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "المغربالفاس-الودادالريا-2026-02-13",
+      "id": "المغربالفاس-الودادالريا-2026-02-14",
       "home": "المغرب الفاسي",
       "away": "الوداد الرياضي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/8321.png",
@@ -93,7 +78,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الجيشالملكي-نهضةبركان-2026-02-13",
+      "id": "الجيشالملكي-نهضةبركان-2026-02-14",
       "home": "الجيش الملكي",
       "away": "نهضة بركان",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/440.png",
@@ -108,7 +93,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ستادرين-باريسسانجي-2026-02-13",
+      "id": "ستادرين-باريسسانجي-2026-02-14",
       "home": "ستاد رين",
       "away": "باريس سان جيرمان",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/312.png",
@@ -120,6 +105,21 @@
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "فرنسا, الدوري الفرنسي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "بوروسيادورت-ماينز05-2026-02-14",
+      "home": "بوروسيا دورتموند",
+      "away": "ماينز 05",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/154.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/297.png",
+      "time_baghdad": "21:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "شاهد - Shahid VIP",
+      "commentator": "غير معروف",
+      "competition": "ألمانيا, الدوري الألماني",
       "_source": "yalla1shoot"
     }
   ]
