@@ -138,6 +138,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "مانشسترسيتي-سالفوردسيتي-2026-02-14",
+      "home": "مانشستر سيتي",
+      "away": "سالفورد سيتي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
+      "away_logo": "https://www.yalla-shoot-plus.com/wp-content/uploads/2026/02/22047.png",
+      "time_baghdad": "17:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 4",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "ساوثهامبتون-ليسترسيتي-2026-02-14",
       "home": "ساوثهامبتون",
       "away": "ليستر سيتي",
@@ -163,21 +178,6 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 4",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "مانشسترسيتي-سالفوردسيتي-2026-02-14",
-      "home": "مانشستر سيتي",
-      "away": "سالفورد سيتي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
-      "away_logo": "https://www.yalla-shoot-plus.com/wp-content/uploads/2026/02/22047.png",
-      "time_baghdad": "17:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 4",
       "_source": "yalla1shoot"
@@ -321,7 +321,7 @@
       "id": "أستونفيلا-نيوكاسليونا-2026-02-14",
       "home": "أستون فيلا",
       "away": "نيوكاسل يونايتد",
-      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/84.png",
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/97.png",
       "time_baghdad": "19:45",
       "status": "NS",
