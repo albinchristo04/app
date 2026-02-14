@@ -33,21 +33,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "صنداونز-مولوديةالجز-2026-02-14",
-      "home": "صن داونز",
-      "away": "مولودية الجزائر",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/7277.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/8218.png",
-      "time_baghdad": "15:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الهلالالسود-سانتإيلويل-2026-02-14",
       "home": "الهلال السوداني",
       "away": "سانت إيلوي لوبوبو",
@@ -75,6 +60,21 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "صنداونز-مولوديةالجز-2026-02-14",
+      "home": "صن داونز",
+      "away": "مولودية الجزائر",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/7277.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/8218.png",
+      "time_baghdad": "15:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
       "_source": "yalla1shoot"
     },
     {
@@ -198,6 +198,36 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "سيمبا-ستادمالي-2026-02-14",
+      "home": "سيمبا",
+      "away": "ستاد مالي",
+      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/12172.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "العين-النصر-2026-02-14",
+      "home": "العين",
+      "away": "النصر",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/871.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/873.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "أبو ظبي الرياضية 1",
+      "commentator": "غير معروف",
+      "competition": "الإمارات, دوري أدنوك للمحترفين",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "أولمبيكمارس-ستراسبورج-2026-02-14",
       "home": "أولمبيك مارسيليا",
       "away": "ستراسبورج",
@@ -255,36 +285,6 @@
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "سيمبا-ستادمالي-2026-02-14",
-      "home": "سيمبا",
-      "away": "ستاد مالي",
-      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-      "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/12172.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "العين-النصر-2026-02-14",
-      "home": "العين",
-      "away": "النصر",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/871.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/873.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "أبو ظبي الرياضية 1",
-      "commentator": "غير معروف",
-      "competition": "الإمارات, دوري أدنوك للمحترفين",
       "_source": "yalla1shoot"
     },
     {
@@ -408,21 +408,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ليفربول-برايتون-2026-02-14",
-      "home": "ليفربول",
-      "away": "برايتون",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/93.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1426.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 4",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ريالمدريد-ريالسوسيداد-2026-02-14",
       "home": "ريال مدريد",
       "away": "ريال سوسيداد",
@@ -435,6 +420,21 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ليفربول-برايتون-2026-02-14",
+      "home": "ليفربول",
+      "away": "برايتون",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/93.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1426.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 4",
       "_source": "yalla1shoot"
     },
     {
@@ -456,7 +456,7 @@
       "id": "شبابالاهلي-الوحدة-2026-02-14",
       "home": "شباب الاهلي",
       "away": "الوحدة",
-      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8347.png",
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/876.png",
       "time_baghdad": "16:00",
       "status": "FT",
