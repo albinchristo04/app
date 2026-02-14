@@ -138,6 +138,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "مانشسترسيتي-سالفوردسيتي-2026-02-14",
+      "home": "مانشستر سيتي",
+      "away": "سالفورد سيتي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
+      "away_logo": "https://www.yalla-shoot-plus.com/wp-content/uploads/2026/02/22047.png",
+      "time_baghdad": "17:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 4",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "ساوثهامبتون-ليسترسيتي-2026-02-14",
       "home": "ساوثهامبتون",
       "away": "ليستر سيتي",
@@ -168,21 +183,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "مانشسترسيتي-سالفوردسيتي-2026-02-14",
-      "home": "مانشستر سيتي",
-      "away": "سالفورد سيتي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
-      "away_logo": "https://www.yalla-shoot-plus.com/wp-content/uploads/2026/02/22047.png",
-      "time_baghdad": "17:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 4",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "خيتافي-فياريال-2026-02-14",
       "home": "خيتافي",
       "away": "فياريال",
@@ -195,21 +195,6 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "سيمبا-ستادمالي-2026-02-14",
-      "home": "سيمبا",
-      "away": "ستاد مالي",
-      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-      "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/12172.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
       "_source": "yalla1shoot"
     },
     {
@@ -283,6 +268,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "سيمبا-ستادمالي-2026-02-14",
+      "home": "سيمبا",
+      "away": "ستاد مالي",
+      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "away_logo": "https://www.yallashootkora.com/wp-content/uploads/2025/11/12172.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
       "_source": "yalla1shoot"
@@ -408,21 +408,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ريالمدريد-ريالسوسيداد-2026-02-14",
-      "home": "ريال مدريد",
-      "away": "ريال سوسيداد",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/110.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/124.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ليفربول-برايتون-2026-02-14",
       "home": "ليفربول",
       "away": "برايتون",
@@ -435,6 +420,21 @@
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 4",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ريالمدريد-ريالسوسيداد-2026-02-14",
+      "home": "ريال مدريد",
+      "away": "ريال سوسيداد",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/110.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/124.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     },
     {
