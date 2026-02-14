@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "ليل-بريست-2026-02-14",
-      "home": "ليل",
-      "away": "بريست",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/310.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/534.png",
-      "time_baghdad": "20:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN Sport 8 HD",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, الدوري الفرنسي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "اتحادالعاصم-أولمبيكآسفي-2026-02-14",
       "home": "اتحاد العاصمة",
       "away": "أولمبيك آسفي",
@@ -78,21 +63,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ليفربول-برايتون-2026-02-14",
-      "home": "ليفربول",
-      "away": "برايتون",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/93.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1426.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "بعد قليل",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 4",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ريالمدريد-ريالسوسيداد-2026-02-14",
       "home": "ريال مدريد",
       "away": "ريال سوسيداد",
@@ -100,11 +70,26 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/124.png",
       "time_baghdad": "22:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ليفربول-برايتون-2026-02-14",
+      "home": "ليفربول",
+      "away": "برايتون",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/93.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1426.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "جارية الان",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 4",
       "_source": "yalla1shoot"
     },
     {
@@ -115,7 +100,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/309.png",
       "time_baghdad": "22:05",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
@@ -236,7 +221,7 @@
       "time_baghdad": "16:30",
       "status": "FT",
       "status_text": "انتهت",
-      "result_text": "0-2",
+      "result_text": "0-3",
       "channel": "MBC Action",
       "commentator": "غير معروف",
       "competition": "ألمانيا, الدوري الألماني",
@@ -251,7 +236,7 @@
       "time_baghdad": "16:30",
       "status": "FT",
       "status_text": "انتهت",
-      "result_text": "2-0",
+      "result_text": "4-0",
       "channel": "شاهد - Shahid VIP",
       "commentator": "غير معروف",
       "competition": "ألمانيا, الدوري الألماني",
@@ -333,21 +318,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الترجي-بترواتليتكو-2026-02-14",
-      "home": "الترجي",
-      "away": "بترو اتليتكو",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
-      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-      "time_baghdad": "18:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "سيمبا-ستادمالي-2026-02-14",
       "home": "سيمبا",
       "away": "ستاد مالي",
@@ -423,6 +393,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "الترجي-بترواتليتكو-2026-02-14",
+      "home": "الترجي",
+      "away": "بترو اتليتكو",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
+      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "time_baghdad": "18:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "لاتسيو-أتالانتا-2026-02-14",
       "home": "لاتسيو",
       "away": "أتالانتا",
@@ -435,21 +420,6 @@
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "إشبيلية-ألافيس-2026-02-14",
-      "home": "إشبيلية",
-      "away": "ألافيس",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/126.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/168.png",
-      "time_baghdad": "19:30",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     },
     {
@@ -483,6 +453,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "إشبيلية-ألافيس-2026-02-14",
+      "home": "إشبيلية",
+      "away": "ألافيس",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/126.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/168.png",
+      "time_baghdad": "19:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "أستونفيلا-نيوكاسليونا-2026-02-14",
       "home": "أستون فيلا",
       "away": "نيوكاسل يونايتد",
@@ -495,6 +480,21 @@
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 4",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ليل-بريست-2026-02-14",
+      "home": "ليل",
+      "away": "بريست",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/310.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/534.png",
+      "time_baghdad": "20:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN Sport 8 HD",
+      "commentator": "غير معروف",
+      "competition": "فرنسا, الدوري الفرنسي",
       "_source": "yalla1shoot"
     }
   ]
