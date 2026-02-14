@@ -33,6 +33,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "إسبانيول-سيلتافيجو-2026-02-14",
+      "home": "إسبانيول",
+      "away": "سيلتا فيجو",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/119.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/117.png",
+      "time_baghdad": "15:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 5 HD",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "صنداونز-مولوديةالجز-2026-02-14",
       "home": "صن داونز",
       "away": "مولودية الجزائر",
@@ -60,21 +75,6 @@
       "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
       "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "إسبانيول-سيلتافيجو-2026-02-14",
-      "home": "إسبانيول",
-      "away": "سيلتا فيجو",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/119.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/117.png",
-      "time_baghdad": "15:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     },
     {
@@ -138,21 +138,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ساوثهامبتون-ليسترسيتي-2026-02-14",
-      "home": "ساوثهامبتون",
-      "away": "ليستر سيتي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/21.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/199.png",
-      "time_baghdad": "17:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 4",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بيرنلي-مانسفيلد-2026-02-14",
       "home": "بيرنلي",
       "away": "مانسفيلد",
@@ -183,6 +168,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "ساوثهامبتون-ليسترسيتي-2026-02-14",
+      "home": "ساوثهامبتون",
+      "away": "ليستر سيتي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/21.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/199.png",
+      "time_baghdad": "17:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 4",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "خيتافي-فياريال-2026-02-14",
       "home": "خيتافي",
       "away": "فياريال",
@@ -192,7 +192,7 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "غير معروف",
+      "channel": "beIN Sports Xtra 1",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
@@ -237,7 +237,7 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "غير معروف",
+      "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
       "competition": "فرنسا, الدوري الفرنسي",
       "_source": "yalla1shoot"
@@ -303,6 +303,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "شتوتجارت-كولن-2026-02-14",
+      "home": "شتوتجارت",
+      "away": "كولن",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/160.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/194.png",
+      "time_baghdad": "19:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "شاهد - Shahid VIP",
+      "commentator": "غير معروف",
+      "competition": "ألمانيا, الدوري الألماني",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "إشبيلية-ألافيس-2026-02-14",
       "home": "إشبيلية",
       "away": "ألافيس",
@@ -342,7 +357,7 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "غير معروف",
+      "channel": "beIN Sport 8 HD",
       "commentator": "غير معروف",
       "competition": "فرنسا, الدوري الفرنسي",
       "_source": "yalla1shoot"
@@ -417,7 +432,7 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "غير معروف",
+      "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
@@ -447,7 +462,7 @@
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "غير معروف",
+      "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
       "competition": "فرنسا, الدوري الفرنسي",
       "_source": "yalla1shoot"
