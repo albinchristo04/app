@@ -63,6 +63,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "كريمونيسي-جنوى-2026-02-15",
+      "home": "كريمونيسي",
+      "away": "جنوى",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/290.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/514.png",
+      "time_baghdad": "16:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Starzplay",
+      "commentator": "غير معروف",
+      "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "الودادالريا-عزاميونايتد-2026-02-15",
       "home": "الوداد الرياضي",
       "away": "عزام يونايتد",
@@ -83,21 +98,6 @@
       "away": "هيلاس فيرونا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/139.png",
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1395.png",
-      "time_baghdad": "16:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Starzplay",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "كريمونيسي-جنوى-2026-02-15",
-      "home": "كريمونيسي",
-      "away": "جنوى",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/290.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/514.png",
       "time_baghdad": "16:00",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
@@ -138,21 +138,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "شباببلوزداد-اوتوهو-2026-02-15",
-      "home": "شباب بلوزداد",
-      "away": "اوتوهو",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/941.png",
-      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 5 HD",
-      "commentator": "غير معروف",
-      "competition": "أفريقيا, الكونفدرالية الافريقية",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الأهلي-الجيشالملكي-2026-02-15",
       "home": "الأهلي",
       "away": "الجيش الملكي",
@@ -180,6 +165,21 @@
       "channel": "beIN SPORTS HD 7",
       "commentator": "غير معروف",
       "competition": "أفريقيا, دوري أبطال أفريقيا - المجموعات",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "شباببلوزداد-اوتوهو-2026-02-15",
+      "home": "شباب بلوزداد",
+      "away": "اوتوهو",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/941.png",
+      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 5 HD",
+      "commentator": "غير معروف",
+      "competition": "أفريقيا, الكونفدرالية الافريقية",
       "_source": "yalla1shoot"
     },
     {
