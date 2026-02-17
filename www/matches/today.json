@@ -1,24 +1,9 @@
 {
-  "date": "2026-02-17",
+  "date": "2026-02-18",
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "بنفيكا-ريالمدريد-2026-02-17",
-      "home": "بنفيكا",
-      "away": "ريال مدريد",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/888.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/110.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "أوروبا, دوري أبطال اوروبا - بلاي اوف",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "بوروسيادورت-أتالانتا-2026-02-17",
+      "id": "بوروسيادورت-أتالانتا-2026-02-18",
       "home": "بوروسيا دورتموند",
       "away": "أتالانتا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/154.png",
@@ -33,7 +18,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "موناكو-باريسسانجي-2026-02-17",
+      "id": "موناكو-باريسسانجي-2026-02-18",
       "home": "موناكو",
       "away": "باريس سان جيرمان",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/210.png",
@@ -48,7 +33,22 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الزمالك-سيراميكاكلي-2026-02-17",
+      "id": "بنفيكا-ريالمدريد-2026-02-18",
+      "home": "بنفيكا",
+      "away": "ريال مدريد",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/888.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/110.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "جارية الان",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "أوروبا, دوري أبطال اوروبا - بلاي اوف",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الزمالك-سيراميكاكلي-2026-02-18",
       "home": "الزمالك",
       "away": "سيراميكا كليوباترا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/2.png",
@@ -63,7 +63,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "السد-الاتحاد-2026-02-17",
+      "id": "السد-الاتحاد-2026-02-18",
       "home": "السد",
       "away": "الاتحاد",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/646.png",
@@ -78,7 +78,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الغرافة-تراکتورسازي-2026-02-17",
+      "id": "الغرافة-تراکتورسازي-2026-02-18",
       "home": "الغرافة",
       "away": "تراکتورسازي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/970.png",
@@ -93,11 +93,11 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الوصل-الزوراء-2026-02-17",
+      "id": "الوصل-الزوراء-2026-02-18",
       "home": "الوصل",
       "away": "الزوراء",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/869.png",
-      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/8248.png",
       "time_baghdad": "18:00",
       "status": "FT",
       "status_text": "انتهت",
@@ -108,11 +108,11 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "غلطةسراي-يوفنتوس-2026-02-17",
+      "id": "غلطةسراي-يوفنتوس-2026-02-18",
       "home": "غلطة سراي",
       "away": "يوفنتوس",
-      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/945.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/135.png",
       "time_baghdad": "19:45",
       "status": "FT",
       "status_text": "انتهت",
