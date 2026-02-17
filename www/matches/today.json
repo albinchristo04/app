@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "غلطةسراي-يوفنتوس-2026-02-17",
-      "home": "غلطة سراي",
-      "away": "يوفنتوس",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/945.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/135.png",
-      "time_baghdad": "19:45",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
-      "commentator": "غير معروف",
-      "competition": "أوروبا, دوري أبطال اوروبا - بلاي اوف",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بنفيكا-ريالمدريد-2026-02-17",
       "home": "بنفيكا",
       "away": "ريال مدريد",
@@ -25,9 +10,9 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/110.png",
       "time_baghdad": "22:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
-      "channel": "غير معروف",
+      "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "أوروبا, دوري أبطال اوروبا - بلاي اوف",
       "_source": "yalla1shoot"
@@ -40,9 +25,9 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/128.png",
       "time_baghdad": "22:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
-      "channel": "غير معروف",
+      "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
       "competition": "أوروبا, دوري أبطال اوروبا - بلاي اوف",
       "_source": "yalla1shoot"
@@ -55,9 +40,9 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/237.png",
       "time_baghdad": "22:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
-      "channel": "غير معروف",
+      "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "أوروبا, دوري أبطال اوروبا - بلاي اوف",
       "_source": "yalla1shoot"
@@ -120,6 +105,21 @@
       "channel": "beIN Sports 5 HD",
       "commentator": "غير معروف",
       "competition": "آسيا, دوري أبطال آسيا 2 - دور الـ 16",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "غلطةسراي-يوفنتوس-2026-02-17",
+      "home": "غلطة سراي",
+      "away": "يوفنتوس",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/945.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/135.png",
+      "time_baghdad": "19:45",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN Sports 3 HD",
+      "commentator": "غير معروف",
+      "competition": "أوروبا, دوري أبطال اوروبا - بلاي اوف",
       "_source": "yalla1shoot"
     }
   ]
