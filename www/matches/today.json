@@ -18,6 +18,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "الوصل-الزوراء-2026-02-17",
+      "home": "الوصل",
+      "away": "الزوراء",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/869.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/8248.png",
+      "time_baghdad": "18:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 5 HD",
+      "commentator": "غير معروف",
+      "competition": "آسيا, دوري أبطال آسيا 2 - دور الـ 16",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "السد-الاتحاد-2026-02-17",
       "home": "السد",
       "away": "الاتحاد",
@@ -45,21 +60,6 @@
       "channel": "الكأس 6 HD",
       "commentator": "غير معروف",
       "competition": "آسيا, دوري أبطال آسيا للنخبة",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "الوصل-الزوراء-2026-02-17",
-      "home": "الوصل",
-      "away": "الزوراء",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/869.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/8248.png",
-      "time_baghdad": "18:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 5 HD",
-      "commentator": "غير معروف",
-      "competition": "آسيا, دوري أبطال آسيا 2 - دور الـ 16",
       "_source": "yalla1shoot"
     },
     {
