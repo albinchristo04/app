@@ -63,21 +63,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بوروسيادورت-أتالانتا-2026-02-17",
-      "home": "بوروسيا دورتموند",
-      "away": "أتالانتا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/154.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/128.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "أوروبا, دوري أبطال اوروبا - بلاي اوف",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "موناكو-باريسسانجي-2026-02-17",
       "home": "موناكو",
       "away": "باريس سان جيرمان",
@@ -98,6 +83,21 @@
       "away": "ريال مدريد",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/888.png",
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/110.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "أوروبا, دوري أبطال اوروبا - بلاي اوف",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "بوروسيادورت-أتالانتا-2026-02-17",
+      "home": "بوروسيا دورتموند",
+      "away": "أتالانتا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/154.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/128.png",
       "time_baghdad": "22:00",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
