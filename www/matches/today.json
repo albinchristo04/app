@@ -108,21 +108,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أولمبياكوس-بايرليفركوز-2026-02-18",
-      "home": "أولمبياكوس",
-      "away": "باير ليفركوزن",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/225.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/156.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
-      "commentator": "غير معروف",
-      "competition": "أوروبا, دوري أبطال اوروبا - بلاي اوف",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "كلوببروج-أتلتيكومدري-2026-02-18",
       "home": "كلوب بروج",
       "away": "أتلتيكو مدريد",
@@ -163,6 +148,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "--0",
       "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "أوروبا, دوري أبطال اوروبا - بلاي اوف",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "أولمبياكوس-بايرليفركوز-2026-02-18",
+      "home": "أولمبياكوس",
+      "away": "باير ليفركوزن",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/225.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/156.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
       "competition": "أوروبا, دوري أبطال اوروبا - بلاي اوف",
       "_source": "yalla1shoot"
