@@ -1,24 +1,9 @@
 {
-  "date": "2026-02-18",
+  "date": "2026-02-19",
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "ليفانتي-فياريال-2026-02-18",
-      "home": "ليفانتي",
-      "away": "فياريال",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/150.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/127.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "ميلان-كومو-2026-02-18",
+      "id": "ميلان-كومو-2026-02-19",
       "home": "ميلان",
       "away": "كومو",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/137.png",
@@ -33,37 +18,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "كلوببروج-أتلتيكومدري-2026-02-18",
-      "home": "كلوب بروج",
-      "away": "أتلتيكو مدريد",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/1169.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/134.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 4",
-      "commentator": "غير معروف",
-      "competition": "أوروبا, دوري أبطال اوروبا - بلاي اوف",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "وولفرهامبتون-أرسنال-2026-02-18",
-      "home": "وولفرهامبتون",
-      "away": "أرسنال",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/83.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN Sports 5 HD",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "???-إنترميلان-2026-02-18",
+      "id": "???-إنترميلان-2026-02-19",
       "home": "???",
       "away": "إنتر ميلان",
       "home_logo": "https://www.yalla-shoot-plus.com/wp-content/themes/AlbaYallaShoot/public/img/default.png",
@@ -78,7 +33,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أولمبياكوس-بايرليفركوز-2026-02-18",
+      "id": "أولمبياكوس-بايرليفركوز-2026-02-19",
       "home": "أولمبياكوس",
       "away": "باير ليفركوزن",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/225.png",
@@ -93,7 +48,37 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نهضةالزمامر-نهضةبركان-2026-02-18",
+      "id": "كلوببروج-أتلتيكومدري-2026-02-19",
+      "home": "كلوب بروج",
+      "away": "أتلتيكو مدريد",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/1169.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/134.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "جارية الان",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 4",
+      "commentator": "غير معروف",
+      "competition": "أوروبا, دوري أبطال اوروبا - بلاي اوف",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "وولفرهامبتون-أرسنال-2026-02-19",
+      "home": "وولفرهامبتون",
+      "away": "أرسنال",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/83.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "جارية الان",
+      "result_text": "0-0",
+      "channel": "beIN Sports 5 HD",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "نهضةالزمامر-نهضةبركان-2026-02-19",
       "home": "نهضة الزمامرة",
       "away": "نهضة بركان",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/49266.png",
@@ -108,7 +93,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "العين-القادسية-2026-02-18",
+      "id": "العين-القادسية-2026-02-19",
       "home": "العين",
       "away": "القادسية",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/871.png",
@@ -123,7 +108,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "كارباغاغدام-نيوكاسليونا-2026-02-18",
+      "id": "كارباغاغدام-نيوكاسليونا-2026-02-19",
       "home": "كارباغ اغدام",
       "away": "نيوكاسل يونايتد",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/7521.png",
@@ -138,7 +123,22 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "النصر-أركاداج-2026-02-18",
+      "id": "الأهلي-سباهان-2026-02-19",
+      "home": "الأهلي",
+      "away": "سباهان",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/9356.png",
+      "time_baghdad": "20:15",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "الكأس 7",
+      "commentator": "غير معروف",
+      "competition": "آسيا, دوري أبطال آسيا 2 - دور الـ 16",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "النصر-أركاداج-2026-02-19",
       "home": "النصر",
       "away": "أركاداج",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/873.png",
@@ -153,18 +153,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الأهلي-سباهان-2026-02-18",
-      "home": "الأهلي",
-      "away": "سباهان",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/9356.png",
-      "time_baghdad": "20:15",
+      "id": "ليفانتي-فياريال-2026-02-19",
+      "home": "ليفانتي",
+      "away": "فياريال",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/150.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/127.png",
+      "time_baghdad": "21:00",
       "status": "FT",
       "status_text": "انتهت",
       "result_text": "0-0",
-      "channel": "الكأس 7",
+      "channel": "غير معروف",
       "commentator": "غير معروف",
-      "competition": "آسيا, دوري أبطال آسيا 2 - دور الـ 16",
+      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     }
   ]
