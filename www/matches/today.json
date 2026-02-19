@@ -78,21 +78,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "سيلتيك-شتوتجارت-2026-02-19",
-      "home": "سيلتيك",
-      "away": "شتوتجارت",
-      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/160.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "أوروبا, الدوري الأوروبي - بلاي اوف",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ليل-النجمالأحمر-2026-02-19",
       "home": "ليل",
       "away": "النجم الأحمر",
@@ -103,6 +88,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "أوروبا, الدوري الأوروبي - بلاي اوف",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "سيلتيك-شتوتجارت-2026-02-19",
+      "home": "سيلتيك",
+      "away": "شتوتجارت",
+      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/160.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "أوروبا, الدوري الأوروبي - بلاي اوف",
       "_source": "yalla1shoot"
