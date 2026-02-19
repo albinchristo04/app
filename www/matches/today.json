@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "باوكسالونيك-سيلتافيجو-2026-02-19",
-      "home": "باوك سالونيكا",
-      "away": "سيلتا فيجو",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/1029.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/117.png",
-      "time_baghdad": "19:45",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 4",
-      "commentator": "غير معروف",
-      "competition": "أوروبا, الدوري الأوروبي - بلاي اوف",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "فنربخشة-نوتنجهامفور-2026-02-19",
       "home": "فنربخشة",
       "away": "نوتنجهام فورست",
@@ -33,18 +18,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "المقاولونال-المصري-2026-02-19",
-      "home": "المقاولون العرب",
-      "away": "المصري",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8310.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/8.png",
-      "time_baghdad": "21:30",
+      "id": "باوكسالونيك-سيلتافيجو-2026-02-19",
+      "home": "باوك سالونيكا",
+      "away": "سيلتا فيجو",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/1029.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/117.png",
+      "time_baghdad": "19:45",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "أون سبورت 2",
+      "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
-      "competition": "مصر, الدوري المصري",
+      "competition": "أوروبا, الدوري الأوروبي - بلاي اوف",
       "_source": "yalla1shoot"
     },
     {
@@ -73,6 +58,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "أون سبورت 1",
+      "commentator": "غير معروف",
+      "competition": "مصر, الدوري المصري",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "المقاولونال-المصري-2026-02-19",
+      "home": "المقاولون العرب",
+      "away": "المصري",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8310.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/8.png",
+      "time_baghdad": "21:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "أون سبورت 2",
       "commentator": "غير معروف",
       "competition": "مصر, الدوري المصري",
       "_source": "yalla1shoot"
