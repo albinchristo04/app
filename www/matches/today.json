@@ -1,24 +1,9 @@
 {
-  "date": "2026-02-20",
+  "date": "2026-02-21",
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "ضمك-الشباب-2026-02-20",
-      "home": "ضمك",
-      "away": "الشباب",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1549.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/180.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "1-2",
-      "channel": "تطبيق ثمانية",
-      "commentator": "غير معروف",
-      "competition": "السعودية, الدوري السعودي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "غزلالمحلة-زد-2026-02-20",
+      "id": "غزلالمحلة-زد-2026-02-21",
       "home": "غزل المحلة",
       "away": "زد",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/7.png",
@@ -33,7 +18,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الإسماعيلي-واديدجلة-2026-02-20",
+      "id": "الإسماعيلي-واديدجلة-2026-02-21",
       "home": "الإسماعيلي",
       "away": "وادي دجلة",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/5.png",
@@ -48,7 +33,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بيراميدز-سيراميكاكلي-2026-02-20",
+      "id": "بيراميدز-سيراميكاكلي-2026-02-21",
       "home": "بيراميدز",
       "away": "سيراميكا كليوباترا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1451.png",
@@ -63,7 +48,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الزمالك-حرسالحدود-2026-02-20",
+      "id": "الزمالك-حرسالحدود-2026-02-21",
       "home": "الزمالك",
       "away": "حرس الحدود",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/2.png",
@@ -78,7 +63,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ماينز05-هامبورج-2026-02-20",
+      "id": "ماينز05-هامبورج-2026-02-21",
       "home": "ماينز 05",
       "away": "هامبورج",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/297.png",
@@ -93,22 +78,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بريست-أولمبيكمارس-2026-02-20",
-      "home": "بريست",
-      "away": "أولمبيك مارسيليا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/534.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/222.png",
-      "time_baghdad": "21:45",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "2-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, الدوري الفرنسي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "ساسولو-هيلاسفيرونا-2026-02-20",
+      "id": "ساسولو-هيلاسفيرونا-2026-02-21",
       "home": "ساسولو",
       "away": "هيلاس فيرونا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/266.png",
@@ -123,11 +93,26 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أتلتيكبلباو-إلتشي-2026-02-20",
+      "id": "بريست-أولمبيكمارس-2026-02-21",
+      "home": "بريست",
+      "away": "أولمبيك مارسيليا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/534.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/222.png",
+      "time_baghdad": "21:45",
+      "status": "NS",
+      "status_text": "جارية الان",
+      "result_text": "2-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "فرنسا, الدوري الفرنسي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "أتلتيكبلباو-إلتشي-2026-02-21",
       "home": "أتلتيك بلباو",
       "away": "إلتشي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/144.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/156.png",
+      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
       "time_baghdad": "22:00",
       "status": "NS",
       "status_text": "جارية الان",
@@ -135,6 +120,21 @@
       "channel": "beIN Sports 3 HD",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ضمك-الشباب-2026-02-21",
+      "home": "ضمك",
+      "away": "الشباب",
+      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "time_baghdad": "21:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "1-2",
+      "channel": "تطبيق ثمانية",
+      "commentator": "غير معروف",
+      "competition": "السعودية, الدوري السعودي",
       "_source": "yalla1shoot"
     }
   ]
