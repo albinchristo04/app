@@ -123,21 +123,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نيس-لوريان-2026-02-22",
-      "home": "نيس",
-      "away": "لوريان",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/251.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/472-1.png",
-      "time_baghdad": "18:15",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 5 HD",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, الدوري الفرنسي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "أنجيه-ليل-2026-02-22",
       "home": "أنجيه",
       "away": "ليل",
@@ -148,6 +133,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "beIN Sports 6 HD",
+      "commentator": "غير معروف",
+      "competition": "فرنسا, الدوري الفرنسي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "نيس-لوريان-2026-02-22",
+      "home": "نيس",
+      "away": "لوريان",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/251.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/472-1.png",
+      "time_baghdad": "18:15",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 5 HD",
       "commentator": "غير معروف",
       "competition": "فرنسا, الدوري الفرنسي",
       "_source": "yalla1shoot"
