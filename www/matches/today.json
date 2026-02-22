@@ -1,24 +1,9 @@
 {
-  "date": "2026-02-22",
+  "date": "2026-02-23",
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "روما-كريمونيسي-2026-02-22",
-      "home": "روما",
-      "away": "كريمونيسي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/143.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/290.png",
-      "time_baghdad": "21:45",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "Starzplay",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "ستراسبورج-أولمبيكليون-2026-02-22",
+      "id": "ستراسبورج-أولمبيكليون-2026-02-23",
       "home": "ستراسبورج",
       "away": "أولمبيك ليون",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/300.png",
@@ -33,7 +18,22 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "فياريال-فالنسيا-2026-02-22",
+      "id": "روما-كريمونيسي-2026-02-23",
+      "home": "روما",
+      "away": "كريمونيسي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/143.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/290.png",
+      "time_baghdad": "21:45",
+      "status": "NS",
+      "status_text": "جارية الان",
+      "result_text": "0-0",
+      "channel": "Starzplay",
+      "commentator": "غير معروف",
+      "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "فياريال-فالنسيا-2026-02-23",
       "home": "فياريال",
       "away": "فالنسيا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/127.png",
@@ -48,7 +48,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أولمبيكالدش-الودادالريا-2026-02-22",
+      "id": "أولمبيكالدش-الودادالريا-2026-02-23",
       "home": "أولمبيك الدشيرة",
       "away": "الوداد الرياضي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/21191.png",
@@ -63,7 +63,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "اتحادتواركة-الجيشالملكي-2026-02-22",
+      "id": "اتحادتواركة-الجيشالملكي-2026-02-23",
       "home": "اتحاد تواركة",
       "away": "الجيش الملكي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/14597.png",
@@ -78,7 +78,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "جنوى-تورينو-2026-02-22",
+      "id": "جنوى-تورينو-2026-02-23",
       "home": "جنوى",
       "away": "تورينو",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/514.png",
@@ -93,7 +93,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "خيتافي-إشبيلية-2026-02-22",
+      "id": "خيتافي-إشبيلية-2026-02-23",
       "home": "خيتافي",
       "away": "إشبيلية",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/317.png",
@@ -108,7 +108,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "سندرلاند-فولهام-2026-02-22",
+      "id": "سندرلاند-فولهام-2026-02-23",
       "home": "سندرلاند",
       "away": "فولهام",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/117.png",
@@ -123,7 +123,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أتالانتا-نابولي-2026-02-22",
+      "id": "أتالانتا-نابولي-2026-02-23",
       "home": "أتالانتا",
       "away": "نابولي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/128.png",
@@ -138,7 +138,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "كريستالبالا-وولفرهامبتون-2026-02-22",
+      "id": "كريستالبالا-وولفرهامبتون-2026-02-23",
       "home": "كريستال بالاس",
       "away": "وولفرهامبتون",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/299.png",
@@ -153,7 +153,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نوتنجهامفور-ليفربول-2026-02-22",
+      "id": "نوتنجهامفور-ليفربول-2026-02-23",
       "home": "نوتنجهام فورست",
       "away": "ليفربول",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/29.png",
@@ -168,7 +168,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "فرايبورج-بوروسيامونش-2026-02-22",
+      "id": "فرايبورج-بوروسيامونش-2026-02-23",
       "home": "فرايبورج",
       "away": "بوروسيا مونشنجلادباخ",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/195.png",
@@ -183,7 +183,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "برشلونة-ليفانتي-2026-02-22",
+      "id": "برشلونة-ليفانتي-2026-02-23",
       "home": "برشلونة",
       "away": "ليفانتي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/111.png",
@@ -198,7 +198,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أنجيه-ليل-2026-02-22",
+      "id": "أنجيه-ليل-2026-02-23",
       "home": "أنجيه",
       "away": "ليل",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1542.png",
@@ -213,7 +213,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نيس-لوريان-2026-02-22",
+      "id": "نيس-لوريان-2026-02-23",
       "home": "نيس",
       "away": "لوريان",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/251.png",
@@ -228,7 +228,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "توتنهامهوتس-أرسنال-2026-02-22",
+      "id": "توتنهامهوتس-أرسنال-2026-02-23",
       "home": "توتنهام هوتسبر",
       "away": "أرسنال",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/114.png",
@@ -243,7 +243,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ميلان-بارما-2026-02-22",
+      "id": "ميلان-بارما-2026-02-23",
       "home": "ميلان",
       "away": "بارما",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/137.png",
@@ -258,7 +258,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "سيلتافيجو-ريالمايوركا-2026-02-22",
+      "id": "سيلتافيجو-ريالمايوركا-2026-02-23",
       "home": "سيلتا فيجو",
       "away": "ريال مايوركا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/117.png",
@@ -273,7 +273,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "هايدينهايم-شتوتجارت-2026-02-22",
+      "id": "هايدينهايم-شتوتجارت-2026-02-23",
       "home": "هايدينهايم",
       "away": "شتوتجارت",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/434.png",
