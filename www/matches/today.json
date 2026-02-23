@@ -1,39 +1,9 @@
 {
-  "date": "2026-02-23",
+  "date": "2026-02-24",
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "ضمك-الأهلي-2026-02-23",
-      "home": "ضمك",
-      "away": "الأهلي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1549.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "تطبيق ثمانية",
-      "commentator": "غير معروف",
-      "competition": "السعودية, الدوري السعودي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "الجونة-المقاولونال-2026-02-23",
-      "home": "الجونة",
-      "away": "المقاولون العرب",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/617.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8310.png",
-      "time_baghdad": "21:30",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "أون سبورت 2",
-      "commentator": "غير معروف",
-      "competition": "مصر, الدوري المصري",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "كهرباءالاسم-طلائعالجيش-2026-02-23",
+      "id": "كهرباءالاسم-طلائعالجيش-2026-02-24",
       "home": "كهرباء الاسماعيلية",
       "away": "طلائع الجيش",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/19506.png",
@@ -48,7 +18,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "سموحة-الأهلي-2026-02-23",
+      "id": "سموحة-الأهلي-2026-02-24",
       "home": "سموحة",
       "away": "الأهلي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/860.png",
@@ -63,7 +33,22 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بولونيا-أودينيزي-2026-02-23",
+      "id": "الجونة-المقاولونال-2026-02-24",
+      "home": "الجونة",
+      "away": "المقاولون العرب",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/617.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8310.png",
+      "time_baghdad": "21:30",
+      "status": "NS",
+      "status_text": "جارية الان",
+      "result_text": "0-0",
+      "channel": "أون سبورت 2",
+      "commentator": "غير معروف",
+      "competition": "مصر, الدوري المصري",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "بولونيا-أودينيزي-2026-02-24",
       "home": "بولونيا",
       "away": "أودينيزي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/129.png",
@@ -78,7 +63,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "إيفرتون-مانشستريونا-2026-02-23",
+      "id": "إيفرتون-مانشستريونا-2026-02-24",
       "home": "إيفرتون",
       "away": "مانشستر يونايتد",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/90.png",
@@ -93,7 +78,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ألافيس-جيرونا-2026-02-23",
+      "id": "ألافيس-جيرونا-2026-02-24",
       "home": "ألافيس",
       "away": "جيرونا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/168.png",
@@ -108,11 +93,11 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نهضةبركان-الفتحالرباط-2026-02-23",
+      "id": "نهضةبركان-الفتحالرباط-2026-02-24",
       "home": "نهضة بركان",
       "away": "الفتح الرباطي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1529.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/05/997.png",
+      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
       "time_baghdad": "00:00",
       "status": "FT",
       "status_text": "انتهت",
@@ -123,7 +108,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الرجاءالبيض-اتحادطنجة-2026-02-23",
+      "id": "الرجاءالبيض-اتحادطنجة-2026-02-24",
       "home": "الرجاء البيضاوي",
       "away": "اتحاد طنجة",
       "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
@@ -138,7 +123,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "فيورنتينا-بيسا-2026-02-23",
+      "id": "فيورنتينا-بيسا-2026-02-24",
       "home": "فيورنتينا",
       "away": "بيسا",
       "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
@@ -150,6 +135,21 @@
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ضمك-الأهلي-2026-02-24",
+      "home": "ضمك",
+      "away": "الأهلي",
+      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
+      "time_baghdad": "21:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "تطبيق ثمانية",
+      "commentator": "غير معروف",
+      "competition": "السعودية, الدوري السعودي",
       "_source": "yalla1shoot"
     }
   ]
