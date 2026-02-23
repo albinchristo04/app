@@ -93,21 +93,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "إيفرتون-مانشستريونا-2026-02-23",
-      "home": "إيفرتون",
-      "away": "مانشستر يونايتد",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/90.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/95.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ألافيس-جيرونا-2026-02-23",
       "home": "ألافيس",
       "away": "جيرونا",
@@ -123,11 +108,26 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "إيفرتون-مانشستريونا-2026-02-23",
+      "home": "إيفرتون",
+      "away": "مانشستر يونايتد",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/90.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/95.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "نهضةبركان-الفتحالرباط-2026-02-23",
       "home": "نهضة بركان",
       "away": "الفتح الرباطي",
-      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1529.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/05/997.png",
       "time_baghdad": "00:00",
       "status": "FT",
       "status_text": "انتهت",
