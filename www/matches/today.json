@@ -48,6 +48,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "المصري-مودرنسبورت-2026-02-25",
+      "home": "المصري",
+      "away": "مودرن سبورت",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/8.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/12724.png",
+      "time_baghdad": "21:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "أون سبورت 1",
+      "commentator": "غير معروف",
+      "competition": "مصر, الدوري المصري",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "البنكالاهلي-فاركو-2026-02-25",
       "home": "البنك الاهلي",
       "away": "فاركو",
@@ -78,25 +93,10 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "المصري-مودرنسبورت-2026-02-25",
-      "home": "المصري",
-      "away": "مودرن سبورت",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/8.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/12724.png",
-      "time_baghdad": "21:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "أون سبورت 1",
-      "commentator": "غير معروف",
-      "competition": "مصر, الدوري المصري",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ريالمدريد-بنفيكا-2026-02-25",
       "home": "ريال مدريد",
       "away": "بنفيكا",
-      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/110.png",
       "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
       "time_baghdad": "22:00",
       "status": "NS",
