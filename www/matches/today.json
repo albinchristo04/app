@@ -1,24 +1,9 @@
 {
-  "date": "2026-02-26",
+  "date": "2026-02-27",
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "الرياض-الأهلي-2026-02-26",
-      "home": "الرياض",
-      "away": "الأهلي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/181.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1.png",
-      "time_baghdad": "21:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "تطبيق ثمانية",
-      "commentator": "غير معروف",
-      "competition": "السعودية, الدوري السعودي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "كريستالبالا-موستار-2026-02-26",
+      "id": "كريستالبالا-موستار-2026-02-27",
       "home": "كريستال بالاس",
       "away": "موستار",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/299.png",
@@ -33,7 +18,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نوتنجهامفور-فنربخشة-2026-02-26",
+      "id": "نوتنجهامفور-فنربخشة-2026-02-27",
       "home": "نوتنجهام فورست",
       "away": "فنربخشة",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/29.png",
@@ -48,7 +33,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "سيلتافيجو-باوكسالونيك-2026-02-26",
+      "id": "سيلتافيجو-باوكسالونيك-2026-02-27",
       "home": "سيلتا فيجو",
       "away": "باوك سالونيكا",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/117.png",
@@ -63,7 +48,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "يوفنتوس-غلطةسراي-2026-02-26",
+      "id": "يوفنتوس-غلطةسراي-2026-02-27",
       "home": "يوفنتوس",
       "away": "غلطة سراي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/135.png",
@@ -78,7 +63,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نهضةبركان-الرجاءالبيض-2026-02-26",
+      "id": "نهضةبركان-الرجاءالبيض-2026-02-27",
       "home": "نهضة بركان",
       "away": "الرجاء البيضاوي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1529.png",
@@ -93,10 +78,10 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "فيورنتينا-ياغييلونياب-2026-02-26",
+      "id": "فيورنتينا-ياغييلونياب-2026-02-27",
       "home": "فيورنتينا",
       "away": "ياغييلونيا بياويستوك",
-      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/323.png",
       "away_logo": "https://www.yalla-shoot-plus.com/wp-content/uploads/2026/02/2220.png",
       "time_baghdad": "19:45",
       "status": "FT",
@@ -108,11 +93,11 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "النجمالأحمر-ليل-2026-02-26",
+      "id": "النجمالأحمر-ليل-2026-02-27",
       "home": "النجم الأحمر",
       "away": "ليل",
       "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/310.png",
       "time_baghdad": "19:45",
       "status": "FT",
       "status_text": "انتهت",
@@ -123,10 +108,10 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "شتوتجارت-سيلتيك-2026-02-26",
+      "id": "شتوتجارت-سيلتيك-2026-02-27",
       "home": "شتوتجارت",
       "away": "سيلتيك",
-      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/160.png",
       "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
       "time_baghdad": "19:45",
       "status": "FT",
@@ -135,6 +120,21 @@
       "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
       "competition": "أوروبا, الدوري الأوروبي - بلاي اوف",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الرياض-الأهلي-2026-02-27",
+      "home": "الرياض",
+      "away": "الأهلي",
+      "home_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "away_logo": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "time_baghdad": "21:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "تطبيق ثمانية",
+      "commentator": "غير معروف",
+      "competition": "السعودية, الدوري السعودي",
       "_source": "yalla1shoot"
     }
   ]
