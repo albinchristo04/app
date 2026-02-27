@@ -3,11 +3,11 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "الشباب-الهلال-2026-02-27",
-      "home": "الشباب",
-      "away": "الهلال",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/180.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/269.png",
+      "id": "الاتحاد-الخليج-2026-02-27",
+      "home": "الاتحاد",
+      "away": "الخليج",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/175.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/188.png",
       "time_baghdad": "21:00",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
@@ -18,11 +18,11 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الاتحاد-الخليج-2026-02-27",
-      "home": "الاتحاد",
-      "away": "الخليج",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/175.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/188.png",
+      "id": "الشباب-الهلال-2026-02-27",
+      "home": "الشباب",
+      "away": "الهلال",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/180.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/269.png",
       "time_baghdad": "21:00",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
@@ -48,21 +48,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بارما-كالياري-2026-02-27",
-      "home": "بارما",
-      "away": "كالياري",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/139.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/324.png",
-      "time_baghdad": "21:45",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "إيطاليا, الدوري الإيطالي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ستراسبورج-لانس-2026-02-27",
       "home": "ستراسبورج",
       "away": "لانس",
@@ -78,18 +63,18 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "وولفرهامبتون-أستونفيلا-2026-02-27",
-      "home": "وولفرهامبتون",
-      "away": "أستون فيلا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/84.png",
-      "time_baghdad": "22:00",
+      "id": "بارما-كالياري-2026-02-27",
+      "home": "بارما",
+      "away": "كالياري",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/139.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/324.png",
+      "time_baghdad": "21:45",
       "status": "NS",
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
+      "channel": "غير معروف",
       "commentator": "غير معروف",
-      "competition": "إنجلترا, الدوري الإنجليزي",
+      "competition": "إيطاليا, الدوري الإيطالي",
       "_source": "yalla1shoot"
     },
     {
@@ -105,6 +90,21 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "وولفرهامبتون-أستونفيلا-2026-02-27",
+      "home": "وولفرهامبتون",
+      "away": "أستون فيلا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/15.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/84.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, الدوري الإنجليزي",
       "_source": "yalla1shoot"
     }
   ]
