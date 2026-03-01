@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "فالنسيا-أوساسونا-2026-03-01",
-      "home": "فالنسيا",
-      "away": "أوساسونا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/112.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/118.png",
-      "time_baghdad": "17:15",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN Sports 6 HD",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ميتز-بريست-2026-03-01",
       "home": "ميتز",
       "away": "بريست",
@@ -85,7 +70,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/136.png",
       "time_baghdad": "19:00",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "Starzplay",
       "commentator": "غير معروف",
@@ -100,7 +85,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/126.png",
       "time_baghdad": "19:30",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "beIN Sports 5 HD",
       "commentator": "غير معروف",
@@ -243,6 +228,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "الناديالأفر-النجمالرياض-2026-03-01",
+      "home": "النادي الأفريقي",
+      "away": "النجم الرياضي بالمتلوي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8239.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/14068.png",
+      "time_baghdad": "14:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "الصفاقسي-مستقبلقابس-2026-03-01",
       "home": "الصفاقسي",
       "away": "مستقبل قابس",
@@ -263,21 +263,6 @@
       "away": "الترجي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/8237.png",
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
-      "time_baghdad": "14:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "الناديالأفر-النجمالرياض-2026-03-01",
-      "home": "النادي الأفريقي",
-      "away": "النجم الرياضي بالمتلوي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8239.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/14068.png",
       "time_baghdad": "14:00",
       "status": "FT",
       "status_text": "انتهت",
@@ -390,6 +375,21 @@
       "channel": "شاهد - Shahid VIP",
       "commentator": "غير معروف",
       "competition": "ألمانيا, الدوري الألماني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "فالنسيا-أوساسونا-2026-03-01",
+      "home": "فالنسيا",
+      "away": "أوساسونا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/112.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/118.png",
+      "time_baghdad": "17:15",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN Sports 6 HD",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     }
   ]
