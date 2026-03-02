@@ -3,36 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "الودادالريا-نهضةبركان-2026-03-02",
-      "home": "الوداد الرياضي",
-      "away": "نهضة بركان",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/04/434.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1529.png",
-      "time_baghdad": "00:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "الرياضية المغربية (3)",
-      "commentator": "غير معروف",
-      "competition": "المغرب, الدوري المغربي",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "حسنيةأكادير-الرجاءالبيض-2026-03-02",
-      "home": "حسنية أكادير",
-      "away": "الرجاء البيضاوي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/8323.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/451.png",
-      "time_baghdad": "00:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "المغربية (5)",
-      "commentator": "غير معروف",
-      "competition": "المغرب, الدوري المغربي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "شبابالاهلي-تراکتورسازي-2026-03-02",
       "home": "شباب الاهلي",
       "away": "تراکتورسازي",
@@ -135,6 +105,36 @@
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "الودادالريا-نهضةبركان-2026-03-02",
+      "home": "الوداد الرياضي",
+      "away": "نهضة بركان",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/04/434.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1529.png",
+      "time_baghdad": "00:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "الرياضية المغربية (3)",
+      "commentator": "غير معروف",
+      "competition": "المغرب, الدوري المغربي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "حسنيةأكادير-الرجاءالبيض-2026-03-02",
+      "home": "حسنية أكادير",
+      "away": "الرجاء البيضاوي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/8323.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/451.png",
+      "time_baghdad": "00:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "المغربية (5)",
+      "commentator": "غير معروف",
+      "competition": "المغرب, الدوري المغربي",
       "_source": "yalla1shoot"
     }
   ]
