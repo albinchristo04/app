@@ -70,7 +70,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/1542.png",
       "time_baghdad": "18:00",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "beIN Sports 5 HD",
       "commentator": "غير معروف",
@@ -93,21 +93,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "كولن-بوروسيادورت-2026-03-07",
-      "home": "كولن",
-      "away": "بوروسيا دورتموند",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/194.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/154.png",
-      "time_baghdad": "19:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "MBC Action",
-      "commentator": "غير معروف",
-      "competition": "ألمانيا, الدوري الألماني",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "أتلتيكومدري-ريالسوسيداد-2026-03-07",
       "home": "أتلتيكو مدريد",
       "away": "ريال سوسيداد",
@@ -120,6 +105,21 @@
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "كولن-بوروسيادورت-2026-03-07",
+      "home": "كولن",
+      "away": "بوروسيا دورتموند",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/194.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/154.png",
+      "time_baghdad": "19:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "MBC Action",
+      "commentator": "غير معروف",
+      "competition": "ألمانيا, الدوري الألماني",
       "_source": "yalla1shoot"
     },
     {
@@ -243,21 +243,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نيوكاسليونا-مانشسترسيتي-2026-03-07",
-      "home": "نيوكاسل يونايتد",
-      "away": "مانشستر سيتي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/97.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 1",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 5",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "أتلتيكبلباو-برشلونة-2026-03-07",
       "home": "أتلتيك بلباو",
       "away": "برشلونة",
@@ -270,6 +255,21 @@
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "نيوكاسليونا-مانشسترسيتي-2026-03-07",
+      "home": "نيوكاسل يونايتد",
+      "away": "مانشستر سيتي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/97.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/94.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 5",
       "_source": "yalla1shoot"
     },
     {
