@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "أوساسونا-ريالمايوركا-2026-03-07",
-      "home": "أوساسونا",
-      "away": "ريال مايوركا",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/118.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/121.png",
-      "time_baghdad": "15:00",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "كالياري-كومو-2026-03-07",
       "home": "كالياري",
       "away": "كومو",
@@ -70,7 +55,7 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2014.png",
       "time_baghdad": "17:15",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
@@ -108,21 +93,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أتلتيكومدري-ريالسوسيداد-2026-03-07",
-      "home": "أتلتيكو مدريد",
-      "away": "ريال سوسيداد",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/134.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/124.png",
-      "time_baghdad": "19:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "إسبانيا, الدوري الإسباني",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "كولن-بوروسيادورت-2026-03-07",
       "home": "كولن",
       "away": "بوروسيا دورتموند",
@@ -135,6 +105,21 @@
       "channel": "MBC Action",
       "commentator": "غير معروف",
       "competition": "ألمانيا, الدوري الألماني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "أتلتيكومدري-ريالسوسيداد-2026-03-07",
+      "home": "أتلتيكو مدريد",
+      "away": "ريال سوسيداد",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/06/134.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/124.png",
+      "time_baghdad": "19:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     },
     {
@@ -198,6 +183,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "سموحة-مودرنسبورت-2026-03-07",
+      "home": "سموحة",
+      "away": "مودرن سبورت",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/860.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/12724.png",
+      "time_baghdad": "21:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "أون سبورت 2",
+      "commentator": "غير معروف",
+      "competition": "مصر, الدوري المصري",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "كهرباءالاسم-إنبي-2026-03-07",
       "home": "كهرباء الاسماعيلية",
       "away": "إنبي",
@@ -223,21 +223,6 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "أون سبورت 1",
-      "commentator": "غير معروف",
-      "competition": "مصر, الدوري المصري",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "سموحة-مودرنسبورت-2026-03-07",
-      "home": "سموحة",
-      "away": "مودرن سبورت",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/860.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/12724.png",
-      "time_baghdad": "21:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "أون سبورت 2",
       "commentator": "غير معروف",
       "competition": "مصر, الدوري المصري",
       "_source": "yalla1shoot"
@@ -303,11 +288,11 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الاتحادالمن-الصفاقسي-2026-03-07",
-      "home": "الاتحاد المنستيري",
-      "away": "الصفاقسي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/784.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/428.png",
+      "id": "الترجي-مستقبلالمرس-2026-03-07",
+      "home": "الترجي",
+      "away": "مستقبل المرسى",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/8230.png",
       "time_baghdad": "14:00",
       "status": "FT",
       "status_text": "انتهت",
@@ -318,11 +303,11 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "الترجي-مستقبلالمرس-2026-03-07",
-      "home": "الترجي",
-      "away": "مستقبل المرسى",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/254.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/8230.png",
+      "id": "الاتحادالمن-الصفاقسي-2026-03-07",
+      "home": "الاتحاد المنستيري",
+      "away": "الصفاقسي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/784.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/428.png",
       "time_baghdad": "14:00",
       "status": "FT",
       "status_text": "انتهت",
@@ -345,6 +330,21 @@
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 5",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "أوساسونا-ريالمايوركا-2026-03-07",
+      "home": "أوساسونا",
+      "away": "ريال مايوركا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/118.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/121.png",
+      "time_baghdad": "15:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
+      "commentator": "غير معروف",
+      "competition": "إسبانيا, الدوري الإسباني",
       "_source": "yalla1shoot"
     }
   ]
