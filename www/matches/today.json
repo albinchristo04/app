@@ -18,21 +18,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "اتحادبنقرد-الناديالأفر-2026-03-08",
-      "home": "اتحاد بن قردان",
-      "away": "النادي الأفريقي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2126.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8239.png",
-      "time_baghdad": "14:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الملعبالتون-النجمالساحل-2026-03-08",
       "home": "الملعب التونسي",
       "away": "النجم الساحلي",
@@ -60,6 +45,21 @@
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 5",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "اتحادبنقرد-الناديالأفر-2026-03-08",
+      "home": "اتحاد بن قردان",
+      "away": "النادي الأفريقي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2126.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8239.png",
+      "time_baghdad": "14:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
       "_source": "yalla1shoot"
     },
     {
@@ -168,21 +168,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "ليل-لوريان-2026-03-08",
-      "home": "ليل",
-      "away": "لوريان",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/310.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/472-1.png",
-      "time_baghdad": "18:15",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 4",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, الدوري الفرنسي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "نيس-ستادرين-2026-03-08",
       "home": "نيس",
       "away": "ستاد رين",
@@ -193,6 +178,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "beIN Sports 3 HD",
+      "commentator": "غير معروف",
+      "competition": "فرنسا, الدوري الفرنسي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ليل-لوريان-2026-03-08",
+      "home": "ليل",
+      "away": "لوريان",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/310.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/472-1.png",
+      "time_baghdad": "18:15",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
       "competition": "فرنسا, الدوري الفرنسي",
       "_source": "yalla1shoot"
@@ -258,21 +258,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "أولمبيكليون-باريسأف.سي.-2026-03-08",
-      "home": "أولمبيك ليون",
-      "away": "باريس أف.سي.",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/211.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/6075.png",
-      "time_baghdad": "21:45",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN Sports 3 HD",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, الدوري الفرنسي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "ميلان-إنترميلان-2026-03-08",
       "home": "ميلان",
       "away": "إنتر ميلان",
@@ -285,6 +270,21 @@
       "channel": "Starzplay",
       "commentator": "غير معروف",
       "competition": "إيطاليا, الدوري الإيطالي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "أولمبيكليون-باريسأف.سي.-2026-03-08",
+      "home": "أولمبيك ليون",
+      "away": "باريس أف.سي.",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/211.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/6075.png",
+      "time_baghdad": "21:45",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 3 HD",
+      "commentator": "غير معروف",
+      "competition": "فرنسا, الدوري الفرنسي",
       "_source": "yalla1shoot"
     },
     {
@@ -303,21 +303,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نهضةالزمامر-الجيشالملكي-2026-03-08",
-      "home": "نهضة الزمامرة",
-      "away": "الجيش الملكي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/49266.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/440.png",
-      "time_baghdad": "00:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-0",
-      "channel": "المغربية (5)",
-      "commentator": "غير معروف",
-      "competition": "المغرب, الدوري المغربي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الرجاءالبيض-أولمبيكآسفي-2026-03-08",
       "home": "الرجاء البيضاوي",
       "away": "أولمبيك آسفي",
@@ -328,6 +313,21 @@
       "status_text": "انتهت",
       "result_text": "0-0",
       "channel": "الرياضية المغربية (3)",
+      "commentator": "غير معروف",
+      "competition": "المغرب, الدوري المغربي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "نهضةالزمامر-الجيشالملكي-2026-03-08",
+      "home": "نهضة الزمامرة",
+      "away": "الجيش الملكي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/49266.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/440.png",
+      "time_baghdad": "00:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "المغربية (5)",
       "commentator": "غير معروف",
       "competition": "المغرب, الدوري المغربي",
       "_source": "yalla1shoot"
