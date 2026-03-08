@@ -3,21 +3,6 @@
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "بورتفيل-سندرلاند-2026-03-08",
-      "home": "بورت فيل",
-      "away": "سندرلاند",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/51.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/117.png",
-      "time_baghdad": "15:30",
-      "status": "NS",
-      "status_text": "جارية الان",
-      "result_text": "0-0",
-      "channel": "beIN Sports 5 HD",
-      "commentator": "غير معروف",
-      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 5",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "لانس-ميتز-2026-03-08",
       "home": "لانس",
       "away": "ميتز",
@@ -85,26 +70,11 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/123.png",
       "time_baghdad": "17:15",
       "status": "NS",
-      "status_text": "بعد قليل",
+      "status_text": "جارية الان",
       "result_text": "0-0",
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
-      "_source": "yalla1shoot"
-    },
-    {
-      "id": "ليل-لوريان-2026-03-08",
-      "home": "ليل",
-      "away": "لوريان",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/310.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/472-1.png",
-      "time_baghdad": "18:15",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "beIN SPORTS HD 4",
-      "commentator": "غير معروف",
-      "competition": "فرنسا, الدوري الفرنسي",
       "_source": "yalla1shoot"
     },
     {
@@ -115,9 +85,24 @@
       "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/312.png",
       "time_baghdad": "18:15",
       "status": "NS",
-      "status_text": "لم تبدأ بعد",
+      "status_text": "بعد قليل",
       "result_text": "0-0",
       "channel": "beIN Sports 3 HD",
+      "commentator": "غير معروف",
+      "competition": "فرنسا, الدوري الفرنسي",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "ليل-لوريان-2026-03-08",
+      "home": "ليل",
+      "away": "لوريان",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/310.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/472-1.png",
+      "time_baghdad": "18:15",
+      "status": "NS",
+      "status_text": "بعد قليل",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 4",
       "commentator": "غير معروف",
       "competition": "فرنسا, الدوري الفرنسي",
       "_source": "yalla1shoot"
@@ -273,21 +258,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "اتحادبنقرد-الناديالأفر-2026-03-08",
-      "home": "اتحاد بن قردان",
-      "away": "النادي الأفريقي",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2126.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8239.png",
-      "time_baghdad": "14:00",
-      "status": "FT",
-      "status_text": "انتهت",
-      "result_text": "0-1",
-      "channel": "غير معروف",
-      "commentator": "غير معروف",
-      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "الملعبالتون-النجمالساحل-2026-03-08",
       "home": "الملعب التونسي",
       "away": "النجم الساحلي",
@@ -318,6 +288,21 @@
       "_source": "yalla1shoot"
     },
     {
+      "id": "اتحادبنقرد-الناديالأفر-2026-03-08",
+      "home": "اتحاد بن قردان",
+      "away": "النادي الأفريقي",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/2126.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8239.png",
+      "time_baghdad": "14:00",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-1",
+      "channel": "غير معروف",
+      "commentator": "غير معروف",
+      "competition": "تونس, الرابطة التونسية المحترفة الأولى",
+      "_source": "yalla1shoot"
+    },
+    {
       "id": "فياريال-إلتشي-2026-03-08",
       "home": "فياريال",
       "away": "إلتشي",
@@ -330,6 +315,21 @@
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "إسبانيا, الدوري الإسباني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "بورتفيل-سندرلاند-2026-03-08",
+      "home": "بورت فيل",
+      "away": "سندرلاند",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/09/51.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/117.png",
+      "time_baghdad": "15:30",
+      "status": "FT",
+      "status_text": "انتهت",
+      "result_text": "0-0",
+      "channel": "beIN Sports 5 HD",
+      "commentator": "غير معروف",
+      "competition": "إنجلترا, كاس الاتحاد الإنجليزي - الدور 5",
       "_source": "yalla1shoot"
     }
   ]
