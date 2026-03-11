@@ -1,9 +1,9 @@
 {
-  "date": "2026-03-11",
+  "date": "2026-03-12",
   "source_url": "https://www.yalla-shoot.info/matches-today/",
   "matches": [
     {
-      "id": "زد-مودرنسبورت-2026-03-11",
+      "id": "زد-مودرنسبورت-2026-03-12",
       "home": "زد",
       "away": "مودرن سبورت",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/1683.png",
@@ -18,7 +18,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "إنبي-الزمالك-2026-03-11",
+      "id": "إنبي-الزمالك-2026-03-12",
       "home": "إنبي",
       "away": "الزمالك",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/8300.png",
@@ -26,14 +26,14 @@
       "time_baghdad": "21:30",
       "status": "NS",
       "status_text": "جارية الان",
-      "result_text": "0-0",
+      "result_text": "1-0",
       "channel": "أون سبورت 1",
       "commentator": "غير معروف",
       "competition": "مصر, الدوري المصري",
       "_source": "yalla1shoot"
     },
     {
-      "id": "باريسسانجي-تشيلسي-2026-03-11",
+      "id": "باريسسانجي-تشيلسي-2026-03-12",
       "home": "باريس سان جيرمان",
       "away": "تشيلسي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/237.png",
@@ -41,14 +41,14 @@
       "time_baghdad": "22:00",
       "status": "NS",
       "status_text": "جارية الان",
-      "result_text": "0-0",
+      "result_text": "1-0",
       "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "أوروبا, دوري أبطال اوروبا - دور الـ 16",
       "_source": "yalla1shoot"
     },
     {
-      "id": "ريالمدريد-مانشسترسيتي-2026-03-11",
+      "id": "ريالمدريد-مانشسترسيتي-2026-03-12",
       "home": "ريال مدريد",
       "away": "مانشستر سيتي",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/110.png",
@@ -63,7 +63,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "???-سبورتنجلشبو-2026-03-11",
+      "id": "???-سبورتنجلشبو-2026-03-12",
       "home": "???",
       "away": "سبورتنج لشبونة",
       "home_logo": "https://www.yalla-shoot-plus.com/wp-content/themes/AlbaYallaShoot/public/img/default.png",
@@ -78,7 +78,7 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "بايرليفركوز-أرسنال-2026-03-11",
+      "id": "بايرليفركوز-أرسنال-2026-03-12",
       "home": "باير ليفركوزن",
       "away": "أرسنال",
       "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/156.png",
@@ -86,7 +86,7 @@
       "time_baghdad": "19:45",
       "status": "FT",
       "status_text": "انتهت",
-      "result_text": "0-0",
+      "result_text": "1-1",
       "channel": "beIN SPORTS HD 1",
       "commentator": "غير معروف",
       "competition": "أوروبا, دوري أبطال اوروبا - دور الـ 16",
