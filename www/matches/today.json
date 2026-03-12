@@ -108,21 +108,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "نوتنجهامفور-ميتييلاند-2026-03-12",
-      "home": "نوتنجهام فورست",
-      "away": "ميتييلاند",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/29.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/1823.png",
-      "time_baghdad": "22:00",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "Bein Sports HD2",
-      "commentator": "غير معروف",
-      "competition": "أوروبا, الدوري الأوروبي - دور الـ 16",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "فيرينتسفاروش-سبورتينجبرا-2026-03-12",
       "home": "فيرينتسفاروشي",
       "away": "سبورتينج براغا",
@@ -135,6 +120,36 @@
       "channel": "غير معروف",
       "commentator": "غير معروف",
       "competition": "أوروبا, الدوري الأوروبي - دور الـ 16",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "كريستالبالا-آيكلارنكا-2026-03-12",
+      "home": "كريستال بالاس",
+      "away": "آيك لارنكا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/299.png",
+      "away_logo": "https://www.yalla-shoot-plus.com/wp-content/uploads/2026/03/2274.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN Sports 3 HD",
+      "commentator": "غير معروف",
+      "competition": "أوروبا, دوري المؤتمر الأوروبي - دور الـ 16",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "فيورنتينا-راكوفتشانست-2026-03-12",
+      "home": "فيورنتينا",
+      "away": "راكوف تشانستوخوفا",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/323.png",
+      "away_logo": "https://www.yalla-shoot-plus.com/wp-content/uploads/2026/03/13058.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "beIN SPORTS HD 4",
+      "commentator": "غير معروف",
+      "competition": "أوروبا, دوري المؤتمر الأوروبي - دور الـ 16",
       "_source": "yalla1shoot"
     },
     {
@@ -163,6 +178,21 @@
       "status_text": "لم تبدأ بعد",
       "result_text": "0-0",
       "channel": "beIN SPORTS HD 1",
+      "commentator": "غير معروف",
+      "competition": "أوروبا, الدوري الأوروبي - دور الـ 16",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "نوتنجهامفور-ميتييلاند-2026-03-12",
+      "home": "نوتنجهام فورست",
+      "away": "ميتييلاند",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/08/29.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/10/1823.png",
+      "time_baghdad": "22:00",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "Bein Sports HD2",
       "commentator": "غير معروف",
       "competition": "أوروبا, الدوري الأوروبي - دور الـ 16",
       "_source": "yalla1shoot"
