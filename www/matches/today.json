@@ -63,21 +63,6 @@
       "_source": "yalla1shoot"
     },
     {
-      "id": "سيراميكاكلي-طلائعالجيش-2026-03-13",
-      "home": "سيراميكا كليوباترا",
-      "away": "طلائع الجيش",
-      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/12723.png",
-      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/304.png",
-      "time_baghdad": "21:30",
-      "status": "NS",
-      "status_text": "لم تبدأ بعد",
-      "result_text": "0-0",
-      "channel": "أون سبورت 1",
-      "commentator": "غير معروف",
-      "competition": "مصر, كأس مصر - ربع النهائي",
-      "_source": "yalla1shoot"
-    },
-    {
       "id": "بوروسيامونش-سانتباولي-2026-03-13",
       "home": "بوروسيا مونشنجلادباخ",
       "away": "سانت باولي",
@@ -90,6 +75,21 @@
       "channel": "شاهد - Shahid VIP",
       "commentator": "غير معروف",
       "competition": "ألمانيا, الدوري الألماني",
+      "_source": "yalla1shoot"
+    },
+    {
+      "id": "سيراميكاكلي-طلائعالجيش-2026-03-13",
+      "home": "سيراميكا كليوباترا",
+      "away": "طلائع الجيش",
+      "home_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/02/12723.png",
+      "away_logo": "https://www.yalla-shoot.info/wp-content/uploads/2025/01/304.png",
+      "time_baghdad": "21:30",
+      "status": "NS",
+      "status_text": "لم تبدأ بعد",
+      "result_text": "0-0",
+      "channel": "أون سبورت 1",
+      "commentator": "غير معروف",
+      "competition": "مصر, كأس مصر - ربع النهائي",
       "_source": "yalla1shoot"
     },
     {
